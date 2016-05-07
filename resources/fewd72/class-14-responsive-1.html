@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 14</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 14 - Responsive Web Design (pt. 1)
+
+			Learning Objectives:
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left text-smaller">
+						<p>1. Pull the latest <code>class-exercises</code></p>
+						<p>2. Copy the following directories into <code>my-class-work/</code>
+						<p class=" pad-left-lg"><code>super-school-news/</code></p>
+						<p class=" pad-left-lg"><code>responsive-news/</code></p>
+						<!-- <p>3. Copy the following directories into <code>homework/</code> -->
+						<!-- <p class=" pad-left-lg"><code>cash-register/</code></p> -->
+						<p>3. Solutions to last week's homework: </p>
+						<p class=" pad-left-lg"><code>cash-register-solution/</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #14 (of 20)</h1>
+					<h1>Responsive Web Design</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects:</p>
+						<p class="pad-left-lg">&rArr; Updated JS draft - due 12/22 (Tuesday)</p>
+						<p>&#149; No class:</p>
+						<p class="pad-left-lg">&rArr; 12/24 (Thurs)</p>
+						<p class="pad-left-lg">&rArr; 12/29 (Tues)</p>
+						<p class="pad-left-lg">&rArr; 12/31 (Thurs)</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Cash Register Review</p>
+						<p class="text-smaller">&#149; HTML/CSS Warm Up</p>
+						<p class="text-smaller">&#149; Responsive Web Design</p>
+						<p class="text-smaller">&#149; Fluid Web Design</p>
+						<p class="text-smaller">&#149; Media Queries</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<!-- REVIEW -->
+				<section class="center">
+					<h1>Cash Register Review</h1>
+				</section>
+
+				<!-- HTML/CSS Warm Up -->
+				<section class="center">
+					<h1>HTML/CSS Layout Review</h1>
+					<p>Open <code>super-school-news/</code> in SublimeText</p>
+					<img src="img/class14/super-school-news.png" alt="">
+				</section>
+
+				<!-- RESPONSIVE WEB DESIGN INTRO -->
+				<section class="center">
+					<h1>Responsive Web Design (RWD)</h1>
+					<img src="img/class14/rwd-intro.jpg">
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Responsive Web Design</h2>
+
+					<p><u>Some Definitions:</u></p>
+					<p class="pad-left-lg">Designing for the optimal viewing experience agnostic of the device on which the site is being viewed</p>
+					<p>Or...</p>
+					<p class="pad-left-lg">Allows a site's layout to change as the screen size being used to view that site changes</p>
+					<p>Or...</p>
+					<p class="pad-left-lg">"One site for every screen"</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Responsive Web Design</h2>
+
+					<p>Why is RWD important?</p>
+					<p class="pad-left-lg fragment">1. Mobile</p>
+					<p class="pad-left-lg fragment">2. One site (codebase) for all screens</p>
+					<p class="pad-left-lg fragment">3. Improved SEO</p>
+				</section>
+
+				<section class="center">
+					<h2>Open up...</h2>
+					<p><a href="GeneralAssemb.ly">GeneralAssemb.ly</a></p>
+					<h2>What makes the site responsive?</h2>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Responsive changes:</h2>
+
+					<p>1. Element (<code>&lt;div&gt;</code>) size</p>
+					<p>2. Layout changes</p>
+					<p>3. Navbar</p>
+					<p>3. Elements are hidden/shown</p>
+					<p>4. Image dimensions</p>
+					<p>5. Typography is changing size</p>
+				</section>
+
+				<section class="center">
+					<h1>Three pillars of RWD:</h1>
+
+					<p>1. Fluid layout</p>
+					<p>2. Media queries</p>
+					<p>3. Em Typography</p>
+				</section>
+
+				<!-- FLUID LAYOUT -->
+				<section class="center">
+					<h1>Fluid Layouts</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Fixed Layout</h2>
+
+					<p class="text-smaller">&#149; So far, our layouts have been <u>fixed</u> (eg 960px)</p>
+					<p class="text-smaller">&#149; Container (wrapper) element has a fixed width</p>
+					<p class="text-smaller">&#149; Content will render the same across screen sizes</p>
+					<div class="text-center">
+						<img src="img/class14/fixed-layout.jpg">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Fluid Layout</h2>
+
+					<p class="text-smallest">&#149; Fluid (aka liquid) layouts use %-based widths (eg <code>width: 75%</code>)</p>
+					<p class="text-smallest">&#149; Content will adapt to the screen size:</p>
+					<p class="pad-left-lg text-smallest">&#149; 75% of 960px => 720px</p>
+					<p class="pad-left-lg text-smallest">&#149; 75% of 375px => 280px</p>
+					<div class="text-center">
+						<img src="img/class14/fluid-layout.jpg" alt="">
+					</div>
+				</section>
+
+				<section class="center">
+					<h1 style="color: yellow;">Super School News</h1>
+					<p>Does it have a fluid layout?</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Fluid Layout</h2>
+
+					<p>&#149; First step towards RWD</p>
+					<p>&#149; Replace <u>fixed</u> widths with <u>fuild</u> widths</p>
+					<p class="pad-left-lg">960px => 85% (or any other %-based value you like)</p>
+					<p>&#149; We can replace:</p>
+					<p class="pad-left-lg">Element widths</p>
+					<p class="pad-left-lg">Padding</p>
+					<p class="pad-left-lg">Margin</p>
+					<p>&#149; We cannot set a % border-width</p>
+				</section>
+
+				<section class="center">
+					<h1 style="color: yellow;">Super School News</h1>
+					<p>Let's add a fluid layout</p>
+				</section>
+
+				<section class="center">
+					<h1>Fluid Layout</h1>
+					<p>Did it solve all our responsive problems?</p>
+				</section>
+
+				<!-- MEDIA QUERIES -->
+				<section class="center">
+					<h1>Media Queries</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries</h2>
+
+					<p><u>A Definition</u>:</p>
+					<p>A media query consists of a media type and at least one expression that limits the style sheets' scope by using media features, such as width, height, and color. Media queries, added in CSS3, let the presentation of content be tailored to a specific range of output devices without having to change the content itself.</p>
+					<p class="text-right">- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">MDN</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries</h2>
+
+					<p><u>Another Definition</u>:</p>
+					<p>Media queries allow you to create CSS styles based on a variety of rules, like screen size.</p>
+					<div class="fragment">
+						<p>For Example:</p>
+						<p class="push-left-lg">&#149; When <code>width &gt; 1000px</code> color text <span style="color:red;">red</span></p>
+						<p class="push-left-lg">&#149; When <code>width &lt; 1000px</code> color text <span style="color:blue;">blue</span></p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Query Methods</h2>
+
+					<p>1. Within CSS Stylesheet:</p>
+					<div class="text-smallest">
+<pre><code>
+	@media screen and (min-width: 1024px) {
+		/* Styles go here */
+	}
+
+</code></pre>
+					</div>
+					<hr>
+					<p>2. Using a <code>&lt;link&gt;</code> tag:</p>
+					<div class="text-smallest">
+<pre><code>
+  &lt;link rel="stylesheet " media="screen and (min-width: 1024px)" href="css/1024only.css"&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Browser-Width Media Queries</h2>
+
+					<p>Within CSS Stylesheet:</p>
+<pre><code>
+	@media screen and (min-width: 1024px) {
+		color: red;
+	}
+
+</code></pre>
+					<p><u>Media Type:</u> <code class="fragment">screen</code></p>
+					<p class="fragment pad-left-lg">Only target devices with a viewable screen</p>
+					<p><u>Rule:</u> <code class="fragment">(mid-width: 1024px)</code></p>
+					<p class="fragment pad-left-lg">Only target windows larger than, or equal to, 1024px</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries - Media Types</h2>
+
+					<p><u>all</u>: Suitable for all devices</p>
+					<p><u>handheld</u>: Intended for handheld devices</p>
+					<p><u>print</u>: Intended for paged material and for documents viewed on screen in print preview mode</p>
+					<p><u>screen</u>: Intended primarily for color computer screens</p>
+					<p><u>tv</u>: Intended for television-type devices</p>
+
+					<p class="text-right">- <a href="http://www.w3.org/TR/CSS2/media.html">W3.org</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries - Media Rules</h2>
+
+					<p><u>width</u>: viewport width</p>
+					<p><u>height</u>: viewport height</p>
+					<p><u>aspect-ratio</u>: width-to-height aspect ratio of the viewport</p>
+					<p><u>orientation</u>: orientation of the viewport</p>
+					<p class="text-right">- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDC</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Browser-Width Media Queries</h2>
+
+					<p>min-width: ___px</p>
+					<p class="pad-left-lg">Targets widths greater than or equal to __px wide</p>
+<pre><code>
+	@media screen and (min-width: 1000px) { ... }
+
+</code></pre>
+					<hr>
+					<p>max-width: ___px</p>
+					<p class="pad-left-lg">Targets widths less than or equal to __px wide</p>
+<pre><code>
+	@media screen and (max-width: 1000px) { ... }
+
+</code></pre>
+
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries - Additional Examples</h2>
+
+					<p>Don't have to specify a media type:</p>
+<pre><code>
+	@media (min-width: 700px) { ... }
+
+</code></pre>
+					<p>Multiple rules:</p>
+<pre><code>
+	@media (min-width: 320px) and (max-width: 480px) { ... }
+
+</code></pre>
+					<p>&#149; These styles will only apply on devices between 320 and 480 pixels</p>
+				</section>
+
+				<section class="center">
+					<h1>Break Points</h1>
+					<img src="img/class14/breakpoint.png" alt="">
+				</section>
+
+				<section class="center">
+					<p>If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.</p>
+					<p>- <a href="https://twitter.com/jbrewer/status/178528003402379265">Josh Brewer</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Break Points</h2>
+
+					<p>There are a lot of <a href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints">break points</a></p>
+					<div class="fragment">
+						<p>A few recommendations:</p>
+						<p class="pad-left-lg">&gt; 1280px</p>
+						<p class="pad-left-lg">1024px</p>
+						<p class="pad-left-lg">768px</p>
+						<p class="pad-left-lg">480px</p>
+						<p class="pad-left-lg">320px</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Codealong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/WrrvLj">CodePen Exercise</a></p>
+				</section>
+
+				<section class="center">
+					<h1 style="color: yellow;">Super School News</h1>
+					<p>Let's add some break points!</p>
+				</section>
+
+				<section class="center">
+					<h1>Exercise: Responsive News</h1>
+					<p>Open <code>responsive-news/</code> in SublimeText</p>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+<!-- 				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section> -->
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

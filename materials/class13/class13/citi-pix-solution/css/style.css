@@ -1,0 +1,87 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  background: url(../images/citipix_skyline.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header, .container {
+  text-align: center;
+}
+
+/* Center the container */
+.container {
+  width: 960px;
+  margin: auto;
+  padding-top: 5em;
+}
+
+header {
+  background: rgba(0,0,0, .5);
+  padding: 20px 0;
+}
+
+.title {
+  color: #fff;
+  font-size: 38px;
+  font-weight: bold;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.title p {
+  font-size: 22px;
+  font-weight: normal
+}
+
+#city-type {
+  color: #6b6b6c;
+  font-size: 38px;
+  background: #fff;
+  border: 1px solid #111;
+  padding: 0px 30px;
+  display: inline-block;
+  width: 680px;
+  margin-right: 24px;
+  font-family: helvetica, arial, sans-serif;
+  height: 72px;
+  line-height: 74px;
+  vertical-align: middle;
+  box-shadow: #111 0 0 20px;
+}
+
+.nyc {
+  background-image: url(../images/nyc.jpg)
+}
+.sf {
+  background-image: url(../images/sf.jpg)
+}
+.la {
+  background-image: url(../images/la.jpg)
+}
+.atx {
+  background-image: url(../images/austin.jpg)
+}
+.syd {
+  background-image: url(../images/sydney.jpg)
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+

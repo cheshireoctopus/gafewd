@@ -1,0 +1,51 @@
+    Home
+    About
+    Services
+    Blog
+    Contact Us
+
+Busy Hands
+
+    LinkedIn
+    Twitter
+    Facebook
+    RSS
+
+[Rainbow Photo]
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+[Request Quote Photo]
+
+Home Box 1
+Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Read more &raquo; (This special character makes a double arrow right)
+
+Home Box 2
+Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Read more &raquo;
+
+Home Box 3
+Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Read more &raquo; 
+
+Blogroll
+
+    Documentation
+    Plugins
+    Suggest Ideas
+    Support Forum
+    Themes
+    WordPress Blog
+
+Text Widget
+Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit etconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Meta Widget
+
+    Log in
+    Entries RSS
+    Comments RSS
+    WordPress.org
+
+© Copyright 2010 Busy Hands.
+Theme brought to you by Good Friends!

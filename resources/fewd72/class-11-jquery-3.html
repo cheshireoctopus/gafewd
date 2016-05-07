@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 11</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 10 - jQuery (pt. 3)
+
+			Learning Objectives:
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left text-smaller">
+						<p>1. Pull the latest <code>class-exercises</code></p>
+						<p>2. Copy the following directories into <code>my-class-work/</code>
+						<p class=" pad-left-lg"><code>click-count/</code></p>
+						<p class=" pad-left-lg"><code>lightswitch/</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #11 (of 20)</h1>
+					<h1>jQuery (pt. 3)</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects - Milestone 2 - due 12/08 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; HTML rough draft</p>
+						<p class="pad-left-lg">&rArr; CSS rough draft</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; <code>$(this)</code> Review</p>
+						<p class="text-smaller">&#149; Conditional statements</p>
+						<p class="text-smaller">&#149; Manipulating CSS Classes</p>
+						<p class="text-smaller">&#149; Chaining Functions</p>
+						<p class="text-smaller">&#149; Mid-Course Review</p>
+						<p class="text-smaller">&#149; Final Proect Convo's</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>$(this) Review</h1>
+					<div class="text-left">
+						<p>1. Open <code>calculator-box</code></p>
+						<p>2. Implement <code>$(this)</code> where you can</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Conditional Statements</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+
+					<p>Control Flow:</p>
+					<p>&rArr; Order in which the computer executes program's statements</p>
+					<p>&rArr; Determines which chunks of code are running at a given time</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+
+					<p>Sequential Control Flow:</p>
+					<p class="text-smaller pad-left-lg">&#149; Programs execute line by line, from top to bottom</p>
+					<p class="text-smaller pad-left-lg">&#149; Default for most programming languages</p>
+					<p class="text-smaller pad-left-lg">&#149; Sor far, all our functions have been written this way</p>
+					<div class="text-center">
+						<img src="img/class11/sequential-flow.png">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+
+					<p>Sequential Control Flow Example:</p>
+<pre><code>
+	function square () {
+		var inputNum = $('input').val()
+		var outputNum = inputNum * inputNum
+
+		$('#output').text(outputNum)
+	}
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statments</h2>
+
+					<p>Programs can flow in other ways:</p>
+					<div class="text-center">
+						<img src="img/class11/control-flows.jpg">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+
+					<p>If/Else Flow:</p>
+					<p class="pad-left-lg">&rArr; AKA <i>conditional</i> or <i>selection</i></p>
+					<p class="pad-left-lg">&rArr; Used to alter program flow when a decision must be made between two or more actions</p>
+					<p class="pad-left-lg">&rArr; This choice is usually made based on variables within the function/program</p>
+
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Conditional Statements</h2>
+
+					<p>If/Else Flow:</p>
+					<div class="text-center">
+						<img src="img/class11/conditional-flow.jpg">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Condtional Statements</h2>
+
+					<p>Sequential vs. Conditional Flows:</p>
+					<div class="text-center">
+						<img src="img/class11/sequential-vs-conditional-flow.png" alt="">
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Condtional Statements</h2>
+
+					<p>Conditional Flows JavaScript Syntax:</p>
+<pre><code>
+	var x = 10
+
+	if (x > 5) {
+		alert('x is larger than 5!')
+	} else {
+		alert('x is smaller than 5!')
+	}
+
+</code></pre>
+					<p class="text-smallest">&#149; Denoted by the <code>if</code> and <code>else</code> keywords</p>
+					<p class="text-smallest">&#149; Begins with a <u>condition</u>: <code>(x > 5)</code></p>
+					<p class="text-smallest">&#149; If the condition is true, the statment(s) in the "if block" will run</p>
+					<p class="text-smallest">&#149; If the condition is false, the statment(s) in the "else block" will run</p>
+				</section>
+
+				<section data-background="#FFF">
+
+					<div class="text-left">
+						<h2>Logical Operators</h2>
+						<p>Assuming <code>var x = 3</code></p>
+					</div>
+					<img src="img/class11/logical-operators.png" alt="">
+				</section>
+
+				<section class="text-left text-smaller" data-background="#FFF">
+					<h2>Logical Operators</h2>
+					<p>Ex. 1</p>
+<pre><code>
+	var x = 10
+
+	if (x == 10) {
+		alert('bananas')
+	} else {
+		alert('apples')
+	}
+
+</code></pre>
+
+					<hr>
+					<p>Ex. 2</p>
+<pre><code>
+	var x = 'cat'
+
+	if (x != 5) {
+		alert('tacos')
+	} else {
+		alert('salads')
+	}
+
+</code></pre>
+				</section>
+
+					<section class="text-left text-smaller" data-background="#FFF">
+					<h2>Logical Operators</h2>
+					<p>Ex. 3</p>
+<pre><code>
+	var x = 10
+
+	if (x >= 10) {
+		alert('oranges')
+	} else {
+		alert('strawberrys')
+	}
+
+</code></pre>
+
+					<hr>
+					<p>Ex. 4</p>
+<pre><code>
+	var x = 10
+
+	if (x <= 10) {
+		alert('kiwis')
+	} else {
+		alert('olives')
+	}
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101">http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Condtional Statements - Multiple Conditions</h3>
+
+					<p class="text-smaller">&#149; Often, programs will evaluate more than one condition</p>
+					<p class="text-smaller">&#149; In JS, use the <code>else if</code> for three or more conditions:</p>
+
+<pre><code>
+	var x = 10
+
+	if (x != 10) {
+		alert('beer')
+	} else if (x == 10) {
+		alert('coffee')
+	} else {
+		alert('water')
+	}
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>Condtional Statements - Multiple Conditions</h3>
+
+					<div class="text-smallest">
+						<p><code>if (condition is true) {</code></p>
+						<p class="pad-left-lg"><code>alert("The condition is true!")</code></p>
+						<p><code>} else if (some other condition is true) {</code></p>
+						<p class="pad-left-lg"><code>alert('The first condition was false, but this one is true!')</code></p>
+						<p><code>} else if (some other conditions is true) {</code></p>
+						<p class="pad-left-lg"><code>alert('The first two conditions were false, but this one is true!')</code></p>
+						<p><code>} else {</code></p>
+						<p class="pad-left-lg"><code>alert('None of the above conditions were true!')</code></p>
+						<p><code>}</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<div class="text-left">
+						<p>Add more conditions to your temperature gauge:	</p>
+						<p><a href="http://codepen.io/cheshireoctopus/pen/ZQzqLN?editors=101">http://codepen.io/cheshireoctopus/pen/	ZQzqLN?editors=101</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Exercise - Click Count</h1>
+					<div class="text-left">
+						<p>1. Open <code>click-count/</code> in Sublime Text</p>
+						<p>2. Follow the instructions in <code>project.js</code></p>
+					</div>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Manipulatin CSS Classes</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+
+					<p><code>.addClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Adds classes to elements</p>
+<pre><code>
+	$('p').addClass('bold-text')
+
+	// would yield: <p class="bold-text"></p>
+
+</code></pre>
+					<p><code>.removeClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Removes classes from elements</p>
+<pre><code>
+	$('p').removeClass('bold-text')
+
+	// would yield: <p></p>
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+
+					<p><code>.toggleClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Adds class to elements if it does not exist; remove if if id does</p>
+					<p class="text-smaller">&#149; Assuming the following HTML:</p>
+<pre><code>
+	<p>Some Paragraph</p>
+
+</code></pre>
+
+<pre><code>
+	$('p').toggleClass('bold-text')
+
+	// would yield: <p class="bold-text"></p>
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating CSS Classes</h2>
+
+					<p><code>.hasClass('class-name')</code></p>
+					<p class="text-smaller pad-left-lg">&rArr; Returns <code>true</code> if the element has the class; <code>false</code> otherwise</p>
+					<p class="text-smaller">&#149; Assuming the following HTML:</p>
+<pre><code>
+	<div id="someEl" class="bold-text"></div>
+
+</code></pre>
+
+<pre><code>
+	if ($('#someEl').hasClass('bold-text')) {
+		// Do something special...
+	}
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong - LightSwitch</h1>
+					<p>Open <code>lightswitch/</code> in SublimeText</p>
+				</section>
+
+				<!-- CHAINING FUNCTIONS -->
+				<section class="center">
+					<h1>Chaining Functions</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Chaining Functions</h2>
+
+					<p>How can we improve this code:</p>
+<pre><code>
+	function doSomething () {
+		$('p').css('background-color', 'blue')
+		$('p').text('Some new text to be added')
+		$('p').slideDown()
+	}
+
+</code></pre>
+
+<div class="fragment">
+				<p>Function chaining:</p>
+<pre><code>
+	function doSomething () {
+		$('p')
+		  .css('background-color', 'blue')
+		  .text('Some new text to be added')
+		  .slideDown()
+	}
+
+</code></pre>
+</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Chaining Functions</h2>
+					<p>&#149; Perform multiple effects/actions one after another</p>
+					<p>&#149; Only works when called on the SAME object:</p>
+<pre><code>
+	$('p').text('hello').css('color', 'red').slideDown()
+
+</code></pre>
+					<p>&#149; Some chained commands are queued; commands further down the chain will wait until previous commands have finished before executing</p>
+<pre><code>
+	$('p').slideDown(500).slideUp(500).slideDown(500)
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong - LightSwitch</h1>
+					<div class="text-left">
+					<p>1. Re-Open <code>lightswitch/</code> in SublimeText</p>
+					<p>2. Implement chaining where possible</p>
+					</div>
+				</section>
+
+				<section class="text-center">
+					<h1>Homework</h1>
+					<div class="text-left">
+						<p>1. Rough draft of HTML/CSS for final project</p>
+						<p>2. Rebuild temp coverter with <code>if/else if/else</code> statements</p>
+						<p class="pad-left-lg text-smaller">&#149; Copy your original, rename it <code>temp-coverter-2</code></p>
+						<p class="pad-left-lg text-smaller">&#149; Add the following functionality</p>
+						<p class="pad-left-lg text-smaller">&#149; An <code>if/else if/else</code> statement</p>
+						<p class="pad-left-lg text-smaller">&#149; Change the background image/color depending on the temperature entered</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Mid-Course Survey</h1>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

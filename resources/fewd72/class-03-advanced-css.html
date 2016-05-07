@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 3</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 03 - Advanced CSS (part 1)
+
+			Learning Objectives:
+				- Classes and ID's
+				- CSS: Nesting and Groups
+				- Define CSS box model
+				- Inline vs Block elements
+				- Span vs Div
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+					<p>Make sure your HW is pushed up!</p>
+				</section>
+
+				<section class="center">
+					<h1>Class #03 - 11/03/2015</h1>
+					<h1>Advanced CSS</h1>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller fragment"><b>Q: SublimeText cheat sheet + notes</b></p>
+						<p class="text-smaller fragment">A: <a href="gafewd.github.io">gafewd.github.io</a></p>
+						<p class="text-smaller fragment"><b>Q: Will we cover pseudo classes?</b></p>
+						<p class="text-smaller fragment">A: Yes!</p>
+						<p class="text-smaller fragment"><b>Q: Can you style the &lt;title&gt; tag?</b></p>
+						<p class="text-smaller fragment">A: Unfortunately not; browser has a default</p>
+						<p class="text-smaller fragment"><b>Q: Easy methods for updating HTML across multiple pages?</b></p>
+						<p class="text-smaller fragment">A: Sort of... see: <code>command + d</code></p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">Classes and ID's</p>
+						<p class="text-smaller">Nested/Grouped Selectors</p>
+						<p class="text-smaller">The Box Model</p>
+						<p class="text-smaller">The Display Property: Block vs. Inline</p>
+						<p class="text-smaller">&lt;span&gt; and &lt;div&gt;</p>
+					</div>
+				</section>
+
+				<!-- CLASSES AND ID'S -->
+				<section class="center">
+					<p>I have multiple &lt;p&gt; tags.</p>
+					<p>How do I style each differently?</p>
+				</section>
+
+				<section class="center">
+					<h1>Classes and ID's</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">ID's</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; ID's are attributes</p>
+						<p>&#149; Assigned to only <u>one</u> HTML element per page</p>
+						<p>&#149; Identify the element for styling/scripting</p>
+						<p>&#149; Cannot contain spaces</p>
+<pre><code>
+	<p id="important-title">Hello, World!</p>
+
+</code></pre>
+						<p>
+							&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen Exercise</a>
+						</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Classes</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Classes are attributes</p>
+						<p>&#149; Assigned to multiple HTML elements per page</p>
+						<p>&#149; Identify the elements for styling/scripting</p>
+						<p>&#149; Cannot contain spaces</p>
+<pre><code>
+	<p class="important-class">Hello, World!</p>
+	<p class="important-class">Hello, Mars!</p>
+	<p class="important-class">Hello, Jupiter!</p>
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">ID's vs. Classes</h2>
+					<hr>
+
+					<div class="text-left">
+						<h3>General rule:</h3>
+						<p>&#149; Use an ID when you are styling <u>ONE</u> specific item</p>
+						<p>&#149; Use a CLASS when you are styling a <u>GROUP</u> of items</p>
+					</div>
+				</section>
+
+				<!-- GROUPING SELECTORS -->
+				<section class="center">
+					<h1>Grouping</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Grouping</h2>
+					<hr>
+
+					<p class="text-left">Is there anything wrong with this CSS:</p>
+
+<pre><code>
+	h2 {
+	    color: red;
+	}
+
+	.some-class {
+	    color: red;
+	}
+
+	#some-id {
+	    color: red;
+	}
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Grouping</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Give the same properties to a number of selectors without having to repeating</p>
+						<p>&#149; Group selectors using a comma (,) separator.</p>
+<pre><code>
+	h2, .some-class, #some-id {
+	    color: red;
+	}
+
+</code></pre>
+						<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoPZYz?editors=110">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<!-- NESTING SELECTORS -->
+				<section class="center">
+					<h1>NESTING</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Nesting</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; CSS Selectors can contain more than one simple selector</p>
+						<p>&#149; More complicated selectors => targeted styles</p>
+						<p>&#149; Child selector:</p>
+<pre><code>
+	#some-id p {
+		color: red;
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Nesting Examples</h2>
+					<hr>
+
+					<div class="text-left">
+<pre><code>
+	p a {
+	  color: black;
+	}
+
+	#some-id p a {
+	  color: red;
+	}
+
+	p .some-cLass, p #some-id {
+	  color: blue;
+	}
+
+	h1 a, h2 a, h3 a {
+	  color: green;
+	}
+
+</code></pre>
+						<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxemz?editors=110">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<!-- THE BOX MODEL -->
+				<section class="center">
+					<h1>The Box Model</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Every HTML element is a box</p>
+						<p>&#149; The layout of each box is a combination of the object's:</p>
+						<p class="pad-left-lg">&rArr; content</p>
+						<p class="pad-left-lg">&rArr; padding</p>
+						<p class="pad-left-lg">&rArr; border</p>
+						<p class="pad-left-lg">&rArr; margin</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model</h2>
+					<hr>
+
+					<img src="img/class03/full-box-model.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Content</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">Content:</p>
+						<p class="text-smaller">&rArr; The text and images that are within the element &lt;tags&gt;</p>
+					</div>
+					<img src="img/class03/box-model-content.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Padding</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">Padding:</p>
+						<p class="text-smaller">&rArr; The space between the content and the border of the element.</p>
+					</div>
+					<img src="img/class03/box-model-padding.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Border</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">Border:</p>
+						<p class="text-smaller">&rArr; The border around the element.</p>
+					</div>
+					<img src="img/class03/box-model-border.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Margin</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">Margin:</p>
+						<p class="text-smaller">&rArr; The space between the border and the other objects on the page.</p>
+					</div>
+					<img src="img/class03/box-model-margin.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model</h2>
+					<hr>
+
+					<img src="img/class03/full-box-model.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Padding</h2>
+					<hr>
+
+					<div class="text-left">
+<pre><code>
+	p {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		padding-left: 5px
+	}
+
+	p {
+		padding: 5px 5px 5px 5px;
+		/* starts at top, moves clockwise */
+	}
+</pre></code>
+<pre><code>
+	p {
+		padding: 5px 5px;
+		/* padding: (top/bottom) (left/right) */
+	}
+
+	p {
+		padding: 5px;
+	}
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Borders</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Borders consist of three properties:</p>
+						<p>&rArr; <b>border-width</b>: a px value for width</p>
+						<p>&rArr; <b>border-style</b>: the style (solid, dotted, dashed, double)</p>
+						<p>&rArr; <b>border-color</b>: the color</p>
+					</div>
+
+<pre><code>
+	p {
+		border: 2px solid black;
+	}
+
+	p {
+		border: rgb(255, 0, 0) 2px dashed;
+	}
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Box Model - Margin</h2>
+					<hr>
+
+					<div class="text-left">
+<pre><code>
+	p {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		margin-left: 5px
+	}
+
+	p {
+		margin: 5px 5px 5px 5px;
+		/* starts at top, moves clockwise */
+	}
+</pre></code>
+<pre><code>
+	p {
+		margin: 5px 5px;
+		/* margin: (top/bottom) (left/right) */
+	}
+
+	p {
+		margin: 5px;
+	}
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Box Model: Exercise</h1>
+					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxeZd?editors=110">CodePen</a></p>
+				</section>
+
+				<section class="center">
+					<h1>The Display Property: Block vs. Inline</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Display Property</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; All HTML elements are either:</p>
+						<p class="pad-left-lg">&rArr; block</p>
+						<p class="pad-left-lg">&rArr; inline</p>
+						<p>&#149; Controlled by the CSS property: <b>display</b></p>
+						<p class="pad-left-lg">&rArr; <code>display: block;</code></p>
+						<p class="pad-left-lg">&rArr; <code>display: inline;</code></p>
+						<p>&#149; Referred to as either <b>block</b> or <b>inline</b> elements</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Block Elements</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Take up 100% of the width of their parent</p>
+						<p>&#149; Can have margin and padding assigned</p>
+						<p>&#149; Can set height and width</p>
+						<p>&#149; Placed below previous elements in the markup; break to a new line</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Block Elements</h2>
+					<hr>
+
+					<img src="img/class03/block-element.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Block Elements</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Examples of <b>block</b> elements:</p>
+						<p class="pad-left-lg">&rArr; &lt;h1&gt; thru &lt;h6&gt;</p>
+						<p class="pad-left-lg">&rArr; &lt;p&gt;</p>
+						<p class="pad-left-lg">&rArr; &lt;ul&gt;</p>
+						<p class="pad-left-lg">&rArr; &lt;li&gt;</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Inline Elements</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Only take up the width of their content</p>
+						<p>&#149; Can have any padding (top, left, bottom, right) assigned</p>
+						<p>&#149; Can only have left and right <b>margin</b> assigned</p>
+						<p>&#149; CANNOT set height and width</p>
+						<p>&#149; Do not send elements to the next line</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Inline Elements</h2>
+					<hr>
+
+					<img src="img/class03/inline-elements.png">
+				</section>
+
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Inline Elements</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Examples of <b>inline</b> elements:</p>
+						<p class="pad-left-lg">&rArr; &lt;a&gt;</p>
+						<p class="pad-left-lg">&rArr; &lt;strong&gt;</p>
+						<p class="pad-left-lg">&rArr; &lt;em&gt;</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - The Display Property</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>Easiest way to explore the display property is to tinker with the background-color of various elements:</p>
+						<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/NGBvGw?editors=110">Code Pen Exercise</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>&lt;span&gt; and &lt;div&gt;</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">&lt;span&gt; and &lt;div&gt; - Basics</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; &lt;span&gt; is a generic inline element</p>
+						<p>&#149; &lt;div&gt; is a generic block element</p>
+						<p>&#149; THEY PROVIDE NO INHERENT MEANING</p>
+						<p>&#149; Provide structure for styling other elements that they wrap</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">&lt;span&gt;</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&lt;span&gt; is used to add hooks onto specific words or phases within flowing content</p>
+						<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/epjEJb?editors=110">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">&lt;div&gt;</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; &lt;div&gt; is the most basic building block in HTML</p>
+						<p>&#149; Does nothing by itself</p>
+						<p>&#149; Used to organize tags into blocks of content</p>
+						<p>&#149; We use it for layout EVERYWHERE</p>
+						<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/JYBybj?editors=110">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>A note on centering...</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Centering Block and Inline Elements</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>Center <b>inline</b> elements by setting:</p>
+						<p class="pad-left-lg"><code>text-align: center</code></p>
+						<p>on its parent</p>
+						<hr>
+						<p>Center <b>block</b> elements by setting:</p>
+						<p class="pad-left-lg">&rArr; 1) a width on the element</p>
+						<p class="pad-left-lg">&rArr; 2) <code>margin: 0 auto;</code></p>
+						<hr>
+						<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/epjEgX?editors=110">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF">
+					<h2 class="text-left">What's On Deck: Advanced CSS (part 2)</h2>
+					<hr>
+
+					<div class="text-left">
+						<h4>Class #4 (of 20) - Thursday, November 5th</h4>
+						<p>&#149; Layout Practice</p>
+						<p>&#149; Semantic HTML</p>
+						<p>&#149; Chrome Developer Tools</p>
+						<p>&#149; Browser Variances</p>
+						<p>&#149; ...Maybe floats</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

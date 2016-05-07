@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 9</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 08 - jQuery (pt. 1)
+
+			Learning Objectives:
+			-
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left">
+						<p class="text-smaller">1. Pull the latest <code>class-exercises</code></p>
+						<p class="text-smaller">2. Copy the following directories into <code>my-class-work/</code>
+						<p class="text-smaller pad-left-lg"><code>fortune-teller/</code></p>
+						<p class="text-smaller">3. Copy the following directories into <code>homework/</code>
+						<p class="text-smaller pad-left-lg"><code>calculator-box/</code></p>
+						<p class="text-smaller pad-left-lg"><code>online-dating-profile/</code></p>
+						<p class="text-smaller">4. Soultions from last class included</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #9 (of 20)</h1>
+					<h1>jQuery (pt. 1)</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects - Milestone 2 - due 12/08 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; HTML rough draft</p>
+						<p class="pad-left-lg">&rArr; CSS rough draft</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller fragment"><b>Q: Where does form data go when submitted?</b></p>
+						<p class="text-smallest fragment">A: To the server; form data is processed and a response from the server is sent back to the client</a></p>
+						<p class="text-smaller fragment"><b>Q: How do I give credit to HTML/CSS/JS I stole?</b></p>
+						<p class="text-smallest fragment">A: Create a <code>humans.txt</code> file; follow this guide: <a href="http://humanstxt.org/">http://humanstxt.org/</a></a></p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smallest">&#149; Review</p>
+						<p class="text-smallest">&#149; jQuery:</p>
+						<p class="pad-left-lg text-smallest">&rArr; CSS Selectors</p>
+						<p class="pad-left-lg text-smallest">&rArr; HTML manipulation using <code>`.html()`</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; The <code>.click()</code> method</p>
+						<p class="pad-left-lg text-smallest">&rArr; The <code>.val()</code> method</p>
+						<p class="pad-left-lg text-smallest">&rArr; Using jQuery and <code>$(document).ready()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; CSS manipulation using <code>.css()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; jQuery Exercise</p>
+						<p class="pad-left-lg text-smallest">&rArr; jQuery Lab</p>
+					</div>
+				</section>
+
+				<!-- FORTUNE TELLER REVIEW -->
+				<section class="center" data-background="#FFF">
+					<h2>Review</h2>
+					<div class="text-left">
+						<p class="text-smallest">1. Open <code>fortune-teller/</code></p>
+						<p class="text-smallest">2. Attach <code>.onclick</code> to <code>id="clickme"</code></p>
+						<p class="text-smallest">3. This click event should trigger a function</p>
+						<p class="text-smallest">4. Use <code>document.getElementById()</code> with <code>.value</code> to capture the <code>&lt;input&gt;</code> values</p>
+						<p class="text-smallest">5. Store these values using variables (eg <code>var hometown = ...</code>)</p>
+						<p class="text-smallest">6. Use string concatenation to diplsay the following into <code>id="output"</code>:</p>
+						<p class="text-smallest pad-left-lg"><code>"You will be a ___ in ___, and married to ____ with ___ kids."</code></p>
+					</div>
+				</section>
+
+				<!-- JQUERY -->
+				<section class="center">
+					<h1>jQuery</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery - What Is It?</h3>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; jQuery <u>IS</u> JavaScript</p>
+						<p>&#149; jQuery is a JavaScript library</p>
+						<p>&#149; A library is a collection of battle-tested functions that increase the speed/stability of development</p>
+						<p>&#149; Why reinvent the wheel? Use a library instead!</p>
+						<p>&#149; 1000's of JS libraries, and growing:</p>
+						<p class="pad-left-lg text-smallest">&rArr; Angular</p>
+						<p class="pad-left-lg text-smallest">&rArr; Backbone</p>
+						<p class="pad-left-lg text-smallest">&rArr; React</p>
+						<p class="pad-left-lg text-smallest">&rArr; Underscore</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery - What Is It?</h3>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Written by John Resig (lives in BK!)</p>
+						<p>&#149; jQuery's Motto: <u>'Write Less, Do More'</u></p>
+						<p>&#149; tl;dr makes working with JS easier:</p>
+						<p class="pad-left-lg">&rArr; HTML / CSS manipulation</p>
+						<p class="pad-left-lg">&rArr; Event handling (click events)</p>
+						<p class="pad-left-lg">&rArr; Animations</p>
+						<p>&#149; Covers JS's browser inconsistencies</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery - Why do we use it?</h3>
+					<hr>
+
+					<div class="text-left">
+						<p>Pure JavaScript:</p>
+						<p><a href="http://codepen.io/josephjbliss/pen/uqdCw">http://codepen.io/josephjbliss/pen/uqdCw</a></p>
+						<p>jQuery:</p>
+						<p><a href="http://codepen.io/josephjbliss/pen/jLtfC">http://codepen.io/josephjbliss/pen/jLtfC</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>jQuery CSS Selectors</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery CSS Selectors - $('x') function</h3>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; CSS selectors query HTML for certain elements</p>
+						<p class="text-smaller">&#149; Similar to <code>document.getElementById()</code></p>
+						<hr>
+						<p>The $('x') Function - Get all of the 'X'</p>
+<pre><code>
+	$('div')
+	$('h2')
+	$('p a')
+	$('p, a')
+
+</code></pre>
+						<p class="text-smaller">&#149; The $('x') function takes <u>ANY</u> CSS selector</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery CSS Selectors - ID's and Classes</h3>
+					<hr>
+
+					<div class="text-left">
+						<p>Fetch ID's using the # (hashtag):</p>
+<pre><code>
+	$('#someId')
+	$('#someId a')
+
+</code></pre>
+						<hr>
+						<p>Fetch Classes using the . (period):</p>
+<pre><code>
+	$('.someClass')
+	$('.someClass a')
+
+</code></pre>
+						<p class="text-smallest">&#149; Using <code>$('.someClass')</code> returns ALL of the HTML elements with a class of <code>.someClass</code></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery CSS Selectors - $()</h3>
+					<hr>
+
+					<div class="text-left">
+						<p><code>$()</code> - the almighty selector!</p>
+						<hr>
+						<p class="text-smaller"><code>$('div')</code></p>
+						<p class="fragment text-smallest">Select all HTML <code>div</code> elements</p>
+						<p class="text-smaller"><code>$('#someId')</code></p>
+						<p class="fragment text-smallest">Selects the first HTML with an ID of "<code>someId</code>"</p>
+						<p class="text-smaller"><code>$('.someClass')</code></p>
+						<p class="fragment text-smallest">Select all the HTML elements with class "<code>someClass</code>"</p>
+						<p class="text-smaller"><code>$('ul li a.social-link')</code></p>
+						<p class="fragment text-smallest">Select anchor tags with class "<code>social-link</code>" that are nested inside <code>&lt;li&gt;</code> elements which are nested inside <code>&lt;ul&gt;</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>HTML Manipulation</h1>
+				</section>
+
+				<!-- HTML Manipulation -->
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery HTML Manipulation</h3>
+
+					<div class="text-left">
+						<p><code>.html()</code></p>
+						<p class="text-smallest pad-left-lg">Will return any HTML inside the selected element:</p>
+<pre><code>
+	$('#someId').html()
+
+</code></pre>
+						<p><code>.html('&lt;h1&gt;a heading&lt;/h1&gt;')</code></p>
+						<p class="text-smallest pad-left-lg">Inserts and overwrites the HTML inside the selected element:</p>
+<pre><code>
+	$('#someId').html('<h1>a heading</h1>')
+
+</code></pre>
+						<p>&#149; Use instead of the <code>.innerHTML</code> JavaScript method</p>
+
+
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">jQuery HTML Manipulation</h3>
+
+					<div class="text-left">
+						<p><code>.text()</code></p>
+						<p class="pad-left-lg text-smaller">Returns any text inside the selected element</p>
+<pre><code>
+	$('#someId').text()
+
+</code></pre>
+						<p><code>.text('some string')</code></p>
+						<p class="pad-left-lg text-smaller">Overwrites any text (or HTML!) inside the selected element</p>
+<pre><code>
+	$('#someId').text('some text!')
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Codealong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101</a></p>
+				</section>
+
+				<!-- CLICK EVENT -->
+				<section class="center">
+					<h1>Click Event</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3	class="text-left">jQuery Click Event</h3>
+					<div class="text-left">
+						<p>JavaScript:</p>
+<pre><code>
+	document.getElementById('someId').onclick = someFunction
+
+	function someFunction () {
+		// do something
+	}
+
+</code></pre>
+						<p>jQuery</p>
+<pre><code>
+	$('#someId').click(someFunction)
+
+	function someFunction () {
+		// do something
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101</a></p>
+				</section>
+
+				<!-- INPUTS AND .val() -->
+				<section class="center">
+					<h1>&lt;input&gt; and .val()</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3	class="text-left">&lt;input&gt; and .val()</h3>
+					<div class="text-left">
+						<p>JavaScript:</p>
+<pre><code>
+	document.getElementById('someId').value
+	// returns the value inside fo someId
+
+</code></pre>
+						<p>jQuery</p>
+<pre><code>
+	$('#someId').val()
+	// returns the value inside of someId
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3	class="text-left">&lt;input&gt; and .val()</h3>
+					<div class="text-left">
+						<p>&#149; Getting values, use <code>.val()</code></p>
+<pre><code>
+	$('#someId').val()
+	// returns the value inside of someId
+
+</code></pre>
+						<p>&#149; Setting values, use <code>.val('some text')</code></p>
+
+<pre><code>
+	$('#someId').val('some text')
+	// sets the value of someId to 'some text'
+
+</code></pre>
+						<p><code>.val()</code> can be used on both &lt;input&gt; and &lt;select&gt; elements</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<a href="http://codepen.io/cheshireoctopus/pen/JYqvqW?editors=101">http://codepen.io/cheshireoctopus/pen/JYqvqW?editors=101</a>
+				</section>
+
+				<section class="center">
+					<h1>Using jQuery</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3	class="text-left">Using jQuery</h3>
+					<div class="text-left">
+						<p>Option 1: Download and store jQuery locally</p>
+						<p class="pad-left-lg text-smallest">1. Download jQuery from <a href="http://jquery.com/download">http://jquery.com/download</a></p>
+						<p class="pad-left-lg text-smallest">2. Save the <code>.js</code> file in your project's <code>js/</code> directory</p>
+						<p class="pad-left-lg text-smallest">3. Create a <code>&lt;script&gt;</code> tag <u>ABOVE</u> any of your own JS files</p>
+<pre><code>
+	&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="project.js"&gt;&lt;/script&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3	class="text-left">Using jQuery</h3>
+					<div class="text-left">
+						<p>Option 2: Link to an external jQuery source (CDN)</p>
+						<p class="pad-left-lg text-smallest">1. Locate an externally hosted version of jQuery:</p>
+						<p class="pad-left-lg text-smallest">&rArr; <a href="https://code.jquery.com/jquery-1.11.3.js">https://code.jquery.com/jquery-1.11.3.js</a></p>
+						<p class="pad-left-lg text-smallest">2. Create a <code>&lt;script&gt;</code> tag <u>ABOVE</u> any of your own JS files</p>
+						<p class="pad-left-lg text-smallest">3. Point the <code>src</code> attribute to the jQuery CDN</p>
+
+<pre><code>
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="project.js"&gt;&lt;/script&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">Using jQuery - Script placement</h3>
+
+					<div class="text-left">
+						<p>&lt;script&gt; tags should always be placed:</p>
+						<p class="pad-left-lg">&#149; at the <u>BOTTOM</u> of your &lt;body&gt;</p>
+						<p class="pad-left-lg">&#149; right before the closing &lt;/body&gt; tag</p>
+						<p>Why:</p>
+						<div class="fragment">
+							<p class="pad-left-lg">&#149; As your JS will reference DOM elements, these elemenets have to be loaded first!</p>
+							<p class="pad-left-lg">&#149; By placing &lt;script&gt; tags at the <u>BOTTOM</u>, the browser will load these &lt;script&gt;'s LAST!</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">Using jQuery - $(document).ready()</h3>
+
+					<div class="text-left">
+						<p class="text-smallest">Best practice is to write jQuery using the <code>$(document).ready()</code> function:</p>
+
+<pre><code>
+	$(document).ready(function() {
+
+		// WRITE OTHER CODE HERE!!
+
+	})
+
+</code></pre>
+						<p class="text-smallest">&#149; Tells jQuery to wait until HTML/CSS have loaded before executing any JavaScript</p>
+						<p class="text-smallest">&#149; Only execute code once the document (DOM) is ready</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h3>Exercise</h3>
+					<p>Rebuild Fortune Teller using jQuery</p>
+					<div class="text-left text-smallest">
+						<p>1. Include jQuery using CDN or local (downloaded version)</p>
+						<p>2. Re-write JS using jQuery:</p>
+						<p class="pad-left-lg">&rArr; Replace <code>document.getElementById()</code> with <code>$()</code> selectors</p>
+						<p class="pad-left-lg">&rArr; Replace <code>.onclick</code> with <code>.click()</code></p>
+						<p class="pad-left-lg">&rArr; Replace <code>.value</code> with <code>.val</code></p>
+						<p class="pad-left-lg">&rArr; Replace <code>.innerHTML</code> with <code>.html()</code> or <code>.text()</code></p>
+						<p>3. Make sure to use:</p>
+<pre><code>
+	$(document.ready(function () {
+
+		// Your code here
+
+	})
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CSS Manipulation</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">CSS Manipulation - .css()</h3>
+					<div class="text-left">
+						<p>JavaScript:</p>
+<pre><code>
+	document.getElementById('someId').style.color = 'red'
+
+</code></pre>
+						<p>jQuery:</p>
+<pre><code>
+	$('#someId').css('color', 'red')
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h3 class="text-left">CSS Manipulation - .css()</h3>
+					<div class="text-left">
+						<p class="text-smallest">Set Single Property: <code>.css(propertyName, value)</code>:</p>
+<pre><code>
+	$('p').css('background-color', 'pink')
+
+</code></pre>
+						<p class="text-smallest">Set Multiple Properties: <br> <code>.css({ property1: value1, property2: value2 })</code></p>
+<pre><code>
+	$('#someId').css({ 'height': '100px', 'width': '100px' })
+
+</code></pre>
+						<p class="text-smallest">Get Property: <code>.css(propertyName)</code></p>
+<pre><code>
+	$('#someId').css(height)
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h2>Lab Time</h2>
+					<p>Calculator Box</p>
+					<div class="text-left">
+						<p class="text-smallest">
+							Clicking on a plus box adds to the total in the center. Clicking on a minus box subtracts. Clicking the red box changes the background color of the middle box red. Clicking the blue box changes the background color of the middle box blue. Clicking the total box will make the background color white (i.e. effectively blank).
+						</p>
+						<p class="text-smallest">
+							If you're feeling ambitious, think about how you might improve-upon or make your calculator box code more efficient.
+						</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Homework</h1>
+					<div class="text-left">
+						<p>1. Finish calculator box</p>
+						<p>2. Online dating profile:</p>
+						<p class="text-smallest pad-left-lg">&rArr; Create an online dating profile for your favorite fictional character</p>
+						<p class="text-smallest pad-left-lg">&rArr; Be sure to utilize floats/clears</p>
+						<p class="text-smallest pad-left-lg">&rArr; Include jQuery and at least one <code>.click()</code> event</p>
+					</div>
+				</section>
+
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

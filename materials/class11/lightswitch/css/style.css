@@ -1,0 +1,23 @@
+body {
+	text-align: center;
+}
+
+.lights-off {
+  background: black;
+}
+
+#lightswitch {
+	font-size: 200px;
+	padding: 50px;
+	cursor: pointer;
+}
+
+.switch-on {
+	background-color: black;
+	color: white;
+}
+
+.switch-off {
+	background-color: white;
+	color: black;
+}

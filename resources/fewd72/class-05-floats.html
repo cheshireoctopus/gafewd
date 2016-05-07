@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 5</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 05 - CSS Floats
+
+			Learning Objectives:
+				- Horizontal Nav strategies
+				- Display Property: inline-block;
+				- CSS Floats
+				- CSS Clears
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left">
+						<p class="text-smaller">1. Pull the latest <code>class-exercises</code></p>
+						<p class="text-smaller">2. Move the following directories into <code>my-class-work/</code>
+						<p class="text-smaller pad-left-lg"> &rArr; <code>horizontal_nav/</code>
+						<p class="text-smaller pad-left-lg"> &rArr; <code>floating_sections/</code>
+						<p class="text-smaller pad-left-lg"> &rArr; <code>layout_challenge/</code>
+						<p class="text-smaller">3. Solutions to <code>fashion_blog/</code> (1 and 2) are included</code>
+						<p class="text-smaller">4. <code>busy_hands/</code> is for additional practice
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #5 (of 20)</h1>
+					<h1>CSS Floats (pt 1.)</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; GA is buying us drinks! Thursday, 11/12</p>
+						<p>&#149; Final Projects! First deliverable due 11/24 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; Project Proposal & Wireframes</p>
+						<p>&#149; I'm out next week; Michael & Stas will be leading</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller fragment"><b>Q: Are we going to learn about the front end web development industry?</b></p>
+						<p class="text-smaller fragment">A: Yes - will be concluding the course with a 'What Now?' segment.</a></p>
+						<p class="text-smaller fragment"><b>Q: Can we reivew Chrome dev tools (ie. Network, Sources, etc.).?</b></p>
+						<p class="text-smaller fragment">A: Yes!</a></p>
+						<p class="text-smaller fragment"><b>Q: Can you explain how to use the console tab?</b></p>
+						<p class="text-smaller fragment">A: Yes!</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller fragment"><b>Q: Will we learn how to use social feeds?</b></p>
+						<p class="text-smaller fragment">A: Maybe - we will put together a module during the finals weeks.</a></p>
+						<p class="text-smaller fragment"><b>Q: What does a developer's resume look like?</b></p>
+						<p class="text-smaller fragment">A: GitHub > portfolio page > paper resume</a></p>
+						<p class="text-smaller fragment"><b>Q: How do you manage side-projects? Do you use WordPress/SquareSpace/etc.?</b></p>
+						<p class="text-smaller fragment">A: Time management! Yes/No re: CMS's</a></p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Horizontal Navigation Recap</p>
+						<p>&#149; CSS property: <code>display: inline-block</code></p>
+						<p>&#149; CSS Floats</p>
+						<p>&#149; CSS Clear</p>
+						<p>&#149; Layout Challenge</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Fashion Blog ?'s</h1>
+				</section>
+
+				<!-- HORIZONTAL NAVIGATION -->
+				<section class="center">
+					<h1>Horizontal Navigation</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Horizontal Navigation - <code>&lt;ul&gt;</code></h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; The debate: <code>&lt;ul&gt;</code> vs. <code>&lt;a&gt;</code></p>
+						<p class="pad-left-lg">&rArr; <code>&lt;ul&gt;</code></p>
+					</div>
+					<img src="img/class05/ul-nav.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Horizontal Navigation - <code>&lt;a&gt;</code></h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; The debate: <code>&lt;ul&gt;</code> vs. <code>&lt;a&gt;</code></p>
+						<p class="pad-left-lg">&rArr; <code>&lt;a&gt;</code></p>
+					</div>
+					<img src="img/class05/a-nav.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Horizontal Navigation - <code>&lt;a&gt;</code></h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Cons of the <code>&lt;a&gt;</code> approach:</p>
+						<p class="pad-left-lg">&rArr; <code>&lt;a&gt;</code> are <b>INLINE</b> elements</p>
+						<p class="pad-left-lg">&rArr; Cannot set <code>margin-top</code> or <code>margin-bottom</code></p>
+						<p class="pad-left-lg">&rArr; Cannot set <code>height</code> or <code>width</code></p>
+						<p class="pad-left-lg">&rArr; <a href="http://codepen.io/cheshireoctopus/pen/avQzQM">CodePen exercise</a></p>
+						<p class="fragment">&#149; We can change <code>display: block</code>...</p>
+						<p class="fragment">&#149; But we have to implement css floats :(</p>
+					</div>
+				</section>
+
+				<!-- DISPLAY: INLINE-BLOCK -->
+				<section class="center">
+					<h2><code>display: inline-block</code></h2>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Display: Inline-Block</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Displays block elements inline</p>
+						<p>&#149; Can set: height, width, margin, padding</p>
+						<p>&#149; Objects appear on the same baseline, regardless of height</p>
+						<p>&#149; IE6 and IE7 do not support <code>display: inline-block</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Horizontal-Nav Exercise</h1>
+					<div class="text-left">
+						<p>1) Open <code>horizontal_nav</code> in SublimeText</p>
+						<p>2) Build what you see in the <code>.png</code> files</p>
+						<p>3) Note ther <code>navigation-selected.png</code></p>
+						<p>4) You may have to research the <code>:hover</code> pseudo class</p>
+					</div>
+				</section>
+
+				<!-- FLOATS -->
+				<section class="center">
+					<h1>Floats</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Floats - Origins</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; CSS positioning property</p>
+						<p>&#149; Enables advanced/customized layout</p>
+						<p>&#149; Derived from text wrapping in print:</p>
+					</div>
+					<img src="img/class05/text-wrap.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Floats - Origins</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Similar to print, can instruct HTML elements to float:</p>
+<pre><code>
+	img {
+		float: left;
+	}
+
+</code></pre>
+						<p>&#149; Valid values: <code>left</code>, <code>right</code>, <code>none</code>, <code>inherit</code></p>
+						<p>&#149; <a href="http://codepen.io/cheshireoctopus/pen/OyaJaK?editors=110">CodePen exercise</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Floats - Some Rules....</h2>
+					<hr>
+
+					<div class="text-left text-smaller">
+						<p>1 &#149; A left-floated box will shift to the left until its leftmost margin edge touches either the edge of the containing block, or the edge of another floated box &rArr; <a href="http://codepen.io/cheshireoctopus/pen/gaQpXX?editors=110">Example</a></p>
+						<p>2 &#149; A floated element should always have an explicit width set. If no width is set, it will collapse to be the width of the content within it (which may vary browser-to- browser / depend on font-size) &rArr; <a href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p>
+						<p>3 &#149; Block level elements above a floated element will not be affected by it. However, elements below will wrap around the floated element. To fix this, you need to do what we call "clearing" the float  &rArr; <a href="http://codepen.io/cheshireoctopus/pen/BoGNdY?editors=110">Example</a></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Clearing Floats</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Clearing Floats</h2>
+					<hr>
+
+					<div class="text-left text-smaller">
+						<p>&#149; Floated objects do not add height to their containing objects; this creates two problemos:</p>
+						<p class="pad-left-lg">&rArr; Objects further down the page will render incorrectly</p>
+						<p class="pad-left-lg">&rArr; If there are only floated objects within an object, it will <u>collapse</u></p>
+						<p class="pad-left-lg">&rArr; <a href="http://codepen.io/cheshireoctopus/pen/wKQaEx?editors=110">Example</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Clearing Floats - The Overflow Method</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Add the following to <u>collapsed</u> element:</p>
+						<p class="pad-left-lg"><code>overflow: hidden;</code></p>
+						<p>&#149; Tells the browser to pay attention to the height of the content</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Clearing Floats - The Clear Class & Object</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Define the following in your CSS:</p>
+<pre><code>
+	.clear {
+		clear: both;
+	}
+
+</code></pre>
+
+						<p>&#149; Create the following element in your HTML; place it <u>AFTER</u> the floated elements:</p>
+<pre><code>
+	<div class="clear"></div>
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Clearing Floats -The Clearfix Class</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Define the following in your CSS:</p>
+<pre><code>
+	.clearfix:after {
+	    content:"";
+	    display:table;
+	    clear:both;
+	}
+
+</code></pre>
+						<p>&#149; Add the class to the element that has collapsed</p>
+						<p>&#149; <a href="https://css-tricks.com/snippets/css/clear-fix/">Source</a></p>
+					</div>
+				</section>
+
+				<!-- FLOATING SECTION CODEALONG -->
+				<section class="center">
+					<h1>Floats/Clears Codealong</h1>
+					<p>Open <code>float_sections</code> in SublimeText</p>
+				</section>
+
+				<!-- LAYOUT CHALLENGE -->
+				<section class="center">
+					<h1>Layout Challenge</h1>
+					<p>Open <code>layout_challenge</code> in SublimeText</p>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF">
+					<h2 class="text-left">What's On Deck: CSS Floats (pt. 2)</h2>
+					<hr>
+
+					<div class="text-left">
+						<h4>Class #6 (of 20) - Thursday, November 12th</h4>
+
+						<div class="text-left">
+							<p>&#149; Floats/Clear review</p>
+							<p>&#149; Layout lab</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,255 @@
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h3 {
+	font-family: "Merriweather", serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+p {
+	margin: 0 0 30px 0;
+}
+
+.button {
+	font-family: "Oswald", sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	background: yellow;
+	color: black;
+	display: block;
+	text-align: center;
+	padding: 12px;
+	box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+	border-radius: 5px;
+}
+
+.button:hover {
+	box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	/*margin-top: 10px;	*/
+}
+
+#page-header {
+	background: black;
+	color: white;
+	overflow: hidden;
+	border-bottom: 4px solid yellow;
+	padding: 0 3%;
+}
+#page-header a {
+	color: inherit;
+	text-decoration: none;
+}
+#page-header h1 {
+	float: left;
+	color: yellow;
+	font-family: "Merriweather", serif;
+	font-size: 30px;
+	margin: 20px 0 0 0;
+}
+#page-header nav {
+	float: right;
+	width: 55%;
+	text-align: right;
+	padding: 20px 0;
+}
+#page-header nav #innernav a {
+	padding: 0 .3em;
+}
+#page-header nav #innernav a:hover {
+	color: yellow;
+}
+#page-header nav #innernav a.active {
+	background: #666;
+}
+#page-header nav #innernav strong {
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+}
+
+#page-header nav a#hamburger {
+	display: none;
+	padding: 15px;
+}
+
+.tagline {
+	font-family: "Merriweather", serif;
+	text-align: center;
+	margin: 0;
+	padding: 20px 3%;
+	font-size: 25px;
+	line-height: 25px;
+	font-style: italic;
+	background: #C6C6C6;
+	border-top: 1px solid #AAA;
+}
+
+#taste {
+	color: #999;
+	text-decoration: line-through;
+}
+
+#are {
+	border-bottom: 3px solid yellow;
+}
+
+.banner {
+	background: url("../images/coworking.jpg") center center no-repeat;
+	/*background-size: cover;*/
+	background-size: 100%;
+	overflow: hidden;
+	padding: 3%;
+	box-shadow: inset 0 0 5px rgba(0,0,0,.75);
+}
+
+.blurb {
+	background: rgba(255,255,255,.8);
+	width: 34%;
+	margin: 0 auto;
+	padding: 4%;
+	float: right;
+	box-shadow: 0 0 5px rgba(0,0,0,.75);
+}
+
+.callouts {
+	background: #EEE;
+	overflow: hidden;
+	padding: 2% 0;
+}
+
+.callout {
+	float: left;
+	width: 33.3333%;
+	padding: 2% 3%;
+	box-sizing: border-box;
+	border-right: 1px solid rgb(200,200,200);
+}
+
+.callout:last-child {
+	border: none;
+}
+
+.callout .button {
+	background: #C6C6C6;
+}
+
+
+footer {
+	background: black;
+	color: white;
+	padding: 2% 3%;
+}
+
+@media only screen and (max-width: 950px){
+	#page-header nav #innernav a {
+		font-size: 16px;	
+		padding: 0 .25em;
+	}
+
+}
+
+@media only screen and (max-width: 768px){
+	body{
+		font-size: 16px;
+	}
+
+	#page-header h1 {
+		font-size: 1.5em;
+		margin-bottom: .75em;
+	} 
+
+	.tagline,.blurb p {
+		display: none;
+	}
+	
+	.blurb{
+		width:60%;
+	}
+	
+	.callout {
+		width: auto;
+		float: none;
+		border: none;
+	}
+
+	#page-header h1 {
+		position: relative;
+		z-index: 1;
+	}
+	
+	#page-header nav {
+		width: 100%;
+	}
+
+	#page-header nav a#hamburger {
+		display: block;
+		text-align: right;
+		width: 100%;
+		right: 0;
+		top: 0;
+		position: absolute;
+	}
+
+	#page-header nav #innernav {
+		position: absolute;
+		width: 94%;
+		background-color: #666666;
+	}
+
+	#page-header nav #innernav a {
+		text-align: center;
+		width: auto;
+		padding: 1em;
+		border-bottom: solid 1px #ffffff;
+		border-right: none;
+		float: none;		
+		display: none;
+	}
+
+	#page-header nav #innernav strong {
+		font-family: "Source Sans Pro";
+		text-transform: capitalize;
+	}
+
+	#page-header nav:hover #innernav a {
+		display: block;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+	body {
+		font-size: 14px;
+	}
+	.blurb {
+		display: none;
+	}
+	.banner {
+		height: 10em;
+	}
+	.callout:nth-child(1) > p {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.callout:nth-child(2) > p {
+		display: none;
+	}
+	.callout:nth-child(3) > p {
+		display: none;
+	}
+}

@@ -1,0 +1,112 @@
+body {
+  background-color: #efefef;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+	width: 80%;
+	margin: 1% auto;
+}
+
+header {
+	text-align: center;
+	margin: 1% 0;
+}
+
+nav a {
+	width: 33.333%;
+	padding: 1em;
+	display: block;
+	float: left;
+	background-color: white;
+	text-align: center;
+	border: 1px solid #cccccc;
+	color: black;
+	text-decoration: none;
+	font-size: 1.25em;
+}
+
+nav a:hover {
+	background: #cccccc;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	margin: .5em 0;
+}
+
+h1 {
+	font-size: 1.75em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+#hero {
+	text-align: center;
+	margin: 3% 0;
+}
+
+#hero img {
+	width: 100%;
+}
+
+#articles {
+	width: 55%;
+	float: left;
+}
+
+#articles img {
+	width: 100%;
+}
+
+#articles > img {
+	width: 98%;
+}
+
+.main-article {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+
+.main-article:nth-of-type(2n+1) {
+	clear: both;
+}
+
+#side-column {
+	float: right;
+	width: 40%;
+}
+
+#side-column img {
+	width: 100%;
+}
+
+p {
+	margin-bottom: 1em;
+	line-height: 1.2;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+	#container {
+		width: 100%;
+	}
+}
+

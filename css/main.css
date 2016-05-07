@@ -1,0 +1,21 @@
+@import url(../lib/font/news-706/news-706.css);
+@import url(../lib/font/pf-din/pf-din.css);
+
+body {
+	margin-top: 50px;
+	padding-bottom: 50px;
+	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+	font-family: 'Pf Din', Impact, sans-serif;
+	text-transform: uppercase;
+}
+
+p, li, table, a {
+	font-family: 'News 706', sans-serif;
+}
+
+.push-top-50 {
+	padding-top: 50px;
+}

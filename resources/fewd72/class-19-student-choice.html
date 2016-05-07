@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 19</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 19 - Student Choice
+
+			Learning Objectives:
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+				</section>
+
+				<section class="center">
+					<h1>Class #19 (of 20)</h1>
+					<h2>Production Ready + Student Choice</h2>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h2>Announcements:</h2>
+
+					<div class="text-left">
+						<p>&#149; Final Projects:</p>
+						<p class="pad-left-lg">&rArr; Due 1/14 (Thursday)</p>
+						<p class="pad-left-lg">&rArr; ...in 2 days!</p>
+						<p>&#149; Homework:</p>
+						<p class="pad-left-lg">&rArr; 80% of assignments must be completed</p>
+						<p class="pad-left-lg">&rArr; Accepting late assignments until 1/17</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Production-Ready:</p>
+						<p class="text-smaller pad-left-lg">&rArr; Meta Tags</p>
+						<p class="text-smaller pad-left-lg">&rArr; Minifying JS/CSS</p>
+						<p class="text-smaller pad-left-lg">&rArr; Google Analytics</p>
+						<p class="text-smaller pad-left-lg">&rArr; Cross-Browser Testing</p>
+						<p class="text-smaller pad-left-lg">&rArr; Web Hosting</p>
+						<p class="text-smaller">&#149; GitHub: Pull Requests</p>
+						<p class="text-smaller">&#149; Parallax</p>
+						<p class="text-smaller">&#149; Final project work</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<!-- META TAGS -->
+				<section class="center">
+					<h1><code>&lt;meta&gt;</code> Tags</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2><code>&lt;meta&gt;</code> Tags</h2>
+
+					<p>&#149; Metadata is data about data...</p>
+					<p>&#149; The <code>&lt;meta&gt;</code> tag provides data about your HTML</p>
+					<p>&#149; Contains <code>name</code> and <code>content</code> attributes</p>
+					<p>&#149; Ex: <code>&lt;author&gt;</code>:</p>
+<pre><code>
+	&lt;meta name="author" content="Keanu Reeves"&gt;
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2><code>&lt;meta&gt;</code> Tags</h2>
+
+					<p>&#149; <code>&lt;description&gt;</code>:</p>
+<pre><code>
+&lt;meta name="description" content="This will show up in SERP's!!"&gt;
+
+</code></pre>
+					<p>&#149; <code>&lt;keywords&gt;</code>:</p>
+<pre><code>
+&lt;meta name="keywords" content="Google, doesn't, care, about, this"&gt;
+
+</code></pre>
+					<p>&#149; <code>&lt;viewport&gt;</code>:</p>
+<pre><code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2><code>&lt;meta&gt;</code> Tags</h2>
+
+					<p>Notes on Search Engine Optimization:</p>
+					<div class="pad-left-lg">
+						<p>&#149; As of 2009, Google no longer considers the <code>keywords</code> <code>&lt;meta&gt;</code> tag</p>
+						<p>&#149; <code>description</code> and <code>&lt;title&gt;</code> will appear in SERP's</p>
+						<p>&#149; Check out <a href="https://developers.google.com/structured-data/rich-snippets/?hl=en&rd=1">rich snippets</a></p>
+					</div>
+				</section>
+
+				<!-- MINIFY JS AND CSS -->
+				<section class="center">
+					<h1>Minify JS and CSS</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Minifiy JS and CSS</h2>
+
+					<p><u>Minification</u>:</p>
+					<blockquote class="text-smaller">
+						...in computer programming languages and especially JavaScript, is the process of removing all unnecessary characters from source code without changing its functionality.
+					</blockquote>
+					<p class="text-right">Source: <a href="https://en.wikipedia.org/wiki/Minification_(programming)">Wikipedia</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Minifiy JS and CSS</h2>
+
+					<p>&#149; Unnecessary characters:</p>
+					<p class="pad-left-lg">&rArr; white space (spaces and tabs)</p>
+					<p class="pad-left-lg">&rArr; new line</p>
+					<p class="pad-left-lg">&rArr; comments</p>
+					<p>&#149; Help with readability; are not required to execute:</p>
+<pre><code>
+	'cat' + 'dog'
+
+	// is the same as:
+
+	'cat'+'dog'
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Minifiy JS and CSS</h2>
+
+					<p>Why?</p>
+					<p>&#149; JS/CSS files are trasmitted over the internet</p>
+					<p>&#149; The larger the file-size, the more time it will take to download</p>
+					<p>&#149; Minification reduces overall file-size:</p>
+					<p class="pad-left-lg">&rArr; <a href="https://code.jquery.com/jquery-2.2.0.js">jQuery</a> = 258 KB</p>
+					<p class="pad-left-lg">&rArr; <a href="https://code.jquery.com/jquery-2.2.0.min.js">jQuery Minified</a> = 86 KB</p>
+					<p class="pad-left-lg">&rArr; Roughly 2/3 smaller!</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Minifiy JS and CSS</h2>
+
+					<p>Minification Tools:</p>
+						<div class="text-smallest">
+						<p>&#149; HTML</p>
+						<p class="pad-left-lg">&rArr; <a href="http://www.willpeavy.com/minifier/">http://www.willpeavy.com/minifier/</a></p>
+						<p>&#149; CSS</p>
+						<p class="pad-left-lg">&rArr; <a href="http://csscompressor.com/">http://csscompressor.com/</a></p>
+						<p>&#149; JS</p>
+						<p class="pad-left-lg">&rArr; <a href="http://jscompress.com/">http://jscompress.com/</a></p>
+						<p>&#149; Build (command line) tools:</p>
+						<p class="pad-left-lg">&rArr; <a href="">Grunt.js</a></p>
+						<p class="pad-left-lg">&rArr; <a href="">Gulp.js</a></p>
+					</div>
+				</section>
+
+				<!-- GOOGLE ANALYTICS -->
+				<section class="center">
+					<h1>Google Analytics</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Google Analytics</h2>
+
+					<p>&#149; Free* web analytics software</p>
+					<p>&#149; <a href="https://analytics.google.com/">https://analytics.google.com/</a></p>
+					<p>&#149; Allows you to track:</p>
+					<p class="pad-left-lg">&rArr; User visits</p>
+					<p class="pad-left-lg">&rArr; Session (visit) duration</p>
+					<p class="pad-left-lg">&rArr; Acquisition (where user came from)</p>
+					<p class="pad-left-lg">&rArr; Custom events (user clicks on a certain button)</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Google Analytics</h2>
+
+					<p>Add a snippet of JS to HTML documnets you want to track:</p>
+					<div class="text-smallest">
+<pre><code>
+&lt;script&gt;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-YOUR-TRACKING-CODE', 'auto');
+	ga('send', 'pageview');
+
+&lt;/script&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- CROSS-BROWSER TESTING -->
+				<section class="center">
+					<h1>Cross-Browser Testing</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Cross-Browser Testing</h2>
+
+					<p>&#149; Reminder: </p>
+					<p class="pad-left-lg">Browsers handle HTML/CSS/JS differently</p>
+					<div class="fragment">
+						<p>&#149; Testing methodology: </p>
+						<p class="pad-left-lg">&rArr; View your site on as many devices as possible</p>
+						<p class="pad-left-lg">&rArr; Ensure layout is acceptable</p>
+						<p class="pad-left-lg">&rArr; Test JS interactions</p>
+						<p class="pad-left-lg">&rArr; Make sure "stuff" isn't broken</p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Cross-Browser Testing</h2>
+
+					<p>Problem: HTML5 and CSS3 vs Older Browsers</p>
+					<p>Solutions:</p>
+					<p class="pad-left-lg text-smaller">&rArr; <a href="http://caniuse.com">http://caniuse.com</a></p>
+					<p class="pad-left-lg text-smaller">&rArr; <a href="https://modernizr.com/">https://modernizr.com/</a></p>
+					<p>Problem: Chrome vs Firefox vs Safari vs IE....</p>
+					<p>Solutions:</p>
+					<p class="pad-left-lg text-smaller">&rArr; <a href="https://www.browserstack.com">https://www.browserstack.com</a></p>
+					<p class="pad-left-lg text-smaller">&rArr; <a href="http://www.vanamco.com/ghostlab/">http://www.vanamco.com/ghostlab/</a></p>
+					<p class="pad-left-lg text-smaller">&rArr; Download all the browsers...</p>
+				</section>
+
+				<!-- WEB HOSTING -->
+				<section class="center">
+					<h1>Web Hosting</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Web Hosting</h2>
+					<hr>
+					<img src="img/class01/florist.png" alt="">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Web Hosting</h2>
+					<hr>
+					<img src="img/class01/dns.png" alt="">
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Web Hosting</h2>
+
+					<p>To host your page:</p>
+					<p class="pad-left-lg">&#149; Buy a domain name</p>
+					<p class="pad-left-lg">&#149; Obtain hosting space (on the server)</p>
+					<p class="pad-left-lg">&#149; Point your domain to your server's IP address</p>
+					<p class="pad-left-lg">&#149; Upload HTML/CSS/JS to server using the file transfer protocol (FTP):</p>
+					<div class="pad-left-lg">
+						<p class="pad-left-lg">&#149; <a href="https://cyberduck.io">https://cyberduck.io</a></p>
+						<p class="pad-left-lg">&#149; <a href="https://filezilla-project.org/">https://filezilla-project.org/</a></p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Web Hosting</h2>
+
+					<p>To host server-side code:</p>
+					<p class="pad-left-lg">&#149; <a href="http://heroku.com">http://heroku.com</a></p>
+					<p class="pad-left-lg">&#149; <a href="https://www.digitalocean.com/">https://www.digitalocean.com/</a></p>
+					<p class="pad-left-lg">&#149; <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></p>
+					<p class="pad-left-lg">&#149; + a ton more...</p>
+				</section>
+
+				<section class="center">
+					<h1>GitHub: Pull Requests</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>GitHub: Pull Requests</h2>
+
+					<p>&#149; So far, you have used GitHub to:</p>
+					<p class="pad-left-lg">&rArr; Pull down files from cloud</p>
+					<p class="pad-left-lg">&rArr; Sync your local work with the cloud</p>
+					<p class="fragment">&#149; NOTE: You have synced your local work with a GitHub repository that YOU own</p>
+					<p class="fragment">&#149; What if you want to make changes to another's code?</p>
+					<p class="fragment">&#149; Enter pull requests</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>GitHub: Pull Requests</h2>
+
+					<p>Pull Requests</p>
+					<blockquote>
+						...let you tell others about changes you've pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
+					</blockquote>
+					<p class="text-right">
+						<a href="https://help.github.com/articles/using-pull-requests/">Source</a>
+					</p>
+				</section>
+
+				<section class="center">
+					<p>Open <a href="https://github.com/jquery/jquery/pulls">jQuery</a> Pull Requests</p>
+				</section>
+
+				<section class="center">
+					<h1>Exercise:</h1>
+					<p>Let's open our own pull requests	</p>
+				</section>
+
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

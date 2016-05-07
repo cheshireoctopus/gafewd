@@ -1,0 +1,45 @@
+==========================
+JQUERY REVIEW INSTRUCTIONS
+==========================
+
+1) In the HTML / CSS, create two boxes, each with identical initial style:
+
+	- Use whatever HTML elements you feel are appropriate to create the boxes
+
+	- The boxes should each have a height and width of 200px
+
+	- Hint: if you're creating two HTML elements with IDENTICAL styles, use a CSS class to apply the styling
+
+2) Include jQuery via Google CDN:
+
+	- Use <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script> tag
+
+	- Remember to place this in the correct location in your HTML
+
+3) Create your own Javascript file and use jQuery to:
+
+	- Change the boxes' background-color (hint: use the .css() function)
+
+	- Add some text to the boxes (hint: use either the .text() or .html() functions)
+
+	- Hint: did you make sure to link the JS file you just created in your HTML? Did you place in the correct position relative to the jQuery CDN?
+
+4) Clicking on either box changes that PARTICULAR box's height and width each to 500px
+
+	- Hint 1: use the .click() event
+
+	- Hint 2: associate the .click() event with a function
+
+	- Hint 3: you will have to apply HTML ID's to each box and associate those ID's with .click() functions
+
+===============
+BONUS QUESTIONS
+===============
+
+5) Can you figure out another way to build your solution to question #4 WITHOUT relying on the boxes' HTML ID's?
+
+	- Hint: Search the web for "jQuery this"
+
+6) Building from your solution to question #5, now, when a user clicks on a box, that PARTICULAR box's height and width should each INCREASE by 100px. In other words, if a box currently has a height and width of 200px each, after clicking on the box, its height and width should now each be 300px; clicking again changes the height and width each to 400px, etc...
+
+	- Hint: Use the concept of "this" in JS to obtain the current height or width of the box and figure out a way to add 100 to it

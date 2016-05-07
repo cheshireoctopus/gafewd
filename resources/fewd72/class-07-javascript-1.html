@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 7</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 08 - JavaScript (pt. 1)
+
+			Learning Objectives:
+			- Identify JavaScript's capabilities
+			- Understand why developers use pseudo code
+			- Describe two JavaScript data types: strings and numbers
+			- Use variables to store/retrieve data
+			- Introduction to JavaScript functions
+			- Introduction to document.getElementById()
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+					<img class="fragment" src="img/class07/hello.jpg">
+
+					<div class="text-left">
+						<!-- <p class="text-smaller">1. Pull the latest <code>class-exercises</code></p> -->
+						<!-- <p class="text-smaller">2. Copy the following directories into <code>my-class-work/</code> -->
+						<!-- <p class="text-smaller pad-left-lg"> &rArr; <code>startup_matchmaker</code> -->
+						<!-- <p class="text-smaller">3. <code>busy_hands</code> (from class-05) is for additional practice -->
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #7 (of 20)</h1>
+					<h1>Intro to Programming</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects! First deliverable due 11/24 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; Project Proposal & Wireframes</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Review Startup Matchmaker</p>
+						<p class="text-smaller">&#149; What is JavaScript and what can it do?</p>
+						<p class="text-smaller">&#149; How to think programatically</p>
+						<p class="text-smaller">&#149; Pseudo Code</p>
+						<p class="text-smaller">&#149; JS Basics</p>
+						<p class="text-smaller" class="pad-left-lg">&#149; Data Types</p>
+						<p class="text-smaller" class="pad-left-lg">&#149; Variables</p>
+						<p class="text-smaller" class="pad-left-lg">&#149; Functions</p>
+						<p class="text-smaller">&#149; <code>document.getElementById()</code> - maybe..</p>
+					</div>
+				</section>
+
+				<!-- REVIEW: STARTUP MATCHMAKER -->
+				<section class="center">
+					<h1>Review Startup Matchmaker</h1>
+				</section>
+
+				<!-- INTRO TO JAVASCRIPT -->
+				<section class="center">
+					<h1>Intro To JavaScript</h1>
+					<p>Hold on to your hats...</p>
+				</section>
+
+				<section class="center">
+					<img src="img/class07/roller-coaster.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">JavaScript: History</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; JavaScript &ne; Java</p>
+						<p>&#149; Born in 1995 - created in 10 days by Brendan Eich</p>
+						<p>&#149; JavaScript is now one of the most <a href="http://githut.info/">popular languages</a></p>
+						<p>&#149; Attwood's Law &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>What Can JavaScript Do In the Browser?</h1>
+					<p>
+						Let's explore.
+					</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">JavaScript: What Can It Do?</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Adding / Removing Elements</p>
+						<p>&#149; Animating content</p>
+						<p>&#149; Changing CSS "on-the-fly"</p>
+						<p>&#149; Detecting user interactions</p>
+						<p>&#149; Form validation</p>
+						<p>&#149; Loading dynamic content</p>
+					</div>
+				</section>
+
+<!-- 				<section data-background="#FFF">
+					<h2 class="text-left">Javascript: What Can It Do?</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>Most uses of JavaScript fall into four categories:</p>
+						<p class="pad-left-lg">&rArr; Changing HTML Content</p>
+						<p class="pad-left-lg">&rArr; Changing HTML Attributes</p>
+						<p class="pad-left-lg">&rArr; Changing CSS Styles</p>
+						<p class="pad-left-lg">&rArr; Loading in data dynamically</p>
+					</div>
+				</section> -->
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Javascript vs HTML + CSS?</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; HTML/CSS are used to define <u>initial</u> page state</p>
+						<p>&#149; JS is used to define how page state can <u>change</u></p>
+						<hr>
+						<p>&#149; HTML/CSS are (mostly) <u>static</u></p>
+						<p>&#149; JS is <u>dynamic</u></p>
+					</div>
+				</section>
+
+				<!-- INTRO TO PROGRAMMING -->
+				<section class="center">
+					<h1>Intro To Programming</h1>
+					<p>Next stop: 1337 h4x0r</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Intro to Programming</h2>
+					<hr>
+
+					<div class="text-left">
+						<p><b>Q:</b> What is a program?</p>
+						<p class="fragment text-smaller pad-left-lg">&rArr; A program is a set of instructions that a person writes to tell a computer how to carry-out a task</p>
+						<p><b>Q:</b> What is programming?</p>
+						<p class="fragment text-smaller pad-left-lg">&rArr; Programming is the task of writing those instructions in a language that the computer can understand</p>
+						<p><b>Q:</b> How do I become a programmer?</p>
+						<p class="fragment text-smaller pad-left-lg">&rArr; Not by learning a particular language, but by learning how to think like a computer</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Think like a computer</h1>
+					<p>10101010100101010</p>
+				</section>
+
+				<section class="center">
+					<h1>Close your laptops</h1>
+					<p>Seriously.</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Think like a CPU - What did we learn?</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; You have to speak the same language</p>
+						<p>&#149; Steps execute sequentially</p>
+						<p>&#149; Steps need to granular and precise</p>
+						<p>&#149; The computer will only do what you tell it to do</p>
+						<p>&#149; The computer is never wrong</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Pseudo Code</h1>
+					<p>Like code, but not?</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Pseudo Code</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; <b>Pseudo Code</b>:</p>
+						<p class="pad-left-lg text-smaller">&rArr; The process of thinking through a program, step-by-step, without actually writing a line of code</p>
+						<p class="pad-left-lg text-smaller">&rArr; A written outline of a program that can be converted into code</p>
+						<p class="pad-left-lg text-smaller">&rArr; Allows the programmer to focus on problem solving, not the precise layout of the code and its syntax</p>
+						<p class="pad-left-lg text-smaller">&rArr; Don't need to know how to code, to write pseudo code!</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Pseudo Code</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Let's write pseudo code for a thermostat</p>
+						<p>&#149; Things to think about:</p>
+						<p class="pad-left-lg">&rArr; What is <u>goal</u> of our program? What are we trying to solve?</p>
+						<p class="pad-left-lg">&rArr; What are the <u>inputs</u> for our program? What pieces of data will be going into it?</p>
+						<p class="pad-left-lg">&rArr; What is the desired <u>output</u> of our program? Once the program runs, what should happen?</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Pseudo Code</h2>
+					<hr>
+
+					<div class="text-left text-smaller">
+						<p><code>determine target_temperature</code></p>
+						<p><code>target_temperature = 72</code></p>
+						<p><code>get current_temperature</code></p>
+						<p><code>current_temperature = 68</code></p>
+						<p><code>if current_temperature < target_temperature</code></p>
+						<p class="pad-left-lg"><code>turn_heater_up</code></p>
+						<p><code>if current_temperature >= target_temperature</code></p>
+						<p class="pad-left-lg"><code>turn_heater_down</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Working Locally With JavaScript</h1>
+					<p>Like my JavaScript? It's local...no big deal.</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Working Locally with JavaScript</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Create JavaScript files using the <code>.js</code> extension</p>
+						<p>&#149; Example: <code>script.js</code></p>
+						<p>&#149; Two methods to link HTML and JS:</p>
+						<p class="pad-left-lg">&rArr; External (most common; preferred):</p>
+<pre><code>
+	<script type="text/javascript" src="script.js"></script>
+
+</code></pre>
+						<p>&#149; Locally (not common; not preferred):</p>
+<pre><code>
+	<script type="text/javascript">
+		// Write JavaScript here...plz don't do this
+	</script>
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left">
+						<p>1. Open <code>first_javascript</code> directory in SublimeText</p>
+						<p>2. Open the file <code>script.js</code></p>
+						<p>3. Add the following lines:</p>
+<pre><code>
+	alert('this is an alert. this is annoying');
+
+	document.write('writing the document, like a boss');
+
+</code></pre>
+						<p>4. Save and open <code>index.html</code> in the browser</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Let's take a Break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- JAVASCRIPT DATA TYPES -->
+				<section class="center">
+					<h1>JavaScript Data Types</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">JavaSript: Data Types</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; In the machine, there is only data</p>
+						<p>&#149; Data are separated by type:</p>
+						<p class="pad-left-lg text-smaller">&rArr; Numbers</p>
+						<p class="pad-left-lg text-smaller">&rArr; Strings</p>
+						<p class="pad-left-lg text-smaller">&rArr; Booleans</p>
+						<p class="pad-left-lg text-smaller">&rArr; Objects</p>
+						<p class="pad-left-lg text-smaller">&rArr; Functions</p>
+						<p class="pad-left-lg text-smaller">&rArr; Null/Undefined</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Data Types: Numbers</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Numbers:</p>
+						<p class="pad-left-lg">&rArr; Used for arithmetic: (operators: +, -, *, / )</p>
+						<div class="pad-left-lg">
+							<p class="pad-left-lg">2 + 2</p>
+							<p class="pad-left-lg">2 - 2</p>
+							<p class="pad-left-lg">2 * 2</p>
+							<p class="pad-left-lg">2 / 2</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Data Types: Strings</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Srings:</p>
+						<p class="pad-left-lg">&rArr; Used to represent text: "Hello, World!"</p>
+						<p>&#149; Notable for <u>String Concatenation</u>:</p>
+						<div class="fragment">
+							<p class="pad-left-lg"><code>'c' + 'a' + 't'</code></p>
+							<p class="pad-left-lg"><code>=&gt; 'cat'</code></p>
+						</div>
+						<div class="fragment">
+							<p class="pad-left-lg"><code>'i have ' + 2 + 'cats'</code></p>
+							<p class="pad-left-lg"><code>=&gt; 'i have 2 cats;</code></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left text-smaller">
+						<p>1. Reopen <code>first_javascript</code> in SublimeText</p>
+						<p>2. Add the following <code>document.write()</code> messages:</p>
+						<div class="pad-left-lg">
+							<p>&#149; The product of 10 and 10:</p>
+<pre><code>
+	document.write(10 * 10);
+
+</code></pre>
+							<p>&#149; The quotient of 100 and 10</p>
+							<p>&#149; The difference of 50 and 17</p>
+							<p>&#149; The sum of 50 and 17</p>
+							<p>&#149; Your first and last name</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- VARIABLES -->
+				<section class="center">
+					<h1>Variables</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Often, you will want to store, or keep track of, data in a program</p>
+						<p class="text-smaller">&#149; Declare using the <u>var</u> keyword</p>
+						<p class="text-smaller">&#149; Will store the piece of data in memory</p>
+						<p class="text-smaller">&#149; Use the variable's name to "call" it, or retrieve it from memory:</p>
+<pre><code>
+	var x = 2;
+	var y = 2;
+
+	x
+	=> 2
+
+	x + y
+	=> 4
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Naming Rules</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Take care when naming your variables</p>
+						<p>&#149; Variable names should reflect the data they describe</p>
+						<p>&#149; Other naming conventions:</p>
+						<p class="pad-left-lg">&rArr; Names should start with a lowercase letter</p>
+						<p class="pad-left-lg">&rArr; Cannot use spaces; use hyphens or underscores instead</p>
+						<p class="pad-left-lg">&rArr; Better yet, use CamelCase:</p>
+<pre><code>
+	var currentTemp = 70;
+	var targetTemp = 73;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Reassignment</h2>
+					<hr>
+
+					<p>1. Create a variable, x, and assign it to 2</p>
+					<p>
+<pre><code>
+	var x = 2;
+	> 2
+
+</code></pre>
+					</p>
+					<p>2. Perform some arithmetic on x</p>
+					<p>
+<pre><code>
+	x * 2
+	> 4
+
+</code></pre>
+					</p>
+					<p>3. What's x now equal to?</p>
+					<p>
+<pre><code>
+	x
+	> 2
+
+</code></pre>
+					</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Variables - Reassignment</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&rArr; You must <u>reassign</u> variables to change them</p>
+					</div>
+<pre><code>
+	var x = 2;
+	> 2
+
+	x * 2
+	> 4
+
+	x
+	> 2
+
+	x = x * 2
+	> 4
+
+	x
+	> 4
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left">
+						<p>1. Open <code>fist_javascript</code> in SublimeText</p>
+						<p>2. Store your previous arthimetic in variables:</p>
+<pre><code>
+	var num1 = 10 * 10;
+
+</code></pre>
+						<p>3. Use <code>document.write()</code> with the vaiables:</p>
+<pre><code>
+	document.write(num1);
+
+</code></pre>
+
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Functions</h1>
+					<img src="img/class07/conjunction-function.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Functions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
+						<p class="text-smaller">&#149; Often take an input, perform logic on that input, and return ouput</p>
+						<p class="text-smaller">&#149; Think of them as miniature programs</p>
+
+						<p class="text-smaller">&#149; What does this function do?</p>
+<pre><code>
+	function hello () {
+		var greeting = 'hello!';
+
+		greeting = 'hello, world!';
+
+		alert(greeting);
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center" id="cool-id">
+					<p><code>document.getElementById()</code></p>
+				</section>
+
+				<section data-background="#FFF">
+					<p class="text-left">document.getElementById()</p>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; One of the most common/useful JavaScript methods</p>
+						<p>&#149; Used to query HTML and return an element with a certain ID attribute</p>
+<pre><code>
+	document.getElementById('logo')
+
+</code></pre>
+						<p>&#149; The above will look through an HTML document and return the first element with and ID = "logo"</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Code Along</h1>
+					<div class="text-left">
+						<p class="text-smaller">1. Open <code>first_javascript</code> in SublimeText</p>
+						<p class="text-smaller">2. Add the following elements to <code>index.html</code>:</p>
+<pre><code>
+	<h1 id="title">Some Title</h1>
+	<p id="text-chunk">A block of text! Yay! Content! SEO!</p>
+
+</code></pre>
+						<p class="text-smaller">3. Use <code>document.getElementId()</code> to target the above elements and change their text color</p>
+
+<pre><code>
+	document.getElementById('title').style.color='red';
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF">
+					<h2 class="text-left">What's On Deck: JavaScript (pt. 2)</h2>
+					<hr>
+
+					<div class="text-left">
+						<h4>Class #8 (of 20) - Thursday, November 19th</h4>
+
+						<div class="text-left">
+							<p>&rArr; More JavaScript!</p>
+							<p>&rArr; Functions</p>
+							<p>&rArr; The DOM</p>
+							<p>&rArr; JavaScript <code>.click</code> event</p>
+							<p>&rArr; Getting Input/Writing Output</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 2</title>
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/general-assembly.css" id="theme">
+
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 02 - CSS Basics
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+					<div class="text-left">
+						<p>First:</p>
+						<p class="pad-left-lg text-smaller">1) Make sure your course/homework from last class is pushed up to Github</a></b></p>
+						<p>Then:</p>
+						<p class="pad-left-lg text-smaller">2) Download <a href="../materials/class02/class02.zip">Class 02 Starter Code</a></b></p>
+						<p class="pad-left-lg text-smaller">3) Copy <b>keanu/</b> from the starter code into your course work directory</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #02 - 03/07/2016</h1>
+					<h1>Introduction to CSS</h1>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="../img/main/questions.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="fragment"><b>Q: Is it helpful that newer browsers will run broken code? This doesn't teach best practices.</b></p>
+						<p class="text-smallest fragment">A: Yes...and no...</p>
+						<p class="fragment"><b>Q: How can I optimize class workflow?</b></p>
+						<p class="text-smallest fragment">A: Learn to power-use your machine and SublimeText (shortcuts, hotkeys, etc.); consider a windows mgmt tool: <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>, <a href="http://mizage.com/divvy/">Divvy</a></p>
+						<p class="fragment"><b>Q: What is the purpose of the <code>&lt;head&gt;</code> element</b></p>
+						<p class="text-smallest fragment">A: The <code>&lt;head&gt;</code> is used to store metadata (data, about data), and is the location where we attach CSS documents using the <code>&lt;link&gt;</code> tag</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="fragment"><b>Q: What skills / frameworks are needed for a career in frontend development?</b></p>
+						<p class="text-smallest fragment">A: JavaScript, JavaScript, JavaScript. Understand the fundamentals! Cannot go wrong learning a popular framework (Angular, Backbone, React, etc.). Learn how the backend works: build a Node app. Non-technical: communication & autodidacticism</p>
+						<p class="fragment"><b>Q: How fast will class move?</b></p>
+						<p class="text-smallest fragment">A: Exponentially faster, but you will have the knowledge base to handle it</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<h2>Agenda</h2>
+					<hr>
+
+					<p>&#149; Warmup Exercise</p>
+					<p>&#149; CSS Intro</p>
+					<p>&#149; Color Property</p>
+					<p>&#149; Fonts</p>
+					<p>&#149; Text</p>
+					<p>&#149; Working Locally with CSS</p>
+				</section>
+
+				<!-- WARMUP (20-25mins) -->
+				<section class="center">
+					<h1>Warmup</h1>
+					<img src="../img/class02/warmup.gif">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Warmup - HTML/GITHUB</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>1. Open <code>keanu/</code> in SublimeText</p>
+						<p>2. Mark up <code>copy.txt</code> with HTML in <code>about.html</code></p>
+						<p>3. Ensure <code>about.html</code> contains proper structure!</p>
+						<p>4. Link the <code>.html</code> files (index, about, films) together</p>
+					</div>
+				</section>
+
+				<!-- CSS INTRO -->
+				<section class="center">
+					<h1>CSS Intro</h1>
+					<img src="../img/class02/css-intro.gif">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>CSS - History</h2>
+					<hr>
+
+					<p>&#149; CSS => Cascading Style Sheets</p>
+					<p>&#149; First proposed in 1994 by H&aring;kon Lie ("How Con Lee") - a colleague of Tim Berners-Lee</p>
+					<p>&#149; Stylesheet language used to describe HTML markup</p>
+					<p>&#149; Allows separation of document content (HTML), from document presentation/styling</p>
+					<p class="pad-left-lg">&rArr; "Separation of concerns"</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Syntax</h2>
+					<hr>
+
+					<img src="../img/class02/css-syntax.png">
+					<p class="fragment text-smallest">&#149; This CSS rule turns the text color of every paragraph, &lt;p&gt;, black</p>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS - Syntax (continued)</h2>
+					<hr>
+
+					<img src="../img/class02/css-syntax-multiple.png">
+
+					<div class="text-left">
+						<p>&#149; One selector can have multiple declarations</p>
+						<p>&#149; Common for each declaration to have its own line</p>
+					</div>
+				</section>
+
+				<!-- CSS COLOR PROPERTY -->
+				<section class="center">
+					<h1>CSS Color Property</h1>
+					<img src="../img/class02/css-colors.png">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">CSS Property: Color</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Colors can be specified using:</p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; "color" keyword - "red"</p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; rgb - rgb(255, 0, 0)</p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; hex codes - #FF0000</p>
+						<p>&#149; Can also use: RGBA, HSL, HSLA</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>CSS Colors - Keyword Property</h2>
+					<hr>
+
+<pre><code>
+	span { color: red; }
+
+</code></pre>
+
+						<p>&#149; Simplest; least-descriptive</p>
+						<p>&#149; red, green, blue, etc.</p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; <span style="color: tomato">tomato</span></p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; <span style="color: deeppink">deeppink</span></p>
+						<p>&nbsp;&nbsp;&nbsp; &rArr; <span style="color: chartreuse">chartreuse</span></p>
+						<p><a href="http://www.crockford.com/wrrrld/color.html">More colors...</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<h2>CSS Colors - RGB Property</h2>
+					<hr>
+
+<pre><code>
+	span { color: rgb(255, 0, 0); }
+
+</code></pre>
+
+					<div class="text-left">
+						<p>&#149; More complicated; more powerful!</p>
+						<p>&#149; First value is red; second is green; third is blue</p>
+						<p>&#149; Each value in a range 0 - 255</p>
+						<p>&#149; Values closer together are gray or muted:</p>
+						<p>
+							<span style="color: rgb(200,200,200)">rgb(200,200,200)</span> /
+							<span style="color: rgb(155,155,155)">rgb(155,155,155)</span> /
+							<span style="color: rgb(075,075,075)">rgb(075,075,075)</span>
+						</p>
+
+					</div>
+				</section>
+
+
+				<section data-background="#FFF">
+					<h2>CSS Colors - Hexadecimal Property</h2>
+					<hr>
+
+<pre><code>
+	p { color: #463DB3 };
+
+</code></pre>
+
+					<ul>
+						<li>How does it work?
+							<ul>
+								<li>Great blog post "The Code Side of Color": <a href="http://www.smashingmagazine.com/2012/10/the-code-side-of-color/">http://www.smashingmagazine.com/2012/10/the-code-side-of-color/</a></li>
+							</ul>
+						</li>
+						<li>Extracting Hex Values: from code, or from image using Photoshop / software tool.</li>
+						<li>When you're the designer (pick a palette):
+							<ul>
+								<li>Adobe Color: <a href="https://color.adobe.com">https://color.adobe.com</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<!-- FONTS -->
+				<section class="center">
+					<h1 style="font-family: 'Comic Sans MS'";>Fonts</h1>
+					<img src="../img/class02/fonts.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Font - Various Properties</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; font-weight</p>
+						<p class="pad-left-lg text-smaller">&rArr; Sets the "thickness" of the font</p>
+						<p class="pad-left-lg text-smaller">
+							&rArr; normal and <span style="font-weight: bold">bold</span>; values 100 - 900
+						</p>
+						<p>&#149; font-style</p>
+						<p class="pad-left-lg text-smaller">Sets a "slant" to the font</p>
+						<p class="pad-left-lg text-smaller">
+							<span style="font-style: normal">normal</span> and <span style="font-style: italic">italic</span>
+						</p>
+						<p>&#149; font-size</p>
+						<p class="pad-left-lg text-smaller">&rArr; Sets the "size" of the font</p>
+						<p class="pad-left-lg text-smaller">&rArr; Length values (12px); Percentage (75%)</p>
+					</div>
+				</section>
+
+				<!-- FONT FAMILY -->
+				<section class="center">
+					<h1>Font-Family</h1>
+					<img src="../img/class02/css-font-family.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Font - Font Family Property</h2>
+					<hr>
+
+<pre><code>
+  p { font-family: 'Comic Sans MS', helvetica, serif };
+
+</code></pre>
+
+					<div class="text-left">
+						<p>&#149; font-family</p>
+						<p class="pad-left-lg text-smaller">&rArr; Applies a particular font to the element</p>
+						<p class="pad-left-lg text-smaller">&rArr; Accepts multiple values</p>
+						<p class="pad-left-lg text-smaller">&rArr; Should always end with: serif; sans-serf; monospace;</p>
+					</div>
+				</section>
+
+				<!-- TEXT -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Text - Various Properties</h2>
+					<hr>
+
+					<p class="text-left text-smaller">&#149; text-align</p>
+					<p class="pad-left-lg text-left text-smaller">&rArr; how text is oriented within the containing block</p>
+					<hr>
+					<p class="text-smaller text-left">
+						text-left
+					</p>
+					<p class="text-smaller text-center">
+						text-center
+					</p>
+					<p class="text-smaller text-right">
+						text-right
+					</p>
+					<hr>
+					<div class="text-left">
+						<p class="text-left text-smaller">&#149; text-decoration</p>
+						<p class="pad-left-lg text-left text-smaller">&rArr; controls extra-textual visual emphasis (<u>underline</u>)</p>
+<pre><code>
+  a { text-decoration: none; }
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- CSS CODEALONG -->
+				<section class="center">
+					<h1>Code Along</h1>
+					<a href="http://codepen.io/cheshireoctopus/pen/mexgPX?editors=110" target="_blank">http://codepen.io/cheshireoctopus/pen/mexgPX?editors=110</a>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="../img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- WORKING LOCALLY WITH CSS -->
+				<section class="center">
+					<h1>Working Locally with CSS</h1>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Local CSS</h2>
+					<hr>
+
+					<div class="text-left">
+						<p>&#149; Three ways to apply CSS to HTML:</p>
+						<p class="pad-left-lg">1) inline CSS</p>
+						<p class="pad-left-lg">2) <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> tag</p>
+						<p class="pad-left-lg">3) link to an external file w/ <code>&lt;link&gt;</code> tag</p>
+					</div>
+				</section>
+
+				<!-- INLINE CSS -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Local CSS - inline styles</h2>
+					<hr>
+
+<pre><code>
+	&lt;p style="color: blue; font-size: 14px;">
+		Keanu Reeves is Johnny Utah
+	&lt;/p>
+
+	&lt;p style="color: blue; text-decoration: underline;">
+		Or is Johnny Utah Keanu Reeves?
+	&lt;/p>
+
+</code></pre>
+
+					<div class="text-left text-smaller">
+						<p class="pad-left-lg">&#149; Not a good practice</p>
+						<p class="pad-left-lg">&#149; Does not separate our concerns (HTML/CSS)</p>
+						<p class="pad-left-lg">&#149; Makes debugging difficult</p>
+						<p class="pad-left-lg">&#149; ONLY USE IF WRITING HTML EMAILS</p>
+						<p class="pad-left-lg">&#149; You will make enemies</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Do NOT Use Inline CSS!</h1>
+					<img src="../img/class02/inline-css.jpeg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Local CSS - &lt;head&gt; embed</h2>
+					<hr>
+<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+		&lt;title>Super Awesome Website&lt;/title>
+		&lt;style type="text/css">
+			h1 {color: red;}
+			p {color: blue; font-size: 14px}
+		&lt;/style>
+	&lt;/head&gt;
+	&lt;body&gt;
+		...
+</code></pre>
+					<div class="text-left">
+						<p class="pad-left-lg">&#149; Better than inline styles</p>
+						<p class="pad-left-lg">&#149; Bloats HTML pages</p>
+						<p class="pad-left-lg">&#149; Can make debugging large applications difficult</p>
+					</div>
+				</section>
+
+				<!-- EXTERNAL CSS -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Local CSS - External file via &lt;link&gt;</h2>
+					<hr>
+<pre><code>
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+ 	 &lt;title>Super Awesome Website&lt;/title>
+	 &lt;link rel="stylesheet" type="text/css" href="style.css">
+ &lt;/head&gt;
+ &lt;body&gt;
+	...
+</code></pre>
+					<div class="text-left">
+						<p class="pad-left-lg">&#149; Like &lt;title&gt;, links to CSS go in &lt;head&gt;</p>
+						<p class="pad-left-lg">&#149; Truly separates HTML from CSS</p>
+						<p class="pad-left-lg">&#149; Easiest to debug; just go to your CSS file!</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Local CSS - External file via &lt;link&gt;</h2>
+					<hr>
+
+<pre><code>
+     &lt;link rel="stylesheet" type="text/css" href="style.css">
+
+</code></pre>
+
+					<div class="text-left">
+						<p>&#149; rel</p>
+						<p class="pad-left-lg text-smaller">&rArr; Specifies the relationship between the current document and the linked document</p>
+						<p>&#149; type</p>
+						<p class="pad-left-lg text-smaller">&rArr; Specifies the media type of the linked document</p>
+						<p>&#149; href</p>
+						<p class="pad-left-lg text-smaller">&rArr; Specifies the location of the linked document</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CSS &lt;link&gt; Exercise</h1>
+					<div class="text-left">
+						<p>1. Re-open <b>keanu/</b> directory</p>
+						<p>2. Link <b>style.css</b> to all three <b>.html</b> files</p>
+						<p>3. Begin Lab Work</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Lab</h1>
+						<div class="text-left">
+						<p>&#149; At the root of your GitHub folder, you should have:</p>
+						<p class="pad-left-lg">&rArr; 1) <code>&lt;index.html&gt;</code></p>
+						<p class="pad-left-lg">&rArr; 2) <code>&lt;style.css&gt;</code></p>
+						<p>&#149; The <code>index.html</code> will be the landing page for your course portfolio</p>
+						<p>&#149; Start personalizing it:</p>
+						<p class="pad-left-lg">1) Add new HTML</p>
+						<p class="pad-left-lg">2) Style the HTML with CSS</p>
+					</div>
+				</section>
+
+
+				<section data-background="#FFF" class="text-left">
+					<h2>What's On Deck: Advanced CSS (part 1)</h2>
+					<hr>
+
+					<h4>Class #3 (of 20) - Wednesday, March 9th</h4>
+					<p>&#149; Nested CSS Selectors</p>
+					<p>&#149; The Box Model:</p>
+					<p class="pad-left-lg">&rArr; Padding</p>
+					<p class="pad-left-lg">&rArr; Border</p>
+					<p class="pad-left-lg">&rArr; Margin</p>
+					<p>&#149; Classes and ID's</p>
+				</section>
+
+				<!-- END/WRAPUP -->
+				<section class="center">
+					<h1>FIN</h1>
+					<img src="../img/main/the-end.jpg">
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

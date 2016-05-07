@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 10</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 10 - jQuery (pt. 2)
+
+			Learning Objectives:
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left text-smaller">
+						<p>1. Pull the latest <code>class-exercises</code></p>
+						<p>2. Copy the following directories into <code>my-class-work/</code>
+						<p class=" pad-left-lg"><code>jquery-review/</code></p>
+						<p class=" pad-left-lg"><code>jquery-city/</code></p>
+						<p class=" pad-left-lg"><code>accordian/</code></p>
+						<p>3. Soultions from last class included:</p>
+						<p class=" pad-left-lg"><code>calculator-box/</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Class #10 (of 20)</h1>
+					<h1>jQuery (pt. 2)</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects - Milestone 2 - due 12/08 (Tuesday)</p>
+						<p class="pad-left-lg">&rArr; HTML rough draft</p>
+						<p class="pad-left-lg">&rArr; CSS rough draft</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<section data-background="#FFF">
+					<h2 class="text-left">Questions</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller fragment"><b>Q: What are the most useful jQuery/JavaScript commands?</b></p>
+						<div class="fragment pad-left-lg text-smallest">
+							<p>A1: <code>document.getElementById()</code> / <code>$('#someId')</code></p>
+							<p>A2: <code>$.ajax(...)</code></p>
+							<p>A3: <code>.append()</code></p>
+						</div>
+						<p class="text-smaller fragment"><b>Q: What does <code>.innerHTML</code> do?</b></p>
+						<p class="text-smallest fragment">A: Used to access the HTML and text inside of a particular HTML element</p>
+						<p class="text-smaller fragment"><b>Q: Why is CSS loaded before <code>&lt;body&gt;</code>, but not JS</b></p>
+						<p class="text-smallest fragment">A: tl;dr it's how web browsers function (see <code>test/</code> example)</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; jQuery Review</p>
+						<p class="text-smaller">&#149; <code>calculator-box</code> Review</p>
+						<p class="text-smaller">&#149; Toggling element visibility</p>
+						<p class="text-smaller">&#149; Anonymous vs. Named functions</p>
+						<p class="text-smaller">&#149; Manipulating element attributes using <code>.attr()</code></p>
+						<p class="text-smaller">&#149; <code>$(this)</code></p>
+						<p class="text-smaller">&#149; Document Traversal</p>
+					</div>
+				</section>
+
+				<!-- JQUERY REVIEW -->
+				<section class="center">
+					<h1>jQuery Reivew</h1>
+					<div class="text-left">
+						<p>1. Open <code>jquery-review/</code> in Sublime Text</p>
+						<p>2. Read <code>instructions.txt</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Calculator-box Review</h1>
+					<p>Any questions?</p>
+				</section>
+
+				<section class="center">
+					<h1>Toggling Element Visibility</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>jQuery Hide and Show</h3>
+					<div>
+						<p><code>.hide()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their inline style to <code>display: none;</code></p>
+<pre><code>
+	$('p').hide()
+
+</code></pre>
+						<p><code>.show()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Revels elements by setting their inline style to <code>display: block</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; If the element was originally <code>inline</code>, then <code>display: inline</code> will be used</p>
+<pre><code>
+	$('p').show()
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>jQuery Hide and Show (ctn)</h3>
+					<div>
+						<p>Change the duration by passing an argument</p>
+						<p>String:</p>
+<pre><code>
+	$('p').hide('slow')
+
+	$('p').show('fast')
+
+</code></pre>
+						<p>Number:</p>
+<pre><code>
+	$('p').hide(700)
+
+	$('p').show(300)
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h3>jQuery Hide and Show Alternatives</h3>
+
+					<p><code>.fadeIn()</code></p>
+					<p><code>.fadeOut()</code></p>
+					<p><code>.slideDown()</code></p>
+					<p><code>.slideUp()</code></p>
+					<p><code>.slideToggle()</code></p>
+					<hr>
+					<p>Each take a <code>duration</code> argument:</p>
+<pre><code>
+	$('p').fadeIn('fast')
+
+	$('p').slideUp(900)
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p><a href="http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101">http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101</a></p>
+				</section>
+
+				<!-- ANONYMOUS FUNCTIONS -->
+				<section class="center">
+					<h1>Anonymous Functions</h1>
+					<img src="img/class10/anonymous.png" alt="">
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Anonymous Functions</h2>
+					<p>So far, we've been writing and calling functions like this:</p>
+<pre><code>
+	// Event handler responsible for calling the function
+	$('button').click(someFunctionName)
+
+	// The Actual Function
+	function someFunctionName () {
+		// Do something here
+	}
+
+</code></pre>
+					<p>&#149; This is an example of a <u>named</u> function</p>
+					<p>&#149; The function's name is <code>someFunctionName</code></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Anonymous Functions (ctn)</h2>
+
+					<p>Anonymous Functions:</p>
+					<p class="pad-left-lg">&rArr; Functions that do not have names: </p>
+<pre><code>
+	function () {
+		// Do something here
+	}
+
+</code></pre>
+<hr>
+					<p>You've already used one:</p>
+<pre><code>
+	$(document).ready(function () {
+		// Your code here
+	})
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Anonymous Functions (ctn)</h2>
+					<div class="text-smallest">
+						<p>&#149; Some commands expect a function as an argument:</p>
+<pre><code>
+	$('button').click(someFunctionName)
+
+	function someFunctionName () {
+		// Do something here
+	}
+
+</code></pre>
+						<p>&#149; Anonymous functions let us use a function with out naming and separately defining it:</p>
+<pre><code>
+	$('button').click(function () {
+		// Do something here
+	})
+
+</code></pre>
+						<p>&#149; This makes anonymous functions good for events: <code>.click()</code>, <code>.keyup()</code>, <code>.mouseover()</code>, etc.</p>
+						<p>&#149; NOTE: anonymous functions only exist when that bit of code is running</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p>Update Hide/Show Keanu to use anonymous functions</p>
+				</section>
+
+				<!-- MANIPULATING ATTRIBUTES -->
+				<section class="center">
+					<h1>Manipulating Element Attributes</h1>
+					<p>Putting the <code>.attr()</code> function to use</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Manipulating Element Attributes</h2>
+					<p><code>.attr('attribute-name')</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Gets the value of the matched attribute name</p>
+<pre><code>
+	<img src="keanu.jpg">
+
+	$('img').attr('src')
+	// returns 'keanu.jpg'
+
+</code></pre>
+					<p><code>.attr('attribute-name', 'attribute-value')</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Changes the value of <code>'attribute-name'</code> to 'attribute value'</p>
+<pre><code>
+	$('img').attr('src', 'gary-busey.jpg')
+
+	<img src="gary-busey.jpg">
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Getting Element Attributes</h2>
+					<div class="text-smallest">
+						<p>Assuming the following HTML:</p>
+<pre><code>
+	<a href="http://google.com">Google</a>
+	<img src="smiley.png" id="logo">
+
+</code></pre>
+						<p>Get attribute <code>.attr('attribute-name')</code>:</p>
+<pre><code>
+	$('a').attr('href')
+
+	// returns 'http://google.com'
+
+</code></pre>
+<pre><code>
+	$('#logo').attr('id')
+
+	// returns 'logo'
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Setting Element Attributes</h2>
+					<div class="text-smallest">
+						<p>Assuming the following HTML:</p>
+<pre><code>
+	<img src="smiley.png" id="logo">
+
+</code></pre>
+						<p>Set attribute <code>.attr('attribute-name', 'attribute-value')</code>:</p>
+<pre><code>
+	$('#logo').attr('src', 'frowney.png')
+
+</code></pre>
+						<p>Turns the above HTML into:</p>
+<pre><code>
+	<img src="frowney.png" id="logo">
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p>Keanu/Gary Swap <a href="http://codepen.io/cheshireoctopus/pen/WQVPzW?editors=101">http://codepen.io/cheshireoctopus/pen/WQVPzW?editors=101</a></p>
+				</section>
+
+				<section class="center">
+					<h1>Exercise: jQuery City</h1>
+					<div class="text-left">
+						<p>&#149; Implement functionality for the following:</p>
+						<p>&#149; When a user clicks on a thumbnail, the larger image <code>img id="bigimage"</code> is replaced by the corresponding thumbnail</p>
+						<p>&#149; Hint: use <code>.attr()</code></p>
+					</div>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- $(this) -->
+				<section class="center">
+					<h1>$(this)</h1>
+					<div class="text-left">
+						<p>1) Open the following: <a href="http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101">http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101</a></p>
+						<p>2) What's going on here?</p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>$(this)</h2>
+
+					<p><code>$(this)</code> allows us to target specific elements that invoked (or called) a function</p>
+
+					<p>&#149; Refactor previous CodePen using <code>$(this)</code>:</p>
+<pre><code>
+	$('span').click(function () {
+		$(this).css('color', 'red')
+	})
+
+</code></pre>
+					<p>&#149; On the click event, only the <code>&lt;span&gt;</code> that invoked the function will turn red</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>$(this) - More technical explanation</h2>
+
+					<div class="text-smaller">
+						<p>&#149; In JS, functions are called (invoked) by an object</p>
+						<p>&#149; Whatever object called the function, can be accessed inside the function using <code>this</code></p>
+						<p>&#149; <code>this</code> is said to be the "context" of the function</p>
+						<p>&#149; We can "wrap" <code>this</code> in jQuery: <code>$(this)</code></p>
+						<p>&#149; HTML elements are objects, too:</p>
+<pre><code>
+	$('span').click(function () {
+		$(this).css('color', 'red')
+	})
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong</h1>
+					<p>Refactor jQuery City using <code>$(this)</code></p>
+				</section>
+
+				<section class="center">
+					<h1>Document Traversal</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Document Traversal</h2>
+
+					<p class="text-smaller">&#149; Given a certain element, how do I access elements around it?</p>
+					<p class="text-smaller">&#149; jQuery makes it very easy to move around the DOM (document object model)</p>
+					<p class="text-smaller">&#149; "Walking the DOM"</p>
+					<p class="text-smaller">&#149; Details: <a href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
+					<p class="text-smaller">&#149; What does the following do?</p>
+<pre><code>
+	$('#wrapper').children()
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Document Traversal - HTML Review</h2>
+<pre><code>
+	<div id="wrapper">
+		<p id="one">
+			<span>Some Text</span>
+		</p>
+		<p id="two">
+			<span>Some Text</span>
+		</p>
+		<p id="three">
+			<span>Some Text</span>
+		</p>
+	</div>
+
+</code></pre>
+					<div class="text-smallest">
+						<p>1: What are <code>#wrapper</code>'s children?</p>
+						<p>2: What is <code>#three</code>'s parent?</p>
+						<p>3: Does <code>#one</code> have any siblings?</p>
+						<p>4: Does the <code>&lt;span&gt;</code> child of <code>#one</code> have siblings?</p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Document Traversal - It's All in the Family</h2>
+
+					<p><code>.children()</code></p>
+					<p class="pad-left-lg">&rArr; Get an element's child elements</p>
+					<p><code>.parent()</code></p>
+					<p class="pad-left-lg">&rArr; Get an element's parent element</p>
+					<p><code>.siblings()</code></p>
+					<p class="pad-left-lg">&rArr; Get an element's sibling elements</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Document Traversal - Siblings</h2>
+
+					<p><code>.next()</code></p>
+					<p class="pad-left-lg">&rArr; Get the immediately following sibling element</p>
+					<p><code>.prev()</code></p>
+					<p class="pad-left-lg">&rArr; Get the immediately preceding sibling element</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Document Traversal - Find</h2>
+
+					<p><code>.find('some-selector')</code></p>
+					<p class="pad-left-lg">&rArr; Will find all child elements matching a certain selector</p>
+<pre><code>
+	<div id="wrapper">
+		<p class="some-class">Some Text</p>
+		<p>Some Text</p>
+		<p class="some-class">Some Text</p>
+	</div>
+
+</code></pre>
+					<p>&#149; What does this do?</p>
+<pre><code>
+	$('#wrapper').find('.some-class').css('color', 'red')
+
+</code></pre>
+				</section>
+
+				<section class="center">
+					<h1>CodeAlong: Accordian</h1>
+				</section>
+
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

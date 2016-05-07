@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD - Class 14</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/general-assembly.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!--
+			Lesson 15 - Responsive Web Design (pt. 2)
+
+			Learning Objectives:
+
+		-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>HELLO</h1>
+
+					<div class="text-left text-smaller">
+						<p>1. Pull the latest <code>class-exercises</code></p>
+						<p>2. Copy the following directories into <code>my-class-work/</code>
+						<p class=" pad-left-lg"><code>responsive-navbar/</code></p>
+						<p>3. Copy the following directories into <code>homework/</code>
+						<p class=" pad-left-lg"><code>startup-matchmaker-responsive/</code></p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h2>Class #15 (of 20)</h2>
+					<h2>Responsive Web Design (pt. 2)</h2>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section class="center">
+					<h1>Announcements:</h1>
+
+					<div class="text-left">
+						<p>&#149; Final Projects:</p>
+						<p class="pad-left-lg">&rArr; Updated JS draft - due 12/22 (Tuesday)</p>
+						<p>&#149; No class:</p>
+						<p class="pad-left-lg">&rArr; 12/24 (Thurs)</p>
+						<p class="pad-left-lg">&rArr; 12/29 (Tues)</p>
+						<p class="pad-left-lg">&rArr; 12/31 (Thurs)</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF">
+					<h2 class="text-left">Agenda</h2>
+					<hr>
+
+					<div class="text-left">
+						<p class="text-smaller">&#149; Media Queries Review</p>
+						<p class="text-smaller">&#149; Responsive Navbar Tutorial</p>
+						<p class="text-smaller">&#149; Em Typography</p>
+						<p class="text-smaller">&#149; <code>&lt;meta&gt;</code> Tag</p>
+						<p class="text-smaller">&#149; Responsive Startup Matchmaker Lab</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section class="center">
+					<h1>Questions</h1>
+					<img src="img/main/questions.jpg">
+				</section>
+
+				<!-- REVIEW -->
+				<section class="center">
+					<h1>Review</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Responsive Web Design - Review</h2>
+
+					<p><u>RWD</u>:</p>
+					<p class="pad-left-lg text-smallest">Designing for the optimal viewing experience no matter the device on which the site is being viewed</p>
+					<p><u>Static vs. Fluid Layouts</u>:</p>
+					<p class="pad-left-lg text-smallest">Using %-based widths, margins, etc. instead of px-based</p>
+					<p><u>Media Queries</u>:</p>
+					<p class="pad-left-lg text-smallest">Allow CSS rules targeted at specific variables, like screen-size</p>
+					<p class="pad-left-lg text-smallest">&#149; When <code>width &gt; 1000px</code> color text <span style="color:red;">red</span></p>
+					<p class="pad-left-lg text-smallest">&#149; When <code>width &lt; 1000px</code> color text <span style="color:blue;">blue</span></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Browser-Width Media Queries</h2>
+
+					<p>Within CSS Stylesheet:</p>
+<pre><code>
+	@media screen and (min-width: 1024px) {
+		color: red;
+	}
+
+</code></pre>
+					<p><u>Media Type:</u> <code class="fragment">screen</code></p>
+					<p class="fragment pad-left-lg">Only target devices with a viewable screen</p>
+					<p><u>Rule:</u> <code class="fragment">(mid-width: 1024px)</code></p>
+					<p class="fragment pad-left-lg">Only target windows larger than, or equal to, 1024px</p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Media Queries - Additional Examples</h2>
+
+					<p>Don't have to specify a media type:</p>
+<pre><code>
+	@media (min-width: 700px) { ... }
+
+</code></pre>
+					<p>Multiple rules:</p>
+<pre><code>
+	@media (min-width: 320px) and (max-width: 480px) { ... }
+
+</code></pre>
+					<p>&#149; These styles will only apply on devices between 320 and 480 pixels</p>
+				</section>
+
+				<!-- RESPONSIVE NAVBAR -->
+				<section class="center">
+					<h1>Responsive Navbar Tutorial</h1>
+					<p>Open <code>responsive-navbar/</code> in SublimeText</p>
+				</section>
+
+				<section class="center">
+					<h1>Three pillars of RWD:</h1>
+
+					<p style="text-decoration: line-through;">1. Fluid layout</p>
+					<p style="text-decoration: line-through;">2. Media queries</p>
+					<p>3. Em Typography</p>
+				</section>
+
+				<!-- EM TYPOGRAPHY -->
+				<section class="center">
+					<h1>Em Typography</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>EM ... What?</h2>
+
+					<p>&#149; An <code>em</code> is a unit of measurement</p>
+					<p>&#149; Like pixels, they determine the size of elements on a web page</p>
+					<p>&#149; Unlike pixels, which are fixed, ems are relative to their <u>parent's</u> font-size</p>
+					<p>&#149; Derived from print design</p>
+					<p>&#149; Based on the size of the letter "<code>M</code>"</p>
+					<p>&#149; <a href="http://kevinperalta.com/playground/em_size.html">More Info</a></p>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>EM's</h2>
+
+					<p>&#149; <code>1em</code> === the inherited font size</p>
+					<p>&#149; If a <code>&lt;div&gt;</code> has <code>font-size</code> of <code>16px</code>:</p>
+					<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>16px</code></p>
+					<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>32px</code></p>
+					<div class="fragment">
+						<p>&#149; If a <code>&lt;p&gt;</code> has <code>font-size</code> of <code>20px</code>:</p>
+						<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>20px</code></p>
+						<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>40px</code></p>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>EM's</h2>
+
+					<p>Example:</p>
+<pre><code>
+	body {
+		font-size: 20px;
+	}
+
+	div {
+		height: 5em; // 100px
+		width: 3em; // 60px
+		margin: 0.5em; // 10px
+		border: 0.05em; // 1px
+	}
+
+</code></pre>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>EM's - General Guide Lines</h2>
+					<div class="text-smallest">
+					<p>1. Set a font-size on the <code>&lt;body&gt;</code> using pixels:</p>
+<pre><code>
+	body {
+		font-size: 16px;
+	}
+
+</code></pre>
+					<p>2. Base other typography on ems:</p>
+<pre><code>
+	h1 {
+		font-size: 3em; // 48px
+	}
+
+	h2 {
+		font-size: 2em; // 32px
+	}
+
+</code></pre>
+					<p>3. Set <code>font-size</code> in media queries to be smaller:</p>
+<pre><code>
+	h1 {
+		font-size: 1.5em; // 32px;
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- META TAG -->
+				<section class="center">
+					<h1><code>&lt;meta&gt;</code> Tag</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2><code>&lt;meta&gt;</code> Tag</h2>
+
+					<p>&#149; Mobile browsers render webpages in a window wider than the screen, the <u>viewport</u></p>
+					<p>&#149; This is why you often have to pinch, zoom, and pan to move around a mobile browser</p>
+					<p>&#149; To ensure that your site is actually being viewed at the width of the device, and not the viewport, use:</p>
+					<div class="text-smallest">
+<pre><code>
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2><code>&lt;meta&gt;</code> Tag</h2>
+
+					<div class="text-smallest">
+<pre><code>
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+</code></pre>
+					</div>
+					<p><code>"width=device-width"</code></p>
+					<p class="pad-left-lg">Controls the size of the viewport; sets it to the device's width</p>
+					<p><code>"initial-scale=1"</code></p>
+					<p class="pad-left-lg">Controls the zoom level</p>
+				</section>
+
+				<!-- RULES OF THUMB -->
+				<section class="center">
+					<h1>Responsive Rules of Thumb</h1>
+				</section>
+
+				<section class="text-left" data-background="#FFF">
+					<h2>Responsive Rules of Thumb</h2>
+
+					<p>&#149; Use pixels for font size on <code>&lt;body&gt;</code> and other top-level elements</p>
+					<p>&#149; Use percents for widths, margins, padding of of <u>major</u> layout elements</p>
+					<p>&#149; Use em's for typography: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.</p>
+					<p>&#149; Include the viewport <code>&lt;meta&gt;</code> in the <code>&lt;head&gt;</code></p>
+				</section>
+
+				<!-- RESPONSIVE STARTUP MATCHMAKER LAB -->
+				<section class="center">
+					<h1>Responsive Startup Matchmaker Lab</h1>
+					<p>Open <code>startup-matchmaker-responsive/</code> in SublimeText</p>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

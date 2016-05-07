@@ -1,0 +1,49 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: white;
+}
+
+#wrapper {
+  	position:absolute;
+    top:0; right:0;
+    bottom:0; left:0;
+	background: black;
+}
+
+#colorfultext {
+	font-size: 5em;
+	text-align: center;
+}
+
+input {
+	font-family: Courier, monospace;
+	height: 2em;
+	width: 2em;
+	font-size: 2em;
+	color: black;
+}
+
+a {
+	cursor: pointer;
+	display: block;
+	font-family: Arial, sans-serif;
+	height: 4em;
+	margin: 1em auto;
+	width: 10em;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 4em;
+	background-color: #999999;
+	border-bottom: solid 2px #444444;
+	border-right: solid 2px #444444;
+}
+
+
+a:active {
+	border-top: solid 2px #444444;
+	border-left: solid 2px #444444;
+	border-bottom: none;
+	border-right: none;
+}
