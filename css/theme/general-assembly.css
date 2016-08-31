@@ -30,6 +30,36 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal pre code {
   max-height: none !important; }
 
+.heading {
+  background-image: url(../../img/main/ga-logo.png);
+  background-repeat: no-repeat;
+  background-position: right top 4px;
+  font-family: 'Pf Din', Impact, sans-serif !important;
+  font-size: 1.3em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+  border-bottom: 2px solid black !important; }
+  .heading img {
+    height: 60px !important;
+    width: 60px !important;
+    margin: 0 !important;
+    float: right;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important; }
+
+.code {
+  background: #f9f2f4;
+  padding: 2px 4px !important;
+  color: #c7254e;
+  border-radius: 4px; }
+
+.reveal blockquote {
+  width: 90% !important; }
+
+.red {
+  color: #fa4542 !important; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

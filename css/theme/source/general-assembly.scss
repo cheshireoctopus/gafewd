@@ -71,6 +71,45 @@ section.has-light-background {
 	max-height: none !important;
 }
 
+.heading {
+	background-image: url(../../img/main/ga-logo.png);
+	background-repeat: no-repeat;
+	background-position: right top 4px;
+	font-family: $headingFont !important;
+	font-size: $heading3Size !important;
+	text-transform: uppercase !important;
+	margin-bottom: 20px !important;
+	border-bottom: 2px solid black !important;
+
+	img {
+		height: 60px !important;
+		width: 60px !important;
+		margin: 0 !important;
+		float: right;
+		border: none !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+}
+
+// Code Syntax
+.code {
+	background: #f9f2f4;
+	padding: 2px 4px !important;
+	color: #c7254e;
+	border-radius: 4px;
+}
+
+// Override Reveal Styles
+.reveal blockquote {
+	width: 90% !important;
+}
+
+// GA red color
+.red {
+	color: rgb(250, 69, 66) !important;
+}
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
