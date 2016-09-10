@@ -19,3 +19,7 @@ p, li, table, a {
 .push-top-50 {
 	padding-top: 50px;
 }
+
+.red {
+  color: #fa4542;
+}
