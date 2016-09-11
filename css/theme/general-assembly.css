@@ -33,12 +33,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .heading {
   background-image: url(../../img/main/ga-logo.png);
   background-repeat: no-repeat;
-  background-position: right top 4px;
+  background-position: right top 8px;
   font-family: "Pf Din", Impact, sans-serif !important;
   font-size: 1.3em !important;
   text-transform: uppercase !important;
   margin-bottom: 20px !important;
-  border-bottom: 2px solid black !important; }
+  border-top: 2px solid black !important;
+  border-bottom: 2px solid black !important;
+  padding-top: 5px !important; }
   .heading img {
     height: 60px !important;
     width: 60px !important;
