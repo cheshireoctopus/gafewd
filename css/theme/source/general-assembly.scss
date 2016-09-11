@@ -100,15 +100,52 @@ section.has-light-background {
 	border-radius: 4px;
 }
 
-// Override Reveal Styles
 .reveal blockquote {
 	width: 90% !important;
 }
 
-// GA red color
-.red {
-	color: rgb(250, 69, 66) !important;
+.title {
+	text-align: left;
+	font-size: 2em !important;
+
+	&.text-bigger {
+		font-size: 2.5em;
+	}
+
+	&.text-huge {
+		font-size: 3em;
+	}
 }
+
+.hero {
+	padding: 0 !important;
+	text-align: left;
+	font-size: 1.75em !important;
+
+	&.condensed {
+		font-size: 1.5em !important;
+	}
+
+	.lesson-title {
+		margin-top: 50px !important;
+	}
+
+	h1 {
+		line-height: 1.0 !important;
+		margin: 0 !important;
+	}
+}
+
+$red: rgb(229,27,36);
+$yellow: rgb(255, 216, 0);
+$mint: rgb(131, 237, 217);
+$teal: rgb(30, 202, 199);
+$burgundy: rgb(113, 10, 51);
+$pink: rgb(255, 157, 182);
+$light-grey: rgb(229, 229, 229);
+$dark-grey: rgb(88, 88, 91);
+
+.red { color: $red !important; }
 
 // Theme template ------------------------------
 @import "../template/theme";
