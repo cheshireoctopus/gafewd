@@ -55,7 +55,7 @@
                 <!-- UNIT 1 -->
                 <h1>Unit 1: HTML & CSS Foundations</h1>
                 <h3>Week One</h3>
-                <!-- <a href="../notes/class00.html" class="list-group-item">Class 00 - Installfest (06/28/16)</a> -->
+                <a href="../notes/class00.html" class="list-group-item disabled">Class 00 - Class Intro and Setup (09/19/16)</a>
                 <!-- <a href="../notes/class01.html" class="list-group-item">Class 01 - JS on the Command Line (06/30/16)</a> -->
                 <h3>Week Two</h3>
                 <!-- <a href="../notes/class02.html" class="list-group-item">Class 02 - Data Types and Arrays (07/05/16)</a> -->
@@ -135,6 +135,13 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.disabled').forEach(function (el) {
+            el.onclick = function (evt) {
+                evt.preventDefault()
+            }
+        })
+    </script>
     <script src="../js/analytics.js"></script>
 </body>
 
