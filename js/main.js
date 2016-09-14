@@ -53,6 +53,9 @@ function initReveal () {
 
 		width: '75%',
 		height: '75%',
+		margin: 0.075,
+
+		slideNumber: 'c/t',
 	}
 
 	Reveal.initialize(options);

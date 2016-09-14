@@ -112,6 +112,10 @@ $headerBorder: 2px solid black !important;
 	text-align: left;
 	font-size: 2em !important;
 
+	&.text-smaller {
+		font-size: 1.75em !important;
+	}
+
 	&.text-bigger {
 		font-size: 2.5em;
 	}
@@ -131,7 +135,8 @@ $headerBorder: 2px solid black !important;
 	}
 
 	.lesson-title {
-		margin-top: 50px !important;
+		margin-top: 75px !important;
+		font-size: 1.75em !important;
 	}
 
 	h1 {

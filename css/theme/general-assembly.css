@@ -62,6 +62,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .title {
   text-align: left;
   font-size: 2em !important; }
+  .title.text-smaller {
+    font-size: 1.75em !important; }
   .title.text-bigger {
     font-size: 2.5em; }
   .title.text-huge {
@@ -74,7 +76,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
   .hero.condensed {
     font-size: 1.5em !important; }
   .hero .lesson-title {
-    margin-top: 50px !important; }
+    margin-top: 75px !important;
+    font-size: 1.75em !important; }
   .hero h1 {
     line-height: 1.0 !important;
     margin: 0 !important; }
