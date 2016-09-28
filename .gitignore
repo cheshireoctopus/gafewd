@@ -1,2 +1,3 @@
 node_modules
 js/analytics.js
+*.DS_Store
