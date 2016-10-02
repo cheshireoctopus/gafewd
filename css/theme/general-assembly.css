@@ -78,6 +78,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   .hero .lesson-title {
     margin-top: 75px !important;
     font-size: 1.75em !important; }
+  .hero .opening-instructions {
+    font-size: 0.45em !important;
+    width: 75%;
+    margin: 0 auto; }
   .hero h1 {
     line-height: 1.0 !important;
     margin: 0 !important; }
