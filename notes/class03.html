@@ -65,6 +65,19 @@
 					<p>&#149; <a href="#/span-div"><code class="code">&lt;span&gt;</code> and <code class="code">&lt;div&gt;</code></a></p>
 				</section>
 
+				<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+					<p class="text-smaller"><b>Q: What is Sass?</b></p>
+					<p class="fragment text-smallest">A: <a href="http://sass-lang.com/" target="_blank">Sass</a> is a CSS preprocessor; it extends the standard CSS language with additional features: variables, operators, imports, etc.</p>
+					<p class="fragment text-smaller"><b>Q: When to use the <code class="code">class</code> attribute?</b></p>
+					<p class="fragment text-smallest">A: Stay tuned - learning this tonight!</p>
+				</section>
+
 				<!-- CLASSES AND ID'S -->
 				<section class="center">
 					<p>I have multiple <code class="code">&lt;p&gt;</code> tags.</p>
@@ -104,7 +117,7 @@
 	}
 
 </code></pre>
-					<p>&#149; This also works; it selects p-tags with the id of <code>important-title</code></p>
+					<p>&#149; This also works; it selects <code class="code">&lt;p&gt;</code> tags with the id of <code class="code">important-title</code></p>
 <pre><code>
 	p#important-title {
 	  color: red;
@@ -162,11 +175,19 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">ID's vs. Classes</div>
-					<p>General rule:</p>
-					<p>&#149; Use an ID when you are styling <u>ONE</u> specific item</p>
-					<p>&#149; Use a CLASS when you are styling a <u>GROUP</u> of items</p>
+					<p>&#149; General rule:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Use an ID when you are styling <u>ONE</u> specific item</p>
+						<p>&rArr; Use a CLASS when you are styling a <u>GROUP</u> of items</p>
+					</div>
+					<div class="fragment">
+						<p>&#149; Note:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Elements cannot have more than one ID</p>
+							<p>&rArr; Elements can have multiple classes</p>
+						</div>
+					</div>
 				</section>
-
 
 				<!-- GROUPING SELECTORS -->
 				<section class="title" id="grouping-selectors">
@@ -228,7 +249,7 @@
 
 </code></pre>
 					</div>
-					<p class="fragment">&#149; This will target <code class="code">&lt;p&gt;</code> inside of the element with ID of <code class="code">some-id</code></p>
+					<p class="fragment">&#149; This will target <code class="code">&lt;p&gt;</code> inside of the element with ID <code class="code">some-id</code></p>
 					<p class="fragment">&#149; <code class="code">&lt;p&gt;</code> tags outside of <code class="code">some-id</code> will <u>not</u> share this style</p>
 					<p class="fragment">&#149; <a href="http://codepen.io/cheshireoctopus/pen/ZpXrqW?editors=1100#0" target="_blank">Example</a></p>
 				</section>
@@ -538,7 +559,7 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Centering Block and Inline Elements</div>
 
-					<p>Center <b>inline</b> elements by setting the following on its <u>parent</u>:</p>
+					<p>Center <b>inline</b> elements by setting the following on their <u>parent</u>:</p>
 					<p class="pad-left-lg"><code class="code">text-align: center</code></p>
 					<div class="fragment">
 					<hr>
