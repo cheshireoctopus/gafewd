@@ -32,65 +32,58 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
-					<div class="text-left text-smaller pad-left-lg">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class04/class04.zip">Class 04 Starter Code</a></p>
-						<p>2) Move the following into your course work directory:</p>
-						<p class="pad-left-lg">&#149; <code>art-is-hard/</code></p>
-						<p class="pad-left-lg">&#149; <code>fashion-blog/</code></p>
-						<p>3) The solution to last week's HW <a href="http://codepen.io/cheshireoctopus/pen/LNNJrJ?editors=1100">here</a></p>
+						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+						<p class="pad-left-lg">&#149; <code class="code">art-is-hard</code></p>
+						<p>3) Move the following into your <code class="code">homework</code> directory:</p>
+						<p class="pad-left-lg">&#149; <code class="code">fashion-blog</code></p>
+						<p>4) The solution to last week's HW <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/LNNJrJ?editors=1100">here</a></p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #4 - 03/14/2016</h1>
-					<h1>HTML/CSS Layout (pt. 1)</h1>
+				<section class="hero condensed">
+					<h1>Class <span class="red">#04</span></h1>
+					<h1>10/12/2016</h1>
+					<h1 class="lesson-title">Advanced CSS</h1>
 				</section>
 
 				<!-- QUESTIONS -->
-				<section class="center">
+				<section class="title">
 					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Questions</h2>
-					<hr>
+					<div class="heading">Questions</div>
 
-					<p class="text-smaller fragment"><b>Q: ID's vs. Classes?</b></p>
-					<p class="text-smaller fragment">A: Use ID's to target <u>ONE</u> element; classes to target <u>multiple</u></a></p>
-					<p class="text-smaller fragment"><b>Q: Video</b></p>
-					<p class="text-smaller fragment">A: Embed video into HTML using the <code>&lt;video&gt;</code> tag - <a href="http://www.w3schools.com/tags/tag_video.asp">more info</a></a></p>
-					<p class="text-smaller fragment"><b>Q: How to style <code>&lt;div&gt;</code>'s within <code>&lt;div&gt;</code>'s?</b></p>
-					<p class="text-smaller fragment">A: Use a combination of classes and/or ID's: <a href="http://codepen.io/cheshireoctopus/pen/zqKpOG?editors=1100">CodePen</a></a></p>
-					<p class="text-smaller fragment"><b>Q: <code>margin-top: 30px;</code> + <code>margin-bottom: 30px;</code>; what happens?</b></p>
-					<p class="text-smaller fragment">A: <u>Vertical</u> margins "collapse" (largest margin wins); <a href="http://codepen.io/cheshireoctopus/pen/GZjyox?editors=1100">CodePen</a></a></p>
+					<p class="text-smaller"><b>Q: CSS properties reference?</b></p>
+					<p class="fragment text-smallest">A: <a target="_blank" href="http://www.htmldog.com/references/css/properties/">http://www.htmldog.com/references/css/properties/</a></p>
+					<p class="text-smaller fragment"><b>Q: Classes and ID's appear to do the same thing; I can actually use multiple ID's without breaking anything?</b></p>
+					<p class="fragment text-smallest">A: Classes and ID's do the same thing; will break w/ <a href="http://codepen.io/cheshireoctopus/pen/rrKyYz" target="_blank">JavaScript</a></p>
+					<p class="text-smaller fragment"><b>Q: Margin vs Padding</b></p>
+					<p class="text-smallest fragment">A: Padding: space between content and border; Margin: space between elements (<a href="http://codepen.io/cheshireoctopus/pen/KgZqjV?editors=1100#0" target="_blank">example</a>)</p>
 				</section>
 
 				<!-- AGENDA -->
-				<section data-background="#FFF">
-					<h2 class="text-left">Agenda</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
 
-					<div class="text-left">
-						<p>&#149; CSS Specificity</p>
-						<p>&#149; Chrome Developer Tools</p>
-						<p>&#149; Browser Variances</p>
-						<p>&#149; Semantic HTML</p>
-						<p>&#149; Layout Lab</p>
-					</div>
+					<p>&#149; CSS Specificity</p>
+					<p>&#149; Chrome Developer Tools</p>
+					<p>&#149; Browser Variances</p>
+					<p>&#149; Semantic HTML</p>
+					<p>&#149; Layout Lab</p>
 				</section>
 
 				<!-- CSS SPECIFICITY -->
-				<section class="center">
+				<section class="title">
 					<h1>CSS SPECIFICITY</h1>
-					<img src="../img/class04/specificity.gif" alt="">
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>CSS Specificity</h2>
-					<hr>
+					<div class="heading">CSS Specificity</div>
 
 					<div class="text-smallest">
 						<p>&#149; Not all CSS-selectors are created equal</p>
@@ -112,8 +105,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>CSS Specificity</h2>
-					<hr>
+					<div class="heading">CSS Specificity</div>
 
 					<p>&#149; Which selector is more specific (<a href="http://codepen.io/cheshireoctopus/pen/EKyzoe?editors=1100">CodePen</a>):</p>
 <pre><code>
@@ -127,14 +119,13 @@
 
 </code></pre>
 					<div class="fragment text-smallest">
-						<p>&#149; <code>p.article</code> > <code>.article</code></p>
-						<p>&#149; paragraphs <em>with</em> the class of <code>article</code> > just the class of <code>article</code></p>
+						<p>&#149; <code class="code">p.article</code> > <code class="code">.article</code></p>
+						<p>&#149; paragraphs <em>with</em> the class of <code class="code">article</code> > just the class of <code class="code">article</code></p>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>CSS Specificity</h2>
-					<hr>
+					<div class="heading">CSS Specificity</div>
 
 					<p>&#149; Which selector is more specific:</p>
 <pre><code>
@@ -148,26 +139,18 @@
 
 </code></pre>
 					<div class="fragment text-smallest">
-						<p>&#149; <code>.container .article</code> > <code>p.article</code></p>
+						<p>&#149; <code class="code">.container .article</code> > <code class="code">p.article</code></p>
 						<p>&#149; Remeber, classes > elements</p>
 					</div>
 				</section>
 
-				<!-- SUBJECT REVIEW -->
-<!-- 				<section class="center">
-					<h1>Review:</h1>
-					<h1>Inline vs. Block</h1>
-				</section>
- -->
 				<!-- CHROME DEVELOPER TOOLS -->
-				<section class="center">
+				<section class="title">
 					<h1>Developer Tools</h1>
-					<p>AKA - Dev Tools</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Dev Tools - What are they?</h2>
-					<hr>
+					<div class="heading">Developer Tools</div>
 
 					<p>&#149; Allow us to peek under the hood</p>
 					<p>&#149; Crucial for debugging</p>
@@ -182,17 +165,14 @@
 					<h2>PC: <code>F12</code></h2>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Dev Tools - Exercise</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Developer Tools</div>
 
-					<div class="text-left">
-						<p>Pick a site (any site):</p>
-						<p>&#149; Edit CSS styles in real-time</p>
-						<p>&#149; What color are the <code>&lt;a&gt;</code> tags?</p>
-						<p>&#149; Are the <code>src</code> attributes of <code>&lt;img&gt;</code> tags relative or absolute?</p>
-						<p>&#149; How many style sheets are linked in the <code>&lt;head&gt;</code>?</p>
-					</div>
+					<p>Pick a site (any site):</p>
+					<p>&#149; Edit CSS styles in real-time</p>
+					<p>&#149; What color are the <code class="code">&lt;a&gt;</code> tags?</p>
+					<p>&#149; Are the <code class="code">src</code> attributes of <code class="code">&lt;img&gt;</code> tags relative or absolute?</p>
+					<p>&#149; How many style sheets are linked in the <code class="code">&lt;head&gt;</code>?</p>
 				</section>
 
 				<section class="center">
@@ -202,25 +182,23 @@
 				<section class="center">
 					<h1>Debugging Lab: Art Is Hard</h1>
 					<div class="text-left">
-						<p>1) Open <code>art-is-hard/</code> in SublimeText</p>
-						<p>2) Right-click, and open the <code>index.html</code> using Chrome</p>
+						<p>1) Open <code class="code">art-is-hard</code> in SublimeText</p>
+						<p>2) Right-click, and open the <code class="code">index.html</code> using Chrome</p>
 						<p>3) Use dev tools to debug</p>
 					</div>
 				</section>
 
 				<!-- BROWSER VARIANCES -->
-				<section class="center">
+				<section class="title">
 					<h1>Browser Variances</h1>
-					<img src="../img/class04/browser-variances.jpg">
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Variances</h2>
-					<hr>
+					<div class="heading">Browser Variances</div>
 
 					<p>&#149; Surprise - all browser's are different!</p>
 					<p>&#149; HTML/CSS/JS differ, subtly</p>
-					<p>&#149; No standard for what a <code>&lt;h1&gt;</code> should look like</p>
+					<p>&#149; No standard for what a <code class="code">&lt;h1&gt;</code> should look like</p>
 					<p>&#149; Developing consistent experience == headache</p>
 				</section>
 
@@ -230,18 +208,16 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Variances - Reset</h2>
-					<hr>
+					<div class="heading">Browser Variances: Reset</div>
 
 					<p>Method 1: <u>Reset It</u></p>
 					<p>&#149; Removes browsers' default styles</p>
 					<p>&#149; <a target="_blank" href="http://meyerweb.com/eric/tools/css/reset/">http://meyerweb.com/eric/tools/css/reset/</a></p>
-					<p>&#149; <a href="http://codepen.io/cheshireoctopus/pen/KzMLRX?editors=1000">CodePen</a></p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/KzMLRX?editors=1000">CodePen</a></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Variances - Normalize</h2>
-					<hr>
+					<div class="heading">Browser Variances: Normalize</div>
 
 					<p>Method 2: <u>Normalize It</u></p>
 					<p>&#149; Make all browsers the same while maintaining some default styles</p>
@@ -250,8 +226,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Variances</h2>
-					<hr>
+					<div class="heading">Browser Variances</div>
 
 					<p>&#149; There are MANY CSS resets</p>
 					<p>&#149; Typical: flamewar/spirited debate about which is best</p>
@@ -260,13 +235,12 @@
 				</section>
 
 				<!-- SEMANTIC HTML -->
-				<section class="center">
+				<section class="title">
 					<h1>Semantic HTML</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Semantic HTML</h2>
-					<hr>
+					<div class="heading">Semantic HTML</div>
 
 					<p><u>Semantic HTML</u>:</p>
 					<p class="pad-left-lg">The use of HTML markup to reinforce the semantics, or <u>meaning</u>, of information in webpages, rather than merely define its presentation or look</p>
@@ -282,48 +256,41 @@
 					<img src="../img/class04/semantic.png">
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Semantic HTML</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
 
-					<div class="text-left">
-						<p>&#149; The following behave exactly like <code>&lt;div&gt;</code>'s:</p>
-						<p class="pad-left-lg"><code>&lt;header&gt;</code></p>
-						<p class="pad-left-lg"><code>&lt;footer&gt;</code></p>
-						<p class="pad-left-lg"><code>&lt;nav&gt;</code></p>
-						<p class="pad-left-lg"><code>&lt;section&gt;</code></p>
-						<p class="pad-left-lg"><code>&lt;aside&gt;</code></p>
-						<p class="pad-left-lg"><code>&lt;article&gt;</code></p>
+					<p>&#149; The following behave exactly like <code class="code">&lt;div&gt;</code>'s:</p>
+					<div class="pad-left-lg">
+						<p><code class="code">&lt;header&gt;</code></p>
+						<p><code class="code">&lt;footer&gt;</code></p>
+						<p><code class="code">&lt;nav&gt;</code></p>
+						<p><code class="code">&lt;section&gt;</code></p>
+						<p><code class="code">&lt;aside&gt;</code></p>
+						<p><code class="code">&lt;article&gt;</code></p>
 					</div>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Semantic HTML</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
 
-					<div class="text-left">
-						<p><code>&lt;header&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines a header for a document</p>
-						<p class="pad-left-lg">&#149; This is <u>different</u> from the <code>&lt;head&gt;</code> element</p>
-						<p><code>&lt;footer&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines a footer for a document</p>
-						<p><code>&lt;nav&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines navigation links</p>
-					</div>
+					<p><code class="code">&lt;header&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a header for a document</p>
+					<p class="pad-left-lg">&#149; This is <u>different</u> from the <code class="code">&lt;head&gt;</code> element</p>
+					<p><code class="code">&lt;footer&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a footer for a document</p>
+					<p><code class="code">&lt;nav&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines navigation links</p>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Semantic HTML</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
 
-					<div class="text-left">
-						<p><code>&lt;section&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines a section in a document</p>
-						<p><code>&lt;aside&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines content aside from the page content</p>
-						<p><code>&lt;article&gt;</code></p>
-						<p class="pad-left-lg">&#149; Defines an article (as in a blog or news site)</p>
-					</div>
+					<p><code class="code">&lt;section&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a section in a document</p>
+					<p><code class="code">&lt;aside&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines content aside from the page content</p>
+					<p><code class="code">&lt;article&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines an article (as in a blog or news site)</p>
 				</section>
 
 				<section class="center">
@@ -334,11 +301,11 @@
 				<section class="center">
 					<h1>Layout Lab</h1>
 					<div class="text-left text-smaller">
-						<p>1) Open <code>fashion-blog/</code> in SublimeText</p>
-						<p>2) Build <code>design.png</code></p>
-						<p>3) Copy can be located in <code>copy.txt</code></p>
-						<p>4) Design specs (colors + font-sizing) can be found in <code>readme.txt</code></p>
-						<p>5) Note the extra <code>&lt;link&gt;</code> tag; this fetches the Lato font</p>
+						<p>1) Open <code class="code">fashion-blog</code> in SublimeText</p>
+						<p>2) Build <code class="code">design.png</code></p>
+						<p>3) Copy can be located in <code class="code">copy.txt</code></p>
+						<p>4) Design specs (colors + font-sizing) can be found in <code class="code">readme.txt</code></p>
+						<p>5) Note the extra <code class="code">&lt;link&gt;</code> tag; this fetches the Lato font</p>
 					</div>
 				</section>
 
@@ -348,17 +315,15 @@
 				</section>
 
 				<!-- ON DECK -->
-				<section data-background="#FFF">
-					<h2 class="text-left">What's On Deck: html/css layout (pt. 2)</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
 
-					<div class="text-left">
-						<h4>Class #5 (of 20) - Wednesday, March 16th</h4>
-						<p>&#149; Horizontal Navigation</p>
-						<p>&#149; <code>display: inline-block;</code></p>
-						<p>&#149; CSS Floats/Clear</p>
-						<p>&#149; Float Lab</p>
-					</div>
+					<h4>Class #5 (of 20) - CSS Layout (pt. 1)</h4>
+
+					<p>&#149; Horizontal Navigation</p>
+					<p>&#149; <code class="code">display: inline-block;</code></p>
+					<p>&#149; CSS Floats/Clear</p>
+					<p>&#149; Float Lab</p>
 				</section>
 
 				<section class="center">
