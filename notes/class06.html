@@ -38,71 +38,57 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
-					<div class="text-left text-smallest pad-left-lg">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class06/class06.zip">Class 06 Starter Code</a></p>
 						<p>2) Move the following into your homework directory:</p>
-						<p class="pad-left-lg">&#149; <code>startup-matchmaker/</code></p>
-						<p>3) The solution to last week's layout/float challenges:</p>
-						<p class="pad-left-lg">&#149; <code>fashion-blog-solution/</code></p>
-						<p class="pad-left-lg">&#149; <code>relaxr-solution/</code></p>
-						<p>4) Push up your HW!</p>
+						<p class="pad-left-lg">&#149; <code class="code">startup-matchmaker</code></p>
+						<p>3) The solution to last class's lab:</p>
+						<p class="pad-left-lg">&#149; <code class="code">fashion-blog-part2-solution</code></p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #06 - 03/21/2016</h1>
-					<h1>CSS Floats (pt. 2)</h1>
+				<section class="hero condensed">
+					<h1>Class <span class="red">#06</span> - 10/19/2016</h1>
+					<h1>CSS Layout (pt. 2)</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
-
-					<div class="text-left">
-						<p>&#149; Final Projects! First deliverable due 03/28 (Monday)</p>
-						<p class="pad-left-lg">&rArr; Project Proposal & Wireframes</p>
-						<p>&#149; GA is buying us drinks!</p>
-						<p class="pad-left-lg">&rArr; 3/23 (Wednesday) - after intro to JS</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Annoucements</div>
+					<p>&#149; Class drinks on Monday, 10/24</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; First deliverable due 10/24 (Monday)</p>
+						<p>&rArr; Project proposal/ideas</p>
 					</div>
 				</section>
 
 				<!-- QUESTIONS -->
-				<section class="center">
+				<!-- <section class="title">
 					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
+				</section> -->
 
-<!-- 				<section data-background="#FFF" class="text-left">
-					<h2>Questions</h2>
-					<hr>
-
-					<p class="text-smaller fragment"><b>Q: Default spacing between elements?</b></p>
-					<p class="text-smaller fragment">A: Unable to locate a source, but looks like 4px</p>
-				</section>
- -->
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
-					<h2>Agenda</h2>
-					<hr>
-					<p>&#149; Final Project</p>
-					<p>&#149; Floats/Clears Review</p>
-					<p>&#149; Startup Matchmaker Lab</p>
+					<div class="heading">Agenda</div>
+
+					<p>&#149; <a href="#/final-project">Final project review</a></p>
+					<p>&#149; <a href="#/floats-clears-review">Floats/clears review</a></p>
+					<p>&#149; <a href="#/startup-matchmaker-lab">Startup Matchmaker lab</a></p>
 				</section>
 
-				<section class="center">
+				<section class="title" id="final-project">
 					<h1>Final Project</h1>
-					<img src="../img/class01/final.jpg">
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Final Project</h2>
-					<hr>
+					<div class="heading">Final Project</div>
 
 					<div class="text-smallest">
 						<p>&#149; Culmination of all skills/technologies (and then some)</p>
-						<p>&#149; Five deliverables; due weekly starting @ week 5</p>
+						<p>&#149; Five deliverables; due weekly starting @ week five</p>
 						<p>&#149; Watch out for scope creep!</p>
 						<p>&#149; Student Gallery: <a href="http://gallery.ga.co/">http://gallery.ga.co/</a></p>
 						<p class="pad-left-lg">&rArr; <a href="http://ericthelefty.github.io/fewd-37/Project/doggy.html">Trippy Dog</a></p>
@@ -115,90 +101,78 @@
 				</section>
 
 				<!-- FLOATS REVIEW -->
-				<section class="center">
+				<section class="title">
 					<h1>Floats/Clears Review</h1>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Floats - Review</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats: Review</div>
 
-					<div class="text-left">
-						<p>&#149; Enable complex layouts by altering a block element's "flow" in the document</p>
-						<p>&#149; Floated elements will shift left or right, until:</p>
-						<p class="pad-left-lg">&rArr; They reach the side of their parent</p>
-						<p class="pad-left-lg">&rArr; They encounter another floating element</p>
-						<p>&#149; Text and Inline elements will now <u>wrap</u> around it</p>
-						<p>&#149; <a href="http://codepen.io/cheshireoctopus/pen/dYQBpz?editors=110">Example</a></p>
+					<p>&#149; Enable complex layouts by altering a block element's "flow" in the document</p>
+					<p>&#149; Floated elements will shift left or right, until:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; They reach the side of their parent</p>
+						<p>&rArr; They encounter another floating element</p>
 					</div>
+					<p>&#149; Text and Inline elements will now <u>wrap</u> around it</p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/dYQBpz?editors=110">Example</a></p>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Clears - Review</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: Review</div>
 
-					<div class="text-left">
-						<p>&#149; How we fix, or control, floating elements</p>
-						<p>&#149; Various approaches to clearing elements:</p>
-						<p class="pad-left-lg">&rArr; <code>clear</code> CSS property</p>
-						<p class="pad-left-lg">&rArr; <code>overflow: hidden</code></p>
-						<p class="pad-left-lg">&rArr; <code>clearfix</code></p>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Clears - The "Clear" CSS Proprety</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; <code>clear</code> is a CSS property that takes:</p>
-						<p class="pad-left-lg">&rArr; <code>left</code></p>
-						<p class="pad-left-lg">&rArr; <code>right</code></p>
-						<p class="pad-left-lg">&rArr; <code>both</code></p>
-						<p>&#149; Tells non-floating elements where floats are not allowed (left, right, both sides)</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF">
-					<h2 class="text-left">Clears - overflow: hidden</h2>
-					<hr>
-
-					<div class="text-left">
-						<p>&#149; The <code>overflow</code> CSS property controls what happens to content that breaks outside of it's container <a href="http://codepen.io/cheshireoctopus/pen/YyRoYa?editors=110">(ex.)</a></p>
-						<p>&#149; Takes the following values: <code>visible, hidden, scroll, auto</code></p>
-						<p>&#149; If <code>hidden</code> or <code>auto</code> is applied to a element containing floated elements, will cause the element to extend to accompany any floating children <a href="http://codepen.io/cheshireoctopus/pen/PPxrEx?editors=110">(ex.)</a></p>
-						<p>&#149; <a href="https://css-tricks.com/almanac/properties/o/overflow/">More info</a></p>
+					<p>&#149; How we fix, or control, floating elements</p>
+					<p>&#149; Various approaches to clearing elements:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">clear</code> CSS property</p>
+						<p>&rArr; <code class="code">overflow: hidden</code></p>
+						<p>&rArr; <code class="code">clearfix</code></p>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Clears - clearfix</h2>
-					<hr>
+					<div class="heading">The <code class="code">clear</code> CSS Property</div>
 
-					<p>&#149; Applying overflow</code> may cause undesirable behavior</p>
+					<p>&#149; <code class="code">clear</code> is a CSS property that takes:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">left</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">both</code></p>
+					</div>
+					<p>&#149; Tells non-floating elements where floats are not allowed (left, right, both sides)</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: <code class="code">overflow: hidden</code></div>
+
+					<p>&#149; The <code class="code">overflow</code> CSS property controls what happens to content that breaks outside of it's container <a href="http://codepen.io/cheshireoctopus/pen/YyRoYa?editors=110">(ex.)</a></p>
+					<p>&#149; Takes the following values: <code class="code">visible, hidden, scroll, auto</code></p>
+					<p>&#149; If <code class="code">hidden</code> or <code class="code">auto</code> is applied to a element containing floated elements, will cause the element to extend to accompany any floating children <a href="http://codepen.io/cheshireoctopus/pen/PPxrEx?editors=110">(ex.)</a></p>
+					<p>&#149; <a href="https://css-tricks.com/almanac/properties/o/overflow/">More info</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: The Clearfix</div>
+
+					<p>&#149; Applying <code class="code">overflow</code> may cause undesirable behavior</p>
 					<p>&#149; Clearfix to the rescue:</p>
-					<pre><code>
+<pre><code>
 	.clearfix:after {
 	  content: "";
 	  display: table;
 	  clear: both;
 	}
-					</code></pre>
+
+</code></pre>
 					<p>&#149; Works on collapsed elements only!</p>
 				</section>
 
-<!-- 				<section class="center">
-					<h1>Layout Practice</h1>
-					<p>Open <code>layout_challenge</code> from the previous class</p>
-				</section> -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Startup Matchmaker Lab</div>
 
-				<section class="center">
-					<h1>Startup Matchmaker</h1>
-					<div class="text-left">
-						<p>1. Open <code>startup-matchmaker/</code> in SublimeText</p>
-						<p>2. Build what you see in <code>spec.png</code></p>
-						<p>3. Styling help can be found in <code>readme.txt</code></p>
-					</div>
+					<p>1. Open <code class="code">startup-matchmaker</code> in SublimeText</p>
+					<p>2. Build what you see in <code class="code">spec.png</code></p>
+					<p>3. Styling help can be found in <code class="code">readme.txt</code></p>
 				</section>
 
 				<!-- THE END -->
@@ -208,10 +182,10 @@
 
 				<!-- ON DECK -->
 				<section data-background="#FFF" class="text-left">
-					<h2>What's On Deck: Intro Programming</h2>
-					<hr>
+					<div class="heading">What's On Deck</div>
 
-					<h4>Class #7 (of 20) - Wednesday, March 23th</h4>
+					<h4>Class #7 (of 20) - Intro to Programming/JavaScript</h4>
+
 					<p>&#149; What is JavaScript and what can it do?</p>
 					<p>&#149; How to think programatically</p>
 					<p>&#149; Pseudo Code</p>

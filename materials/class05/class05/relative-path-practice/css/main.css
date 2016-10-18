@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	display: block;
+	margin-bottom: 50px;
+}
+
+.painting {
+	display: inline-block;
+	margin: 0 10px;
+	width: 300px;
+	height: 400px;
+	background-position:center;
+	background-size: cover;
+}
+
+.blue {
+	background-image: url('blue.jpg');
+}
+
+.yellow {
+	background-image: url('yellow.jpg');
+}
+
+.grey {
+	background-image: url('grey.jpg');
+}
