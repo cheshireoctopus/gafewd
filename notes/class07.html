@@ -78,17 +78,19 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Agenda</div>
 
-					<p>&#149; <a href="#/js-in-the-browser">JS in the browser</a></p>
-					<p>&#149; <a href="#/intro-to-programming">Intro to programming</a></p>
-					<p>&#149; <a href="#/pseudo-code">Pseudo code</a></p>
-					<p>&#149; <a href="#/working-with-js">Working locally with JavaScript</a></p>
-					<p>&#149; <a href="#/js-basics">JS Basics</a>:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Data Types</p>
-						<p>&rArr; Variables</p>
-						<p>&rArr; Functions</p>
+					<div class="text-smaller">
+						<p>&#149; <a href="#/js-in-the-browser">JS in the browser</a></p>
+						<p>&#149; <a href="#/intro-to-programming">Intro to programming</a></p>
+						<p>&#149; <a href="#/pseudo-code">Pseudo code</a></p>
+						<p>&#149; <a href="#/working-with-js">Working locally with JavaScript</a></p>
+						<p>&#149; <a href="#/js-basics">JS Basics</a>:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Data Types</p>
+							<p>&rArr; Variables</p>
+							<p>&rArr; Functions</p>
+						</div>
+						<p>&#149; <a href="#/document-querying">Document Querying</a></p>
 					</div>
-					<p>&#149; <a href="#/document-get-by-id"><code>document.getElementById()</code></a></p>
 				</section>
 
 				<!-- INTRO TO JAVASCRIPT -->
@@ -108,6 +110,20 @@
 					<p>&#149; Born in 1995 - created in 10 days by <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a></p>
 					<p>&#149; JavaScript is one of the most <a target="_blank" href="http://githut.info/">popular languages</a></p>
 					<p>&#149; <a href="https://blog.codinghorror.com/the-principle-of-least-power/" target="_blank">Attwood's Law</a> &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript: A History</div>
+
+					<div class="text-smallest">
+						<p>&#149; JavaScript's current version is ES6; most developers using a mix of ES5/ES6</p>
+						<p>&#149; ES &rArr; <a href="http://www.ecma-international.org/" target="_blank">ECMAScript</a> (European Computer Manufacturers Association)</p>
+						<p>&#149; FEWD will focus on the ES5 implementation</p>
+
+						<div class="text-center">
+							<img src="../img/class07/history-javascript.png" alt="">
+						</div>
+					</div>
 				</section>
 
 				<section class="title" id="js-in-the-browser">
@@ -330,8 +346,8 @@
 					<div class="fragment">
 						<p>&#149; Advanced operations contained in the <code class="code">Math</code> library:</p>
 						<div class="pad-left-lg text-smaller">
-							<p>&rArr; <code class="code">Math.pow(2,3)</code> &rArr; 8</p>
-							<p>&rArr; <code class="code">Math.sqrt(25)</code> &rArr; 25</p>
+							<p>&rArr; <code class="code">Math.pow(2,3)</code> = 8</p>
+							<p>&rArr; <code class="code">Math.sqrt(25)</code> = 5</p>
 						</div>
 					</div>
 				</section>
@@ -339,21 +355,45 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Data Types: Strings</div>
 
-					<p>&#149; Used to represent text: <code class="code">"Hello, World!"</code></p>
-					<div class="fragment">
-					<p>&#149; Notable for <b>string concatenation</b>:</p>
-						<div class="pad-left-lg">
-							<p><code class="code">'c' + 'a' + 't'</code></p>
-							<p>&rArr; <code class="code">'cat'</code></p>
+					<div class="text-smaller">
+						<p>&#149; Used to represent text: <code class="code">"Hello, World!"</code></p>
+						<div class="fragment">
+						<p>&#149; Notable for <b>string concatenation</b>:</p>
+<pre><code>
+	'c' + 'a' + 't'
+
+	// "cat"
+
+</code></pre>
+						</div>
+						<div class="fragment">
+							<hr>
+							<p>&#149; Can concatenate different data types (numbers, variables) with strings:</p>
+<pre><code>
+	'i have ' + 2 + 'cats'
+
+	// "i have 2 cats"
+
+</code></pre>
 						</div>
 					</div>
-					<div class="fragment">
-						<hr>
-						<div class="pad-left-lg">
-							<p><code class="code">'i have ' + 2 + 'cats'</code></p>
-							<p>&rArr; <code class="code">'i have 2 cats'</code></p>
-						</div>
-					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types: Strings</div>
+
+					<p>&#149; ES6 introduced <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank">template strings</a></p>
+					<p>&#149; A cleaner way to perform string concatenation:</p>
+<pre><code>
+	var first = 'Barack'
+	var last = 'Obama'
+
+	`Your name is ${first} ${last}.`
+
+	// "Your name is Barack Obama"
+
+</code></pre>
+					<p>&#149; Note the tick marks surrounding the template: <code class="code">` `</code></p>
 				</section>
 
 				<section class="center">
@@ -384,7 +424,7 @@
 
 					<div class="text-smaller">
 						<p>&#149; Often, you will want to store, or keep track of, data in a program</p>
-						<p>&#149; Declare using the <code class="code">var</code> keyword</p>
+						<p>&#149; Declare using the <code class="code">var</code> keyword (note: ES6 introduced <code class="code">let</code> and <code class="code">const</code>)</p>
 						<p>&#149; Will store the piece of data in memory</p>
 						<p>&#149; Use the variable's name to "call" it (retrieve it from memory):</p>
 <pre><code>
@@ -392,10 +432,10 @@
 	var y = 2;
 
 	x
-	=> 2
+	// 2
 
 	x + y
-	=> 4
+	// 4
 
 </code></pre>
 					</div>
@@ -426,19 +466,19 @@
 					<p>1. Create a variable, x, and assign it to 2</p>
 <pre><code>
 	var x = 2;
-	> 2
+	// 2
 
 </code></pre>
 					<p>2. Perform some arithmetic on x</p>
 <pre><code>
 	x * 2
-	> 4
+	// 4
 
 </code></pre>
 					<p>3. What's x now equal to?</p>
 <pre><code>
 	x
-	> 2
+	// 2
 
 </code></pre>
 					</div>
@@ -450,19 +490,19 @@
 					<p><b>Note</b>: you must <u>reassign</u> variables to change them</p>
 <pre><code>
 	var x = 2
-	> 2
+	// 2
 
 	x * 2
-	> 4
+	// 4
 
 	x
-	> 2
+	// 2
 
 	x = x * 2
-	> 4
+	// 4
 
 	x
-	> 4
+	// 4
 
 </code></pre>
 				</section>
@@ -512,38 +552,75 @@
 					</div>
 				</section>
 
-				<section class="title" id="document-get-by-id">
-					<p><code>document.getElementById()</code></p>
+				<section class="title" id="document-querying">
+					<h1>Document Querying</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">document.getElementById()</div>
+					<div class="heading">Document Querying</div>
 
-					<p>&#149; One of the most common/useful JavaScript methods</p>
-					<p>&#149; Used to query HTML and return an element with a certain ID attribute</p>
+					<p>&#149; <code class="code">document.getElementById(selector)</code></p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; One of the most common/useful JavaScript methods</p>
+						<p>&rArr; Used to query HTML and return an element with a certain ID attribute</p>
+					</div>
 <pre><code>
 	document.getElementById('logo')
 
 </code></pre>
-					<p>&#149; The above will look through an HTML document and return the first element with and ID = "logo"</p>
+					<p>&#149; The above will look through an HTML document and return the first element with an ID of "logo"</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Querying</div>
+
+					<p>&#149; <code class="code">document.querySelector(selector)</code></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Returns the <u>first</u> element within the document</p>
+						<p>&rArr; Can query for elements, classes, and ID's</p>
+						<p>&rArr; Prefix <code class="code">selector</code> with <code class="code">#</code> for ID's</p>
+						<p>&rArr; Prefix <code class="code">selector</code> with <code class="code">.</code> for classes</p>
+					</div>
+<pre><code>
+	document.querySelector('#some-id')
+	// returns the first element with id of "some-id"
+
+	document.querySelector('.some-class')
+	// returns the first element class of "some-class"
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Querying</div>
+
+					<p>&#149; <code class="code">document.querySelectorAll(selectors)</code></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Returns a <u>list</u> of the elements within the document</p>
+						<p>&rArr; Can query for elements, classes, and ID's</p>
+					</div>
+<pre><code>
+	document.querySelectorAll('p')
+	// returns all &lt;p> tags
+
+	document.querySelectorAll('.some-class')
+	// returns all elements with class of "some-class"
+
+</code></pre>
 				</section>
 
 				<section class="center">
 					<h1>Code Along</h1>
-					<div class="text-left">
-						<p class="text-smaller">1. Open <code class="code">first-javascript</code> in SublimeText</p>
-						<p class="text-smaller">2. Add the following elements to <code class="code">index.html</code>:</p>
+					<div class="text-left text-smallest">
+						<p>1. Open <code class="code">first-javascript</code> in SublimeText</p>
+						<p>2. Add the following elements to <code class="code">index.html</code>:</p>
 <pre><code>
 	<h1 id="title">Some Title</h1>
 	<p id="text-chunk">A block of text! Yay! Content! SEO!</p>
 
 </code></pre>
-						<p class="text-smaller">3. Use <code class="code">document.getElementId()</code> to target the above elements and change their text color</p>
-
-<pre><code>
-	document.getElementById('title').style.color='red';
-
-</code></pre>
+						<p>3. Use a document query to target the above elements and change their text color</p>
+						<p class="pad-left-lg">Hint: combine your query with <code class="code">.style.color = 'red'</code></p>
 					</div>
 				</section>
 
@@ -556,7 +633,7 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">What's On Deck</div>
 
-					<h4>Class #8(of 20) - JavaScript (pt. 2)</h4>
+					<h4>Class #8 (of 20) - JavaScript (pt. 2)</h4>
 
 					<p>&#149; More JavaScript!</p>
 					<p>&#149; Functions</p>
