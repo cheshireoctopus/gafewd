@@ -39,14 +39,14 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class08/class08.zip">Class 08 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class="pad-left-lg">&#149; <code>lifetime-supply/</code></p>
-						<p class="pad-left-lg">&#149; <code>rgb-color-choice/</code></p>
+						<p class="pad-left-lg">&#149; <code class="code">lifetime-supply</code></p>
+						<p class="pad-left-lg">&#149; <code class="code">rgb-color-choice</code></p>
 						<!-- <p class="pad-left-lg">&#149; <code>temperature-converter/</code></p> -->
 						<!-- <p class="text-smaller">1. Pull the latest <code>class-exercises</code></p>
 						<p class="text-smaller">2. Copy the following directories into <code>my-class-work/</code>
@@ -57,91 +57,76 @@
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #8 - 03/28/2016</h1>
+				<section class="hero condensed">
+					<h1>Class <span class="red">#8</span> - 10/26/2016</h1>
 					<h1>JavaScript (pt. 2)</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
-
-					<div class="text-left">
-						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg">&rArr; Second deliverable due 04/11 (Monday)</p>
-						<p class="pad-left-lg">&rArr; HTML/CSS Rough Draft</p>
-					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
-
 				<section data-background="#FFF" class="text-left">
-					<h2>Questions</h2>
-					<hr>
+					<div class="heading">Announcements</div>
 
-					<p class="text-smaller fragment"><b>Q: When should we use JS to style elements and when should we use CSS?</b></p>
-					<p class="text-smaller fragment">A: Use CSS to define <u>initial</u> page styles; use JS to change CSS in response to user actions</p>
+					<p>&#149; Final Projects:</p>
+					<p class="pad-left-lg">&rArr; Second deliverable due 10/31 (Monday)</p>
+					<p class="pad-left-lg">&rArr; Wireframes</p>
+					<p>&#149; Mid-course Review:</p>
+					<p class="pad-left-lg">&rArr; Please check your email for the mid-course review</p>
+					<p class="pad-left-lg">&rArr; Will complete towards the end of class</p>
 				</section>
 
 				<!-- AGENDA -->
-				<section data-background="#FFF">
-					<h2 class="text-left">Agenda</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
 
-					<div class="text-left">
-						<p class="text-smaller">&#149; JavaScript Review</p>
-						<p class="text-smaller">&#149; Browser Events:</p>
-						<p class="text-smaller pad-left-lg"><code>.onclick</code></p>
-						<p class="text-smaller pad-left-lg"><code>.onmouseover</code> and <code>.onmouseout</code></p>
-						<p class="text-smaller">&#149; Input elements:</p>
-						<p class="text-smaller pad-left-lg"><code>.innerHTML</code> property</p>
-						<p class="text-smaller pad-left-lg"><code>.value</code> property</p>
-						<p class="text-smaller">&#149; Lab!</p>
+					<div class="text-smaller">
+						<p>&#149; <a href="#/js-review">JavaScript review</a></p>
+						<p>&#149; <a href="#/browser-events">Browser events</a>:</p>
+						<p class="pad-left-lg"><code class="code">.onclick</code></p>
+						<p class="pad-left-lg"><code class="code">.onmouseover</code> and <code class="code">.onmouseout</code></p>
+						<p>&#149; <a href="#/inner-html-property"><code>.innerHTML</code></a> property</p>
+						<p>&#149; <a href="#/input-elements">Input elements</a></p>
+						<p>&#149; <a href="#/labs">Labs</a></p>
 					</div>
 				</section>
 
-				<section class="center">
+				<section class="title" id="js-review">
 					<h1>JS Review</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>JS Review</h2>
-					<hr>
+					<div class="heading">JS Review</div>
 
-					<p>&#149; Data types:</p>
-					<div class="fragment text-smaller">
-						<p class="pad-left-lg">&rArr; How we classify data</p>
-						<p class="pad-left-lg">&rArr; Strings, Numbers, Booleans, etc.</p>
-						<p class="pad-left-lg">&rArr; Determines how we interact with the data</p>
-					</div>
-					<p>&#149; Variables:</p>
-					<div class="fragment text-smaller">
-						<p class="pad-left-lg">&rArr; Placeholder used to store a piece of data</p>
+					<div class="text-smaller">
+						<p>&#149; Data types:</p>
+						<div class="fragment text-smaller pad-left-lg">
+							<p>&rArr; How we classify data</p>
+							<p>&rArr; Strings, Numbers, Booleans, etc.</p>
+							<p>&rArr; Determines how we interact with the data</p>
+						</div>
+						<p>&#149; Variables:</p>
+						<div class="fragment text-smaller">
+							<p class="pad-left-lg">&rArr; Placeholder used to store a piece of data</p>
 <pre><code>
 	var x = 2;
 
 </code></pre>
-						<p class="pad-left-lg">&rArr; How we manage state (store memory) in a program</p>
-						<p class="pad-left-lg">&rArr; Assignment only occurs left to right!</p>
+							<p class="pad-left-lg">&rArr; How we manage state (store memory) in a program</p>
+							<p class="pad-left-lg">&rArr; Assignment only occurs left to right!</p>
+						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>JS Revew</h2>
-					<hr>
+					<div class="heading">JS Reivew</div>
 
-					<p><code>document.getElementById()</code></p>
+					<p><code class="code">document.getElementById()</code></p>
 					<div class="fragment text-smallest pad-left-lg">
 						<p>&rArr; Queries HTML for the first element with the specified ID</p>
 <pre><code>
 	document.getElementById('logo')
 
 </code></pre>
-						<p>&rArr; The above will look through a HTML document and return the first element with <code>id="logo"</code></p>
+						<p>&rArr; The above will look through a HTML document and return the first element with <code class="code">id="logo"</code></p>
 						<p>&rArr; Once an element is returned, additional JavaScript methods can be "called" on it</p>
 						<p>&rArr; Can use variables to store refrences to HTML elements:</p>
 <pre><code>
@@ -154,11 +139,35 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>JS Review</h2>
-					<hr>
+					<div class="heading">JS Reivew</div>
+					<div class="text-smaller">
+						<p>Other methods for querying HTML:</p>
+<pre><code>
+	// will return the first element with an ID of "logo"
+	document.querySelector('#logo');
+
+	// will return the first &lt;h1> element
+	document.querySelector('h1');
+
+	// will return all &lt;p> elements
+	document.querySelectorAll('p');
+
+	// will return all elements with a class of "feature"
+	document.querySelectorAll('.feature');
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; Note: <code class="code">document.querySelectorAll</code> returns a list (an array) of DOM nodes</p>
+							<p>&#149; Will be covering the list/array data structure next week</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JS Review</div>
 
 					<p>&#149; Functions</p>
-					<div class="fragment text-smallest pad-left-lg">
+					<div class="text-smallest pad-left-lg">
 						<p>&rArr; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
 						<p>&rArr; Think of them as miniature programs</p>
 
@@ -170,34 +179,39 @@
 	}
 
 </code></pre>
-						<p>1. What is the name of this function?</p>
-						<p>2. What does this function do?</p>
-						<p>3. Does this function have any state?</p>
-						<p>4. How would you call, or invoke, this function?</p>
+						<div class="fragment">
+							<p>1. What is the name of this function?</p>
+							<p>2. What does this function do?</p>
+							<p>3. Does this function have any state (anything kept in memory)?</p>
+							<p>4. How would you call, or invoke, this function?</p>
+						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Functions: Named vs. Anonymous</h2>
+					<div class="heading">Functions: Named vs. Anonymous</div>
+
 					<div class="text-smallest">
-					<p>&#149; Named Functions:</p>
-					<p class="pad-left-lg">&rArr; Function is associated with a name</p>
-					<p class="pad-left-lg">&rArr; Useful if you plan on using the funciton in many places</p>
+						<p>&#149; Named Functions:</p>
+						<p class="pad-left-lg">&rArr; Function is associated with a name</p>
+						<p class="pad-left-lg">&rArr; Useful if you plan on using the funciton in many places</p>
 <pre><code>
 	function calculateTax () {
-		// func body
+	  // func body
 	}
 
 </code></pre>
-					<p>&#149; Anonymous Functions:</p>
-					<p class="pad-left-lg">&rArr; Function is created and executed on the fly</p>
-					<p class="pad-left-lg">&rArr; Useful for callbacks and event handlers</p>
+						<div class="fragment">
+							<p>&#149; Anonymous Functions:</p>
+							<p class="pad-left-lg">&rArr; Function is created and executed on the fly</p>
+							<p class="pad-left-lg">&rArr; Useful for callbacks and event handlers</p>
 <pre><code>
-	function () {
-		// func body
+	document.querySelector('#my-el').onclick = function () {
+	  // func body
 	}
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -232,73 +246,70 @@
 				</section> -->
 
 				<!-- BROWSER EVENTS -->
-				<section class="center">
+				<section class="title" id="browser-events">
 					<h1>Browser Events</h1>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">Browser Events</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Browser Events</div>
 
-					<div class="text-left">
-						<p>&#149; Events that users perform in the browser:</p>
-						<p class="pad-left-lg text-smaller">&rArr; click</p>
-						<p class="pad-left-lg text-smaller">&rArr; mouse over</p>
-						<p class="pad-left-lg text-smaller">&rArr; mouse out</p>
-						<p class="pad-left-lg text-smaller">&rArr; key down</p>
-						<p class="pad-left-lg text-smaller">&rArr; key up</p>
-						<p class="pad-left-lg text-smaller">&rArr; form submit</p>
-						<p>&#149; We can use JavaScript to track and respond to events</p>
-						<p>&#149; <a href="http://eloquentjavascript.net/14_event.html">More Events Info</a></p>
+					<p>&#149; Events that users perform in the browser:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; click</p>
+						<p>&rArr; mouse over</p>
+						<p>&rArr; mouse out</p>
+						<p>&rArr; key down</p>
+						<p>&rArr; key up</p>
+						<p>&rArr; form submit</p>
 					</div>
+					<p>&#149; We can use JavaScript to track and respond to events</p>
+					<p>&#149; <a href="http://eloquentjavascript.net/14_event.html">More Events Info</a></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Events</h2>
-					<hr>
-					<p class="text-smallest">Apply events in three steps:</p>
-					<div class="pad-left-lg">
-						<div class="text-smallest">
-							<p>1) Use <code>document.getElementById()</code> to select the element you want to apply the event to</p>
+					<div class="heading">Browser Events</div>
+
+					<p>Apply events in three steps:</p>
+					<div class="pad-left-lg text-smallest">
+						<p>1) Use <code class="code">document.getElementById()</code> (or, any other query selector) to select the element you want to apply the event to:</p>
 <pre><code>
 	document.getElementById('click-me')
 
 </code></pre>
-							<p>2) Apply the event name to the selected element:</p>
+						<p>2) Apply the event name to the selected element:</p>
 <pre><code>
 	document.getElementById('click-me').onclick
 
 </code></pre>
-							<p>3) Set the above equal to the function that will run when the event is triggered</p>
+						<p>3) Set the above equal to the function that will run when the event is triggered</p>
 <pre><code>
 	document.getElementById('click-me').onclick = function () {
-		// do something
+	  // do something
 	}
 
 </code></pre>
-						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Events - Click Event</h2>
-					<hr>
+					<div class="heading">Browser Events: Click Event</div>
+
 					<div class="text-smaller">
-						<p>&#149; Use <code>.onclick</code> to add a click handler to an element</p>
+						<p>&#149; Use <code class="code">.onclick</code> to add a click handler to an element</p>
 						<p>&#149; Events can be handled with both anonymous and named functions:</p>
 						<p>&#149; Named function:</p>
 <pre><code>
 	document.getElementById('some-el').onclick = doSomething;
 
 	function doSomething () {
-		// function body
+	  // function body
 	}
 
 </code></pre>
 						<p>&#149; Anonymous function:</p>
 <pre><code>
 	document.getElementById('some-el').onclick = function () {
-		// function body
+	  // function body
 	}
 
 </code></pre>
@@ -311,11 +322,10 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>Browser Events - Mouse Over/Out</h2>
-					<hr>
+					<div class="heading">Browser Events: Mouse Over/Out</div>
 
 					<div class="text-smaller">
-						<p>&#149; Use <code>.onmouseover</code> and <code>.onmouseout</code> to achieve a "hover" effect:</p>
+						<p>&#149; Use <code class="code">.onmouseover</code> and <code class="code">.onmouseout</code> to achieve a "hover" effect:</p>
 <pre><code>
 	var button = document.getElementById('someElement');
 
@@ -323,8 +333,8 @@
 	button.onmouseout = outFunction;
 
 </code></pre>
-						<p class="pad-left-lg">&rArr; <code>.onmouseover</code> is triggered when a user moves the cursor over the desired HTML element</p>
-						<p class="pad-left-lg">&rArr; <code>.onmouseout</code> is triggered when a user's cursor leaves said element</p>
+						<p class="pad-left-lg">&rArr; <code class="code">.onmouseover</code> is triggered when a user moves the cursor over the desired HTML element</p>
+						<p class="pad-left-lg">&rArr; <code class="code">.onmouseout</code> is triggered when a user's cursor leaves said element</p>
 					</div>
 				</section>
 
@@ -333,44 +343,48 @@
 						<p><a href="http://codepen.io/cheshireoctopus/pen/RWdMKo?editors=1010" target="_blank">http://codepen.io/cheshireoctopus/pen/RWdMKo?editors=1010</a></p>
 				</section>
 
-				<section class="center">
-					<h1>.innerHTML Property</h1>
+				<section class="title" id="inner-html-property">
+					<h1><code>.innerHTML</code> Property</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>.innerHTML Property</h2>
-					<hr>
+					<div class="heading"><code>.innerHTML Property</code></div>
 
 					<div class="text-smallest">
 						<p>&#149; Often, you will want to set/get text from HTML</p>
-						<p>&#149; Use <code>.innerHTML</code> to read and write HTML</p>
+						<p>&#149; Use <code class="code">.innerHTML</code> to read and write HTML</p>
 						<p>&#149; Assuming the following HTML:</p>
 <pre><code>
 	<div id="result">Hello, World!</div>
 
 </code></pre>
-						<p>&rArr; To read:</p>
+						<div class="fragment">
+							<p>&rArr; To read:</p>
 <pre><code>
-	document.getElementById('some-id').innerHTML
+	document.getElementById('result').innerHTML
 	=> 'Hello, World!'
 
 </code></pre>
-						<p>&rArr; To write:</p>
+						</div>
+						<div class="fragment">
+							<p>&rArr; To write:</p>
 <pre><code>
-	document.getElementById('some-id').innerHTML = 'Cats';
+	document.getElementById('result').innerHTML = 'Cats';
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>parseInt() Function</h1>
+				<section class="title">
+					<h1><code>parseInt()</code> Function</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>parseInt() Function</h2>
-					<p>&#149; <code>.innerHTML</code>, and similar methods that pull text from HTML, return these values as <u>strings</u>!</p>
-					<p>&#149; <code>parseInt()</code> converts the string data type to a <u>number</u> data type</p>
+					<div class="heading"><code>parseInt()</code> Function</div>
+
+					<p>&#149; <code class="code">.innerHTML</code>, and similar methods that pull text from HTML, return these values as <u>strings</u>!</p>
+					<p>&#149; <code class="code">parseInt()</code> converts the string data type to a <u>number</u> data type</p>
 <pre><code>
 	var x = "2"
 
@@ -389,10 +403,10 @@
 
 					<div class="text-left text-smaller">
 						<p>1. Go to <a href="http://codepen.io/cheshireoctopus/pen/JXJroj?editors=101" target="_blank">http://codepen.io/cheshireoctopus/pen/JXJroj?editors=101</a></p>
-						<p>2. Add <code>.onclick</code> events to the <code>&lt;button&gt;</code>'s</p>
-						<p>3. When clicked, these buttons should add/subtract from <code>id="result"</code></p>
-						<p>4. Use <code>.innerHTML</code> to change the text inside <code>id="result"</code></p>
-						<p>5. Don't forget <code>parseInt()</code></p>
+						<p>2. Add <code class="code">.onclick</code> events to the <code class="code">&lt;button&gt;</code>'s</p>
+						<p>3. When clicked, these buttons should add/subtract from <code class="code">id="result"</code></p>
+						<p>4. Use <code class="code">.innerHTML</code> to change the text inside <code class="code">id="result"</code></p>
+						<p>5. Don't forget <code class="code">parseInt()</code></p>
 
 <pre><code>
 	document.getElementById('zero').onclick = function () {
@@ -403,103 +417,103 @@
 					</div>
 				</section>
 
-				<section class="center">
+				<section class="title" id="input-elements">
 					<h1>User Input Elements</h1>
 					<p>&lt;input&gt; and &lt;select&gt;</p>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">User Input Elements</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">User Input Elements</div>
 
-					<div class="text-left">
-						<p>&#149; User input elements enable interactive behaviors</p>
-						<p>&#149; Allow users to input, select, check, and submit data</p>
-						<p>&#149; Two (primary) input-related elements:</p>
-						<p class="pad-left-lg">&lt;input&gt;</p>
-						<p class="pad-left-lg">&lt;select&gt;</p>
-					</div>
+					<p>&#149; User input elements enable interactive behaviors</p>
+					<p>&#149; Allow users to input, select, check, and submit data</p>
+					<p>&#149; Two (primary) input-related elements:</p>
+					<p class="pad-left-lg"><code class="code">&lt;input&gt;</code></p>
+					<p class="pad-left-lg"><code class="code">&lt;select&gt;</code></p>
+					<p>&#149; Also see: <code class="code">&lt;textarea&gt;</code></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<h2>&lt;input&gt; element</h2>
-					<hr>
+					<div class="heading"><code>&lt;input&gt;</code> element</div>
 
-					<div class="text-left text-smallest">
+					<div class="text-smallest">
 						<p>&#149; Used to accept a variety of data from user</p>
 <pre><code>
 	&lt;input type="text" /&gt;
 
 </code></pre>
-						<p>&#149; The <code>type</code> attribute determines the type of input:</p>
-						<p class="pad-left-lg">&rArr; text (default; don't have to specify)</p>
-						<p class="pad-left-lg">&rArr; password</p>
-						<p class="pad-left-lg">&rArr; radio</p>
-						<p class="pad-left-lg">&rArr; checkbox</p>
-						<p class="pad-left-lg">&rArr; color</p>
-						<p class="pad-left-lg">&rArr; date</p>
+						<p>&#149; The <code class="code">type</code> attribute determines the type of input:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; text (default; don't have to specify)</p>
+							<p>&rArr; password</p>
+							<p>&rArr; radio</p>
+							<p>&rArr; checkbox</p>
+							<p>&rArr; color</p>
+							<p>&rArr; date</p>
+						</div>
 					</div>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">&lt;input&gt; element</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code>&lt;input&gt;</code> element</div>
 
-					<div class="text-left">
-						<p class="text-smallest"><code>&lt;input placeholder="this is a placeholer"&gt;</code></p>
+					<div class="text-smallest">
+						<p class="text-smallest"><code class="code">&lt;input placeholder="this is a placeholer"&gt;</code></p>
 						<input type="text" placeholder="this is a placeholer">
+						<hr>
 						<p class="text-smallest">
-							&lt;input type="radio" name="radio1" checked&gt;
-							<br>
-							&lt;input type="radio" name="radio1"&gt;
+							<code class="code">&lt;input type="radio" name="my-radio" checked&gt;</code>
+							<br><br>
+							<code class="code">&lt;input type="radio" name="my-radio"&gt;</code>
 						</p>
 						<input type="radio" name="radio1" checked> <input type="radio" name="radio1">
+						<hr>
 						<p class="text-smallest">
-							&lt;input type="checkbox"&gt;
-							<br>
-							&lt;input type="checkbox"&gt;
+							<code class="code">&lt;input type="checkbox"&gt;</code>
 						</p>
-						<input type="checkbox"> <input type="checkbox">
-						<p class="text-smallest">&lt;input type="color"&gt;</p>
+						<input type="checkbox">
+						<hr>
+						<p class="text-smallest"><code class="code">&lt;input type="color"&gt;</code></p>
 						<input type="color">
 					</div>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">&lt;select&gt; element</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code>&lt;select&gt;</code> element</div>
 
-					<div class="text-left">
-						<p class="text-smaller">&#149; AKA - dropddown element</p>
-						<p class="text-smaller">&#149; Used to represent a menu of options</p>
+					<div class="text-smaller">
+						<p>&#149; AKA - dropddown element</p>
+						<p>&#149; Used to represent a menu of options</p>
 <pre><code>
 	<select>
-		<option value="option1">Option 1</option>
-		<option value="option2">Option 2</option>
-		<option value="option3">Option 3</option>
+	  <option value="option1">Option 1</option>
+	  <option value="option2">Option 2</option>
+	  <option value="option3">Option 3</option>
 	</select>
 
 </code></pre>
-						<select>
-							<option value="option1">Option 1</option>
-							<option value="option2">Option 2</option>
-							<option value="option3">Option 3</option>
-						</select>
-						<p class="text-smaller">&#149; &lt;option&gt; elements represent available selections</p>
-						<p class="text-smaller">&#149; &lt;option&gt; elements must contain <code>value</code> attributes</p>
+						<div class="text-center">
+							<select>
+								<option value="option1">Option 1</option>
+								<option value="option2">Option 2</option>
+								<option value="option3">Option 3</option>
+							</select>
+						</div>
+						<p>&#149; <code class="code">&lt;option&gt;</code> elements represent available selections</p>
+						<p>&#149; <code class="code">&lt;option&gt;</code> elements must contain <code class="code">value</code> attributes</p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>.value Property</h1>
+				<section class="title">
+					<h1><code>.value</code> Property</h1>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">.value Property</h2>
-					<hr>
-					<div class="text-left">
-						<p>&#149; <code>.value</code> is used to get/set <code>&lt;input&gt;</code> values</p>
-						<p>&#149; WATCHOUT - similar to <code>.innerHTML</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code>.value</code> Property</div>
+
+					<div class="text-smaller">
+						<p>&#149; <code class="code">.value</code> is used to get/set <code class="code">&lt;input&gt;</code> values</p>
+						<p>&#149; WATCHOUT - similar to <code class="code">.innerHTML</code></p>
 						<p>&#149; Is used to read and write values:</p>
 						<p class="pad-left-lg">&rArr; Read:</p>
 <pre><code>
@@ -514,52 +528,56 @@
 					</div>
 				</section>
 
-				<section data-background="#FFF">
-					<h2 class="text-left">.value Property - continued</h2>
-					<hr>
-					<div class="text-left">
-						<p class="text-smallest">&#149; <code>.value</code> can also be used on <code>&lt;select&gt;</code> elements</p>
-						<p class="text-smallest">&#149; Uses the <code>&lt;option&gt;</code>'s <code>value</code> attribute</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code>.value</code> Property</div>
+
+					<div class="text-smaller">
+						<p>&#149; <code class="code">.value</code> can also be used on <code class="code">&lt;select&gt;</code> elements</p>
+						<p>&#149; Uses the <code class="code">&lt;option&gt;</code>'s <code class="code">value</code> attribute</p>
 <pre><code>
 	<select id="some-dropdown">
-		<option value="option-one">Beer</option>
-		<option value="option-two">Coffee</option>
-		<option value="option-three">Water</option>
+	  <option value="option-one">Beer</option>
+	  <option value="option-two">Coffee</option>
+	  <option value="option-three">Water</option>
 	</select>
 
 </code></pre>
 
-						<p class="text-smallest">&#149; The following will return the above's selected <code>&lt;option&gt;</code> <u>value!!!!</u></p>
+						<p>&#149; The following will return the above's selected <code class="code">&lt;option&gt;</code> <u>value</u>!</p>
 <pre><code>
 	document.getElementById('some-dropdown').value
 
 </code></pre>
-						<p class="text-smallest">&#149; Returns "option-one", NOT "Beer"</p>
+						<p>&#149; Returns "option-one", NOT "Beer"</p>
 					</div>
+				</section>
+
+				<section class="title" id="labs">
+					<h1>Labs</h1>
 				</section>
 
 				<section class="center">
 					<h2>Exercise: RGB Color Choice</h2>
-					<div class="text-left">
-						<p class="text-smallest">Open <code>rgb-color-choice/</code> and write JS for the following:</p>
-						<p class="text-smallest">1. User enters a value into the red, green, and blue fields</p>
-						<p class="text-smallest">2. User clicks 'Change the Color!' <code>&lt;button&gt;</code>, triggers a function</p>
-						<p class="text-smallest">3. Inside this function, create variables for the color values (R, G, B)</p>
-						<p class="text-smallest">4. Relpace the text inside <code>id=colorful-text</code> with the new RGB values</p>
-						<p class="text-smallest">5. Use <code>.style.background</code> to change the background color of the <code>#wrapper</code></p>
+					<div class="text-left text-smallest">
+						<p>Open <code class="code">rgb-color-choice</code> and write JS for the following:</p>
+						<p>1. User enters a value into the red, green, and blue fields</p>
+						<p>2. User clicks 'Change the Color!' <code class="code">&lt;button&gt;</code>, triggers a function</p>
+						<p>3. Inside this function, create variables for the color values (R, G, B)</p>
+						<p>4. Relpace the text inside <code class="code">id=colorful-text</code> with the new RGB values</p>
+						<p>5. Use <code class="code">.style.background</code> to change the background color of the <code class="code">#wrapper</code></p>
 					</div>
 				</section>
 
 				<section class="center">
 					<h2>Exercise: Lifetime Supply</h2>
-					<div class="text-left">
-						<p class="text-smallest">Open <code>lifetime-supply/</code>; write JS for the following:</p>
-						<p class="text-smallest">1. Store your current age into a variable</p>
-						<p class="text-smallest">2. Store a maximum age into a variable</p>
-						<p class="text-smallest">3. Store a favorite drink (from a drop-down) into a variable</p>
-						<p class="text-smallest">4. Store an amount per day into a variable</p>
-						<p class="text-smallest">5. Calculate how many you would eat total for the rest of your life</p>
-						<p class="text-smallest">6. Output your results to the user</p>
+					<div class="text-left text-smaller">
+						<p>Open <code class="code">lifetime-supply</code>; write JS for the following:</p>
+						<p>1. Store your current age into a variable</p>
+						<p>2. Store a maximum age into a variable</p>
+						<p>3. Store a favorite drink (from a drop-down) into a variable</p>
+						<p>4. Store an amount per day into a variable</p>
+						<p>5. Calculate how many you would eat total for the rest of your life</p>
+						<p>6. Output your results to the user</p>
 					</div>
 				</section>
 
@@ -582,12 +600,11 @@
 
 				<!-- ON DECK -->
 				<section data-background="#FFF" class="text-left">
-					<h2>What's On Deck: jQuery (pt. 1)</h2>
-					<hr>
+					<div class="heading">What's On Deck</div>
 
-					<h4>Class #9 (of 20) - Wednesday, March 30th</h4>
+					<h4>Class #9 (of 20) - JavaScript (pt. 2)</h4>
 
-					<p>&#149; If/Else (boolean logic)</p>
+					<p>&#149; If/else conditional statements</p>
 					<p>&#149; Functions and Arguments</p>
 					<p>&#149; jQuery</p>
 				</section>
