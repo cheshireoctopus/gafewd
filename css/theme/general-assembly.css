@@ -56,6 +56,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: #c7254e;
   border-radius: 4px; }
 
+.lower {
+  text-transform: lowercase !important; }
+
 .reveal blockquote {
   width: 90% !important; }
 

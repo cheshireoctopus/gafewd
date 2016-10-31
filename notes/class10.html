@@ -35,108 +35,77 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class10/class10.zip">Class 10 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>jquery-review/</code></p>
-						<p class=" pad-left-lg"><code>jquery-city/</code></p>
-						<p class=" pad-left-lg"><code>accordian/</code></p>
-						<p>3) Make sure you HW is pushed up!</p>
+						<div class="pad-left-lg">
+							<p><code class="code">jquery-city</code></p>
+						</div>
+						<p>3) Move the following into your homework directory:</p>
+						<p class="pad-left-lg"><code class="code">accordian</code></p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #10 - 04/04/2016</h1>
-					<h2>jQuery (pt. 2) - DOM Manipulation</h2>
+				<section class="hero condensed">
+					<h1>Class <span class="red">#10</span> - 11/02/2016</h1>
+					<h1>jQuery (pt. 2)</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
-
-					<div class="text-left">
-						<p>&#149; Final Projects - Milestone 2 - due 04/11 (Monday)</p>
-						<p class="pad-left-lg">&rArr; HTML rough draft</p>
-						<p class="pad-left-lg">&rArr; CSS rough draft</p>
-					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
-
 				<section data-background="#FFF" class="text-left">
-					<h2>Questions</h2>
-					<hr>
+					<div class="heading">Announcements</div>
 
-					<p class="text-smaller fragment"><b>Q: Best practice to use jQuery over JavaScript if it results in cleaner code?</b></p>
-					<div class="fragment text-smallest">A: It depends...
-						<p class="pad-left-lg">&rArr; jQuery is a tool with a specific use case: making it easier to work with the DOM.</p>
-						<p class="pad-left-lg">&rArr; As the developer, it's up to you to select the proper tools to solve the problem.</p>
-						<p class="pad-left-lg">&rArr; Remember: JS and jQuery aren't mutually exclusive - you will use the two together (afterall, jQuery <u>IS</u> JavaScript).</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Third deliverable due 11/07 (Monday)</p>
+						<p>&rArr; HTML/CSS Rough Draft</p>
 					</div>
-					<!-- <p class="text-smaller fragment"><b>Q: What does <code>.innerHTML</code> do?</b></p>
-					<p class="text-smallest fragment">A: Used to access the HTML and text inside of a particular HTML element</p>
-					<p class="text-smaller fragment"><b>Q: Why is CSS loaded before <code>&lt;body&gt;</code>, but not JS</b></p>
-					<p class="text-smallest fragment">A: tl;dr it's how web browsers function (see <code>test/</code> example)</p> -->
 				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
-					<h2>Agenda</h2>
-					<hr>
+					<div class="heading">Agenda</div>
 
 					<div class="text-smaller">
-						<p>&#149; jQuery Review</p>
-						<p>&#149; Toggling element visibility (hide vs. show)</p>
-						<p>&#149; Anonymous vs. Named functions</p>
-						<p>&#149; Manipulating element attributes using <code>.attr()</code></p>
-						<p>&#149; <code>$(this)</code></p>
-						<p>&#149; Document Traversal</p>
-					</div>
-				</section>
-
-				<!-- JQUERY REVIEW -->
-				<section class="center">
-					<h1>jQuery Review</h1>
-					<div class="text-left">
-						<p>1. Open <code>jquery-review/</code> in Sublime Text</p>
-						<p>2. Read <code>instructions.txt</code></p>
+						<!-- <p>&#149; jQuery Review</p> -->
+						<p>&#149; <a href="#/jquery-hide-show">Toggling element visibility (hide vs. show)</a></p>
+						<p>&#149; <a href="#/jquery-attr">Manipulating element attributes using <code>.attr()</code></a></p>
+						<p>&#149; <a href="#/jquery-this"><code>$(this)</code></p></a>
+						<p>&#149; <a href="#/dom-traversal">Document traversal</a></p>
+						<p>&#149; <a href="#/lab">Accordian lab</a></p>
 					</div>
 				</section>
 
 				<!-- TOGGLING ELEMENT VISIBILITY -->
-				<section class="center">
+				<section class="title" id="jquery-hide-show">
 					<h1>Toggling Element Visibility</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show</h3>
-					<hr>
-						<p><code>.hide()</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their inline style to <code>display: none;</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Hide and Show</div>
+
+					<p><code class="code">.hide()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their inline style to <code class="code">display: none;</code></p>
 <pre><code>
-	$('p').hide()
+	$('p').hide();
 
 </code></pre>
-						<p><code>.show()</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; Reveals elements by setting their inline style to <code>display: block</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; If the element was originally <code>inline</code>, then <code>display: inline</code> will be used</p>
+						<p><code class="code">.show()</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Reveals elements by setting their inline style to <code class="code">display: block</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; If the element was originally <code class="code">inline</code>, then <code class="code">display: inline</code> will be used</p>
 <pre><code>
-	$('p').show()
+	$('p').show();
 
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show (ctn)</h3>
-					<hr>
-						<p>&#149; Change the duration by passing an argument</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Hide and Show</div>
+
+					<p>&#149; Change the duration by passing an argument:</p>
 						<p class="pad-left-lg">&rArr; String:</p>
 <pre><code>
 	$('p').hide('slow')
@@ -153,22 +122,27 @@
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Hide and Show Alternatives</h3>
-					<hr>
-					<p><code>.fadeIn()</code></p>
-					<p><code>.fadeOut()</code></p>
-					<p><code>.slideDown()</code></p>
-					<p><code>.slideUp()</code></p>
-					<p><code>.slideToggle()</code></p>
-					<hr>
-					<p>&#149; Each take a <code>duration</code> argument:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Hide and Show</div>
+
+					<div class="text-smallest">
+						<p>&#149; jQuery provides alternatives to <code class="code">.hide()</code> and <code class="code">.show()</code>:</p>
+						<div class="pad-left-lg">
+							<p><code class="code">.fadeIn()</code></p>
+							<p><code class="code">.fadeOut()</code></p>
+							<p><code class="code">.slideDown()</code></p>
+							<p><code class="code">.slideUp()</code></p>
+							<p><code class="code">.slideToggle()</code></p>
+						</div>
+						<hr>
+						<p>&#149; Each takes a <code class="code">duration</code> argument:</p>
 <pre><code>
 	$('p').fadeIn('fast')
 
 	$('p').slideUp(900)
 
 </code></pre>
+					</div>
 				</section>
 
 				<section class="center">
@@ -176,90 +150,17 @@
 					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101">http://codepen.io/cheshireoctopus/pen/EVqraa?editors=101</a></p>
 				</section>
 
-				<!-- ANONYMOUS FUNCTIONS -->
-				<section class="center">
-					<h1>Anonymous Functions</h1>
-					<img src="../img/class10/anonymous.png" alt="">
-				</section>
-
-<!-- 				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions Review</h2>
-					<hr>
-					<p>So far, we've been writing and calling functions like this:</p>
-<pre><code>
-	// Event handler responsible for calling the function
-	$('button').click(someFunctionName)
-
-	// The Actual Function
-	function someFunctionName () {
-		// Do something here
-	}
-
-</code></pre>
-					<p>&#149; This is an example of a <u>named</u> function</p>
-					<p>&#149; The function's name is <code>someFunctionName</code></p>
-				</section> -->
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions Review</h2>
-					<hr>
-					<p>&#149; Named Functions:</p>
-<pre><code>
-	function doSomething () {
-		// run some code...
-	}
-
-</code></pre>
-					<p>&#149; Anonymous Functions:</p>
-<pre><code>
-	function () {
-		// run some code...
-	}
-
-</code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h2>Anonymous Functions</h2>
-					<hr>
-					<div class="text-smallest">
-						<p>&#149; Many commands, especially events,  expect a function as an argument:</p>
-<pre><code>
-	$('button').click(someFunction)
-
-	function someFunction () {
-		// Do something here
-	}
-
-</code></pre>
-						<p>&#149; Anonymous functions let us use a function without naming and separately defining it:</p>
-<pre><code>
-	$('button').click(function () {
-		// Do something here
-	})
-
-</code></pre>
-						<p>&#149; This makes anonymous functions good for events: <code>.click()</code>, <code>.keyup()</code>, <code>.mouseover()</code>, etc.</p>
-						<p>&#149; NOTE: anonymous functions only exist when that bit of code is running</p>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong</h1>
-					<p>Update Hide/Show Keanu to use anonymous functions</p>
-				</section>
-
 				<!-- MANIPULATING ATTRIBUTES -->
-				<section class="center">
+				<section class="title" id="jquery-attr">
 					<h1>Manipulating Element Attributes</h1>
-					<p>Putting the <code>.attr()</code> function to use</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Manipulating Element Attributes</h2>
-					<hr>
-					<p><code>.attr('attribute-name')</code></p>
-					<p class="pad-left-lg text-smallest">&rArr; Gets the value of the matched attribute name</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Manipulating Element Attributes</div>
+
+					<div class="text-smaller">
+						<p><code class="code">.attr('attribute-name')</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Gets the value of the matched attribute name</p>
 <pre><code>
 	<img src="keanu.jpg">
 
@@ -267,27 +168,27 @@
 	// returns 'keanu.jpg'
 
 </code></pre>
-					<p><code>.attr('attribute-name', 'attribute-value')</code></p>
-					<p class="pad-left-lg text-smallest">&rArr; Changes the value of <code>'attribute-name'</code> to 'attribute value'</p>
+						<p><code class="code">.attr('attribute-name', 'attribute-value')</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Changes the value of <code class="code">'attribute-name'</code> to <code class="code">'attribute value'</code></p>
 <pre><code>
 	$('img').attr('src', 'gary-busey.jpg')
 
 	<img src="gary-busey.jpg">
 
 </code></pre>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Getting Element Attributes</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Manipulating Element Attributes</div>
 					<div class="text-smallest">
-						<p>Assuming the following HTML:</p>
+						<p>&#149; Assuming the following HTML:</p>
 <pre><code>
 	<a href="http://google.com">Google</a>
 	<img src="smiley.png" id="logo">
 
 </code></pre>
-						<p>Get attribute <code>.attr('attribute-name')</code>:</p>
+						<p>&#149; Get attribute <code class="code">.attr('attribute-name')</code>:</p>
 <pre><code>
 	$('a').attr('href')
 
@@ -303,21 +204,21 @@
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Setting Element Attributes</h2>
-					<hr>
-					<div class="text-smallest">
-						<p>Assuming the following HTML:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Manipulating Element Attributes</div>
+
+					<div class="text-smaller">
+						<p>&#149; Assuming the following HTML:</p>
 <pre><code>
 	<img src="smiley.png" id="logo">
 
 </code></pre>
-						<p>Set attribute <code>.attr('attribute-name', 'attribute-value')</code>:</p>
+						<p>&#149; Set attribute <code class="code">.attr('attribute-name', 'attribute-value')</code>:</p>
 <pre><code>
 	$('#logo').attr('src', 'frowney.png')
 
 </code></pre>
-						<p>Turns the above HTML into:</p>
+						<p>&#149; Turns the above HTML into:</p>
 <pre><code>
 	<img src="frowney.png" id="logo">
 
@@ -334,9 +235,9 @@
 					<h1>Exercise: jQuery City</h1>
 					<div class="text-left">
 						<p>Implement functionality for the following:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&#149; When a user clicks on a thumbnail, the larger image <code>img id="bigimage"</code> is replaced by the corresponding thumbnail</p>
-							<p>&#149; Hint: use <code>.attr()</code></p>
+						<div class="pad-left-lg text-smallest">
+							<p>&#149; When a user clicks on a thumbnail, the larger image <code class="code">img id="bigimage"</code> is replaced by the corresponding thumbnail</p>
+							<p>&#149; Hint: use <code class="code">.attr()</code></p>
 						</div>
 					</div>
 				</section>
@@ -348,41 +249,45 @@
 				</section>
 
 				<!-- $(this) -->
+				<section class="title">
+					<h1><code class="lower">$(this)</code></h1>
+				</section>
+
 				<section class="center">
-					<h1>$(this)</h1>
+					<h1><code class="lower">$(this)</code></h1>
 					<div class="text-left text-smaller">
 						<p>1) Open the following: <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101">http://codepen.io/cheshireoctopus/pen/EVqreN?editors=101</a></p>
 						<p>2) What's going on here?</p>
+						<p class="fragment">3) What if we wanted to turn each individual word red on click?</p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>$(this)</h2>
-					<hr>
-					<p><code>$(this)</code> allows us to target specific elements that invoked (or called) a function</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">$(this)</code></div>
 
-					<p>&#149; Refactor previous CodePen using <code>$(this)</code>:</p>
+					<p>&#149; <code class="code">$(this)</code> allows us to target specific elements that invoked (or called) a function</p>
+					<p>&#149; Refactor previous CodePen using <code class="code">$(this)</code>:</p>
 <pre><code>
 	$('span').click(function () {
-		$(this).css('color', 'red')
+	  $(this).css('color', 'red')
 	})
 
 </code></pre>
-					<p>&#149; On the click event, only the <code>&lt;span&gt;</code> that invoked the function will turn red</p>
+					<p>&#149; On the click event, only the <code class="code">&lt;span&gt;</code> that invoked the function will turn red</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>$(this) - More technical explanation</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">$(this)</code></div>
+
 					<div class="text-smaller">
 						<p>&#149; In JS, functions are called (invoked) by an object</p>
-						<p>&#149; Whatever object called the function, can be accessed inside the function using <code>this</code></p>
-						<p>&#149; <code>this</code> is said to be the "context" of the function</p>
-						<p>&#149; We can "wrap" <code>this</code> in jQuery: <code>$(this)</code></p>
+						<p>&#149; Whatever object called the function can be accessed inside the function using <code class="code">this</code></p>
+						<p>&#149; <code class="code">this</code> is said to be the "context" of the function</p>
+						<p>&#149; We can "wrap" <code class="code">this</code> in jQuery: <code class="code">$(this)</code></p>
 						<p>&#149; HTML elements are objects, too:</p>
 <pre><code>
 	$('span').click(function () {
-		$(this).css('color', 'red')
+	  $(this).css('color', 'red')
 	})
 
 </code></pre>
@@ -391,30 +296,33 @@
 
 				<section class="center">
 					<h1>CodeAlong</h1>
-					<p>Refactor jQuery City using <code>$(this)</code></p>
+					<p>Refactor jQuery City using <code class="code">$(this)</code></p>
 				</section>
 
-				<section class="center">
+				<section class="title" id="dom-traversal">
 					<h1>Document Traversal</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal</h2>
-					<hr>
-					<p class="text-smaller">&#149; Given a certain element, how do I access elements around it?</p>
-					<p class="text-smaller">&#149; jQuery makes it very easy to move around the DOM (document object model)</p>
-					<p class="text-smaller">&#149; "Walking the DOM"</p>
-					<p class="text-smaller">&#149; Details: <a href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
-					<p class="text-smaller">&#149; What does the following do?</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Traversal</div>
+
+					<div class="text-smaller">
+						<p>&#149; Given a certain element, how do I access elements around it?</p>
+						<p>&#149; jQuery makes it very easy to move around the DOM (document object model)</p>
+						<p>&#149; "Walking the DOM"</p>
+						<p>&#149; Details: <a target="_blank" href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
+						<p>&#149; What does the following do?</p>
+					</div>
 <pre><code>
 	$('#wrapper').children()
 
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - HTML Review</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Traversal: HTML Review</div>
+
+					<div class="text-smallest">
 <pre><code>
 	<div id="wrapper">
 		<p id="one">
@@ -429,44 +337,49 @@
 	</div>
 
 </code></pre>
-					<div class="text-smallest">
-						<p>1: What are <code>#wrapper</code>'s children?</p>
-						<p>2: What is <code>#three</code>'s parent?</p>
-						<p>3: Does <code>#one</code> have any siblings?</p>
-						<p>4: Does the <code>&lt;span&gt;</code> child of <code>#one</code> have siblings?</p>
+						<p>1: What are <code class="code">#wrapper</code>'s children?</p>
+						<p>2: What is <code class="code">#three</code>'s parent?</p>
+						<p>3: Does <code class="code">#one</code> have any siblings?</p>
+						<p>4: Does the <code class="code">&lt;span&gt;</code> child of <code class="code">#one</code> have siblings?</p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Document Traversal - It's All in the Family</h3>
-					<hr>
-					<p><code>.children()</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Traversal: It's all in the family</div>
+
+					<p><code class="code">.children()</code></p>
 					<p class="pad-left-lg">&rArr; Get an element's child elements</p>
-					<p><code>.parent()</code></p>
-					<p class="pad-left-lg">&rArr; Get an element's parent element</p>
-					<p><code>.siblings()</code></p>
-					<p class="pad-left-lg">&rArr; Get an element's sibling elements</p>
+					<div class="fragment">
+						<p><code class="code">.parent()</code></p>
+						<p class="pad-left-lg">&rArr; Get an element's parent element</p>
+					</div>
+					<div class="fragment">
+						<p><code class="code">.siblings()</code></p>
+						<p class="pad-left-lg">&rArr; Get an element's sibling elements</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - Siblings</h2>
-					<hr>
-					<p><code>.next()</code></p>
-					<p class="pad-left-lg">&rArr; Get the immediately following sibling element</p>
-					<p><code>.prev()</code></p>
-					<p class="pad-left-lg">&rArr; Get the immediately preceding sibling element</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Traversal: Siblings</div>
+
+					<p><code class="code">.next()</code></p>
+					<p class="pad-left-lg">&rArr; Get the immediate following sibling element</p>
+					<div class="fragment">
+						<p><code class="code">.prev()</code></p>
+						<p class="pad-left-lg">&rArr; Get the immediate preceding sibling element</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Document Traversal - Find</h2>
-					<hr>
-					<p><code>.find('some-selector')</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Traversal: Find</div>
+
+					<p>&#149; <code class="code">.find('some-selector')</code></p>
 					<p class="pad-left-lg">&rArr; Will find all child elements matching a certain selector</p>
 <pre><code>
 	<div id="wrapper">
-		<p class="some-class">Some Text</p>
-		<p>Some Text</p>
-		<p class="some-class">Some Text</p>
+	   <p class="some-class">Some Text</p>
+	   <p>Some Text</p>
+	   <p class="some-class">Some Text</p>
 	</div>
 
 </code></pre>
@@ -477,14 +390,33 @@
 </code></pre>
 				</section>
 
-				<section class="center">
-					<h1>Exercise: Accordion</h1>
+				<section class="title" id="#lab">
+					<h1>Lab</h1>
 				</section>
 
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Accordian Lab</div>
+
+					<p>&#149; Open <code class="code">accordian</code> in Sublime Text</p>
+					<p>&#149; Follow the instructions in <code class="code">js/app.js</code></p>
+				</section>
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #11 (of 20) - Conditional Statements</h4>
+
+					<p>&#149; Conditional statements</p>
+					<p>&#149; Manipulating CSS Classes</p>
+					<p>&#149; Chaining Functions</p>
+					<p>&#149; Mid-Course Review</p>
+					<p>&#149; Final Proect Convo's</p>p>
 				</section>
 
 				<section class="center">
