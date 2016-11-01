@@ -58,10 +58,23 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Announcements</div>
 
-					<p>&#149; Final Projects:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Third deliverable due 11/07 (Monday)</p>
-						<p>&rArr; HTML/CSS Rough Draft</p>
+					<div class="text-smallest">
+						<p>&#149; Final Projects:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Third deliverable due 11/07 (Monday)</p>
+							<p>&rArr; HTML/CSS Rough Draft</p>
+						</div>
+						<p>&#149; Advanced Topic Saturdays:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
+							<p>&rArr; When: 11/12 and 11/19; approximately three hours each</p>
+						</div>
+						<p>&#149; Random Knowledge Sundays</p>
+						<div class="pad-left-lg">
+							<p>&rArr; What: Misc. topics (taking requests...)</p>
+							<p>&rArr; When: Every Sunday; approximately 30 minutes - 1 hour</p>
+							<p>&rArr; 11/06 will cover the OSX command line / terminal</p>
+						</div>
 					</div>
 				</section>
 
@@ -106,20 +119,24 @@
 					<div class="heading">jQuery Hide and Show</div>
 
 					<p>&#149; Change the duration by passing an argument:</p>
-						<p class="pad-left-lg">&rArr; String:</p>
+						<div class="fragment">
+							<p class="pad-left-lg">&rArr; String:</p>
 <pre><code>
 	$('p').hide('slow')
 
 	$('p').show('fast')
 
 </code></pre>
-						<p class="pad-left-lg">&rArr; Number:</p>
+						</div>
+						<div class="fragment">
+							<p class="pad-left-lg">&rArr; Number:</p>
 <pre><code>
 	$('p').hide(700)
 
 	$('p').show(300)
 
 </code></pre>
+						</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -135,7 +152,7 @@
 							<p><code class="code">.slideToggle()</code></p>
 						</div>
 						<hr>
-						<p>&#149; Each takes a <code class="code">duration</code> argument:</p>
+						<p>&#149; Each takes an optional <code class="code">duration</code> argument:</p>
 <pre><code>
 	$('p').fadeIn('fast')
 
@@ -184,8 +201,8 @@
 					<div class="text-smallest">
 						<p>&#149; Assuming the following HTML:</p>
 <pre><code>
-	<a href="http://google.com">Google</a>
-	<img src="smiley.png" id="logo">
+	&lt;a href="http://google.com">Google</a>
+	&lt;img id="logo" src="smiley.png">
 
 </code></pre>
 						<p>&#149; Get attribute <code class="code">.attr('attribute-name')</code>:</p>
@@ -210,7 +227,7 @@
 					<div class="text-smaller">
 						<p>&#149; Assuming the following HTML:</p>
 <pre><code>
-	<img src="smiley.png" id="logo">
+	&lt;img id="logo" src="smiley.png">
 
 </code></pre>
 						<p>&#149; Set attribute <code class="code">.attr('attribute-name', 'attribute-value')</code>:</p>
@@ -220,7 +237,7 @@
 </code></pre>
 						<p>&#149; Turns the above HTML into:</p>
 <pre><code>
-	<img src="frowney.png" id="logo">
+	&lt;img id="logo" src="frowney.png">
 
 </code></pre>
 					</div>
@@ -234,11 +251,8 @@
 				<section class="center">
 					<h1>Exercise: jQuery City</h1>
 					<div class="text-left">
-						<p>Implement functionality for the following:</p>
-						<div class="pad-left-lg text-smallest">
-							<p>&#149; When a user clicks on a thumbnail, the larger image <code class="code">img id="bigimage"</code> is replaced by the corresponding thumbnail</p>
-							<p>&#149; Hint: use <code class="code">.attr()</code></p>
-						</div>
+						<p>&#149; When a user clicks on a thumbnail, the larger image <code class="code">&lt;img id="bigimage"&gt;</code> is replaced by the corresponding thumbnail</p>
+						<p>&#149; Hint: use <code class="code">.attr()</code> on the <code class="code">&lt;img&gt;</code></p>
 					</div>
 				</section>
 
@@ -249,7 +263,7 @@
 				</section>
 
 				<!-- $(this) -->
-				<section class="title">
+				<section class="title" id="jquery-this">
 					<h1><code class="lower">$(this)</code></h1>
 				</section>
 
@@ -266,31 +280,35 @@
 					<div class="heading"><code class="lower">$(this)</code></div>
 
 					<p>&#149; <code class="code">$(this)</code> allows us to target specific elements that invoked (or called) a function</p>
-					<p>&#149; Refactor previous CodePen using <code class="code">$(this)</code>:</p>
+					<div class="fragment">
+						<p>&#149; Refactor previous CodePen using <code class="code">$(this)</code>:</p>
 <pre><code>
 	$('span').click(function () {
 	  $(this).css('color', 'red')
 	})
 
 </code></pre>
-					<p>&#149; On the click event, only the <code class="code">&lt;span&gt;</code> that invoked the function will turn red</p>
+					</div>
+					<p class="fragment">&#149; On the click event, only the <code class="code">&lt;span&gt;</code> that invoked the function will turn red</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading"><code class="lower">$(this)</code></div>
 
-					<div class="text-smaller">
+					<div class="text-smallest">
 						<p>&#149; In JS, functions are called (invoked) by an object</p>
 						<p>&#149; Whatever object called the function can be accessed inside the function using <code class="code">this</code></p>
-						<p>&#149; <code class="code">this</code> is said to be the "context" of the function</p>
-						<p>&#149; We can "wrap" <code class="code">this</code> in jQuery: <code class="code">$(this)</code></p>
-						<p>&#149; HTML elements are objects, too:</p>
+						<p>&#149; <code class="code">this</code> is said to be the "context" of the function (refers to whatever object invoked/called it)</p>
+						<div class="fragment">
+							<p>&#149; We can "wrap" <code class="code">this</code> in jQuery: <code class="code">$(this)</code></p>
+							<p>&#149; HTML elements are objects, too:</p>
 <pre><code>
 	$('span').click(function () {
 	  $(this).css('color', 'red')
 	})
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -308,15 +326,16 @@
 
 					<div class="text-smaller">
 						<p>&#149; Given a certain element, how do I access elements around it?</p>
-						<p>&#149; jQuery makes it very easy to move around the DOM (document object model)</p>
-						<p>&#149; "Walking the DOM"</p>
-						<p>&#149; Details: <a target="_blank" href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
-						<p>&#149; What does the following do?</p>
-					</div>
+						<div class="fragment">
+							<p>&#149; jQuery makes it very easy to move around the DOM</p>
+							<p>&#149; "Walking the DOM"</p>
+							<p>&#149; Details: <a target="_blank" href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
+							<p>&#149; What do you think the following do?</p>
 <pre><code>
 	$('#wrapper').children()
 
 </code></pre>
+						</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -337,10 +356,10 @@
 	</div>
 
 </code></pre>
-						<p>1: What are <code class="code">#wrapper</code>'s children?</p>
-						<p>2: What is <code class="code">#three</code>'s parent?</p>
-						<p>3: Does <code class="code">#one</code> have any siblings?</p>
-						<p>4: Does the <code class="code">&lt;span&gt;</code> child of <code class="code">#one</code> have siblings?</p>
+						<p class="fragment">1: What are <code class="code">#wrapper</code>'s children?</p>
+						<p class="fragment">2: What is <code class="code">#three</code>'s parent?</p>
+						<p class="fragment">3: Does <code class="code">#one</code> have any siblings?</p>
+						<p class="fragment">4: Does the <code class="code">&lt;span&gt;</code> child of <code class="code">#one</code> have siblings?</p>
 					</div>
 				</section>
 
@@ -377,20 +396,22 @@
 					<p class="pad-left-lg">&rArr; Will find all child elements matching a certain selector</p>
 <pre><code>
 	<div id="wrapper">
-	   <p class="some-class">Some Text</p>
-	   <p>Some Text</p>
-	   <p class="some-class">Some Text</p>
+	   <p class="post">Lorem ipsum dolor sit amet.</p>
+	   <p>Lorem ipsum dolor sit amet.</p>
+	   <p class="post">Lorem ipsum dolor sit amet.</p>
 	</div>
 
 </code></pre>
-					<p>&#149; What does this do?</p>
+					<div class="fragment">
+						<p>&#149; What does this do?</p>
 <pre><code>
-	$('#wrapper').find('.some-class').css('color', 'red')
+	$('#wrapper').find('.post').css('color', 'red')
 
 </code></pre>
+					</div>
 				</section>
 
-				<section class="title" id="#lab">
+				<section class="title" id="lab">
 					<h1>Lab</h1>
 				</section>
 
@@ -416,7 +437,7 @@
 					<p>&#149; Manipulating CSS Classes</p>
 					<p>&#149; Chaining Functions</p>
 					<p>&#149; Mid-Course Review</p>
-					<p>&#149; Final Proect Convo's</p>p>
+					<p>&#149; Final Proect Convo's</p>
 				</section>
 
 				<section class="center">

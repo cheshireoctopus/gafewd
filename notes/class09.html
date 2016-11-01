@@ -62,7 +62,7 @@
 					</div>
 					<p>&#149; We're halfway there!</p>
 					<div class="pad-left-lg text-smaller">
-						<p >&rArr; 9 more classes (including the last day - 12/05)</p>
+						<p >&rArr; Only ten more classes</p>
 						<p >&rArr; Take a minute and reflect 🤔</p>
 					</div>
 				</section>
@@ -180,7 +180,7 @@
 	$('p, a') // select all &lt;p&gt;'s and &lt;a&gt;'s
 
 </code></pre>
-							<p>&#149; <code class="code">The $('x')</code> function takes <u>ANY</u> CSS selector</p>
+							<p>&#149; The <code class="code">$('x')</code> function takes <u>ANY</u> CSS selector</p>
 						</div>
 					</div>
 				</section>
@@ -219,7 +219,7 @@
 						<p><code class="code">$('.someClass')</code></p>
 						<p class="fragment pad-left-lg">&rArr; Select all the HTML elements with class "<code class="code">someClass</code>"</p>
 						<p><code class="code">$('ul li a.social-link')</code></p>
-						<p class="fragment pad-left-lg">&rArr; Select anchor tags with class "<code class="code">social-link</code>" that are nested inside <code class="code">&lt;li&gt;</code> elements which are nested inside <code class="code">&lt;ul&gt;</code></p>
+						<p class="fragment pad-left-lg">&rArr; Select anchor tags with class <code class="code">social-link</code> that are nested inside <code class="code">&lt;li&gt;</code> elements which are nested inside <code class="code">&lt;ul&gt;</code></p>
 					</div>
 				</section>
 
@@ -281,17 +281,17 @@
 	document.querySelector('#someId').onclick = someFunction
 
 	function someFunction () {
-		// do something
+	  // do something
 	}
 
 </code></pre>
 					<div class="fragment">
-						<p>jQuery</p>
+						<p>jQuery:</p>
 <pre><code>
 	$('#someId').click(someFunction)
 
 	function someFunction () {
-		// do something
+	  // do something
 	}
 
 </code></pre>
@@ -304,15 +304,15 @@
 					<p>JavaScript:</p>
 <pre><code>
 	document.querySelector('#someId').onclick = function () {
-		// do something
+	  // do something
 	}
 
 </code></pre>
 					<div class="fragment">
-						<p>jQuery</p>
+						<p>jQuery:</p>
 <pre><code>
 	$('#someId').click(function () {
-		// do something
+	  // do something
 	})
 
 </code></pre>
@@ -326,16 +326,16 @@
 
 				<!-- INPUTS AND .val() -->
 				<section class="title" id="input-and-val">
-					<h1><code>&lt;input&gt;</code> and <code>.val()</code></h1>
+					<h1><code class="lower">&lt;input&gt;</code> and <code class="lower">.val()</code></h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading"><code>&lt;input&gt;</code> and <code>.val()</code></div>
+					<div class="heading"><code class="lower">&lt;input&gt;</code> and <code class="lower">.val()</code></div>
 
 					<p>JavaScript:</p>
 <pre><code>
 	document.querySelector('#someId').value
-	// returns the value inside fo someId
+	// returns the value inside of someId
 
 </code></pre>
 					<div class="fragment">
@@ -349,7 +349,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading"><code>&lt;input&gt;</code> and <code>.val()</code></div>
+					<div class="heading"><code class="lower">&lt;input&gt;</code> and <code class="lower">.val()</code></div>
 
 					<p>&#149; Getting values, use <code class="code">.val()</code></p>
 <pre><code>
@@ -439,7 +439,7 @@
 
 </code></pre>
 						<p>&#149; Tells jQuery to wait until HTML/CSS have loaded before executing any JavaScript</p>
-						<p>&#149; In other workds, execute JavaScript once the document (DOM) is ready</p>
+						<p>&#149; In other words, execute JavaScript once the document (DOM) is ready</p>
 					</div>
 				</section>
 
@@ -469,11 +469,11 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">CSS Manipulation: <code>.css()</code></div>
+					<div class="heading">CSS Manipulation: <code class="lower">.css()</code></div>
 
 					<p>JavaScript:</p>
 <pre><code>
-	document.querySelector('someId').style.color = 'red'
+	document.querySelector('#someId').style.color = 'red'
 
 </code></pre>
 					<div class="fragment">
@@ -486,7 +486,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">CSS Manipulation: <code>.css()</code></div>
+					<div class="heading">CSS Manipulation: <code class="lower">.css()</code></div>
 
 					<p class="text-smallest">&#149; Set Single Property: <code class="code">.css(propertyName, value)</code>:</p>
 <pre><code>
@@ -516,7 +516,7 @@
 				<section class="center">
 					<h2>Lab/HW: Calculator Box</h2>
 					<div class="text-left text-smallest">
-						<p>1. Open <code class="code">calculator-box/</code> in SublimeText</p>
+						<p>1. Open <code class="code">calculator-box</code> in SublimeText</p>
 						<p>2. Add a <code class="code">&lt;script&gt;</code> tag to include jQuery</p>
 						<p>3. Build the following behaviors:</p>
 						<div class="pad-left-lg">
