@@ -45,7 +45,11 @@
 							<p><code class="code">jquery-city</code></p>
 						</div>
 						<p>3) Move the following into your homework directory:</p>
-						<p class="pad-left-lg"><code class="code">accordian</code></p>
+						<div class="pad-left-lg">
+							<p><code class="code">accordian</code></p>
+							<p><code class="code">temperature-converter</code></p>
+						</div>
+						<p>4) Solution to <code class="code">calculator-box</code> included</p>
 					</div>
 				</section>
 
@@ -295,19 +299,13 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading"><code class="lower">$(this)</code></div>
 
-					<div class="text-smallest">
+					<div class="text-smaller">
 						<p>&#149; In JS, functions are called (invoked) by an object</p>
 						<p>&#149; Whatever object called the function can be accessed inside the function using <code class="code">this</code></p>
 						<p>&#149; <code class="code">this</code> is said to be the "context" of the function (refers to whatever object invoked/called it)</p>
 						<div class="fragment">
 							<p>&#149; We can "wrap" <code class="code">this</code> in jQuery: <code class="code">$(this)</code></p>
-							<p>&#149; HTML elements are objects, too:</p>
-<pre><code>
-	$('span').click(function () {
-	  $(this).css('color', 'red')
-	})
-
-</code></pre>
+							<p>&#149; Remember, DOM nodes are objects</p>
 						</div>
 					</div>
 				</section>
@@ -330,11 +328,15 @@
 							<p>&#149; jQuery makes it very easy to move around the DOM</p>
 							<p>&#149; "Walking the DOM"</p>
 							<p>&#149; Details: <a target="_blank" href="http://api.jquery.com/category/traversing/">http://api.jquery.com/category/traversing/</a></p>
-							<p>&#149; What do you think the following do?</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; What do you think the following will do?</p>
 <pre><code>
 	$('#wrapper').children()
 
 </code></pre>
+						</div>
+						<p class="fragment">&#149; This will return the elements nested inside of <code class="code">#wrapper</code></p>
 						</div>
 				</section>
 
@@ -392,7 +394,7 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Document Traversal: Find</div>
 
-					<p>&#149; <code class="code">.find('some-selector')</code></p>
+					<p>&#149; <code class="code">.find('some-css-selector')</code></p>
 					<p class="pad-left-lg">&rArr; Will find all child elements matching a certain selector</p>
 <pre><code>
 	<div id="wrapper">
