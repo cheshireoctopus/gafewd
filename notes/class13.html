@@ -35,87 +35,85 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class13/class13.zip">Class 13 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>citi-pix/</code></p>
-						<p class=" pad-left-lg"><code>form-test/</code></p>
-						<p>3) Move the following into your homework directory:</p>
-						<p class=" pad-left-lg"><code>cash-register/</code></p>
+						<p class=" pad-left-lg"><code class="code">citi-pix</code></p>
+						<p class=" pad-left-lg"><code class="code">form-test</code></p>
+						<p class=" pad-left-lg"><code class="code">cash-register</code></p>
+						<p>3) The following solutions are included:</p>
+						<p class=" pad-left-lg"><code class="code">list-maker</code></p>
+						<!-- <p>3) Move the following into your homework directory:</p> -->
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #13 - 04/13/2016</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#13</span> - 11/14/2016</h1>
 					<h1>Forms</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
 
-					<div class="text-left">
-						<p>&#149; Final Projects - Milestone 3 - due 04/18</p>
-						<p class="pad-left-lg">&rArr; JS rough draft</p>
-						<p>&#149; Final Projects - Milestone 4 - due 04/25</p>
-						<p class="pad-left-lg">&rArr; JS revised draft</p>
-						<p>&#149; Last Class on Monday, 05/09...26 days away!</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Fifth deliverable due 11/21 (Monday)</p>
+						<p>&rArr; JavaScript draft</p>
+					</div>
+					<p>&#149; Advanced Topic Saturdays:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; What: Google Maps + CitiBike API</p>
+						<p>&rArr; When: 11/19; approximately 2.5 - 3 hours</p>
 					</div>
 				</section>
 
 				<!-- AGENDA -->
-				<section data-background="#FFF">
-					<h2 class="text-left">Agenda</h2>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
 
-					<div class="text-left">
-						<p class="text-smaller">&#149; Review</p>
-						<p class="text-smaller">&#149; Skill Assessment</p>
-						<p class="text-smaller">&#149; <code>.change()</code> Event</p>
-						<p class="text-smaller">&#149; CitiPix Exercise</p>
-						<p class="text-smaller">&#149; HTML <code>&lt;form&gt;</code> Element</p>
-						<p class="text-smaller">&#149; <code>.submit()</code> Event</p>
-						<p class="text-smaller">&#149; Preventing Default Event Behaviours</p>
-						<p class="text-smaller">&#149; HTML <code>&lt;table&gt;</code> Element</p>
-						<p class="text-smaller">&#149; Cash Register Lab</p>
+					<div class="text-smaller">
+						<p>&#149; Review</p>
+						<p>&#149; <a href="#/change-event"><code class="code">.change()</code> Event</a></p>
+						<p>&#149; <a href="#/citipix">CitiPix Exercise</a></p>
+						<p>&#149; <a href="#/form-element">HTML <code class="code">&lt;form&gt;</code> Element</a></p>
+						<p>&#149; <a href="#/submit-event"><code class="code">.submit()</code> Event</a></p>
+						<p>&#149; <a href="#/prevent-default">Preventing Default Event Behaviours</a></p>
+						<p>&#149; <a href="#/table-element">HTML <code class="code">&lt;table&gt;</code> Element</a></p>
+						<p>&#149; <a href="#/lab">Cash Register Lab</a></p>
 					</div>
 				</section>
 
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
-
 				<!-- REVIEW -->
-				<section class="center">
+				<section class="title">
 					<h1>Review</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Reivew - Function Arguments</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Function Arguments</div>
+
 					<div class="text-smallest">
-						<p>So far, named functions have been defined like this:</p>
+						<p>&#149; So far, named functions have been defined like this:</p>
 <pre><code>
 	function alertName () {
-		alert('Keanu Reeves')
+	  alert('Keanu Reeves')
 	}
 
 </code></pre>
-						<p class="fragment">What happens if we want to alert another name?</p>
+						<p class="fragment">&#149; What happens if we want to alert another name?</p>
 						<div class="fragment">
-							<p>We would have to declare another function:</p>
+							<p>&#149; We would have to declare another function:</p>
 <pre><code>
 	function alertAnotherName () {
-		alert('Gary Busey')
+	  alert('Gary Busey');
 	}
 
 </code></pre>
-							<p class="fragment">Is this scalable? Say we wanted to alert the entire cast of <u>Point Break (1991)</u>...</p>
+							<p class="fragment">&#149; Is this scalable? Say we wanted to alert the entire cast of <u>Point Break (1991)</u>...</p>
 						</div>
 					</div>
 				</section>
@@ -123,108 +121,119 @@
 				<section class="text-center text-smaller" data-background="#FFF">
 <pre><code>
 	function alertBodhi () {
-		alert('Patrick Swayze')
+	  alert('Patrick Swayze');
 	}
 
 </code></pre>
 
 <pre><code>
 	function alertJohnny () {
-		alert('Keanu Reeves')
+	  alert('Keanu Reeves');
 	}
 
 </code></pre>
 
 <pre><code>
 	function alertPappas () {
-		alert('Gary Busey')
+	  alert('Gary Busey');
 	}
 
 </code></pre>
 
 <pre><code>
 	function alertTyler () {
-		alert('Lori Petty')
+	  alert('Lori Petty');
 	}
 
 </code></pre>
-					<p>Only 37 more functions to write...</p>
-
+					<p class="fragment">Only 37 more functions to write...</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Review - Function Arguments</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Function Arguments</div>
+
 					<p>Instead, we could write:</p>
 
 <pre><code>
 	function alertName (nameInput) {
-		alert(nameInput)
+	  alert(nameInput);
 	}
 
-	alertName('Keanu Reeves')
-	alertName('Patrick Swayze')
+	alertName('Keanu Reeves');
+	alertName('Patrick Swayze');
 
 </code></pre>
 
-					<p>Function arguments make our code:</p>
-					<p class="pad-left-lg">&rArr; Cleaner</p>
-					<p class="pad-left-lg">&rArr; Reusable</p>
-					<p class="pad-left-lg">&rArr; More maintable</p>
+					<div class="fragment text-smaller">
+						<p>Function arguments make our code:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Cleaner</p>
+							<p>&rArr; Reusable</p>
+							<p>&rArr; More maintable</p>
+						</div>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Review - Multiple Arguments</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Multiple Arguments</div>
+
 					<div class="text-smaller">
 						<p>&#149; Functions can take more than one argument (up to 255!)</p>
 						<p>&#149; Define multiple arguments using a comma-separated list:</p>
 					</div>
 <pre><code>
 	function add (x, y, z) {
-		var sum = x + y + z
-		alert(sum)
+	  var sum = x + y + z;
+	  alert(sum);
 	}
 
 </code></pre>
+					<div class="fragment">
+						<p>&#149; And called like so:</p>
+<pre><code>
+	add(1,2,3);
+	// alerts 6
+
+	add(5,10,15);
+	// alerts 30
+
+</code></pre>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Review - HTML Insertion/Removal</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: HTML Insertion/Removal</div>
+
 					<div class="text-smaller">
-						<p><code>.append('someContent')</code></p>
+						<p>&rArr; <code class="code">.append('someContent')</code></p>
 <pre><code>
 	$('#someEl').append('&lt;some text here&gt;')
 
 </code></pre>
-						<p><code>.prepend('someContent')</code></p>
-						<p><code>.before('someContent')</code></p>
-						<p><code>.after('someContent')</code></p>
-						<p><code>.empty()</code></p>
-						<p><code>.remove()</code></p>
-<pre><code>
-	$('#someEl').empty()
-
-</code></pre>
+						<p>&rArr; <code class="code">.prepend('someContent')</code></p>
+						<p>&rArr; <code class="code">.before('someContent')</code></p>
+						<p>&rArr; <code class="code">.after('someContent')</code></p>
+						<hr>
+						<div class="fragment">
+							<p>&rArr; <code class="code">.empty()</code></p>
+							<p>&rArr; <code class="code">.remove()</code></p>
+						</div>
 					</div>
 				</section>
 
 				<!-- SKILL ASSESSMENT -->
 				<section class="center">
 					<h1>Skill Assessment</h1>
-					<img src="../img/main/skills.jpg">
 					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/eJNRjN?editors=101">Code Debug - CodePen</a></p>
 				</section>
 
 				<!-- CHANGE EVENT-->
-				<section class="center">
-					<h1><code>.change()</code> Event</h1>
+				<section class="title" id="change-event">
+					<h1><code class="lower">.change()</code> Event</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Review - Browser Events</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Browser Events</div>
 
 					<p>&#149; Events are actions that users perform in the browser:</p>
 					<div class="pad-left-lg text-smallest">
@@ -239,50 +248,47 @@
 					<p>&#149; <a href="http://eloquentjavascript.net/14_event.html">More Events Info</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.onclick</code> and <code>.click()</code></h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.onclick</code> and <code class="lower">.click()</code></div>
 
 					<p>&#149; So far, we've primarily used the click event:</p>
-					<p>jQuery: <code>.click()</code></p>
+					<p>jQuery: <code class="code">.click()</code></p>
 <pre><code>
 	$('#someEl').click(function () {
-		// do some stuff
+	  // do some stuff
 	})
 
 </code></pre>
 
-					<p>JavaScript: <code>.onclick</code></p>
+					<p>JavaScript: <code class="code">.onclick</code></p>
 <pre><code>
 	document.getElementById('someEl').onclick = function () {
-		// so some stuff
+	  // so some stuff
 	}
 
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.change()</code> Event</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.change()</code> Event</div>
 
-					<p>&#149; The <code>.change()</code> event will fire when a user changes the value of a:</p>
-					<p class="pad-left-lg"><code>&lt;input&gt;</code></p>
-					<p class="pad-left-lg"><code>&lt;select&gt;</code></p>
-					<p class="pad-left-lg"><code>&lt;textarea&gt;</code></p>
+					<p>&#149; The <code class="code">.change()</code> event will fire when the following change:</p>
+					<p class="pad-left-lg"><code class="code">&lt;input&gt;</code></p>
+					<p class="pad-left-lg"><code class="code">&lt;select&gt;</code></p>
+					<p class="pad-left-lg"><code class="code">&lt;textarea&gt;</code></p>
 					<p>&#149; Useful for rendering dynamic forms</p>
 					<p class="pad-left-lg">&rArr; <a target="_blank" href="http://www1.bloomingdales.com/bag/index.ognc?CategoryID=">Shopping Cart</a></p>
 					<p class="pad-left-lg">&rArr; <a target="_blank" href="https://www.virginamerica.com/book">Airline Tickets</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.change()</code> Event</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.change()</code> Event</div>
 
-					<p>&#149; Apply a <code>.change()</code> just as you would a <code>.click()</code>:</p>
+					<p>&#149; Apply a <code class="code">.change()</code> just as you would a <code class="code">.click()</code>:</p>
 
 <pre><code>
 	$('#some-input').change(function () {
-		// something changed! let's so stuff
+	  // something changed! let's so stuff
 	})
 
 </code></pre>
@@ -290,11 +296,11 @@
 				</section>
 
 				<!-- CITIPIX EXERCISE -->
-				<section class="center">
+				<section class="center" id="citipix">
 					<h1>Exercise: CitiPix</h1>
 					<div class="text-left">
-						<p>1. Open <code>citi-pix/</code> in SublimeText</p>
-						<p>2. Follow the instructions in <code>app.js</code></p>
+						<p>1. Open <code class="code">citi-pix</code> in SublimeText</p>
+						<p>2. Follow the instructions in <code class="code">app.js</code></p>
 					</div>
 				</section>
 
@@ -305,28 +311,30 @@
 				</section>
 
 				<!-- FORM ELEMENT -->
-				<section class="center">
-					<h1><code>&lt;form&gt;</code> Element</h1>
+				<section class="title" id="form-element">
+					<h1><code class="lower">&lt;form&gt;</code> Element</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>&lt;form&gt;</code> Element</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;form&gt;</code> Element</div>
 
 					<p>&#149; Forms are used to capture user input</p>
-					<p>&#149; User input is sent to, and processed by, the "backend" (code on sever)</p>
+					<p>&#149; User input is sent to, and processed by, the server</p>
 					<p>&#149; HTML forms can contain a variety of elements:</p>
-					<p class="pad-left-lg">&rArr; inputs and textareas</p>
-					<p class="pad-left-lg">&rArr; selects (dropdowns)</p>
-					<p class="pad-left-lg">&rArr; checkboxes</p>
-					<p class="pad-left-lg">&rArr; radio buttons</p>
-					<p class="pad-left-lg">&rArr; submit buttons</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; inputs and textareas</p>
+						<p>&rArr; selects (dropdowns)</p>
+						<p>&rArr; checkboxes</p>
+						<p>&rArr; radio buttons</p>
+						<p>&rArr; submit buttons</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>&lt;form&gt;</code> Element</h3>
-					<hr>
-					<p>Example Form Structure</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;form&gt;</code> Element</div>
+
+					<div class="text-smaller">
+						<p>&#149; Example form structure:</p>
 <pre><code>
 	<form>
 		<input type="text" placeholder="Name">
@@ -343,72 +351,51 @@
 	</form>
 
 </code></pre>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3><code>&lt;form&gt;</code> Element</h3>
-					<hr>
-					<div style="width: 500px; margin: 0 auto; border: 1px solid black; padding: 10px;">
-						<form>
-							<p style="text-align: center;">Some Form</p>
-							<hr>
-							<input type="text" placeholder="Name">
-							<br>
-							<select>
-								<option value="one">One</option>
-								<option value="one">Two</option>
-							</select>
-							<br>
-							<input type="checkbox"> Checkbox 1
-							<input type="checkbox"> Checkbox 2
-							<br>
-							<input type="submit" value="Submit Form">
-						</form>
+						<p>&#149; <a href="">Outcome</a></p>
 					</div>
 				</section>
 
 				<!-- SUBMIT EVENT -->
-				<section class="center">
-					<h2><code>.submit()</code> Event</h2>
+				<section class="title" id="submit-event">
+					<h2><code class="lower">.submit()</code> Event</h2>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.submit()</code> Event</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.submit()</code> Event</div>
 
-					<p>&#149; Triggered when <code>&lt;form&gt;</code>'s are submitted</p>
+					<p>&#149; Fires when <code class="code">&lt;form&gt;</code> elements are submitted</p>
 
 <pre><code>
 	$('form').submit(function () {
-		// do something on form submit
+	  // do something on form submit
 	})
 
 </code></pre>
 					<p>&#149; On submit, will send form data to server (this does require configuration)</p>
-					<p>&#149; Only works on <code>&lt;form&gt;</code> elements</p>
-					<p>&#149; <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">More info</a> on <code>&lt;form&gt;</code> attributes</p>
+					<p>&#149; Only works on <code class="code">&lt;form&gt;</code> elements</p>
+					<p>&#149; <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">More info</a> on <code class="code">&lt;form&gt;</code> attributes</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.submit()</code> Event</h3>
-					<hr>
-					<p>&#149; Specifically, <code>.submit()</code> will fire when:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.submit()</code> Event</div>
+
+					<p>&#149; Specifically, <code class="code">.submit()</code> will fire when:</p>
 					<div class="pad-left-lg text-smaller">
-						<p>&rArr; User clicks <code>&lt;input type="submit&gt;</code></p>
-						<p>&rArr; User clicks <code>&lt;button type="submit&gt;&lt;button&gt;</code></p>
-						<p>&rArr; User presses <code>enter</code> key while a <code>&lt;form&gt;</code> element is selected</p>
+						<p>&rArr; User clicks <code class="code">&lt;input type="submit&gt;</code></p>
+						<p>&rArr; User clicks <code class="code">&lt;button type="submit&gt;&lt;button&gt;</code></p>
+						<p>&rArr; User presses <code class="code">enter</code> key while a <code class="code">&lt;form&gt;</code> element is selected</p>
 					</div>
-					<p>&#149; Note: There is an issue re: submitting forms... (open <code>form-test/</code> in Sublime)</p>
+					<p>&#149; Note: There is an issue re: submitting forms... (open <code class="code">form-test</code>)</p>
 				</section>
 
 				<!-- PREVENT DEFAULT EVENT BEHAVIOR -->
-				<section class="center">
+				<section class="title" id="prevent-default">
 					<h1>Preventing Default Event Behaviors</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Preventing Default Event Behavior</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Preventing Default Event Behavior</div>
+
 					<p>&#149; Some events/elements have <u>default</u> behaviors</p>
 					<p>&#149; For example, when clicked on, the following link will take you to http://google.com</p>
 <pre><code>
@@ -418,11 +405,10 @@
 					<p>&#149; Often, developers will want to override these default behaviors</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Preventing Default Event Behavior</h3>
-					<hr>
-					<p>&#149; Override defaults using <code>.preventDefault()</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Preventing Default Event Behavior</div>
 
+					<p>&#149; Override defaults using <code class="code">.preventDefault()</code></p>
 <pre><code>
 	$('#myForm').submit(function (event) {
 		event.preventDefault();
@@ -431,36 +417,36 @@
 	})
 
 </code></pre>
-					<p>&#149; The <code>event</code> argument can be passed into the anonymous function associated with the event</p>
-					<p>&#149; You may also see this referred to as: <code>evt</code>, or even: <code>e</code></p>
+					<p>&#149; The <code class="code">event</code> argument can be passed into the anonymous function associated with the event</p>
+					<p>&#149; You may also see this referred to as: <code class="code">evt</code>, or even: <code class="code">e</code></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Preventing Default Event Behavior</h3>
-					<hr>
-					<div class="text-smaller">
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Preventing Default Event Behavior</div>
+
+					<div class="text-smallest">
 						<p>These all do the same thing:</p>
 <pre><code>
 	$('#myForm').submit(function (event) {
-		event.preventDefault();
+	  event.preventDefault();
 
-		// Rest of code here
+	  // Rest of code here
 	})
 
 </code></pre>
 <pre><code>
 	$('#myForm').submit(function (evt) {
-		evt.preventDefault();
+	  evt.preventDefault();
 
-		// Rest of code here
+	  // Rest of code here
 	})
 
 </code></pre>
 <pre><code>
 	$('#myForm').submit(function (e) {
-		e.preventDefault();
+	  e.preventDefault();
 
-		// Rest of code here
+	  // Rest of code here
 	})
 
 </code></pre>
@@ -468,24 +454,23 @@
 				</section>
 
 				<!-- TABLE ELEMENT -->
-				<section class="center">
-					<h1>HTML <code>&lt;table&gt;</code> Elements</h1>
-					<img src="../img/class12/tables.gif" alt="">
+				<section class="title" id="table-element">
+					<h1><code class="lower">&lt;table&gt;</code> Element</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML <code>&lt;table&gt;</code>'s</h3>
-					<hr>
-					<p>&#149; <code>&lt;table&gt;</code>'s are used to organize and store data into rows, columns, and cells</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
+					<p>&#149; <code class="code">&lt;table&gt;</code>'s are used to organize and store data into rows, columns, and cells</p>
 					<p>&#149; Circa 1999: used for page layout</p>
 					<p>&#149; 2016: primary use is in email layouts</p>
 					<p>&#149; Still used on web for data display</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML <code>&lt;table&gt;</code>'s</h3>
-					<hr>
-					<div class="text-smaller">
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
+					<div class="text-smallest">
 <pre><code>
 	<table border="1">
 		<thead>
@@ -511,24 +496,24 @@
 	</table>
 
 </pre></code>
-						<p><a href="http://codepen.io/cheshireoctopus/pen/JGoaGp?editors=100">CodePen Table</a></p>
+						<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/JGoaGp?editors=100">CodePen Table</a></p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML <code>&lt;table&gt;</code>'s</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
 					<div class="text-smallest">
-						<p><code>&lt;table&gt;</code></p>
+						<p><code class="code">&lt;table&gt;</code></p>
 						<p class="pad-left-lg">&rArr; Top level table element; contains the below elements:</p>
-						<p><code>&lt;thead&gt;</code></p>
+						<p><code class="code">&lt;thead&gt;</code></p>
 						<p class="pad-left-lg">&rArr; Table Header; contains top level table row</p>
-						<p><code>&lt;tbody&gt;</code></p>
+						<p><code class="code">&lt;tbody&gt;</code></p>
 						<p class="pad-left-lg">&rArr; Table Body; contains the data to be displayed</p>
-						<p><code>&lt;tr&gt;</code></p>
+						<p><code class="code">&lt;tr&gt;</code></p>
 						<p class="pad-left-lg">&rArr; Table Row: used to display a row of data;</p>
-						<p><code>&lt;td&gt; and &lt;th&gt;</code></p>
-						<p class="pad-left-lg">&rArr; Table Data; an individual data cell; <code>&lt;th&gt;</code> are for header cells</p>
+						<p><code class="code">&lt;td&gt;</code> and <code class="code">&lt;th&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Table Data; an individual data cell; <code class="code">&lt;th&gt;</code> are for header cells</p>
 					</div>
 				</section>
 
@@ -538,18 +523,30 @@
 				</section>
 
 				<!-- CASH REGISTER LAB/HW -->
-				<section class="center">
+				<section class="center" id="lab">
 					<h1>Cash Register Lab</h1>
 
 					<div class="text-left">
-						<p>1. Open up <code>cash-register/</code> in Sublime Text</p>
-						<p>2. Follow instructions in <code>app.js</code></p>
+						<p>1. Open up <code class="code">cash-register</code> in Sublime Text</p>
+						<p>2. Follow instructions in <code class="code">app.js</code></p>
 					</div>
 				</section>
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #14 (of 20) - Responsive Web Design (pt. 1)</h4>
+
+					<p>&#149; CSS: <code class="code">box-sizing: border-box;</code></p>
+					<p>&#149; Responsive Web Design Overview</p>
+					<p>&#149; Fluid Web Design</p>
+					<p>&#149; Media Queries</p>
 				</section>
 
 				<section class="center">
