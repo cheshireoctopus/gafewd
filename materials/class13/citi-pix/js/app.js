@@ -19,4 +19,18 @@
 
 $(document).ready(function() {
 
+
+$('#city-type').change(function () {
+	// var city = $('#city-type').val();
+	var city = $(this).val();
+
+	$('body')
+		.removeClass()
+		.addClass(city);
+})
+
+
+
+
+
 });
