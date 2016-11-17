@@ -35,83 +35,69 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left text-smaller">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class16/class16.zip">Class 16 Starter Code</a></p>
-						<p>2) Push up <code>startup-matchmaker-responsive/</code> to GitHub</p>
-						<p>3) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>animate-css/</code></p>
-						<p class=" pad-left-lg"><code>animated-sticky-nav/</code></p>
-						<!-- <p class=" pad-left-lg"><code>owl-slider-example/</code></p> -->
-						<!-- <p class=" pad-left-lg"><code>responsive-navbar/</code></p> -->
-						<p>4) Solution to <code>startup-matchmaker-responsive/</code> included!</p>
+						<p>2) Move the following into your course work directory:</p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">animate-css</code></p>
+							<p>&#149; <code class="code">animated-sticky-nav</code></p>
+						</div>
+						<p>3) The following solutions are included:</p>
+						<p class="pad-left-lg">&#149; <code class="code">startup-matchmaker-responsive</code></p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #16 - 04/25/2016</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#16</span> - 11/23/2016</h1>
 					<h2>CSS Positioning and Animation</h2>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
 
-					<div class="text-left">
-						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Due in two weeks!</p>
-						<p class="pad-left-lg text-smaller">&rArr; Classes 18 and 19 (05/02 and 05/04): in-class project work</p>
-						<p class="pad-left-lg text-smaller">&rArr; Final weekend office hours Sat/Sun (05/07 and 05/08)</p>
-						<p>&#149; Office Hours:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Tuesday Office Hours &rArr; 6:30PM - 8:30PM @ GA</p>
-						<p class="pad-left-lg text-smaller">&rArr; Dedicated Sunday Office Hours &rArr; TBD</p>
-						<p>&#149; Last Class on Monday, 05/09...14 days away!</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Sixth deliverable due 11/28 (Monday)</p>
+						<p>&rArr; JavaScript draft (ctn)</p>
 					</div>
+					<p>&#149; Final weekend office hours Sat (12/03)</p>
+					<p>&#149; Last class on 12/05 (Monday)</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Remaining Classes</h2>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Remaining Classes</div>
 
-					<p><u>04/27 (Wednesday)</u>:</p>
+					<p><u>11/28 (Monday)</u>:</p>
 					<p class="pad-left-lg text-smallest">CSS/jQuery plugins</p>
-					<p><u>05/02 (Monday)</u>:</p>
+					<p><u>11/30 (Wednesday)</u>:</p>
 					<p class="pad-left-lg text-smallest">Bootstrap & Google Maps / In-class final presentation work</p>
-					<p><u>05/04 (Wednesday)</u>:</p>
-					<p class="pad-left-lg text-smallest">Production-ready code / In-class final presentation work</p>
-					<p><u>05/09 (Monday)</u>:</p>
+					<p><u>12/05 (Monday)</u>:</p>
 					<p class="pad-left-lg text-smallest">Last class + final presentations</p>
 				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
-					<h2>Agenda</h2>
-					<hr>
+					<div class="heading">Agenda</div>
 
 					<p>&#149; CSS Positioning</p>
 					<p>&#149; CSS Transitions</p>
-					<p>&#149; jQuery <code>.animate()</code></p>
+					<p>&#149; jQuery <code class="code">.animate()</code></p>
 					<p>&#149; One-on-one final project checkins</p>
 				</section>
 
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
-
 				<!-- CSS POSITIONING -->
-				<section class="center">
+				<section class="title" id="css-positioning">
 					<h1>CSS Positioning</h1>
-					<img src="../img/class16/position-absolute.png" alt="">
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Positioning: Overview</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Positioning: Overview</div>
 
-					<div class="text-smaller">
+					<div class="text-smallest">
 						<p>1) Static</p>
 <pre><code>
 	position: static;
@@ -135,55 +121,56 @@
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>position: static;</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: static;</code></div>
 
 					<p>&#149; Default CSS positioning value for <u>ALL</u> elements</p>
 					<p>&#149; Considered "normal" behavior</p>
 					<p>&#149; Static elements are <u>NOT</u> positioned</p>
 					<p>&#149; Cannot set the following properties:</p>
-					<div class="pad-left-lg">
-						<p><code>&rArr; top</code></p>
-						<p><code>&rArr; right</code></p>
-						<p><code>&rArr; bottom</code></p>
-						<p><code>&rArr; left</code></p>
-					</div>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>position: fixed;</h3>
-					<hr>
-					<p>&#149; Positioned relative to the browser window</p>
-					<p>&#149; Does not move when the browser scrolls</p>
-					<p>&#149; Removed from the normal flow of the document</p>
-					<p>&#149; Used for for persistent navigation: "sticky headers"</p>
-					<p>&#149; Can position using:</p>
 					<div class="pad-left-lg text-smaller">
-						<p><code>&rArr; top</code></p>
-						<p><code>&rArr; right</code></p>
-						<p><code>&rArr; bottom</code></p>
-						<p><code>&rArr; left</code></p>
+						<p>&rArr; <code class="code">top</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">bottom</code></p>
+						<p>&rArr; <code class="code">left</code></p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Sticky Header Example</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: fixed;</code></div>
+
+					<div class="text-smaller">
+						<p>&#149; Positioned relative to the browser window</p>
+						<p>&#149; Does not move when the browser scrolls</p>
+						<p>&#149; Removed from the normal flow of the document</p>
+						<p>&#149; Used for for persistent navigation: "sticky headers"</p>
+						<p>&#149; Can position using:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">top</code></p>
+							<p>&rArr; <code class="code">right</code></p>
+							<p>&rArr; <code class="code">bottom</code></p>
+							<p>&rArr; <code class="code">left</code></p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Sticky Header Example</div>
+
 					<p class="text-smaller">&#149; Apply the following CSS rules to your <code>&lt;header&gt;</code>:</p>
 <pre><code>
  header {
- 	 position: fixed;
-	 width: 100%;
-	 top: 0;
-	 height: 50px; // should match the padding-top on body
+   position: fixed;
+   width: 100%;
+   top: 0;
+   height: 50px; // should match the padding-top on body
  }
 
 </code></pre>
 					<p class="text-smaller">&#149; Apply the following CSS rules to your <code>&lt;body&gt;</code>:</p>
 <pre><code>
  body {
-	 padding-top: 50px // should match the height of header
+   padding-top: 50px; // should match the height of header
  }
 
 </code></pre>
@@ -191,17 +178,17 @@
 				</section>
 
 				<section class="center">
-					<h2>Animated Sticky Nav Tutorial</h2>
-					<p>Open <code>animated-sticky-nav/</code> in SublimeText</p>
+					<h1>Animated Sticky Nav Tutorial</h1>
+					<p>Open <code class="code">animated-sticky-nav</code></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Quick Note: CSS Transitions</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Quick Note: CSS Transitions</div>
+
 					<p>&#149; Provides a method for controlling CSS changes:</p>
 					<p>&#149; <u>NOTE</u>: Experimental CSS property</p>
 					<p>&#149; Syntax:</p>
-					<p class="pad-left-lg text-smaller"><code>transition: property duration function delay;</code></p>
+					<p class="pad-left-lg text-smaller"><code class="code">transition: property duration function delay;</code></p>
 					<p>&#149; Applied:</p>
 <pre><code>
 	p {
@@ -214,45 +201,44 @@
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Quick Note: CSS Transitions</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Quick Note: CSS Transitions</div>
+
 					<p><a target="_blank" href="http://easings.net/">Transition functions</a>:</p>
-					<div class="pad-left-lg">
-						<p><code>ease</code></p>
-						<p><code>linear</code></p>
-						<p><code>ease-in</code></p>
-						<p><code>ease-out</code></p>
-						<p><code>ease-in-out</code></p>
-						<p><code>step-start</code></p>
-						<p><code>step-end</code></p>
+					<div class="pad-left-lg text-smaller">
+						<p>&#149; <code class="code">ease</code></p>
+						<p>&#149; <code class="code">linear</code></p>
+						<p>&#149; <code class="code">ease-in</code></p>
+						<p>&#149; <code class="code">ease-out</code></p>
+						<p>&#149; <code class="code">ease-in-out</code></p>
+						<p>&#149; <code class="code">step-start</code></p>
+						<p>&#149; <code class="code">step-end</code></p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>position: relative;</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: relative;</code></div>
 					<div class="text-center">
 						<p>How would we create this?</p>
 						<img src="../img/class16/position-relative.png" alt="">
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>position: relative;</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: relative;</code></div>
+
 					<p>&#149; Positioned relative to its normal position</p>
-					<p>&#149; Move using <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties</p>
+					<p>&#149; Move using <code class="code">top</code>, <code class="code">right</code>, <code class="code">bottom</code>, and <code class="code">left</code> properties</p>
 					<p>&#149; <u>Note</u>: the original space for the element is preserved</p>
 					<p>&#149; Used for:</p>
 					<p class="pad-left-lg">&rArr; Overlapping elements</p>
 					<p class="pad-left-lg">&rArr; As a reference for absolutely-positioned elements</p>
-					<p>&#149; <a target="_blan"href="http://codepen.io/cheshireoctopus/pen/RrRYOL?editors=1100">CodePen exercise</a></p>
+					<p>&#149; <a target="_blanl" href="http://codepen.io/cheshireoctopus/pen/RrRYOL?editors=1100">CodePen exercise</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>position: absolute;</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: absolute;</code></div>
+
 					<div class="text-smaller">
 						<p>&#149; Positioned relative to either:</p>
 						<p class="pad-left-lg">&rArr; Browser window</p>
@@ -266,12 +252,12 @@
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>position: absolute; & position: relative;</h3>
-					<hr>
-					<p>&#149; Use <code>position: absolute;</code> with <code>position: relative;</code> to absolutely position an element <u>within</u> another element</p>
-					<p>&#149; <code>position: relative;</code> is placed on the parent element</p>
-					<p>&#149; <code>position: absolute;</code> is placed on the child element</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position:absolute</code> & <code class="lower">position:relative</code></div>
+
+					<p>&#149; Use <code class="code">position: absolute</code> with <code class="code">position: relative</code> to absolutely position an element <u>within</u> another element</p>
+					<p>&#149; <code class="code">position: relative</code> is placed on the parent element</p>
+					<p>&#149; <code class="code">position: absolute</code> is placed on the child element</p>
 					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/LGZgyz?editors=110">CodePen Exercise</a></p>
 				</section>
 
@@ -288,44 +274,46 @@
 				</section>
 
 				<!-- jQuery .animate() -->
-				<section class="center">
-					<h1>jQuery <code>.animate()</code></h1>
+				<section class="title" id="jquery-animate">
+					<h1>jQuery <code class="lower">.animate()</code></h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery <code>.animate()</code></h3>
-					<hr>
-					<p><code>.animate()</code> performs a custom animation on a set of CSS properties</p>
-					<p class="pad-left-lg text-smallest">&rArr; Animate height/width from <code>Ypx</code> to <code>Zpx</code></p>
-					<p class="pad-left-lg text-smallest">&rArr; Animate an element's postion (move element across screen)</p>
-					<p>&#149; We can call <code>.animate()</code> on <u>most</u> CSS properties</p>
-					<p>&#149; Cannot <code>.animate()</code> color-related properties</p>
-					<p>&#149; See <a href="https://jqueryui.com/animate/">jQuery UI Color Animation</a> plugin</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
+
+					<p><code class="code">.animate()</code> performs a custom animation on a set of CSS properties</p>
+					<p class="pad-left-lg text-smallest">&rArr; Ex: animate height/width from <code class="code">Ypx</code> to <code class="code">Zpx</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Ex: animate an element's postion (move element across screen)</p>
+					<p>&#149; Can call <code class="code">.animate()</code> on <u>most</u> CSS properties</p>
+					<p>&#149; Cannot <code class="code">.animate()</code> color-related properties</p>
+					<p class="pad-left-lg">&rArr; See <a target="_blank" href="https://jqueryui.com/animate/">jQuery UI Color Animation</a> plugin</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>.animate()</code> the following:</h3>
-					<hr>
-						<p class="text-smaller">&#149; Border:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
+
+					<div class="text-smallest">
+						<p>&#149; Border:</p>
 						<p class="text-smallest pad-left-lg">border; border-width; border-bottom-width; etc.</p>
-						<p class="text-smaller">&#149; Margin:</p>
+						<p>&#149; Margin:</p>
 						<p class="text-smallest pad-left-lg">margin; margin-top; margin-right; etc</p>
-						<p class="text-smaller">&#149; Padding:</p>
+						<p>&#149; Padding:</p>
 						<p class="text-smallest pad-left-lg">padding; padding-top; padding-right; etc</p>
-						<p class="text-smaller">&#149; height/width</p>
-						<p class="text-smaller">&#149; font-size</p>
-						<p class="text-smaller">&#149; top/right/bottom/left</p>
-						<p class="text-smaller">&#149; opacity</p>
+						<p>&#149; height/width</p>
+						<p>&#149; font-size</p>
+						<p>&#149; top/right/bottom/left</p>
+						<p>&#149; opacity</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h4>jQuery <code>.animate()</code></h4>
-					<hr>
-					<p><code>.animate()</code> signature:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
 
-					<p class="pad-left-lg"><code>.animate(CSS-properties, duration)</code></p>
+					<p>&#149; jQuery <code class="code">.animate()</code> signature:</p>
 
-					<p>Example:</p>
+					<p class="pad-left-lg"><code class="code">.animate(CSS-properties, duration)</code></p>
+
+					<p>&#149; Example:</p>
 
 <pre><code>
 	$('#someEl').animate({
@@ -334,39 +322,53 @@
 	}, 2000)
 
 </code></pre>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/jWrQMV">CodePen Example</a></p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/jWrQMV">CodePen Example</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery <code>.animate()</code> - Positioning</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate</code>: Positioning</div>
+
 					<p>&#149; We can animate an element's postioning:</p>
-					<p class="pad-left-lg">&rArr; <code>top</code></p>
-					<p class="pad-left-lg">&rArr; <code>right</code></p>
-					<p class="pad-left-lg">&rArr; <code>bottom</code></p>
-					<p class="pad-left-lg">&rArr; <code>right</code></p>
-					<p>&#149; Said element must be <code>position: absolute;</code></p>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/WrxYpG">CodePen Exercise</a></p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">top</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">bottom</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+					</div>
+					<p>&#149; Said element must be <code class="code">position: absolute;</code></p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/WrxYpG">CodePen Exercise</a></p>
 				</section>
 
 				<!-- ANIMATE CSS -->
-				<section class="center">
+				<section class="center" id="animate-css">
 					<h1>Animate.CSS</h1>
 					<div class="text-left">
-						<p>1) Visit: <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
-						<p>2) Open <code>animate-css/</code> in Sublime Text</p>
+						<p>1) Visit: <a target="_blank" href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+						<p>2) Open <code class="code">animate-css</code> in Sublime Text</p>
 					</div>
 				</section>
-
-				<!-- Owl Plugin Tutorial -->
-				<!-- <section class="center">
-					<h1>Owl Carousel Plugin</h1>
-					<p>Open <code>owl-slider-example/</code> in SublimeText</p>
-				</section> -->
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #17 (of 20) - Working with Media and jQuery Plugins</h4>
+
+					<div class="text-smallest">
+						<p>&#149; Working with Media</p>
+						<p class="pad-left-lg">&rArr; Video + Audio</p>
+						<p class="pad-left-lg">&rArr; <code>&lt;iframe&gt;</code></p>
+						<p>&#149; Font Awesome</p>
+						<p>&#149; jQuery Plugins:</p>
+						<p class="pad-left-lg">&rArr; Masonry</p>
+						<p class="pad-left-lg">&rArr; Lightbox</p>
+						<p>&#149; Final-project work</p>
+					</div>
 				</section>
 
 				<section class="center">

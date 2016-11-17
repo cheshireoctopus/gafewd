@@ -35,71 +35,58 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class15/class15.zip">Class 15 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>responsive-navbar/</code></p>
-						<p>3) Move the following into your homework directory:</p>
-						<p class=" pad-left-lg"><code>startup-matchmaker-responsive/</code></p>
+						<p class=" pad-left-lg">&#149; <code class="code">responsive-navbar</code></p>
+						<p class=" pad-left-lg">&#149; <code class="code">startup-matchmaker-responsive</code></p>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #15 - 04/20/2016</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#15</span> - 11/21/2016</h1>
 					<h2>Responsive Web Design (pt. 2)</h2>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
 
-					<div class="text-left">
-						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Milestone 4: Revised JS Draft - due 04/25</p>
-						<p class="pad-left-lg text-smaller">&rArr; Classes 18 and 19 (05/02 and 05/04): in-class project work</p>
-						<p>&#149; Office Hours:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Dedicated Tuesday/Thursday Office Hours?</p>
-						<p class="pad-left-lg text-smaller">&rArr; Dedicated Sunday Office Hours?</p>
-						<p class="pad-left-lg text-smaller">&rArr; Outside lessons...?</p>
-						<p class="pad-left-lg text-smaller">&rArr; Final weekend office hours Sat/Sun (05/07 and (05/08)</p>
-						<p>&#149; Last Class on Monday, 05/09...19 days away!</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Sixth deliverable due 11/28 (Monday)</p>
+						<p>&rArr; JavaScript draft (ctn)</p>
 					</div>
+					<p>&#149; I am out Wed (11/23); Joe Keohan will take over</p>
+					<p>&#149; Final weekend office hours Sat (12/03)</p>
+					<p>&#149; Last class on 12/05 (Monday)</p>
 				</section>
 
 				<!-- AGENDA -->
-				<section class="text-left" data-background="#FFF">
-					<h3>Agenda</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
 
-					<div class="text-smaller">
-						<p>&#149; Responsive Review</p>
-						<p>&#149; Responsive Navbar Tutorial</p>
-						<p>&#149; Em Typography</p>
-						<p>&#149; <code>&lt;meta&gt;</code> Tag</p>
-						<p>&#149; Responsive Startup Matchmaker Lab</p>
-					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
+					<p>&#149; Responsive Review</p>
+					<p>&#149; Responsive Navbar Tutorial</p>
+					<p>&#149; Em Typography</p>
+					<p>&#149; <code class="code">&lt;meta&gt;</code> Tag</p>
+					<p>&#149; Responsive Startup Matchmaker Lab</p>
 				</section>
 
 				<!-- REVIEW -->
-				<section class="center">
-					<h1>Review</h1>
+				<section class="title">
+					<h1>Responsive Review</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Responsive Web Design - Review</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Responsive Review</div>
+
 					<div class="fragment">
 						<p><u>RWD</u>:</p>
-						<p class="pad-left-lg text-smallest">Designing the optimal viewing experience no matter the device on which the site is being viewed</p>
+						<p class="pad-left-lg text-smallest">Designing the optimal viewing experience no matter the device</p>
 					</div>
 					<div class="fragment">
 						<p><u>Static vs. Fluid Layouts</u>:</p>
@@ -107,48 +94,50 @@
 					</div>
 					<div class="fragment">
 						<p><u>Media Queries</u>:</p>
-						<p class="pad-left-lg text-smallest">Allow CSS rules targeted at specific variables, like screen-size</p>
-						<p class="pad-left-lg text-smallest">&#149; When <code>width &gt; 1000px</code> color text <span style="color:red;">red</span></p>
-						<p class="pad-left-lg text-smallest">&#149; When <code>width &lt; 1000px</code> color text <span style="color:blue;">blue</span></p>
+						<div class="pad-left-lg text-smallest">
+							<p>Allow CSS rules targeted at specific variables, like screen-size</p>
+							<p>&#149; When <code class="code">width &gt; 1000px</code> color text <span style="color:red;">red</span></p>
+							<p>&#149; When <code class="code">width &lt; 1000px</code> color text <span style="color:blue;">blue</span></p>
+						</div>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Browser-Width Media Queries</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Responsive Review: Browser-Width Media Queries</div>
+
 					<p>Within CSS Stylesheet:</p>
 <pre><code>
 	@media screen and (min-width: 1024px) {
-		color: red;
+	  color: red;
 	}
 
 </code></pre>
-					<p><u>Media Type:</u> <code class="fragment">screen</code></p>
+					<p><u>Media Type:</u> <code class="code fragment">screen</code></p>
 					<p class="fragment pad-left-lg">Only target devices with a viewable screen</p>
-					<p><u>Rule:</u> <code class="fragment">(mid-width: 1024px)</code></p>
+					<p><u>Rule:</u> <code class="code fragment">(mid-width: 1024px)</code></p>
 					<p class="fragment pad-left-lg">Only target windows larger than, or equal to, 1024px</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Media Queries - Additional Examples</h3>
-					<hr>
-					<p>Don't have to specify a media type:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Media Queries: Additional Examples</div>
+
+					<p>&#149; Don't have to specify a media type:</p>
 <pre><code>
 	@media (min-width: 700px) { ... }
 
 </code></pre>
-					<p>Multiple rules:</p>
+					<p>&#149; Multiple rules:</p>
 <pre><code>
 	@media (min-width: 320px) and (max-width: 480px) { ... }
 
 </code></pre>
-					<p>&#149; These styles will only apply on devices between 320 and 480 pixels</p>
+					<p class="pad-left-lg text-smaller">&rArr; These styles will only apply on devices between 320 and 480 pixels</p>
 				</section>
 
 				<!-- RESPONSIVE NAVBAR -->
 				<section class="center">
-					<h2>Responsive Navbar Tutorial</h2>
-					<p>Open <code>responsive-navbar/</code> in SublimeText</p>
+					<h1>Responsive Navbar Tutorial</h1>
+					<p>Open <code class="code">responsive-navbar</code></p>
 				</section>
 
 				<section class="center">
@@ -160,83 +149,80 @@
 				</section>
 
 				<!-- EM TYPOGRAPHY -->
-				<section class="center">
+				<section class="title" id="em-typography">
 					<h1>Em Typography</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>EM ... What?</h3>
-					<hr>
-					<p>&#149; An <code>em</code> is a unit of measurement</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Em ... What?</div>
+
+					<p>&#149; An <code class="code">em</code> is a unit of measurement</p>
 					<p>&#149; Derived from print design</p>
-					<p>&#149; Based on the size of the letter "<code>M</code>"</p>
-					<p>&#149; Like pixels, they determine the size of elements on a web page</p>
+					<p>&#149; Based on the size of the letter "<code class="code">M</code>"</p>
+					<p>&#149; Like pixels, determines the size of elements on a web page</p>
 					<p>&#149; Unlike pixels, which are fixed, ems are relative to their <u>parent's</u> font-size</p>
 					<p>&#149; <a href="http://kevinperalta.com/playground/em_size.html">More Info</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>EM's</h3>
-					<hr>
-					<p>&#149; Repeat: em's are relative to their <u>parent's</u> font-size</p>
-					<p>&#149; <code>1em</code> === the inherited font size</p>
-					<div class="fragment">
-						<p>&#149; If a <code>&lt;div&gt;</code> has <code>font-size</code> of <code>16px</code>:</p>
-						<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>16px</code></p>
-						<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;div&gt;</code> is <code>32px</code></p>
-					</div>
-					<div class="fragment">
-						<p>&#149; If a <code>&lt;p&gt;</code> has <code>font-size</code> of <code>20px</code>:</p>
-						<p class="pad-left-lg"><code>1em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>20px</code></p>
-						<p class="pad-left-lg"><code>2em</code> <u>within</u> said <code>&lt;p&gt;</code> is <code>40px</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">EM's</div>
+
+					<div class="text-smaller">
+						<p>&#149; Repeat: em's are relative to their <u>parent's</u> font-size</p>
+						<p>&#149; <code class="code">1em</code> === the inherited font size</p>
+						<div class="fragment">
+							<p>&#149; If a <code class="code">&lt;div&gt;</code> has <code class="code">font-size</code> of <code class="code">16px</code>:</p>
+							<p class="pad-left-lg"><code class="code">1em</code> <u>within</u> said <code class="code">&lt;div&gt;</code> is <code class="code">16px</code></p>
+							<p class="pad-left-lg"><code class="code">2em</code> <u>within</u> said <code class="code">&lt;div&gt;</code> is <code class="code">32px</code></p>
+						</div>
+						<div class="fragment">
+							<p>&#149; If a <code class="code">&lt;p&gt;</code> has <code class="code">font-size</code> of <code class="code">20px</code>:</p>
+							<p class="pad-left-lg"><code class="code">1em</code> <u>within</u> said <code class="code">&lt;p&gt;</code> is <code class="code">20px</code></p>
+							<p class="pad-left-lg"><code class="code">2em</code> <u>within</u> said <code class="code">&lt;p&gt;</code> is <code class="code">40px</code></p>
+						</div>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>EM's</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Em's</div>
+
 					<p>Example:</p>
 <pre><code>
 	body {
-		font-size: 20px;
+	  font-size: 20px;
 	}
 
 	div {
-		height: 5em; // 100px
-		width: 3em; // 60px
-		margin: 0.5em; // 10px
-		border: 0.05em; // 1px
+	  height: 5em; // 100px
+	  width: 3em; // 60px
+	  margin: 0.5em; // 10px
+	  border: 0.05em; // 1px
 	}
 
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>EM's - General Guide Lines</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">EM's: General Guidelines</div>
+
 					<div class="text-smallest">
-					<p>1. Set a font-size on the <code>&lt;body&gt;</code> using pixels:</p>
+						<p>1. Set a font-size on the <code class="code">&lt;body&gt;</code> using pixels:</p>
 <pre><code>
 	body {
-		font-size: 16px;
+	  font-size: 16px;
 	}
 
 </code></pre>
-					<p>2. Base other typography on ems:</p>
+						<p>2. Base other typography on ems:</p>
 <pre><code>
-	h1 {
-		font-size: 3em; // 48px
-	}
-
-	h2 {
-		font-size: 2em; // 32px
-	}
+	h1 { font-size: 3em; // 48px }
+	h2 { font-size: 2em; // 32px }
 
 </code></pre>
-					<p>3. Set <code>font-size</code> in media queries to be smaller:</p>
+						<p>3. Set <code class="code">font-size</code> in media queries to be smaller:</p>
 <pre><code>
 	h1 {
-		font-size: 1.5em; // 32px;
+	  font-size: 1.5em; // 32px;
 	}
 
 </code></pre>
@@ -244,13 +230,13 @@
 				</section>
 
 				<!-- META TAG -->
-				<section class="center">
-					<h1><code>&lt;meta&gt;</code> Tag</h1>
+				<section class="title" id="meta-tag">
+					<h1><code class="lower">&lt;meta&gt;</code> Tag</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>&lt;meta&gt;</code> Tag</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;meta&gt;</code> Tag</div>
+
 					<p>&#149; Mobile browsers render webpages in a window wider than the screen, the <u>viewport</u></p>
 					<p>&#149; This is why you often have to pinch, zoom, and pan to move around a mobile browser</p>
 					<p>&#149; To ensure that your site is actually being viewed at the width of the device, and not the viewport, use:</p>
@@ -262,44 +248,55 @@
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3><code>&lt;meta&gt;</code> Tag</h3>
-					<hr>
-					<div class="text-smallest">
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;meta&gt;</code> Tag</div>
+
 <pre><code>
-	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
 </code></pre>
-					</div>
-					<p><code>"width=device-width"</code></p>
-					<p class="pad-left-lg">Controls the size of the viewport; sets it to the device's width</p>
-					<p><code>"initial-scale=1"</code></p>
-					<p class="pad-left-lg">Controls the zoom level</p>
+					<p><code class="code">width=device-width</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; Controls the size of the viewport; sets it to the device's width</p>
+					<p><code class="code">initial-scale=1</code></p>
+					<p class="pad-left-lg text-smaller">&rArr; Controls the zoom level</p>
 				</section>
 
 				<!-- RULES OF THUMB -->
-				<section class="center">
+				<section class="title">
 					<h1>Responsive Rules of Thumb</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Responsive Rules of Thumb</h3>
-					<hr>
-					<p>&#149; Use pixels for font size on <code>&lt;body&gt;</code> and other top-level elements (containers, wrappers, etc.)</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Responsive Rules of Thumb</div>
+
+					<p>&#149; Use pixels for font size on <code class="code">&lt;body&gt;</code> and other top-level elements (containers, wrappers, etc.)</p>
 					<p>&#149; Use percents for widths, margins, padding of of <u>major</u> layout elements</p>
-					<p>&#149; Use em's for typography: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.</p>
-					<p>&#149; Include the viewport <code>&lt;meta&gt;</code> in the <code>&lt;head&gt;</code></p>
+					<p>&#149; Use em's for typography: <code class="code">&lt;h1&gt;</code>, <code class="code">&lt;p&gt;</code>, etc.</p>
+					<p>&#149; Include the viewport <code class="code">&lt;meta&gt;</code> in the <code class="code">&lt;head&gt;</code></p>
 				</section>
 
 				<!-- RESPONSIVE STARTUP MATCHMAKER LAB -->
 				<section class="center">
-					<h2>Responsive Startup Matchmaker Lab</h2>
-					<p>Open <code>startup-matchmaker-responsive/</code> in SublimeText</p>
+					<h1>Responsive</h1>
+					<h1>Startup Matchmaker Lab</h1>
+					<p>Open <code class="code">startup-matchmaker-responsive</code></p>
 				</section>
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #16 (of 20) - CSS Positioning and Animation</h4>
+
+					<p>&#149; CSS Positioning</p>
+					<p>&#149; CSS Transitions</p>
+					<p>&#149; jQuery <code class="code">.animate()</code></p>
+					<p>&#149; One-on-one final project checkins</p>
 				</section>
 
 				<section class="center">
