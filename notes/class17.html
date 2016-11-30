@@ -35,258 +35,282 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
 
-					<div class="text-left text-smaller">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class17/class17.zip">Class 17 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>font-awesome-example/</code></p>
-						<p class=" pad-left-lg"><code>html5-video-example/</code></p>
-						<p class=" pad-left-lg"><code>masonry-example/</code></p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">font-awesome-example</code></p>
+							<p>&#149; <code class="code">html5-video-example</code></p>
+							<p>&#149; <code class="code">masonry-example</code></p>
+							<p>&#149; <code class="code">light-box-example</code></p>
+							<p>&#149; <code class="code">raindrops-example</code></p>
+						</div>
 						<!-- <p class=" pad-left-lg"><code>owl-slider-example/</code></p> -->
-						<p class=" pad-left-lg"><code>light-box-example/</code></p>
+
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #17 - 04/27/2016</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#17</span> - 11/28/2016</h1>
 					<h2>Working with Media and jQuery Plugins</h2>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h1>Announcements:</h1>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
 
-					<div class="text-left">
-						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Due in 12 days!</p>
-						<p class="pad-left-lg text-smaller">&rArr; Classes 18 and 19 (05/02 and 05/04): in-class project work</p>
-						<p class="pad-left-lg text-smaller">&rArr; Final weekend office hours Sat/Sun (05/07 and 05/08)</p>
-						<p>&#149; Office Hours:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Sunday (5/1) Office Hours &rArr; 1:00PM - 3:00PM @ GA</p>
-						<p class="pad-left-lg text-smaller">&rArr; Tuesday/Thursday Office Hours &rArr; 6:00PM - 8:30PM @ GA</p>
-						<p>&#149; Last Class on Monday, 05/09...12 days away!</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Due in seven days!</p>
+					</div>
+					<p>&#149; Final weekend office hours Sat (12/03)</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; 11AM - 2PM</p>
+						<p>&rArr; 4th-floor</p>
+					</div>
+					<p>&#149; Last class on 12/05 (Monday)</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Final presentations</p>
+						<p>&rArr; Drinks</p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>Remaining Classes</h2>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Remaining Classes</div>
 
-					<p><u>05/02 (Monday)</u>:</p>
-					<p class="pad-left-lg text-smallest">Bootstrap & Google Maps / In-class final presentation work</p>
-					<p><u>05/04 (Wednesday)</u>:</p>
-					<p class="pad-left-lg text-smallest">Production-ready code / In-class final presentation work</p>
-					<p><u>05/09 (Monday)</u>:</p>
-					<p class="pad-left-lg text-smallest">Last class + final presentations</p>
+					<p><u>11/28 (Monday)</u>:</p>
+					<p class="pad-left-lg text-smaller">CSS/jQuery plugins</p>
+					<p><u>11/30 (Wednesday)</u>:</p>
+					<p class="pad-left-lg text-smaller">Bootstrap & Google Maps / in-class final presentation work</p>
+					<p><u>12/05 (Monday)</u>:</p>
+					<p class="pad-left-lg text-smaller">Last class + final presentations</p>
 				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
-					<h2>Agenda</h2>
-					<hr>
+					<div class="heading">Agenda</div>
 
-					<div class="text-smaller">
-						<p>&#149; Working with Media</p>
-						<p class="pad-left-lg text-smaller">&rArr; Video</p>
-						<p class="pad-left-lg text-smaller">&rArr; Audio</p>
-						<p class="pad-left-lg text-smaller">&rArr; <code>&lt;iframe&gt;</code></p>
-						<p>&#149; Font Awesome</p>
-						<p>&#149; jQuery Plugins:</p>
-						<p class="pad-left-lg text-smaller">&rArr; Masonry</p>
-						<p class="pad-left-lg text-smaller">&rArr; Lightbox</p>
-						<p>&#149; Final-project work</p>
+					<p>&#149; Working with Media</p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Video</p>
+						<p>&rArr; Audio</p>
+						<p>&rArr; <code class="code">&lt;iframe&gt;</code></p>
 					</div>
-				</section>
-
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
+					<p>&#149; Font Awesome</p>
+					<p>&#149; jQuery Plugins:</p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Masonry</p>
+						<p>&rArr; Lightbox</p>
+						<p>&rArr; Raindrops</p>
+					</div>
+					<!-- <p>&#149; Final-project work</p> -->
 				</section>
 
 				<!-- VIDEO -->
-				<section class="center">
-					<h1>Working with Media:</h1>
+				<section class="title" id="working-with-video">
 					<h1>HTML5 Video</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Video</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video</div>
+
 					<p>&#149; Before HTML5:</p>
-					<p class="pad-left-lg">&rArr; No standard for embedding videos in HTML</p>
-					<p class="pad-left-lg">&rArr; Various plugins, no consistency</p>
-					<p class="pad-left-lg">&rArr; Had to rely on Flash ('please download/update to watch')</p>
-					<p>&#149; After HTML5:</p>
-					<p class="pad-left-lg">&rArr; <code>&lt;video&gt;</code> standard introduced</p>
-					<p class="pad-left-lg">&rArr; Life is good</p>
-					<p class="pad-left-lg">&rArr; ...except on IE 6, 7, and 8</p>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Video - Sources</h3>
-					<hr>
-					<p>&#149; Single Video Source:</p>
-					<div class="text-smallest">
-<pre><code>
-	<video src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></video>
-
-</code></pre>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; No standard for embedding videos in HTML</p>
+						<p>&rArr; Various plugins, no consistency</p>
+						<p>&rArr; Had to rely on Flash ("please download/update to watch")</p>
+						<p>&rArr; No bueno</p>
 					</div>
-					<p>&#149; Multiple Sources:</p>
-					<div class="text-smallest">
-<pre><code>
-	<video>
-		<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-		<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-		<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogv">
-	</video>
-
-</code></pre>
-					</div>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML Video - <code>&lt;source&gt;</code></h3>
-					<hr>
-					<p>&#149; Why different <code>&lt;source&gt;</code> tags?</p>
-					<div class="fragmet">
-						<p>&#149; Different browsers support different formats:</p>
-						<div class="text-smallest pad-left-lg">
-							<p>&#149; Chrome:</p>
-							<p class="pad-left-lg">&rArr; MP4, WebM, Ogg/Ogv</p>
-							<p>&#149; Firefox:</p>
-							<p class="pad-left-lg">&rArr; MP4, WebM, Ogg/Ogv</p>
-							<p>&#149; Safari:</p>
-							<p class="pad-left-lg">&rArr; MP4</p>
-							<p>&#149; IE 6-8:</p>
-							<p class="pad-left-lg">&rArr; Flash only :(</p>
+					<div class="fragment">
+						<p>&#149; After HTML5:</p>
+						<div class="pad-left-lg text-smallest">
+							<p>&rArr; <code class="code">&lt;video&gt;</code> standard introduced</p>
+							<p>&rArr; Life is good</p>
+							<p>&rArr; ...except on IE 6, 7, and 8</p>
 						</div>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Video - Other Attributes</h3>
-					<hr>
-					<p><code>controls</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Allows user to control volume, seeking, pause/play</p>
-					<p><code>autoplay</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Video will begin playing automatically (usually before loading has completed)</p>
-					<p><code>loop</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Loops video</p>
-					<p><code>poster="path/to/src.jpg"</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Adds background image</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video: Sources</div>
+
+					<p>&#149; Single Video Source:</p>
+					<div class="text-smallest">
+<pre><code>
+	<video src="oceans.mp4" type="video/mp4"></video>
+
+</code></pre>
+					</div>
+					<div class="fragment">
+						<p>&#149; Multiple Sources:</p>
+						<div class="text-smallest">
+<pre><code>
+	<video>
+	   <source src="oceans.mp4" type="video/mp4">
+	   <source src="oceans.webm" type="video/webm">
+	   <source src="oceans.ogv" type="video/ogv">
+	</video>
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video: Sources</div>
+
+					<div class="text-smaller">
+						<p>&#149; Why different <code class="code">&lt;source&gt;</code> tags?</p>
+						<div class="fragment">
+							<p>&#149; Different browsers support different formats:</p>
+							<div class="text-smallest pad-left-lg">
+								<p>&#149; Chrome:</p>
+								<p class="pad-left-lg">&rArr; MP4, WebM, Ogg/Ogv</p>
+								<p>&#149; Firefox:</p>
+								<p class="pad-left-lg">&rArr; MP4, WebM, Ogg/Ogv</p>
+								<p>&#149; Safari:</p>
+								<p class="pad-left-lg">&rArr; MP4</p>
+								<p>&#149; IE 6-8:</p>
+								<p class="pad-left-lg">&rArr; Flash only :(</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video: Other Attributes</div>
+
+					<p>&#149; <code class="code">controls</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Allows user to control volume, seeking, pause/play</p>
+					<p>&#149; <code class="code">autoplay</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Video will begin playing automatically (usually before loading has completed)</p>
+					<p>&#149; <code class="code">loop</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Loops video</p>
+					<p>&#149; <code class="code">poster="path/to/src.jpg"</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Adds background image</p>
 				</section>
 
 				<section class="center">
 					<h1>Codealong</h1>
-					<p>Open <code>html5-video-example/</code> in Sublime Text</p>
+					<p>Open <code class="code">html5-video-example</code> in Sublime Text</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Video - Pros/Cons</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video: Pros/Cons</div>
+
 					<p>Pros:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Standardized <code>&lt;video&gt;</code> tag</p>
-					<p class="pad-left-lg text-smaller">&rArr; Video-file neutral (MP4, Ogg, WebM)</p>
-					<p class="pad-left-lg text-smaller">&rArr; No more Flash!</p>
-					<p>Cons:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Only works on modern browsers (no &lt; IE9)</p>
-					<p class="pad-left-lg text-smaller">&rArr; Not all browsers support same video-file types</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Standardized <code class="code">&lt;video&gt;</code> tag</p>
+						<p>&rArr; Video-file neutral (MP4, Ogg, WebM)</p>
+						<p>&rArr; No more Flash!</p>
+					</div>
+					<div class="fragment">
+						<p>Cons:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; Only works on modern browsers (no &lt; IE9)</p>
+							<p>&rArr; Not all browsers support same video-file types</p>
+						</div>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Video - Cross-Browser Video</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Video: Cross-Browser Video</div>
+
 					<p>1. Use a (free or paid) 3rd-party service</p>
-					<p class="text-smallest pad-left-lg">&rArr; YouTube</p>
-					<p class="text-smallest pad-left-lg">&rArr; Vimeo</p>
-					<p class="text-smallest pad-left-lg">&rArr; <a href="https://flowplayer.org/">Flowplayer</a></p>
-					<p class="text-smallest pad-left-lg">&rArr; <a href="http://wistia.com/">Wistia</a></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; YouTube</p>
+						<p>&rArr; Vimeo</p>
+						<p>&rArr; <a href="https://flowplayer.org/">Flowplayer</a></p>
+						<p>&rArr; <a href="http://wistia.com/">Wistia</a></p>
+					</div>
 					<p>2. Use a jQuery plugin</p>
-					<p class="text-smallest pad-left-lg">&rArr; <a href="http://videojs.com/">VideoJS</a></p>
-					<p class="text-smallest pad-left-lg">&rArr; <a href="http://fitvidsjs.com/">FitVidJS</a></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; <a href="http://videojs.com/">VideoJS</a></p>
+						<p>&rArr; <a href="http://fitvidsjs.com/">FitVidJS</a></p>
+					</div>
 					<p>3. Be a badass and create your own</p>
 				</section>
 
 				<!-- AUDIO -->
-				<section class="center">
-					<h1>Working with Media:</h1>
+				<section class="title" id="html5-audio">
 					<h1>HTML5 Audio</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Audio</h3>
-					<hr>
-					<p>&#149; Similar to <code>&lt;video&gt;</code>:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Audio</div>
+
+					<p>&#149; Similar to <code class="code">&lt;video&gt;</code>:</p>
 <pre><code>
   &lt;audio controls&gt;
-	  <source src="media/finalcountdown.mp3" type="audio/mpeg">
+    <source src="media/finalcountdown.mp3" type="audio/mpeg">
   &lt;/audio&gt;
 
 </code></pre>
 					<p>&#149; Attributes:</p>
-					<p class="pad-left-lg">&rArr; <code>autoplay</code></p>
-					<p class="pad-left-lg">&rArr; <code>controls</code></p>
-					<p class="pad-left-lg">&rArr; <code>loop</code></p>
-					<p class="pad-left-lg">&rArr; <code>muted</code></p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; <code class="code">autoplay</code></p>
+						<p>&rArr; <code class="code">controls</code></p>
+						<p>&rArr; <code class="code">loop</code></p>
+						<p>&rArr; <code class="code">muted</code></p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>HTML5 Audio</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML5 Audio</div>
+
 					<p>&#149; As with video, certain browsers only support certain types</p>
 					<p>&#149; Include different audio file types:</p>
 
 <pre><code>
   &lt;audio controls&gt;
-	  <source src="media/finalcountdown.mp3" type="audio/mpeg">
-	  <source src="media/finalcountdown.ogg" type="audio/ogg">
+    <source src="media/finalcountdown.mp3" type="audio/mpeg">
+    <source src="media/finalcountdown.ogg" type="audio/ogg">
   &lt;/audio&gt;
 
 </code></pre>
 				</section>
 
 				<!-- iFrame -->
-				<section class="center">
-					<h1>Working with Media:</h1>
-					<h1>iFrames</h1>
+				<section class="title" id="iframe-element">
+					<h1><code class="lower">&lt;iframe&gt;</code> Element</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h2>iFrames</h2>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;iframe&gt;</code></div>
 
-					<p>&#149; <code>&lt;iframe&gt;</code> == "inline frame"</p>
+					<p>&#149; <code class="code">&lt;iframe&gt;</code> === "inline frame"</p>
 					<p>&#149; Used to embed another HTML document within the current HTML document</p>
 					<p>&#149; AKA: place a webpage within another webpage</p>
 					<p>&#149; Syntax:</p>
 <pre><code>
-	&lt;iframe src="URL"&gt;&lt;/frame&gt;
+	&lt;iframe src="http://google.com"&gt;&lt;/frame&gt;
 
 </code></pre>
-					<p>&#149; Open <a href="http://codepen.io">CodePen</a> and embed an <code>&lt;iframe&gt;</code></p>
+					<p>&#149; Open <a target="_blank" href="http://codepen.io">CodePen</a> and embed an <code>&lt;iframe&gt;</code></p>
 				</section>
 
 				<!-- FONT AWESOME -->
-				<section class="center">
+				<section class="title" id="font-awesome">
 					<h1>Font Awesome</h1>
 				</section>
 
-				<!-- <section class="text-left" data-background="#FFF">
-					<h3>Font Awesome</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Font Awesome</div>
+
 					<p>&#149; Font and CSS framework</p>
-					<p>&#149; Collection of <a target="_blank" href="https://fortawesome.github.io/Font-Awesome/icons/">605 pictographic icons</a></p>
-					<p>&#149; Embedded as a font, so you can set CSS styles like <code>color</code> and <code>font-size</code></p>
+					<p>&#149; Collection of <a target="_blank" href="https://fortawesome.github.io/Font-Awesome/icons/">675 pictographic icons</a></p>
+					<p>&#149; Embedded as a font, so you can set CSS styles like <code class="code">color</code> and <code class="code">font-size</code></p>
 					<p>&#149; To use:</p>
 					<p class="pad-left-lg">&rArr; Use CDN</p>
 					<p class="pad-left-lg">&rArr; Download files locally</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Font Awesome</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Font Awesome</div>
+
 					<p>&#149; Icon usage:</p>
 <pre><code>
 	<i class="fa fa-camera-retro"></i>
@@ -301,11 +325,15 @@
 	<i class="fa fa-camera-retro fa-5x"></i>
 
 </code></pre>
-				</section> -->
+				</section>
 
 				<section class="center">
 					<h1>CodeAlong</h1>
-					<p>Open <code>font-awesome-example/</code> in Sublime Text</p>
+
+					<div class="text-left">
+						<p>1) Open <code class="code">font-awesome-example</code> in Sublime Text</p>
+						<p>2) Visit <a href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a></p>
+					</div>
 				</section>
 
 				<!-- BREAK (5-7 mins) -->
@@ -315,18 +343,20 @@
 				</section>
 
 				<!-- jQuery Plugins -->
-				<section class="center">
+				<section class="title" id="jquery-plugins">
 					<h1>jQuery Plugins</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Plugins - What are they?</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Plugins</div>
+
 					<p>&#149; Plugins (or libraries) are pre-written pieces of JavaScript</p>
 					<p>&#149; Built to solve a particular issue:</p>
-					<p class="pad-left-lg">&rArr; Fullscreen video player</p>
-					<p class="pad-left-lg">&rArr; Image carousel</p>
-					<p class="pad-left-lg">&rArr; Page scrolling</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Fullscreen video player</p>
+						<p>&rArr; Image carousel</p>
+						<p>&rArr; Page scrolling</p>
+					</div>
 					<p>&#149; To use, just add the plugin script below jQuery:</p>
 <pre><code>
 	&lt;script&gt; src="jquery.js"&gt;&lt;/script&gt;
@@ -335,20 +365,22 @@
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Plugins - What to look for?</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Plugins: What to look for?</div>
+
 					<p>&#149; There are 1000's of plugins; be judicious:</p>
-					<p class="pad-left-lg">&rArr; Recently updated</p>
-					<p class="pad-left-lg">&rArr; Well-documented</p>
-					<p class="pad-left-lg">&rArr; The more contributors the better</p>
-					<p class="pad-left-lg">&rArr; Open source</p>
-					<p class="pad-left-lg">&rArr; Hosted on GitHub</p>
+					<div class="pad-left-lg">
+						<p class="fragment">&rArr; Recently updated</p>
+						<p class="fragment">&rArr; Well-documented</p>
+						<p class="fragment">&rArr; The more contributors the better</p>
+						<p class="fragment">&rArr; Open source</p>
+						<p class="fragment">&rArr; Hosted on GitHub</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>jQuery Plugins - Tips for Using?</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Plugins: Tips for using</div>
+
 					<p class="fragment">1) Read the documentation</p>
 					<p class="fragment">2) Seriously, read the documentation</p>
 					<p class="fragment">3) Look for, and copy, examples</p>
@@ -357,36 +389,49 @@
 					<p class="fragment">6) Open a GitHub issue if you think you found a bug</p>
 				</section>
 
-				<!-- Owl Carousel Tutorial -->
-				<!-- <section class="center">
-					<h1>Owl Carousel Plugin</h1>
-					<p>Open <code>owl-slider-example/</code> in Sublime Text</p>
-				</section> -->
+				<!-- Light Box Tutorial -->
+				<section class="center">
+					<h1>Light Box Plugin</h1>
+
+					<div class="text-left">
+						<p>1) Open <code class="code">light-box-example</code> in Sublime Text</p>
+						<p>2) Visit <a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">http://lokeshdhakar.com/projects/lightbox2/</a></p>
+					</div>
+				</section>
 
 				<!-- Masonry Tutorial -->
 				<section class="center">
 					<h1>Masonry Plugin</h1>
-					<p>Open <code>masonry-example/</code> in Sublime Text</p>
+
+					<div class="text-left">
+						<p>1) Open <code class="code">masonry-example</code> in Sublime Text</p>
+						<p>2) Visit <a href="http://masonry.desandro.com/" target="_blank">http://masonry.desandro.com/</a></p>
+					</div>
 				</section>
 
-				<!-- Light Box Tutorial -->
+				<!-- RAIN DROPS PLUGIN -->
 				<section class="center">
-					<h1>Light Box Plugin</h1>
-					<p>Open <code>light-box-example/</code> in Sublime Text</p>
-				</section>
-
-				<section class="center">
-					<h1>jQuery Plugin: Exercise</h1>
-					<div class="text-left text-smaller">
-						<p>1) Create a new directory, <code>plugin-exercise</code></p>
-						<p>2) Include the usual susepcts <code>index.html</code>, <code>app.js</code>, etc.</p>
-						<p>3) Find and successfully implement a jQuery plugin of your choice</p>
+					<h1>Raindrops.js jQuery Plugin</h1>
+					<div class="text-left">
+						<p>1) Open <code class="code">raindrops-exmaple</code></p>
+						<p>2) Visit <a href="http://daniellaharel.com/raindrops/" target="_blank">http://daniellaharel.com/raindrops/</a></p>
+						<p>3) Successfully implement raindrops.js</p>
 					</div>
 				</section>
 
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #18 (of 20) - Working with Bootstrap and Google Maps API</h4>
+
+					<p>&#149; CSS Frameworks (Bootstrap)</p>
+					<p>&#149; Google Maps API</p>
 				</section>
 
 				<section class="center">

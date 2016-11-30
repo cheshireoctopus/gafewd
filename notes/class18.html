@@ -35,89 +35,87 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
+				<section class="hero">
 					<h1>HELLO</h1>
-					<div class="text-left text-smaller">
+					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class18/class18.zip">Class 18 Starter Code</a></p>
 						<p>2) Move the following into your course work directory:</p>
-						<p class=" pad-left-lg"><code>bootstrap-example/</code></p>
-						<p class=" pad-left-lg"><code>google-maps-example/</code></p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">bootstrap-example</code></p>
+							<p>&#149; <code class="code">google-maps-example</code></p>
+						</div>
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Class #18 - 05/02/2016</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#18</span> - 11/30/2016</h1>
 					<h3>Working with Bootstrap and Google Maps API</h3>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
-				<section class="center">
-					<h2>Announcements:</h2>
-					<div class="text-left text-smaller">
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
+
+					<div class="text-smallest">
 						<p>&#149; Final Projects:</p>
-						<p class="pad-left-lg">&rArr; Due 05/09 (Monday)</p>
-						<p>&#149; Office Hours:</p>
-						<p class="pad-left-lg">&rArr; Tuesday/Thursday: 6:15PM - 8:15PM</p>
-						<p class="pad-left-lg">&rArr; Saturday: TBD</p>
-						<p class="pad-left-lg">&rArr; Sunday: Maybe</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Due in five days!</p>
+						</div>
+						<p>&#149; Final weekend office hours Sunday (12/03)</p>
+						<div class="pad-left-lg">
+							<p>&rArr; 11AM - 2PM</p>
+							<p>&rArr; 4th-floor</p>
+						</div>
+						<div class="pad-left-lg">
+
+						</div>
+						<p>&#149; Last class on 12/05 (Monday)</p>
 						<p>&#149; Course Completion:</p>
-						<p class="pad-left-lg">&rArr; 80% of assignments must be completed</p>
-						<p class="pad-left-lg">&rArr; Accepting late assignments until Friday, 5/10</p>
+						<div class="pad-left-lg">
+							<p>&rArr; 80% of assignments must be completed</p>
+							<p>&rArr; Accepting late assignments until Sunday, 12/12</p>
+						</div>
 					</div>
-				</section>
-
-				<section class="text-left" data-background="#FFF">
-					<h3>Remaining Classes</h3>
-					<hr>
-
-					<p><u>05/04 - Wednesday</u>:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Production-ready code</p>
-					<p class="pad-left-lg text-smaller">&rArr; Students' choice</p>
-					<p class="pad-left-lg text-smaller">&rArr; Final project work</p>
-					<p><u>05/09 - Monday</u>:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Last class</p>
-					<p class="pad-left-lg text-smaller">&rArr; Final presentations</p>
 				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
-					<h3>Agenda</h3>
-					<hr>
+					<div class="heading">Agenda</div>
+
 					<p>&#149; CSS Frameworks (Bootstrap)</p>
 					<p>&#149; Google Maps API</p>
 				</section>
 
-				<!-- QUESTIONS -->
-				<section class="center">
-					<h1>Questions</h1>
-					<img src="../img/main/questions.jpg">
-				</section>
-
 				<!-- CSS FRAMEWORKS -->
-				<section class="center">
+				<section class="title">
 					<h1>CSS Frameworks</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Frameworks</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Frameworks</div>
+
 					<p><u>Framework</u>:</p>
 					<div class="text-smaller">
-					<p>&#149; Standardized approach for solving common problems</p>
-					<p>&#149; Pre-packaged code used to support the development of website</p>
-					<p>&#149; Goals:</p>
-					<p class="pad-left-lg">&rArr; Provide a common structure (boilerplate)</p>
-					<p class="pad-left-lg">&rArr; Eliminate repetitive work</p>
-					<p class="pad-left-lg">&rArr; Speed development process</p>
+						<p>&#149; Standardized approach for solving common problems</p>
+						<p>&#149; Pre-packaged code used to support web development</p>
+						<div class="fragment">
+							<p>&#149; Goals:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; Provide a common structure (boilerplate)</p>
+								<p>&rArr; Eliminate repetitive work</p>
+								<p>&rArr; Speed development process</p>
+								<p>&rArr; Increase on-boarding time of new developers</p>
+							</div>
+						</div>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Frameworks</h3>
-					<hr>
-					<p><u>Front End Framework</u>:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Frameworks</div>
+
+					<p><u>Frontend Framework</u>:</p>
 					<div class="text-smaller">
-						<p>&#149; Files and folders of standardized code (HTML/CSS/JS)</p>
+						<p>&#149; Contains standardized code and assets (HTML/CSS/JS)</p>
 						<p>&#149; Typography and pre-built styles for HTML elements</p>
 						<p>&#149; CSS grid for developing a responsive layout</p>
 						<p>&#149; Solutions to cross-browser compatibility issues</p>
@@ -125,159 +123,183 @@
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Frameworks</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Frameworks</div>
+
 					<p>Two types of framework:</p>
-					<div class="pad-left-lg text-smaller">
-						<p>1) Grid/Layouts - Simple:</p>
-						<p class="pad-left-lg">&rArr; <a href="http://960.gs/">960 Grid System</a></p>
-						<p class="pad-left-lg">&rArr; <a href="http://daneden.github.io/Toast/">Toast</a></p>
-						<p class="pad-left-lg">&rArr; <a href="http://getbase.org/">Base</a></p>
-						<p>2)	 Complete - Complex:</p>
-						<p class="pad-left-lg">&rArr; <a href="http://getbootstrap.com/">Bootstrap</a></p>
-						<p class="pad-left-lg">&rArr; <a href="http://foundation.zurb.com/">(Zurb) Foundation</a></p>
-						<p class="pad-left-lg">&rArr; <a href="http://getskeleton.com/">Skeleton</a></p>
+					<div class="text-smallest">
+						<p>1) Grid/Layouts (simple):</p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://960.gs/">960 Grid System</a></p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://daneden.github.io/Toast/">Toast</a></p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://getbase.org/">Base</a></p>
+						<p>2)	 Complete (complex):</p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a></p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://foundation.zurb.com/">(Zurb) Foundation</a></p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://getskeleton.com/">Skeleton</a></p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Frameworks - Selecting a Framework</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Frameworks: Selecting a Framework</div>
+
 					<p>Rule of thumb:</p>
-					<p class="pad-left-lg">&rArr; The more stylistically complex (the more custom CSS you will be writing), the less complex of a framework you will need</p>
+					<p class="pad-left-lg text-smaller">&rArr; The more stylistically complex (the more custom CSS you will be writing), the less complex of a framework you will need</p>
+					<div class="fragment">
 					<p>As with plugins:</p>
-					<p class="pad-left-lg">&rArr; Open source</p>
-					<p class="pad-left-lg">&rArr; Recently updated</p>
-					<p class="pad-left-lg">&rArr; Community of active contributors</p>
-					<p class="pad-left-lg">&rArr; Well-documented</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; Open source</p>
+							<p>&rArr; Recently updated</p>
+							<p>&rArr; Community of active contributors</p>
+							<p>&rArr; Well-documented</p>
+						</div>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>CSS Frameworks - Pros/Cons</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Frameworks: Pros/Cons</div>
+
 					<p>Pros:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Major increase in speed of development</p>
-					<p class="pad-left-lg text-smaller">&rArr; Solutions to common problems already built</p>
-					<p class="pad-left-lg text-smaller">&rArr; Cross-browser compatibility</p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Major increase in speed of development</p>
+						<p>&rArr; Solutions to common problems already built</p>
+						<p>&rArr; Cross-browser compatibility</p>
+					</div>
 					<p>Cons:</p>
-					<p class="pad-left-lg text-smaller">&rArr; Reliance (you will un-learn CSS!)</p>
-					<p class="pad-left-lg text-smaller">&rArr; Dependence - what if you want to switch frameworks?</p>
-					<p class="pad-left-lg text-smaller">&rArr; Bloat - unused framework code</p>
-					<p class="pad-left-lg text-smaller">&rArr; <a href="http://adventurega.me/bootstrap/">Identical/similar-looking/clones</a></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Reliance - you will un-learn CSS!</p>
+						<p>&rArr; Dependence - what if you want to switch frameworks?</p>
+						<p>&rArr; Bloat - unused framework code</p>
+						<p>&rArr; <a href="http://adventurega.me/bootstrap/" target="_blank">Identical/similar-looking/clones</a></p>
+					</div>
 				</section>
 
 				<!-- BOOTSTRAP -->
-				<section class="center">
+				<section class="title" id="bootstrap">
 					<h1>Bootstrap</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - What is it?</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: What is it?</div>
+
 					<p>In their own words:</p>
 					<blockquote>"Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web."</blockquote>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - What is it?</h3>
-					<hr>
-					<p>&#149; Best thing to come out of Twitter</p>
-					<p>&#149; OG built by <a target="_blank" href="https://twitter.com/mdo">@mdo</a> and <a target="_blank" href="https://twitter.com/fat">@fat</a></p>
-					<p>&#149; CSS framework (with HTML and JS components)</p>
-					<p>&#149; Collection of CSS styles for common UI <a target="_blank" href="http://getbootstrap.com/components/">components</a>:</p>
-					<p class="pad-left-lg text-smallest">&rArr; Navbars</p>
-					<p class="pad-left-lg text-smallest">&rArr; Buttons</p>
-					<p class="pad-left-lg text-smallest">&rArr; Forms</p>
-					<p class="pad-left-lg text-smallest">&rArr; Image Carousels</p>
-					<p>&#149; Notable for its responsive <a target="_blank" href="http://getbootstrap.com/css/#grid">grid</a> layout</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: What is it?</div>
+
+					<div class="text-smaller">
+						<p>&#149; Best thing to come out of Twitter</p>
+						<p>&#149; OG built by <a target="_blank" href="https://twitter.com/mdo">@mdo</a> and <a target="_blank" href="https://twitter.com/fat">@fat</a></p>
+						<p>&#149; CSS framework (with HTML and JS components)</p>
+						<p>&#149; Collection of CSS styles for common UI <a target="_blank" href="http://getbootstrap.com/components/">components</a>:</p>
+						<div class="pad-left-lg text-smallest">
+							<p>&rArr; Navbars</p>
+							<p>&rArr; Buttons</p>
+							<p>&rArr; Forms</p>
+							<p>&rArr; Image Carousels</p>
+						</div>
+						<p>&#149; Notable for its responsive <a target="_blank" href="http://getbootstrap.com/css/#grid">grid</a> layout</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - What is it?</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: What is it?</div>
+
 					<div class="text-center">
 						<img src="../img/class18/bootstrap-files.png" alt="">
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - The Grid</h3>
-					<hr>
-					<p>Core CSS Classes:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: The Grid</div>
 
-					<p><code>&lt;container&gt;</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Top-level element; holds all other code</p>
+					<div class="text-smaller">
+						<p>Core CSS Classes:</p>
+						<p><code class="code">&lt;container&gt;</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Top-level element; contains other HTML</p>
 
-					<p><code>&lt;row&gt;</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Horiztonal row used to hold <code>col</code>'s</p>
-					<p class="pad-left-lg text-smaller">&rArr; Must be children of <code>container</code>'s</p>
+						<p><code class="code">&lt;row&gt;</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Horiztonal row used to hold <code class="code">col</code>'s</p>
+						<p class="pad-left-lg text-smaller">&rArr; Must be children of <code class="code">container</code>'s</p>
 
-					<p><code>&lt;col&gt;</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; Used to hold content (text/images/etc.)</p>
-					<p class="pad-left-lg text-smaller">&rArr; Must be immediate children of <code>row</code>'s</p>
+						<p><code class="code">&lt;col&gt;</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Used to hold content (text/images/etc.)</p>
+						<p class="pad-left-lg text-smaller">&rArr; Must be immediate children of <code class="code">row</code>'s</p>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - The Grid</h3>
-					<hr>
-					<img src="../img/class18/bootstrap-12-grid.png" alt="">
-					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: The Grid</div>
+
+					<div class="text-center">
+						<img src="../img/class18/bootstrap-12-grid.png" alt="">
+					</div>
+					<p class="text-left text-smallest">Source: <a target="_blank" href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - Columns</h3>
-					<hr>
-					<p>&#149; Bootstrap's grid is divided into 12 columns</p>
-					<p>&#149; Columns are created using CSS classes</p>
-					<p>&#149; Build columns using the following formula:</p>
-					<p class="pad-left-lg"><code>col-{screen-size}-{width}</code></p>
-					<p><code>&lt;div class="col-md-6"&gt;</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; A div for medium-sized screens that is 6-columns wide</p>
-					<p><code>&lt;div class="col-xs-2"&gt;</code></p>
-					<p class="pad-left-lg text-smaller">&rArr; A div for x-small screens that is 2-columns wide</p>
-					<p></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: Columns</div>
+
+					<div class="text-smaller">
+						<p>&#149; Bootstrap's grid is divided into 12 columns</p>
+						<p>&#149; Columns are created using CSS classes</p>
+						<p>&#149; Build columns using the following formula: <code class="code">col-{size}-{width}</code></p>
+						<div class="fragment">
+							<hr>
+							<p>&#149; <code class="code">&lt;div class="col-md-6"&gt;</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; A <code class="code">&lt;div&gt;</code> for medium-sized screens that is 6-columns wide</p>
+							<p>&#149; <code class="code">&lt;div class="col-xs-2"&gt;</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; A <code class="code">&lt;div&gt;</code> for x-small screens that is 2-columns wide</p>
+							<p></p>
+							<p>&#149; <a href="http://codepen.io/cheshireoctopus/pen/BQmzPv?editors=1100#0" target="_blank">Codepen Example</a></p>
+						</div>
+					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - Two 50%-width columns</h3>
-					<hr>
-					<img src="../img/class18/bootstrap-2-col.png" alt="">
-					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Boostrap: Two 50%-width Columns</div>
+
+					<div class="text-center">
+						<img src="../img/class18/bootstrap-2-col.png" alt="">
+					</div>
+					<p class="text-left text-smallest">Source: <a target="_blank" href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - Two 50%-width columns</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: Two 50%-width Columns</div>
+
 <pre><code>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6">Content here</div>
-			<div class="col-md-6">Content here</div>
-		</div>
+	   <div class="row">
+ 	     <div class="col-md-6">Content here</div>
+	     <div class="col-md-6">Content here</div>
+	   </div>
 	</div>
 
 </code></pre>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - Four 25%-width columns</h3>
-					<hr>
-					<img src="../img/class18/bootstrap-4-col.png" alt="">
-					<p class="text-right text-smallest">Source: <a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: Four 25%-width Columns</div>
+
+					<div class="text-center">
+						<img src="../img/class18/bootstrap-4-col.png" alt="">
+					</div>
+					<p class="text-left text-smallest">Source: <a target="_blank" href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/">Girl Develop It</a></p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Bootstrap - Four 25%-width columns</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Bootstrap: Four 25%-width Columns</div>
+
 <pre><code>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-3">Content here</div>
-			<div class="col-md-3">Content here</div>
-			<div class="col-md-3">Content here</div>
-			<div class="col-md-3">Content here</div>
-		</div>
+	   <div class="row">
+	      <div class="col-md-3">Content here</div>
+	      <div class="col-md-3">Content here</div>
+	      <div class="col-md-3">Content here</div>
+	      <div class="col-md-3">Content here</div>
+	   </div>
 	</div>
 
 </code></pre>
@@ -286,19 +308,21 @@
 				<section class="center">
 					<h1>Codealong</h1>
 					<div class="text-left">
-						<p>&#149; Open <code>bootstrap-example/</code> in Sublime Text</p>
-						<p>&#149; Navigate to <code>grid-practice.html</code></p>
+						<p>&#149; Open <code class="code">bootstrap-example</code> in Sublime Text</p>
+						<p>&#149; Navigate to <code class="code">grid-practice.html</code></p>
 					</div>
 				</section>
 
 				<section class="center">
 					<h1>Exercises</h1>
 					<div class="text-left">
-						<p>&#149; Open <code>layout-challenge.pdf</code></p>
+						<p>&#149; Open <code class="code">layout-challenge.pdf</code></p>
 						<p>&#149; Build the first three challenges using Boostrap:</p>
-						<p class="pad-left-lg">&rArr; <code>two-column.html</code></p>
-						<p class="pad-left-lg">&rArr; <code>three-column.html</code></p>
-						<p class="pad-left-lg">&rArr; <code>simple-marketing.html</code></p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">two-column.html</code></p>
+							<p>&rArr; <code class="code">three-column.html</code></p>
+							<p>&rArr; <code class="code">simple-marketing.html</code></p>
+						</div>
 					</div>
 				</section>
 
@@ -309,16 +333,18 @@
 				</section>
 
 				<!-- GOOGLE MAPS API -->
-				<section class="center">
+				<section class="title" id="google-maps">
 					<h1>Goolge Maps API</h1>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>What is an API?</h3>
-					<hr>
-					<p class="text-smallest">&#149; Application Programming Interface</p>
-					<p class="text-smallest">&#149; Set of rules/instructions for interacting with a piece of software</p>
-					<p class="text-smallest">&#149; Middleman; allows different pieces of software to "talk" to each other</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What is an API?</div>
+
+					<div class="text-smallest">
+						<p>&#149; API &rArr; Application Programming Interface</p>
+						<p>&#149; Set of rules/instructions for interacting with a piece of software</p>
+						<p>&#149; Middleman; allows different pieces of software to "talk" to each other</p>
+					</div>
 					<div class="text-center">
 						<img src="../img/class18/api.png" alt="">
 					</div>
@@ -328,64 +354,67 @@
 					<h2>Let's Build a Map</h2>
 					<div class="text-left">
 						<p>&#149; <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps JavaScript API V3 Documentation</a></p>
-						<p>&#149; Open <code>google-maps-example/</code> in Sublime Text</p>
+						<p>&#149; Open <code class="code">google-maps-example</code> in Sublime Text</p>
 					</div>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Let's Build a Map</h3>
-					<hr>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Let's Build a Map</div>
+
 					<p>1. Obtain API Key</p>
-					<p>2. Add starter HTML</p>
+					<p>2. Add starter HTML and CSS</p>
 					<p>3. Enable map using JS</p>
 					<p>4. ???</p>
 					<p>5. Profit</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Let's Build a Map - Changing the <code>center</code></h3>
-					<hr>
-					<p>Google Maps require:</p>
-					<p class="pad-left-lg">&rArr; <code>center</code></p>
-					<p class="pad-left-lg">&rArr; <code>zoom</code></p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Google Maps: Changing the <code class="lower">center</code></div>
 
-					<p>Challenge: Change the <code>center</code> of your map to NYC</p>
+					<p>Google Maps require:</p>
+					<p class="pad-left-lg">&rArr; <code class="code">center</code></p>
+					<p class="pad-left-lg">&rArr; <code class="code">zoom</code></p>
+
+					<p>Challenge: Change the <code class="code">center</code> of your map to NYC</p>
 					<p class="pad-left-lg fragment">&rArr; Hint: look up NYC's coordinates!</p>
 					<p class="pad-left-lg fragment">&rArr; 40.7127 N, 74.0059 W</p>
 				</section>
 
-				<section class="text-left" data-background="#FFF">
-					<h3>Let's Build a Map - Adding Markers</h3>
-					<hr>
-					<p>Markers require:</p>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Google Maps: Adding Markers</div>
+
+					<p>&#149; Markers require:</p>
 					<div class="pad-left-lg">
-						<p>&#149; <code>position:</code></p>
-						<p class="pad-left-lg"><code>{lat: y, lng: x}</code></p>
-						<p>&#149; <code>map</code></p>
+						<p>&rArr; <code class="code">position: {lat: y, lng: x}</code></p>
+						<p>&rArr; <code class="code">map</code></p>
 					</div>
-					<p>Challenge: use the following to add a marker at NYC</p>
+					<p>&#149; Challenge: use the following to add a marker at NYC</p>
 <pre><code>
 	var marker = new google.maps.Marker({
-		position: {lat: y, lng: x},
-		map: map,
-		title: 'New York, NY'
+	  position: {lat: y, lng: x},
+	  map: map,
+	  title: 'New York, NY'
 	});
 
 </code></pre>
 				</section>
 
-				<section class="center">
-					<h1>More Bootstrap:</h1>
-					<div class="text-left">
-						<p>1: Navigation bar</p>
-						<p>2: Images</p>
-						<p>3: Buttons</p>
-					</div>
-				</section>
-
 				<!-- THE END -->
 				<section class="center">
 					<img src="../img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #20 (of 20) - Final Class</h4>
+
+					<p>&#149; Course Recap</p>
+					<p>&#149; Course Certification</p>
+					<p>&#149; You + GA</p>
+					<p>&#149; Next Steps</p>
+					<p>&#149; Final Presentations</p>
 				</section>
 
 				<section class="center">
