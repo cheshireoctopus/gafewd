@@ -8,3 +8,4 @@ Please feel free to fork your own class.
 
 Contributions are welcome :)
 
+*Note: Are you teaching JSD? Be sure to checkout [GA-JSD](https://github.com/cheshireoctopus/gajsd).*
