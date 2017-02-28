@@ -1,1 +1,0 @@
-Please fix the relative paths for the four images in our gallery!
