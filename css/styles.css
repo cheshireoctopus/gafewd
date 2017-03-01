@@ -230,7 +230,7 @@ hr {
 	background-color: #F6F6F6;
 }
 
-.week_button {
+.week-marker {
 	background-color: #E51B24;
 	color: white;
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
@@ -240,26 +240,20 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.week_button p {
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: 0 auto;
 }
 
 .class-date {
 	color: #222222;
 	width: 20%;
-}
-
-.class-date p {
 	background-color: #FFD800;
 	text-align: center;
 	font-weight: bold;
 	border-radius: 3px;
+	font-size: 16px;
 }
 
 .grey-info-card {
