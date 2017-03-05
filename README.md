@@ -5,7 +5,7 @@
 
 Hosted at [http://gafewd.surge.sh/](http://gafewd.surge.sh/).
 
-Please feel free to fork your own class. Contributions are welcome 👍
+Please feel free to fork for your own class. Contributions are welcome 👍
 
 If you are looking for just the static web portal assets, see [https://github.com/cheshireoctopus/gafewd-portal](https://github.com/cheshireoctopus/gafewd-portal).
 
