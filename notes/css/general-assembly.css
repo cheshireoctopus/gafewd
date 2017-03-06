@@ -31,7 +31,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   max-height: none !important; }
 
 .heading {
-  background-image: url(../../img/main/ga-logo.png);
+  background-image: url(../img/main/ga-logo.png);
   background-repeat: no-repeat;
   background-position: right top 8px;
   font-family: "Pf Din", Helvetica, sans-serif !important;
