@@ -21,7 +21,7 @@
 
 				<section class="hero condensed">
 					<h1>Class <span class="red">#02</span></h1>
-					<h1>03/06/2016</h1>
+					<h1>03/08/2016</h1>
 					<h1 class="lesson-title">Introduction to HTML</h1>
 				</section>
 
@@ -40,6 +40,22 @@
 					</div>
 				</section>
 
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+					<div class="text-smallest">
+						<p><b>Q: Will we be using the same repository for all of our projects?</b></p>
+						<p class="fragment">A: Yes...at least initially</p>
+						<p class="fragment"><b>Q: How do you keep code clean for other users?</b></p>
+						<p class="fragment">A: Through diligence, dedication to quality, and discipline.</p>
+						<p class="fragment"><b>Q: Is is preferable in the industry to use GitHub Desktop or the command line?</b></p>
+						<p class="fragment">A: Commmand line (<a href="http://generalassembly.github.io/prework/command-line/#/" target="_blank">OSX tutorial</a>)</p>
+						<p class="fragment"><b>Q: How to create new projects/pages in Sublime?</b></p>
+						<p class="fragment">A: A few ways...</p>
+						<p class="fragment"><b>Q: Why is this question mandatory?</b></p>
+						<p class="fragment">A: I am not sure - feel free to leave "N/A"</p>
+					</div>
+				</section>
+
 				<section class="title" id="warmup">
 					<h1>Warmup</h1>
 
@@ -51,7 +67,7 @@
 					<div class="text-smaller">
 						<p>1. Open your <u>local</u> Github repo in Sublime Text (click and drag)</p>
 						<p>2. Create a new directory, <code class="code">class-work</code>, inside of your local repo</p>
-						<p>3. Create a new file, <code class="code">index.html</code>, inside of <code class="code">class-work</code>; add some HTML to this file if you would like</p>
+						<p>3. Create a new file, <code class="code">index.html</code>, inside of <code class="code">class-work</code>; add some HTML</p>
 						<p>4. Add a message and commit your changes</p>
 						<p>5. Push/sync your local changes with your remote repo</p>
 						<p>6. Check your remote repo on <a href="https://github.com" target="_blank">https://github.com</a> to ensure changes have been made</p>
@@ -137,13 +153,13 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">HTML - History of HTML</div>
 
-					<p>&#149; HTML => HyperText Markup Language</p>
+					<p>&#149; HTML => Hypertext Markup Language</p>
 					<p>&#149; Invented in 1989 by Sir Timothy Berners-Lee</p>
 					<p>&#149; Majority of the websites you've visited are rendered in HTML</p>
 					<p>&#149; Web browsers parse (read) HTML and render (display) the results</p>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
+				<!-- <section data-background="#FFF" class="text-left">
 					<div class="heading">HTML - Say what?</div>
 
 					<p><u>HT => HyperText</u></p>
@@ -152,7 +168,7 @@
 					<p class="text-smallest fragment pad-left-lg">Markup describes a system of describing or annotating text files. Markup describes the structure/layout of a webpage.</p>
 					<p><u>L => Language</u></p>
 					<p class="text-smallest fragment pad-left-lg">Just like any language, HTML has its own vocabulary, grammar, and syntax. You can think of HTML as the language that the web speaks.</p>
-				</section>
+				</section> -->
 
 				<section class="title" id="html-elements">
 					<h1>HTML Elements</h1>
@@ -167,14 +183,15 @@
 							<div class="fragment">
 								<p>&#149; Elements consist of:</p>
 								<div class="pad-left-lg text-smaller">
-									<p>Starting tag: <code class="code">&lt;p&gt;</code></p>
-									<p>Content: text, image, video, other elements, etc.</p>
-									<p>Ending tag: <code class="code">&lt;/p&gt;</code></p>
+									<p>&rArr; Opening tag: <code class="code">&lt;p&gt;</code></p>
+									<p>&rArr; Content: text, image, video, other elements, etc.</p>
+									<p>&rArr; Closing tag: <code class="code">&lt;/p&gt;</code></p>
 								</div>
 							</div>
 							<div class="fragment">
 								<p>&#149; The content is what the user sees</p>
 								<p>&#149; The tags tell the browser what TYPE of content it is and how to present it</p>
+								<p>&#149; <b>Note:</b> Some tags do not have a closing tag: <code class="code">&lt;img&gt;</code>, <code class="code">&lt;hr&gt;</code>, etc.</p>
 							</div>
 						</div>
 				</section>
@@ -185,9 +202,10 @@
 					<div class="text-center">
 						<img src="img/class02/html-element-structure.png">
 					</div>
-
-					<p>&#149; Note: the user will only see "Hello world!"</p>
-					<p>&#149; The browser will apply some basic styling to <code class="code">&lt;p&gt;</code> elements</p>
+					<div class="fragment">
+						<p>&#149; Important: the user will only see "Hello world!"</p>
+						<p>&#149; The browser will apply some basic styling to <code class="code">&lt;p&gt;</code> elements</p>
+					</div>
 				</section>
 
 				<section class="title">
@@ -219,9 +237,24 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Paragraph Tags</div>
 
-					<p>&#149; <code class="code">&#60;p&#62;This is a paragraph&#60;/p&#62;</code></p>
 					<p>&#149; One of the bread-and-butter tags; will see this everywhere</p>
-					<p>&#149; Think of it as a paragraph of content in a book or article</p>
+					<p>&#149; Similar to a paragraph in a book or article</p>
+<pre><code>
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Dolores corporis perspiciatis amet autem sapiente fugiat sunt,
+    labore eum totam facere, assumenda
+    magni nobis sequi cumque dolore officiis laudantium. Ea, beatae.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Dolores corporis perspiciatis amet autem sapiente fugiat sunt,
+    labore eum totam facere, assumenda
+    magni nobis sequi cumque dolore officiis laudantium. Ea, beatae.
+  &lt;/p&gt;
+
+</code></pre>
 				</section>
 
 				<section class="center">
