@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 03</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>First:</p>
+						<p class="pad-left-lg">1) Make sure your class work/homework from last class is pushed up to Github</a></b></p>
+						<p>Then:</p>
+						<p class="pad-left-lg">2) Download <a href="../materials/class03.zip">Class 03 Starter Code</a></b></p>
+						<p class="pad-left-lg">3) Copy the <code class="code">keanu</code> directory into your <code class="code">class-work</code> directory</p>
+					</div>
+				</section>
+
+				<section class="hero">
+					<h1>Class <span class="red">#03</span></h1>
+					<h1>03/13/2017</h1>
+					<h1 class="lesson-title">CSS Basics</h1>
+				</section>
+
+				<!-- <section class="title">
+					<h1>Questions</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<p>&#149; <a href="#/warmup">Warmup Exercise</a></p>
+					<p>&#149; <a href="#/css-intro">CSS Intro</a></p>
+					<p>&#149; <a href="#/color-property">Color Property</a></p>
+					<p>&#149; <a href="#/fonts">Fonts + Text</a></p>
+					<p>&#149; <a href="#/working-with-css">Working with CSS</a></p>
+				</section>
+
+				<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+					<p class="text-smaller"><b>Q: Text editor shortcuts:</b></p>
+					<div class="fragment text-smallest">
+						<p>A: Recommend investing a few hours becoming a power user:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <a target="_blank" href="https://generalassemb.ly/blog/sublime-text-3-tips-tricks-shortcuts/">25 tricks/shortcuts</a></p>
+							<p>&rArr; <a target="_blank" href="https://scotch.io/bar-talk/the-complete-visual-guide-to-sublime-text-3-getting-started-and-keyboard-shortcuts">Scotch.io Sublime Text Overview</a></p>
+							<p>&rArr; <a target="_blank" href="https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text">Scotch.io Atom Overview</a></p>
+						</div>
+					</div>
+					<p class="fragment text-smaller"><b>Q: Will we learn how different browsers handle HTML/CSS?</b></p>
+					<p class="fragment text-smallest">A: Not specifics, but we will cover <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">solutions</a> to normalize behavior</p>
+					<p class="fragment text-smaller"><b>Q: Will sites like SquareSpace replace the need for coding basic sites?</b></p>
+					<p class="fragment text-smallest">A: Yes and <a target="_blank" href="https://www.quora.com/Why-do-people-still-hire-web-designers-when-there-are-website-builders-out-there-such-as-WordPress-Wix-and-Weebly">no</a></p>
+
+				</section>
+
+				<!-- WARMUP (20-25mins) -->
+				<section class="hero" id="warmup">
+					<h1>Warmup</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Warmup</div>
+
+					<p>1. Open <code class="code">keanu</code> in SublimeText</p>
+					<p>2. Mark up <code class="code">copy.txt</code> with HTML in <code class="code">about.html</code></p>
+					<p>3. Ensure <code class="code">about.html</code> contains proper structure!</p>
+					<p>4. Link the <code class="code">.html</code> files (index, about, films) together</p>
+				</section>
+
+				<!-- CSS INTRO -->
+				<section class="title" id="css-intro">
+					<h1>CSS Intro</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: History</div>
+
+					<p>&#149; CSS => Cascading Style Sheets</p>
+					<p class="fragment">&#149; First proposed in 1994 by H&aring;kon Lie ("How Con Lee") - a colleague of Tim Berners-Lee</p>
+					<p class="fragment">&#149; Stylesheet language used to describe HTML markup</p>
+					<p class="fragment">&#149; Allows separation of document content (HTML), from document presentation/styling</p>
+					<p class="pad-left-lg fragment">&rArr; "Separation of concerns"</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: Syntax</div>
+
+					<img src="img/class03/css-syntax.png">
+					<p class="fragment text-smallest">&#149; This CSS rule turns the text color of every paragraph, <code class="code">&lt;p&gt;</code>, black</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: Syntax (ctn)</div>
+
+					<img src="img/class03/css-syntax-multiple.png">
+
+					<p>&#149; One selector can have multiple declarations</p>
+					<p>&#149; Common for each declaration to have its own line</p>
+				</section>
+
+				<!-- CSS COLOR PROPERTY -->
+				<section class="title" id="color-property">
+					<h1>CSS Color Property</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color Property</div>
+					<p>&#149; Text color can be set with <code class="code">color</code>:</p>
+<pre><code>
+	h1 {
+	  color: "red";
+	}
+
+</code></pre>
+					<div class="fragment">
+						<p>&#149; Color values can be specified using:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; color keyword: <code class="code">"red"</code> (must be in quotations)</p>
+							<p class="fragment">&rArr; rgb: <code class="code">rgb(255, 0, 0)</code></p>
+							<p class="fragment">&rArr; hex code: <code class="code">#FF0000</code></p>
+						</div>
+					</div>
+					<p class="fragment">&#149; Can also use: RGBA, HSL, HSLA</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color: Keyword Value</div>
+
+<pre><code>
+	span {
+	  color: red;
+	}
+
+</code></pre>
+					<div class="text-smaller">
+						<p>&#149; Simplest; least-descriptive</p>
+						<p>&#149; red, green, blue, etc.</p>
+						<p class="pad-left-lg">&rArr; <span style="color: tomato">tomato</span></p>
+						<p class="pad-left-lg">&rArr; <span style="color: deeppink">deeppink</span></p>
+						<p class="pad-left-lg">&rArr; <span style="color: chartreuse">chartreuse</span></p>
+						<p>&#149; <a href="http://www.crockford.com/wrrrld/color.html">More colors...</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color: RGB Value</div>
+
+<pre><code>
+	span {
+	  color: rgb(255, 0, 0);
+	}
+
+</code></pre>
+					<div class="text-smaller">
+						<p>&#149; More complicated; more powerful!</p>
+						<p class="fragment">&#149; First value is red; second is green; third is blue</p>
+						<p class="fragment">&#149; Each value in a range 0 - 255</p>
+						<p class="fragment">&#149; Values closer together are gray or muted:</p>
+						<p class="pad-left-lg fragment">
+							<span style="color: rgb(200,200,200)">rgb(200,200,200)</span> /
+							<span style="color: rgb(155,155,155)">rgb(155,155,155)</span> /
+							<span style="color: rgb(075,075,075)">rgb(075,075,075)</span>
+						</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color: Hexadecimal Value</div>
+
+<pre><code>
+	p {
+	  color: #463DB3;
+	}
+
+</code></pre>
+					<p>&#149; Very robust...but there's some maths happening</p>
+					<p>&#149; How it works: <a target="_blank" href="http://www.smashingmagazine.com/2012/10/the-code-side-of-color/">"The Code Side of Color"</a></p>
+					<p>&#149; Adobe Color: <a target="_blank" href="https://color.adobe.com">https://color.adobe.com</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Applying Color: Text vs. Background</div>
+
+					<p>&#149; <code class="code">color</code></p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Used to apply color to text</p>
+<pre><code>
+	p {
+	  color: rgb(255, 0, 0);
+	}
+
+</code></pre>
+					</div>
+					<div class="fragment">
+						<p>&#149; <code class="code">background</code></p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; Used to apply a background color (or image) to elements:</p>
+<pre><code>
+	p {
+	  color: rgb(255, 0, 0);
+	  background: rgb(0, 255, 0);
+	}
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- FONTS -->
+				<section class="hero" id="fonts">
+					<h1><span style="font-family: 'Comic Sans MS'">Fonts and Text</span></h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Font: Various Properties</div>
+
+					<div class="text-smaller">
+						<p>&#149; <code class="code">font-weight</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Sets the "thickness" of the font</p>
+						<p class="pad-left-lg text-smaller">
+							&rArr; normal and <span style="font-weight: bold">bold</span>; values 100 - 900
+						</p>
+						<p>&#149; <code class="code">font-style</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Sets a "slant" to the font</p>
+						<p class="pad-left-lg text-smaller">
+							&rArr; <span style="font-style: normal">normal</span> and <span style="font-style: italic">italic</span>
+						</p>
+						<p>&#149; <code class="code">font-size</code></p>
+						<p class="pad-left-lg text-smaller">&rArr; Sets the size of the font</p>
+						<p class="pad-left-lg text-smaller">&rArr; Pixel values (12px); percentage (75%); em's (1em)</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Font: Font-Family Property</div>
+
+<pre><code>
+	p {
+	  font-family: 'Comic Sans MS', helvetica, serif;
+	}
+
+</code></pre>
+
+					<p>&#149; <code class="code">font-family</code></p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Applies a particular font to the element</p>
+						<p>&rArr; Accepts multiple values</p>
+						<p>&rArr; Should always end with: <code class="code">serif</code>, <code class="code">sans-serf</code>, or <code class="code">monospace</code></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Font: Text Property</div>
+
+					<div class="text-smaller">
+						<p class="text-left text-smaller">&#149; <code class="code">text-align</code></p>
+						<p class="pad-left-lg text-left text-smaller">&rArr; how text is oriented within the containing block</p>
+						<hr>
+						<p class="text-smaller text-left">
+							text-left
+						</p>
+						<p class="text-smaller text-center">
+							text-center
+						</p>
+						<p class="text-smaller text-right">
+							text-right
+						</p>
+						<hr>
+						<div class="text-left">
+							<p class="text-left text-smaller">&#149; <code class="code">text-decoration</code></p>
+							<p class="pad-left-lg text-left text-smaller">&rArr; controls extra-textual visual emphasis (<u>underline</u>)</p>
+<pre><code>
+	p {
+	  text-decoration: underline;
+	}
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<!-- CSS CODEALONG -->
+				<section class="center">
+					<h1>Code Along</h1>
+					<a href="http://codepen.io/cheshireoctopus/pen/mexgPX?editors=110" target="_blank">CodePen</a>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- WORKING WITH CSS -->
+				<section class="title" id="working-with-css">
+					<h1>Working with CSS</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Working with CSS</div>
+
+					<p>&#149; Three ways to apply CSS to HTML:</p>
+					<div class="pad-left-lg">
+						<p>1) Inline CSS</p>
+						<p>2) Embed in HTML using a <code class="code">&lt;style&gt;</code> tag</p>
+						<p>3) Link to an external file using the <code class="code">&lt;link&gt;</code> tag</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Inline CSS</div>
+
+<pre><code>
+	&lt;p style="color: blue; font-size: 14px;">
+	  Keanu Reeves is Johnny Utah
+	&lt;/p>
+
+	&lt;p style="color: blue; text-decoration: underline;">
+	  Or is Johnny Utah Keanu Reeves?
+	&lt;/p>
+
+</code></pre>
+
+					<div class="text-smallest pad-left-lg fragment">
+						<p>&#149; Not a good practice</p>
+						<p>&#149; Does not separate our concerns (HTML/CSS)</p>
+						<p>&#149; Makes debugging difficult</p>
+						<p>&#149; ONLY USE IF WRITING HTML EMAILS</p>
+						<p>&#149; You will make enemies</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Do NOT Use Inline CSS!</h1>
+					<img src="img/class03/inline-css.jpeg">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="code lower">&lt;head&gt;</code> embed</div>
+
+<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title>Super Awesome Website&lt;/title>
+	  &lt;style type="text/css">
+	    h1 {color: red;}
+	    p {color: blue; font-size: 14px}
+	  &lt;/style>
+	&lt;/head&gt;
+	&lt;body&gt;
+	  ...
+
+</code></pre>
+					<div class="pad-left-lg text-smaller">
+						<p>&#149; Better than inline styles, as styles share same location</p>
+						<div class="fragment">
+							<p>&#149; Bloats HTML pages</p>
+							<p>&#149; Can make debugging large applications difficult</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">External CSS</div>
+
+<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title>Super Awesome Website&lt;/title>
+ 	  &lt;link rel="stylesheet" type="text/css" href="style.css">
+	&lt;/head&gt;
+	&lt;body&gt;
+	  ...
+
+</code></pre>
+					<div class="pad-left-lg">
+						<p>&#149; Like <code class="code">&lt;title&gt;</code>, placed within <code class="code">&lt;head&gt;</code></p>
+						<p>&#149; Truly separates HTML from CSS</p>
+						<p>&#149; Easiest to debug; just go to your CSS file!</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">External CSS</div>
+
+<pre><code>
+     &lt;link rel="stylesheet" type="text/css" href="style.css">
+
+</code></pre>
+
+					<div class="text-left text-smaller">
+						<div class="fragment">
+							<p>&#149; <code class="code">rel</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the relationship between the current document and the linked document</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">type</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the media type of the linked document</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">href</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the location of the linked document</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Exercise: CSS Linking</div>
+					<p>1. Re-open <code class="code">keanu</code> directory</p>
+					<p>2. Link <code class="code">style.css</code> to all three <code class="code">.html</code> files</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Hint: <code class="code">style.css</code> is located <u>inside</u> the <code class="code">css</code> directory</p>
+						<p>&rArr; Second hit: Think back to relative paths; consider the directory where the image is located...</p>
+					</div>
+					<p>3. Begin lab work</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab</div>
+					<div class="text-smaller">
+						<p>&#149; At the root of your GitHub folder, you should have the files:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">index.html</code></p>
+							<p>&rArr; <code class="code">styles.css</code></p>
+						</div>
+						<p>&#149; The <code class="code">index.html</code> will be the landing page for your course portfolio</p>
+						<p>&#149; Start personalizing it:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>1) Add new HTML (perhaps a paragraph on why you are taking FEWD)</p>
+							<p>2) Make a list of links to your homework and class work</p>
+							<p>3) Style the HTML with CSS</p>
+							<p>4) Commit and push your changes</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>FIN</h1>
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+                    <h4>Class #04 (of 20) - Intermediate CSS</h4>
+					<p>&#149; Nested + Grouped CSS Selectors</p>
+					<p>&#149; The Box Model:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Padding</p>
+						<p>&rArr; Border</p>
+						<p>&rArr; Margin</p>
+					</div>
+					<p>&#149; Classes and ID's</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
