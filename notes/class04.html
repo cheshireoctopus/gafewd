@@ -17,8 +17,8 @@
 				<section class="hero">
 					<h1>HELLO</h1>
 					<div class="opening-instructions">
-						<p>1) Please download <a href="../materials/class04/class04.zip">Class 04 Starter Code</a></p>
-						<p>2) Move <code class="code">box-model-layout</code> into your homework folder</p>
+						<p>1) Please download <a href="../materials/class04.zip">Class 04 Starter Code</a></p>
+						<p>2) Move <code class="code">travel-bucket-list</code> into your <code class="code">homework</code> folder</p>
 					</div>
 				</section>
 
@@ -40,18 +40,30 @@
 					<p>&#149; <a href="#/span-div"><code class="code">&lt;span&gt;</code> and <code class="code">&lt;div&gt;</code></a></p>
 				</section>
 
-<!-- 				<section class="title">
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
+					<p>&#149; Three more weeks until final-project ideas are due!</p>
+					<p>&#149; We need to plan a class happy hour:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Class 05: Mon, 3/20</p>
+						<p>&rArr; Class 06: Wed, 3/22</p>
+						<p>&rArr; Class 07: Mon, 3/27</p>
+						<p>&rArr; Class 08: Wed, 3/29</p>
+					</div>
+				</section>
+
+				<section class="title">
 					<h1>Questions</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Questions</div>
 
-					<p class="text-smaller"><b>Q: What is Sass?</b></p>
-					<p class="fragment text-smallest">A: <a href="http://sass-lang.com/" target="_blank">Sass</a> is a CSS preprocessor; it extends the standard CSS language with additional features: variables, operators, imports, etc.</p>
-					<p class="fragment text-smaller"><b>Q: When to use the <code class="code">class</code> attribute?</b></p>
-					<p class="fragment text-smallest">A: Stay tuned - learning this tonight!</p>
-				</section> -->
+					<p class="text-smaller"><b>Q: When breaking up large groups of text, is it better to use the <code class="code">&lt;br&gt;</code> tag, or different <code class="code">&lt;p&gt;</code>'s?</b></p>
+					<p class="fragment text-smallest">A: <code class="code">&lt;p&gt;</code>'s are <a href="http://codepen.io/cheshireoctopus/pen/qrXypa?editors=1100#0" target="_blank">recommended</a>; leverage CSS for spacing</p>
+					<p class="fragment text-smaller"><b>Q: So I uploaded to Github now what? What do I do with the files after they are on GitHub? How do I put this stuff on a server?</b></p>
+					<p class="fragment text-smallest">A: Technically, it's already on GitHub's server :) - if you don't want to rely on GitHub, or you already have your own server, check out <a href="http://www.webopedia.com/TERM/F/ftp.html" target="_blank">FTP</a></p>
+				</section>
 
 				<!-- CLASSES AND ID'S -->
 				<section class="center">
@@ -93,13 +105,6 @@
 	}
 
 </code></pre>
-					<p>&#149; This also works; it selects <code class="code">&lt;p&gt;</code> tags with the id of <code class="code">important-title</code></p>
-<pre><code>
-	p#important-title {
-	  color: red;
-	}
-
-</code></pre>
 					<p>
 						&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen Exercise</a>
 					</p>
@@ -110,15 +115,15 @@
 					<div class="heading">Applying Element Classes</div>
 
 					<p>&#149; Classes are attributes</p>
-					<p>&#149; Assigned to <u>multiple</u> HTML elements per app</p>
+					<p>&#149; Assigned to <u>multiple</u> HTML elements per page</p>
 					<p>&#149; Identify the elements for styling/scripting</p>
 					<p>&#149; Cannot contain spaces</p>
 <pre><code>
-	&lt;p class="important-class">Hello, World!&lt;/p&gt;
+	&lt;p class="hello">Hello, World!&lt;/p&gt;
 
-	&lt;p class="important-class">Hello, Mars!&lt;/p&gt;
+	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
 
-	&lt;p class="important-class">Hello, Jupiter!&lt;/p&gt;
+	&lt;p class="hello">Hello, Jupiter!&lt;/p&gt;
 
 </code></pre>
 				</section>
@@ -129,13 +134,13 @@
 					<div class="text-smallest">
 						<p>&#149; To style the following classes:</p>
 <pre><code>
-	&lt;p class="important-class">Hello, World!&lt;/p&gt;
-	&lt;p class="important-class">Hello, Mars!&lt;/p&gt;
+	&lt;p class="hello">Hello, World!&lt;/p&gt;
+	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
 
 </code></pre>
 						<p>&#149; Use <code class="code">.</code> + the class's name:</p>
 <pre><code>
-	.important-class {
+	.hello {
 	  color: pink;
 	}
 
@@ -234,26 +239,31 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Nested Selectors: Examples</div>
-
+					<div class="fragment">
 <pre><code>
 	p a {
 	  color: black;
 	}
 
+</code></pre>
+					</div>
+					<div class="fragment">
+<pre><code>
 	#some-id p a {
 	  color: red;
 	}
 
-	p .some-cLass, p #some-id {
+</code></pre>
+					</div>
+					<div class="fragment">
+<pre><code>
+	p .some-class, p #some-id {
 	  color: blue;
 	}
 
-	h1 a, h2 a, h3 a {
-	  color: green;
-	}
-
 </code></pre>
-					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxemz?editors=110">CodePen Exercise</a></p>
+					</div>
+					<p class="fragment">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxemz?editors=110">CodePen Exercise</a></p>
 				</section>
 
 				<!-- THE BOX MODEL -->
@@ -325,14 +335,13 @@
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Box Model Codealong</h1>
-					<div class="text-left">
-						<p>1. Open a <a href="http://codepen.io" target="_blank">CodePen</a></p>
-						<p>2. Create a <code class="code">&lt;div&gt;</code></p>
-						<p>3. Fill it with some content (hint: type "lorem" and hit <code class="code">tab</code>)</p>
-						<p>4. Apply a <code class="code">background</code> color to it</p>
-					</div>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Box Model Codealong</div>
+
+					<p>1. Open a <a href="http://codepen.io" target="_blank">CodePen</a></p>
+					<p>2. Create a <code class="code">&lt;div&gt;</code></p>
+					<p>3. Fill it with some content (hint: type "lorem" and hit <code class="code">tab</code>)</p>
+					<p>4. Apply a <code class="code">background</code> color to it</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -341,7 +350,7 @@
 					<div class="text-smaller">
 						<p>&#149; Borders consist of three properties:</p>
 						<div class="pad-left-lg text-smaller">
-							<p>&rArr; <code class="code">border-width</code>: a px value for width</p>
+							<p>&rArr; <code class="code">border-width</code>: a pixel-based value for width</p>
 							<p>&rArr; <code class="code">border-style</code>: the style (solid, dotted, dashed, double)</p>
 							<p>&rArr; <code class="code">border-color</code>: the color</p>
 						</div>
@@ -447,10 +456,13 @@
 					<p>&#149; All HTML elements are either:</p>
 					<p class="pad-left-lg">&rArr; <code class="code">block</code></p>
 					<p class="pad-left-lg">&rArr; <code class="code">inline</code></p>
-					<p>&#149; Controlled by the CSS property: <code class="code">display</code></p>
-					<p class="pad-left-lg">&rArr; <code class="code">display: block;</code></p>
-					<p class="pad-left-lg">&rArr; <code class="code">display: inline;</code></p>
-					<p>&#149; Referred to as either <b>block</b> or <b>inline</b> elements</p>
+					<div class="fragment">
+						<p>&#149; Controlled by the CSS property: <code class="code">display</code></p>
+						<p class="pad-left-lg">&rArr; <code class="code">display: block;</code></p>
+						<p class="pad-left-lg">&rArr; <code class="code">display: inline;</code></p>
+					</div>
+					<p class="fragment">&#149; Referred to as either <b>block</b> or <b>inline</b> elements</p>
+					<p class="fragment">&#149; A third option will be discussed later: <code class="code">inline-block</code></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -568,10 +580,11 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Lab/HW</div>
 					<div class="text-smaller">
-						<p>1. Open the <code class="code">box-model-layout</code> directory</p>
+						<p>1. Open the <code class="code">travel-bucket-list</code> directory</p>
 						<p>2. Build <code class="code">spec.png</code> in <code class="code">index.html</code></p>
-						<p>3. Make sure <code class="code">index.html</code> and <code class="code">style.css</code> are linked!</p>
+						<p>3. Make sure <code class="code">index.html</code> and <code class="code">styles.css</code> are linked!</p>
 						<p>4. You will need to use:</p>
+						<p class="pad-left-lg">&rArr; Relative links for the images</p>
 						<p class="pad-left-lg">&rArr; <code class="code">padding</code></p>
 						<p class="pad-left-lg">&rArr; <code class="code">margin</code></p>
 						<p class="pad-left-lg">&rArr; <code class="code">text-align</code></p>
