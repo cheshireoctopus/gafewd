@@ -62,11 +62,10 @@
 							<p>&rArr; <a target="_blank" href="https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text">Scotch.io Atom Overview</a></p>
 						</div>
 					</div>
-					<p class="fragment text-smaller"><b>Q: Will we learn how different browsers handle HTML/CSS?</b></p>
-					<p class="fragment text-smallest">A: Not specifics, but we will cover <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">solutions</a> to normalize behavior</p>
-					<p class="fragment text-smaller"><b>Q: Will sites like SquareSpace replace the need for coding basic sites?</b></p>
-					<p class="fragment text-smallest">A: Yes and <a target="_blank" href="https://www.quora.com/Why-do-people-still-hire-web-designers-when-there-are-website-builders-out-there-such-as-WordPress-Wix-and-Weebly">no</a></p>
-
+					<!-- <p class="fragment text-smaller"><b>Q: Will we learn how different browsers handle HTML/CSS?</b></p>
+					<p class="fragment text-smallest">A: Not specifics, but we will cover <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">solutions</a> to normalize behavior</p> -->
+					<!-- <p class="fragment text-smaller"><b>Q: Will sites like SquareSpace replace the need for coding basic sites?</b></p>
+					<p class="fragment text-smallest">A: Yes and <a target="_blank" href="https://www.quora.com/Why-do-people-still-hire-web-designers-when-there-are-website-builders-out-there-such-as-WordPress-Wix-and-Weebly">no</a></p> -->
 				</section>
 
 				<!-- WARMUP (20-25mins) -->
@@ -124,14 +123,14 @@
 					<p>&#149; Text color can be set with <code class="code">color</code>:</p>
 <pre><code>
 	h1 {
-	  color: "red";
+	  color: red;
 	}
 
 </code></pre>
 					<div class="fragment">
 						<p>&#149; Color values can be specified using:</p>
 						<div class="pad-left-lg">
-							<p>&rArr; color keyword: <code class="code">"red"</code> (must be in quotations)</p>
+							<p>&rArr; color keyword: <code class="code">red</code></p>
 							<p class="fragment">&rArr; rgb: <code class="code">rgb(255, 0, 0)</code></p>
 							<p class="fragment">&rArr; hex code: <code class="code">#FF0000</code></p>
 						</div>
@@ -252,7 +251,7 @@
 
 <pre><code>
 	p {
-	  font-family: 'Comic Sans MS', helvetica, serif;
+	  font-family: 'Comic Sans MS', helvetica, serif, sans-serif;
 	}
 
 </code></pre>
@@ -261,7 +260,7 @@
 					<div class="pad-left-lg text-smaller">
 						<p>&rArr; Applies a particular font to the element</p>
 						<p>&rArr; Accepts multiple values</p>
-						<p>&rArr; Should always end with: <code class="code">serif</code>, <code class="code">sans-serf</code>, or <code class="code">monospace</code></p>
+						<p>&rArr; Should always end with: <code class="code">serif</code>, <code class="code">sans-serif</code>, or <code class="code">monospace</code></p>
 					</div>
 				</section>
 
@@ -273,13 +272,13 @@
 						<p class="pad-left-lg text-left text-smaller">&rArr; how text is oriented within the containing block</p>
 						<hr>
 						<p class="text-smaller text-left">
-							text-left
+							<code class="code">left</code>
 						</p>
 						<p class="text-smaller text-center">
-							text-center
+							<code class="code">center</code>
 						</p>
 						<p class="text-smaller text-right">
-							text-right
+							<code class="code">right</code>
 						</p>
 						<hr>
 						<div class="text-left">
