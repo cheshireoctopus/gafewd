@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 06</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero condensed">
+					<h1>HELLO</h1>
+
+					<div class="opening-instructions">
+						<div class="text-smaller">
+							<p>1) Please download <a href="../materials/class06.zip">Class 06 Starter Code</a></p>
+							<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; <code class="code">horizontal-nav</code>
+								<p>&rArr; <code class="code">floating-sections</code>
+								<p>&rArr; <code class="code">relative-path-practice</code>
+								<p>&rArr; <code class="code">layout-challenge</code></p>
+								<p>&rArr; <code class="code">fashion-blog-part2</code></p>
+							</div>
+							<p>3) <code class="code">fashion-blog-solution</code> is included</p>
+							<p>4) Move the following into your <code class="code">homework</code> directory:</p>
+							<p class="pad-left-lg"> &rArr; <code class="code">fashion-blog-part2</code>
+						</div>
+					</div>
+				</section>
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#06</span></h1>
+					<h1>3/22/2017</h1>
+					<h1 class="lesson-title">Page Layout: Floats and Clears</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Annoucements</div>
+					<p>&#149; We have to plan class drinks!</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Wed (10/19)</p>
+						<p>&rArr; Mon (10/24)</p>
+						<p>&rArr; Wed (10/26)</p>
+					</div>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; First deliverable due Monday, Aprial 3rd</p>
+						<p>&rArr; Project proposal/ideas</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+			<!-- 	<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+					<p class="text-smaller"><b>Q: If you link multiple CSS files to your HTML doc, which one takes precedence if there are conflicts? </b></p>
+					<div class="fragment">
+						<p class="text-smallest">A: The last style sheet loaded will take precedence.</p>
+<pre><code>
+	&lt;link rel="stylesheet" href="css/boostrap.css"&gt;
+	&lt;link rel="stylesheet" href="css/style.css"&gt;
+
+</code></pre>
+					</div>
+					<p class="fragment text-smaller"><b>Q: Do we need to be familiar with the rest of the dev tools panels?</b></p>
+					 <p class="text-smallest fragment">A: FEWD will focus on Elements + Console</p>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<p>&#149; <a href="#/horizontal-nav">Horizontal navigation</a></p>
+					<p>&#149; <a href="#/display-inline-block"><code class="code">display: inline-block</code></a></p>
+					<p>&#149; <a href="#/float">CSS <code class="code">float</code> property</a></p>
+					<p>&#149; <a href="#/clear">CSS <code class="code">clear</code> property</a></p>
+				</section>
+
+				<!-- WARMUP -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Warmup</div>
+
+					<p>1) Open <code class="code">relative-path-practice</code> in SublimeText</p>
+					<p>2) Fix the four relative image paths:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; One is in <code class="code">index.html</code></p>
+						<p>&rArr; Three are in <code class="code">css/main.css</code></p>
+					</div>
+				</section>
+
+				<!-- HORIZONTAL NAVIGATION -->
+				<section class="title" id="horizontal-nav">
+					<h1>Horizontal Navigation</h1>
+					<p class="text-smallest">Q: How'd you build Fashion Blog's nav?</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code">&lt;ul&gt;</code></div>
+
+					<p>&#149; The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p class="pad-left-lg">&rArr; <code class="code">&lt;ul&gt;</code></p>
+					<div class="text-center">
+						<img src="img/class06/ul-nav.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;a&gt;</code></div>
+					<p>&#149; The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p class="pad-left-lg">&rArr; <code class="code">&lt;a&gt;</code></p>
+					<div class="text-center">
+						<img src="img/class06/a-nav.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;a&gt;</code></div>
+
+					<p>&#149; Cons of the <code class="code">&lt;a&gt;</code> approach:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">&lt;a&gt;</code> tags are <b>INLINE</b> elements</p>
+						<p>&rArr; Cannot set <code class="code">margin-top</code> or <code class="code">margin-bottom</code></p>
+						<p>&rArr; Cannot set <code class="code">height</code> or <code class="code">width</code></p>
+						<p>&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/avQzQM">CodePen exercise</a></p>
+					</div>
+					<p class="fragment">&#149; We can change <code class="code">display: block</code>...</p>
+					<p class="fragment">&#149; ...but would have to implement floats :(</p>
+				</section>
+
+				<!-- DISPLAY: INLINE-BLOCK -->
+				<section class="title" id="display-inline-block">
+					<h2>display: inline-block</h2>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Display: <code class="code lower">inline-block</code></div>
+
+					<p>&#149; Display block elements...inline</p>
+					<div class="fragment">
+						<p>&#149; Can still set box model properties:</p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">height</code></p>
+							<p>&#149; <code class="code">width</code></p>
+							<p>&#149; <code class="code">margin</code></p>
+							<p>&#149; <code class="code">padding</code></p>
+						</div>
+					</div>
+					<p class="fragment">&#149; <b>Note:</b> IE6 and IE7 do not support <code class="code">display: inline-block</code></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal-Nav Exercise</div>
+					<p>1) Open <code class="code">horizontal-nav</code> in SublimeText</p>
+					<p>2) Build what you see in the <code class="code">.png</code> files</p>
+					<p>3) Note the <code class="code">navigation-selected.png</code></p>
+				</section>
+
+				<!-- FLOATS -->
+				<section class="title" id="float">
+					<h1>Floats</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats</div>
+
+					<p>&#149; CSS positioning property; ex: <code class="code">float: left;</code></p>
+					<p>&#149; Enables more robust web layouts</p>
+					<p>&#149; Derived from text wrapping in print:</p>
+					<div class="text-center">
+						<img src="img/class06/text-wrap.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats</div>
+
+					<p>&#149; Applied as follows:</p>
+<pre><code>
+	img {
+	  float: left;
+	}
+
+</code></pre>
+					<p class="fragment">&#149; Valid values: <code class="code">left</code>, <code class="code">right</code>, <code class="code">none</code></p>
+					<p class="fragment">&#149; Original purpose: allow text to "wrap" around images</p>
+					<p class="fragment">&#149; Has become: a technique for advanced web layouts</p>
+					<p class="fragment">&#149; Enables <code class="code">block</code> elements to render <code class="code">inline</code></p>
+				</section>
+
+				<section class="center">
+					<h2>Floats + Layout</h2>
+					<img src="img/class06/float-layout.jpg" alt="">
+					<p><a href="http://codepen.io/cheshireoctopus/pen/VamNPP?editors=1100">CodePen Example</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats: Some Rules...</div>
+
+					<div class="text-left text-smaller">
+						<p>1) A floated element should always have a <code class="code">width</code> set; otherwise it will collapse to be the width of the content within it</p>
+						<p class="pad-left-lg"> &rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p>
+						<div class="fragment">
+							<p>2) A floated box will shift until it touches either the edge of its parent, or the edge of another floated box</p>
+							<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/gaQpXX?editors=110">Example</a></p>
+						</div>
+						<div class="fragment">
+							<p>3) Elements below a floated element will slide up "behind" it; to fix this, we need to <code class="code">clear</code> the float</p>
+							<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoGNdY?editors=110">Example</a></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="title" id="clear">
+					<h1>Clearing Floats</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats</div>
+
+					<div class="text-left text-smaller">
+						<p>&#149; Floated objects do not add height to their containing objects; this creates two problems:</p>
+						<div class="pad-left-lg">
+							<p>1) Objects further down the page will render incorrectly</p>
+							<p>2) If there are only floated objects within an object, it will <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQaEx?editors=110">collapse</a></p>
+						</div>
+						<p class="fragment">&#149; To solve these issues, we must handle or <u>clear</u> floated elements</p>
+						<div class="fragment">
+							<p>&#149; Three methods:</p>
+							<div class="pad-left-lg">
+								<p>1) <code class="code">overflow: hidden;</code></p>
+								<p>2) The <code class="code">clear</code> CSS property</p>
+								<p>3) The "clearfix"</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Handling Floats: The Overflow Method</div>
+
+					<p>&#149; Add the following to the <u>collapsed</u> element:</p>
+					<p class="pad-left-lg"><code class="code">overflow: hidden;</code></p>
+					<p>&#149; Tells the browser to pay attention to the height of the content</p>
+					<p class="fragment">&#149; Technically isn't clearing...a parent cannot clear its children's floats</p>
+					<p class="fragment">&#149; Establishes a new block formatting context</p>
+					<p class="fragment">&#149; Elements that create new BFC's are designed to acknowledge their children's floats</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats: The Clear Class</div>
+
+					<div class="text-smaller">
+						<p>1) Define the following in your CSS:</p>
+<pre><code>
+	.clear {
+	  clear: both;
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>2) Create the following element in your HTML; place it <u>AFTER</u> the floated elements</p>
+<pre><code>
+    &lt;div id="floated-right">&lt;/div>
+    &lt;div id="floated-left">&lt;/div>
+    &lt;div class="clear">&lt;/div>
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats: The Clearfix Class</div>
+
+					<p>&#149; Define the following in your CSS:</p>
+<pre><code>
+	.clearfix:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+
+</code></pre>
+					<p>&#149; Add the class to the element that has collapsed</p>
+					<p>&#149; <a target="_blank" href="https://css-tricks.com/snippets/css/clear-fix/">Source</a></p>
+				</section>
+
+				<!-- FLOATING SECTION CODEALONG -->
+				<section class="center">
+					<h1>Floats/Clears Codealong</h1>
+					<p>Open <code class="code">floating-sections</code> in SublimeText</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab/HW: Fashion Blog (pt. 2)</div>
+
+					<p>1) Open <code class="code">fashion-blog-part2</code> in SublimeText</p>
+					<p>2) Build what you see in <code class="code">design.png</code></p>
+					<p>3) Copy found in <code class="code">copy.txt</code></p>
+					<p>4) Will have to look up <code class="code">:first-letter</code></p>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #7 (of 20) - Page Layout: Lab</h4>
+
+					<p>&#149; Floats/Clear review</p>
+					<p>&#149; Layout lab</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
