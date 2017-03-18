@@ -15,10 +15,10 @@ High-level text properties:
 "Better Dressed People":
     black
 
-Links:
-    #DD0000
+"Sartre's List" and Links:
+    #dd0000
 
-Links hover:
+"Sartre's List" and Links hover:
     #aa0000
 
 Navigation links:
@@ -27,7 +27,7 @@ Navigation links:
 Navigation links hover:
     black
 
-Date: 
+Date:
     #cccccc
 
 Article Title

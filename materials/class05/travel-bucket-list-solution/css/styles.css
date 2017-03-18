@@ -1,0 +1,63 @@
+body {
+	font-family: helvetica, sans-serif;
+	margin: 0;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+	background: rgb(243, 243, 243);
+	padding: 15px;
+}
+
+.header {
+	text-align: center;
+	background: rgb(9, 202, 159);
+	color: white;
+	padding: 20px 0;
+}
+
+.header h1 {
+	margin: 0;
+}
+
+.nav {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.nav a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.travel-destination {
+	text-align: center;
+	padding: 30px;
+	background: grey;
+	margin-bottom: 40px;
+}
+
+.travel-destination h2 {
+	margin: 0 0 20px 0;
+}
+
+.travel-destination p {
+	margin: 20px 0 0 0;
+	text-align: justify;
+}
+
+.blue-bg {
+	background: rgb(196, 222, 252);
+}
+
+.green-bg {
+	background: rgb(194, 242, 227);
+}
+
+.footer {
+	text-align: center;
+	font-weight: bold;
+}
