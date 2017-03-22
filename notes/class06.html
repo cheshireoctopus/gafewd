@@ -55,30 +55,40 @@
 				</section>
 
 				<!-- QUESTIONS -->
-			<!-- 	<section class="title">
+				<section class="title">
 					<h1>Questions</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Questions</div>
 
-					<p class="text-smaller"><b>Q: If you link multiple CSS files to your HTML doc, which one takes precedence if there are conflicts? </b></p>
-					<div class="fragment">
-						<p class="text-smallest">A: The last style sheet loaded will take precedence.</p>
+					<div class="text-smaller">
+						<p class="text-smaller"><b>Q: If you link multiple CSS files to your HTML doc, which one takes precedence if there are conflicts? </b></p>
+						<div class="fragment">
+							<p class="text-smallest">A: The last style sheet loaded will take precedence.</p>
 <pre><code>
 	&lt;link rel="stylesheet" href="css/boostrap.css"&gt;
 	&lt;link rel="stylesheet" href="css/style.css"&gt;
 
 </code></pre>
-					</div>
-					<p class="fragment text-smaller"><b>Q: Do we need to be familiar with the rest of the dev tools panels?</b></p>
-					 <p class="text-smallest fragment">A: FEWD will focus on Elements + Console</p>
-				</section> -->
+						</div>
+						<p class="fragment text-smaller"><b>Q: Is semantic HTML a best practice? Or, is it only used for data-tracking?</b></p>
+						<div class="fragment text-smallest">
+				 			<p>A: Beyond SEO, semantic HTML is also used for:</p>
+				 			<div class="pad-left-lg">
+				 				<p>&#149; Accessibility (screen readers)</p>
+				 				<p>&#149; Internationalization</p>
+				 				<p>&#149; Interoperability (help other programmers understand the code)</p>
+				 			</div>
+				 		</div>
+				 	</div>
+				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Agenda</div>
 
+					<p>&#149; <a href="#/pseudo-classes">Pseudo Class Selectors</a></p>
 					<p>&#149; <a href="#/horizontal-nav">Horizontal navigation</a></p>
 					<p>&#149; <a href="#/display-inline-block"><code class="code">display: inline-block</code></a></p>
 					<p>&#149; <a href="#/float">CSS <code class="code">float</code> property</a></p>
@@ -86,7 +96,7 @@
 				</section>
 
 				<!-- WARMUP -->
-				<section data-background="#FFF" class="text-left">
+				<!-- <section data-background="#FFF" class="text-left">
 					<div class="heading">Warmup</div>
 
 					<p>1) Open <code class="code">relative-path-practice</code> in SublimeText</p>
@@ -94,6 +104,58 @@
 					<div class="pad-left-lg">
 						<p>&rArr; One is in <code class="code">index.html</code></p>
 						<p>&rArr; Three are in <code class="code">css/main.css</code></p>
+					</div>
+				</section> -->
+
+				<!-- PSEUDO CLASSES SELECTORS -->
+				<section class="title" id="pseudo-classes">
+					<h1>Pseudo Class Selectors</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Class Selectors</div>
+					<div class="text-smaller">
+						<p>&#149; Pseudo class selectors allow styling given an element's state</p>
+						<div class="fragment">
+							<p>&#149; Consider an <code class="code">&lt;a&gt;</code> tag; it can be:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; Unvisited (normal)</p>
+								<p>&rArr; Visited</p>
+								<p>&rArr; Hovered</p>
+								<p>&rArr; Active</p>
+							</div>
+						</div>
+						<p class="fragment">&#149; With pseudo classes, we can apply CSS rules to each of the above states</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Class Selectors</div>
+					<div class="text-smallest">
+						<p>&#149; Pseudo class selectors are applied using the <code class="code">:</code></p>
+<pre><code>
+	SELECTOR:PSEUDO_CLASS {
+	  ...styles
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; Pseudo selectors work with id, class, and element selectors:</p>
+<pre><code>
+	a:hover {
+	  color: green;
+	}
+
+	.nav-link:visited {
+	  color: pink;
+	}
+
+	#home-link:active {
+  	  color: orange;
+	}
+
+</code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -104,9 +166,9 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Horizontal Navigation: <code class="code">&lt;ul&gt;</code></div>
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;ul&gt;</code></div>
 
-					<p>&#149; The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p>The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
 					<p class="pad-left-lg">&rArr; <code class="code">&lt;ul&gt;</code></p>
 					<div class="text-center">
 						<img src="img/class06/ul-nav.png">
@@ -115,7 +177,7 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;a&gt;</code></div>
-					<p>&#149; The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p>The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
 					<p class="pad-left-lg">&rArr; <code class="code">&lt;a&gt;</code></p>
 					<div class="text-center">
 						<img src="img/class06/a-nav.png">
@@ -158,7 +220,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Horizontal-Nav Exercise</div>
+					<div class="heading">Exercise: Horizontal-Nav</div>
 					<p>1) Open <code class="code">horizontal-nav</code> in SublimeText</p>
 					<p>2) Build what you see in the <code class="code">.png</code> files</p>
 					<p>3) Note the <code class="code">navigation-selected.png</code></p>
@@ -199,14 +261,14 @@
 				<section class="center">
 					<h2>Floats + Layout</h2>
 					<img src="img/class06/float-layout.jpg" alt="">
-					<p><a href="http://codepen.io/cheshireoctopus/pen/VamNPP?editors=1100">CodePen Example</a></p>
+					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VamNPP?editors=1100">CodePen Example</a></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Floats: Some Rules...</div>
 
 					<div class="text-left text-smaller">
-						<p>1) A floated element should always have a <code class="code">width</code> set; otherwise it will collapse to be the width of the content within it</p>
+						<p>1) A floated element should always have a <code class="code">width</code>; otherwise it will collapse to the width of its content:</p>
 						<p class="pad-left-lg"> &rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p>
 						<div class="fragment">
 							<p>2) A floated box will shift until it touches either the edge of its parent, or the edge of another floated box</p>
