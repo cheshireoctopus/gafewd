@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 07</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/class06/class06.zip">Class 07 Starter Code</a></p>
+						<p>2) Move the following into your <code class="code">homework</code> directory:</p>
+						<p class="pad-left-lg">&#149; <code class="code">startup-matchmaker</code></p>
+						<p>3) The solution to last class's lab/hw is included:</p>
+						<p class="pad-left-lg">&#149; <code class="code">fashion-blog-part2-solution</code></p>
+					</div>
+				</section>
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#07</span></h1>
+					<h1>03/27/2017</h1>
+					<h1 class="lesson-title">Page Layout: Lab</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Annoucements</div>
+					<p>&#149; Class drinks tonight!</p>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; First deliverable due Monday, April 3rd</p>
+						<p>&rArr; One week from today!</p>
+						<p>&rArr; Project proposal/ideas</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<!-- <section class="title">
+					<h1>Questions</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<p>&#149; <a href="#/final-project">Final project review</a></p>
+					<p>&#149; <a href="#/floats-clears-review">Floats/clears review</a></p>
+					<p>&#149; <a href="#/startup-matchmaker-lab">Startup Matchmaker lab</a></p>
+				</section>
+
+				<section class="title" id="final-project">
+					<h1>Final Project</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Final Project</div>
+
+					<div class="text-smallest">
+						<p>&#149; Culmination of all skills/technologies (and then some...)</p>
+						<p class="fragment">&#149; Five deliverables; due weekly starting next Monday, April 3rd</p>
+						<p class="fragment">&#149; Watch out for scope creep!</p>
+						<div class="fragment">
+							<p>&#149; Student Gallery: <a href="http://gallery.ga.co/" target="_blank">http://gallery.ga.co/</a></p>
+							<div class="pad-left-lg">
+								<p>&rArr; <a href="http://ericthelefty.github.io/fewd-37/Project/doggy.html">Trippy Dog</a></p>
+								<p>&rArr; <a href="http://weeeitsmylinh.github.io/fewd-37/map-project/world-map/world.html">Find That Country</a></p>
+								<p>&rArr; <a href="http://astrologer-horse-46603.bitballoon.com/">Tweet The Vote</a></p>
+								<p>&rArr; <a href="http://www.drinkerlyn.com/">Erlyn</a></p>
+								<p>&rArr; <a href="http://murielm.github.io/fewd-34/Homework/disrupticon">Disrupticon</a></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- FLOATS REVIEW -->
+				<section class="title" id="floats-clears-review">
+					<h1>Floats/Clears Review</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats: Review</div>
+
+					<div class="text-smaller">
+						<p>&#149; Enable complex layouts by altering a block element's "flow" in the document</p>
+						<p class="fragment">&#149; Three rules:</p>
+						<div class="pad-left-lg">
+							<p class="fragment">1) Floated elements should be assigned a <code class="code">width</code></p>
+							<div class="fragment">
+								<p>2) Floated elements will shift left or right, until:</p>
+								<div class="pad-left-lg">
+									<p>&rArr; They reach the side of their parent</p>
+									<p>&rArr; They encounter another floating element</p>
+								</div>
+							</div>
+							<p class="fragment">3) Floated elements need to be handled using one of the clearing techniques</p>
+						</div>
+						<p class="fragment">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/dYQBpz?editors=110">Example</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: Review</div>
+
+					<p>&#149; How we handlefloating elements</p>
+					<p>&#149; Various approaches to clearing elements:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">clear</code> CSS property</p>
+						<p>&rArr; <code class="code">overflow: hidden;</code></p>
+						<p>&rArr; <code class="code">clearfix</code> class</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">The <code class="code lower">clear</code> CSS Property</div>
+
+					<p>&#149; <code class="code">clear</code> is a CSS property that takes:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">left</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">both</code></p>
+					</div>
+					<p>&#149; Tells non-floating elements where floats are not allowed (left, right, both sides)</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: <code class="code lower">overflow: hidden</code></div>
+
+					<p>&#149; The <code class="code">overflow</code> CSS property determines what happens to content that extends beyond its parent</p>
+					<p class="fragment">&#149; Takes the following values: <code class="code">visible, hidden, scroll, auto</code></p>
+					<p class="fragment">&#149; If <code class="code">hidden</code> or <code class="code">auto</code> is applied to an element containing floated elements, will cause the element to extend to accompany any floating children</p>
+					<p class="fragment">&#149; <a href="https://css-tricks.com/almanac/properties/o/overflow/">More info</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clears: The Clearfix</div>
+
+					<p>&#149; Applying <code class="code">overflow</code> may cause undesirable behavior</p>
+					<p>&#149; Clearfix to the rescue:</p>
+<pre><code>
+	.clearfix:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+</code></pre>
+					<p>&#149; Works on collapsed elements only!</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left" id="startup-matchmaker-lab">
+					<div class="heading">Startup Matchmaker Lab</div>
+
+					<p>&#149; Open <code class="code">startup-matchmaker</code> in SublimeText</p>
+					<p>&#149; Build what you see in <code class="code">spec.png</code></p>
+					<p>&#149; Styling help can be found in <code class="code">readme.txt</code></p>
+					<p>&#149; Will have to research the following CSS properties:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">background-position</code></p>
+						<p>&rArr; <code class="code">border-radius</code> (rounded corners)</p>
+						<p>&rArr; <code class="code">rgba</code> color values (used for opacity)</p>
+					</div>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #8 (of 20) - Intro to Programming/JavaScript</h4>
+
+					<p>&#149; What is JavaScript and what can it do?</p>
+					<p>&#149; How to think programatically</p>
+					<p>&#149; Pseudo Code</p>
+					<p>&#149; JS Basics</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
