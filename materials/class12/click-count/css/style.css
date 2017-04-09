@@ -1,0 +1,24 @@
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: black url('../images/count.png') center center fixed no-repeat;
+	background-size: 40%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#clickme {
+	background-color: transparent;
+	height: 100%;
+	margin: 0 auto;
+	padding: 50px;
+	color: white;
+	font-size: 80px;
+	font-family: "Short Stack", fantasy;
+	cursor: pointer;
+}
