@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Advanced Class</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/advanced_class.zip">Advanced Class Starter Code</a></p>
+						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+						<p class="pad-left-lg">&#149; <code class="code">citi_bike_api</code></p>
+					</div>
+				</section>
+
+				<section class="hero condensed">
+					<h1><span class="red">Advanced</span> Class</h1>
+					<h1>05/06/2017</h1>
+					<h1 class="lesson-title">Data Structures + AJAX</h1>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+					<p>&#149; Recap: Data Types</p>
+					<p>&#149; Arrays</p>
+					<p>&#149; Objects</p>
+					<p>&#149; AJAX</p>
+					<p>&#149; CitiBike Lab</p>
+				</section>
+
+				<!-- DATA TYPES -->
+				<section class="title">
+					<h1>Data Types</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types</div>
+					<p>&#149; In the machine, there is only data</p>
+					<p class="fragment">&#149; The goal of computing is to collect, manage, manipulate, and store this data</p>
+					<p class="fragment">&#149; To manipulate data, it's important to know the data <u>type</u>:</p>
+					<div class="fragment pad-left-lg">
+						<p>&rArr; What the data represents</p>
+						<p>&rArr; Possible values for that type</p>
+						<p>&rArr; Operations that can be performed on the data</p>
+					</div>
+					<p class="fragment">&#149; ALWAYS KNOW YOUR DATA TYPE!</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types</div>
+					<div class="text-smaller">
+						<p class="text-smaller">&#149; Numbers</p>
+						<div class="text-smallest pad-left-lg">
+							<p><code class="code">42</code>, <code class="code">1337</code>, <code class="code">3.14</code></p>
+						</div>
+						<div class="fragment">
+							<p class="text-smaller">&#149; Strings</p>
+							<div class="text-smallest pad-left-lg">
+								<p>Single words or sentences surrounded by quotes</p>
+								<p><code class="code">'lots of kittens'</code></p>
+							</div>
+						</div>
+						<div class="fragment">
+							<p class="text-smaller">&#149; Booleans</p>
+							<div class="text-smallest pad-left-lg">
+								<p>Either <code class="code">true</code> or <code class="code">false</code> values</p>
+							</div>
+						</div>
+						<div class="fragment">
+							<p class="text-smaller">&#149; Arrays</p>
+							<div class="text-smallest pad-left-lg">
+								<p>Collections of related data</p>
+								<p><code class="code">['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island']</code></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ARRAYS -->
+				<section class="title" id="arrays">
+					<h1>Arrays</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Arrays</div>
+
+					<p>&#149; Arrays are a list-like data structure of comma-separated values</p>
+					<p>&#149; Useful for storing a sequence of related data</p>
+					<p>&#149; Declare arrays using square brackets: <code class="code">[ ]</code></p>
+<pre><code>
+	var friends = ['Moe', 'Larry', 'Curly'];
+
+</code></pre>
+					<div class="fragment">
+						<p>&#149; <b>Element</b> - an item inside the array</p>
+						<p>&#149; <b>Index</b> - the numerical location of each element in the array (starts at position 0 - aka "0-indexed")</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Arrays</div>
+
+					<p>&#149; JS provides multiple methods for array creation:</p>
+					<div class="pad-left-lg">
+						<div class="fragment">
+							<p>&rArr; The <code class="code">new</code> keyword</p>
+<pre><code>
+	var drinks = new Array('beer', 'coffee', 'water');
+
+</code></pre>
+						</div>
+						<div class="fragment">
+							<p>&rArr; Using the array literal</p>
+<pre><code>
+	var drinks = ['beer', 'coffee', 'water'];
+
+</code></pre>
+						</div>
+					</div>
+					<div class="fragment">
+						<p>&#149; While similar, there are crucial differences</p>
+						<p>&#149; Use the <u>array literal</u> for now</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Arrays</div>
+
+					<div class="text-smallest">
+						<p>&#149; Use <code class="code">[index]</code> to retrieve values from an array</p>
+						<p>&#149; Remember that arrays are <u>0-indexed</u></p>
+<pre><code>
+	var drinks = ['beer', 'coffee', 'water'];
+
+	drinks[0]
+	// 'beer'
+
+	drinks [0+1]
+	// 'coffee'
+
+	var x = drinks.length - 1
+	drinks[x]
+	// 'water'
+
+	drinks[4]
+	// undefined
+
+</code></pre>
+						<p>&#149; <a href="https://repl.it/HWRb/1" target="_blank">REPL.it</a> examples</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Array Iteration</div>
+					<p>&#149; Consider an array of names:</p>
+<pre><code>
+  var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
+
+</code></pre>
+					<p class="fragment">&#149; How would we <code class="code">console.log</code> all the names in this array?</p>
+					<div class="fragment">
+<pre><code>
+	console.log(boroughs[0]);
+	console.log(boroughs[1]);
+	console.log(boroughs[2]);
+	console.log(boroughs[3]);
+	console.log(boroughs[4]);
+
+</code></pre>
+					</div>
+					<p class="fragment">&#149; Is this efficient/scalable?</p>
+				</section>
+
+				<!-- ARRAY ITERATION -->
+				<section class="title" id="iteration">
+					<h1>Array Iteration</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Array Iteration</div>
+					<p>&#149; Iteration is the process of running the same function to every element in an array:</p>
+					<div class="fragment">
+<pre><code>
+  var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
+
+  boroughs.forEach(function (borough) {
+    console.log(borough)
+  })
+
+  // 'manhattan'
+  // 'the bronx'
+  // 'queens'
+  // 'brooklyn'
+  // 'staten island'
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Array Iteration</div>
+
+					<p>&#149; JS arrays have several iteration methods:</p>
+					<div class="pad-left-lg text-smaller">
+						<p><code class="code">.forEach()</code></p>
+						<p><code class="code">.every()</code></p>
+						<p><code class="code">.some()</code></p>
+						<p><code class="code">.filter()</code></p>
+						<p><code class="code">.map()</code></p>
+					</div>
+					<p class="fragment">&#149; Most require a function to be supplied as an argument; this function will be applied to each item in the array, individually</p>
+				</section>
+
+				<!-- OBJECTS -->
+				<section class="title" id="objects">
+					<h1>Objects</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Introduction</div>
+					<p>&#149; So far, we've dealt with simple (primitive) data types:</p>
+					<div class="pad-left-lg fragment">
+						<p>&rArr; <code class="code">String</code></p>
+						<p>&rArr; <code class="code">Number</code></p>
+						<p>&rArr; <code class="code">Boolean</code></p>
+						<p>&rArr; Not so much: <code class="code">undefined</code>, <code class="code">null</code></p>
+					</div>
+					<p class="fragment">&#149; <code class="code">Array</code>, a list-like data-structure (note: complex)</p>
+					<p class="fragment">&#149; As our applications grow more powerful, we need to leverage a more complex data-structure, the <code class="code">Object</code></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Introduction</div>
+					<p class="text-smaller">&#149; Objects are collections of <u>properties</u>, which are <u>key:value</u> pairs:</p>
+					<div class="fragment">
+<pre><code>
+  {
+    name: 'Obama',
+    number: 44,
+    titles: ['POTUS', 'Prez', 'Commander-In-Chief'],
+    speak: function () {
+      return 'Pay your taxes.';
+    }
+  }
+
+</code></pre>
+					</div>
+					<div class="fragment text-smaller">
+						<p>&#149; Useful for a simple, structured data store</p>
+						<p>&#149; Fundamental programming paradigm that helps us structure and categorize our code</p>
+						<p>&#149; AKA - associative array / hash / dictionary</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Creation</div>
+					<p>Like arrays, two ways to create objects:</p>
+					<div class="fragment">
+						<p>&#149; Object Literal</p>
+<pre><code>
+	var person = {};
+
+</code></pre>
+						<p class="pad-left-lg text-smaller">&rArr; Useful for simple data stores</p>
+					</div>
+					<div class="fragment">
+						<p>&#149; Object Constructor</p>
+<pre><code>
+	var person = new Object();
+
+</code></pre>
+						<p class="pad-left-lg text-smaller">&rArr; Useful for creating many instances of a particular type</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Get/Set Values</div>
+					<p>&#149; Use either <u>dot-notation</u> or <u>bracket notation</u> to set and get propreties</p>
+					<div class="fragment">
+<pre><code>
+  var person = {
+    name: 'Obama'
+  };
+
+  // dot-notation
+  person.job = 'president';
+
+  person.job;
+  // "president"
+
+  // bracket notation (useful if a property has a special character)
+  person['bad-habits'] = 'cigarettes';
+
+  person['bad-habits'];
+  // "cigarettes"
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Recap</div>
+					<div class="text-smaller">
+						<p><b>Q: Objects are collections of _____:_____ pairs</b></p>
+						<div class="fragment">
+							<p class="pad-left-lg">A: <code class="code">key:value</code> pairs</p>
+<pre><code>
+	var person = {
+	  name: 'Obama',
+	  number: 44,
+	}
+
+</code></pre>
+						</div>
+						<p class="fragment"><b>Q: Two methods of creating objects are: </b></p>
+						<div class="fragment">
+							<p class="pad-left-lg">A: The object literal and the object constructor</p>
+<pre><code>
+	var person = {};
+
+	var person = new Object();
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Objects: Recap</div>
+					<p><b>Q: To get and set object properties, we can use either:</b></p>
+					<div class="fragment">
+						<p class="pad-left-lg">A: <u>dot-notation</u> or <u>bracket-notation</u></p>
+<pre><code>
+	var person = {};
+
+	// set
+	person.name = 'Obama';
+
+	// get
+	person.name
+	// "Obama"
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="title" id="ajax">
+					<h1>AJAX</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">API's: What are they?</div>
+					<div class="text-smallest">
+						<p>&#149; API = Application Programming Interface</p>
+						<p>&#149; Set of rules/instructions for interacting with a piece of software</p>
+						<p>&#149; Middleman; allows different pieces of software to "talk"</p>
+						<p>&#149; API for devices (iPhone); for operating systems (OSX); for JavaScript libraries (jQuery API)</p>
+					</div>
+					<div class="text-center">
+						<img src="img/class15/api.png" alt="">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">AJAX</div>
+					<p>&#149; AJAX = Asynchronous JavaScript and XML</p>
+					<p>&#149; Collection of technologies used to make HTTP (and other asychronous) requests from the browser</p>
+					<p>&#149; Sends and receives data in a variety of formats, including <code class="code">JSON</code></p>
+					<p>&#149; Operates in the "background"; allows us to request/receive data and update the UI without having to refresh the page</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery + AJAX</div>
+					<div class="text-smaller">
+						<p>&#149; Vanilla JS is sufficient for making HTTP requests</p>
+						<p>&#149; It's just verbose...see <a href="https://www.sitepoint.com/guide-vanilla-ajax-without-jquery/" target="_blank">example</a></p>
+						<p>&#149; Also, older browsers handle AJAX calls differently</p>
+						<div class="fragment">&#149; jQuery's motto: "Write Less, Do More!"</div>
+						<div class="fragment">
+<pre><code>
+	$.ajax({
+	  url: 'http://your-url.com',
+	  type: 'GET',
+	  success: function (response) {
+	  	console.log(response);
+	  },
+	})
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery + AJAX</div>
+
+					<p>&#149; <code class="code">$.ajax()</code> is a method that takes an object of options:</p>
+<pre><code>
+	{
+	  url: (the endpoint you want to make the request to),
+	  type: (what type of request - GET, POST, PUT, DELETE),
+	  success: (function that runs when the request is successful),
+	  error: (function that runs when the request fails),
+	}
+
+</code></pre>
+					<p>&#149; Additional jQuery Ajax <a href="https://www.sitepoint.com/use-jquerys-ajax-function/">options</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Codealong: CitiBike API</div>
+					<p>&#149; Open <code class="code">citi_bike_api</code> in Sublime</p>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
