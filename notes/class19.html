@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 19</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/class19/class19.zip">Class 19 Starter Code</a></p>
+						<p>2) Move the following into your course work directory:</p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">animate-css</code></p>
+							<p>&#149; <code class="code">animated-sticky-nav</code></p>
+						</div>
+						<p>3) The following solutions are included:</p>
+						<p class="pad-left-lg">&#149; <code class="code">startup-matchmaker-responsive</code></p>
+					</div>
+				</section>
+
+				<section class="hero">
+					<h1>Class <span class="red">#19</span></h1>
+					<h1>05/08/2017</h1>
+					<h1 class="lesson-title">CSS Positioning and Animation</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
+
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Due Wednesday!</p>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<div class="text-smaller">
+						<p>&#149; <a href="#/css-positioning">CSS Positioning</a></p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">position: static;</code></p>
+							<p>&rArr; <code class="code">position: fixed;</code></p>
+						</div>
+						<p>&#149; <a href="#/css-transitions">CSS Transitions</a></p>
+						<p>&#149; <a href="#/css-positioning">CSS Positioning</a></p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">position: relative;</code></p>
+							<p>&rArr; <code class="code">position: absolute;</code></p>
+						</div>
+						<p>&#149; <a href="#/jquery-animate">jQuery <code class="code">.animate()</code></a></p>
+						<p>&#149; In-class final project work</p>
+					</div>
+				</section>
+
+				<!-- CSS POSITIONING -->
+				<section class="title" id="css-positioning">
+					<h1>CSS Positioning</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Positioning: Overview</div>
+
+					<div class="text-smaller">
+						<p>&#149; The <code class="code">position</code> CSS property defines alternative positioning rules for elements</p>
+						<p>&#149; Useful for advanced layouts, fixed headers, and animated elements</p>
+						<p>&#149; When set, can use the CSS properties: <code class="code">top</code>, <code class="code">right</code>, <code class="code">bottom</code>, <code class="code">left</code></p>
+						<p>&#149; <code class="code">position</code> has four values:</p>
+					</div>
+<pre><code>
+	position: static;
+	position: fixed;
+	position: relative;
+	position: absolute;
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: static;</code></div>
+
+					<p>&#149; Default CSS positioning value for <u>ALL</u> elements</p>
+					<p>&#149; Considered "normal" behavior</p>
+					<p>&#149; Static elements are <u>NOT</u> positioned</p>
+					<p>&#149; Cannot set the following properties:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; <code class="code">top</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">bottom</code></p>
+						<p>&rArr; <code class="code">left</code></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: fixed;</code></div>
+
+					<div class="text-smaller">
+						<p>&#149; Positioned relative to the browser window</p>
+						<p>&#149; Element will stay in view, even as window scrolls</p>
+						<p>&#149; Removed from the normal flow of the document</p>
+						<p>&#149; Used for for persistent navigation: "sticky headers"</p>
+						<p>&#149; Can position using:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">top</code></p>
+							<p>&rArr; <code class="code">right</code></p>
+							<p>&rArr; <code class="code">bottom</code></p>
+							<p>&rArr; <code class="code">left</code></p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Sticky Header Example</div>
+
+					<p class="text-smaller">&#149; Apply the following CSS rules to your <code>&lt;header&gt;</code>:</p>
+<pre><code>
+ header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   height: 50px; // should match the padding-top on body
+ }
+
+</code></pre>
+					<p class="text-smaller">&#149; Apply the following CSS rules to your <code>&lt;body&gt;</code>:</p>
+<pre><code>
+ body {
+   padding-top: 50px; // should match the height of header
+ }
+
+</code></pre>
+					<p class="text-smaller">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/QyEBeO?editors=110">CodePen Example</a></p>
+				</section>
+
+				<section class="title" id="css-transitions">
+					<h1>CSS Transitions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Transitions</div>
+
+					<p>&#149; Provide a method for controlling CSS changes</p>
+					<p>&#149; Ex: Slowly fade <code class="code">color</code> change over a second</p>
+					<p>&#149; Syntax:</p>
+					<p class="pad-left-lg text-smaller"><code class="code">transition: property duration function delay;</code></p>
+					<p>&#149; Applied:</p>
+<pre><code>
+	p {
+	  transition: color 2s;
+	}
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Transitions</div>
+
+					<p><a target="_blank" href="http://easings.net/">Transition functions</a>:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&#149; <code class="code">ease</code></p>
+						<p>&#149; <code class="code">linear</code></p>
+						<p>&#149; <code class="code">ease-in</code></p>
+						<p>&#149; <code class="code">ease-out</code></p>
+						<p>&#149; <code class="code">ease-in-out</code></p>
+						<p>&#149; <code class="code">step-start</code></p>
+						<p>&#149; <code class="code">step-end</code></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Codealong: Animated Sticky Navigation Bar</div>
+					<div class="text-smallest">
+						<p>1) Open <code class="code">animated-sticky-nav</code></p>
+						<p>2) Apply <code class="code">fixed</code> positioning and <code class="code">transition: all 2s;</code> to the <code class="code">&lt;header&gt;</code></p>
+						<p>4) Create an "offset" class:</p>
+<pre><code>
+	.header-offset {
+	  background: red;
+	  font-size: 30px;
+	}
+
+</code></pre>
+						<p>5) Use jQuery to listen for scrolling and toggle the CSS class</p>
+<pre><code>
+	$(window).scroll(function () {
+	  var offset = $(window).scrollTop();
+
+	  if (offset > 150) {
+	    $('header').addClass('header-offset')
+	  } else {
+	    $('header').removeClass('header-offset')
+	  }
+	})
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: relative;</code></div>
+					<div class="text-center">
+						<p>How would we create this?</p>
+						<img src="img/class19/position-relative.png" alt="">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: relative;</code></div>
+
+					<p>&#149; Positioned relative to its normal position</p>
+					<p>&#149; Move using <code class="code">top</code>, <code class="code">right</code>, <code class="code">bottom</code>, and <code class="code">left</code> properties</p>
+					<p>&#149; <u>Note</u>: the original space for the element is preserved</p>
+					<p>&#149; Used for:</p>
+					<p class="pad-left-lg">&rArr; Overlapping elements</p>
+					<p class="pad-left-lg">&rArr; As a reference for absolutely-positioned elements</p>
+					<p>&#149; <a target="_blanl" href="http://codepen.io/cheshireoctopus/pen/RrRYOL?editors=1100">CodePen exercise</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">position: absolute;</code></div>
+
+					<div class="text-smaller">
+						<p>&#149; Positioned relative to either:</p>
+						<p class="pad-left-lg">&rArr; Browser window</p>
+						<p class="pad-left-lg">&rArr; Closest <u>positioned</u> element</p>
+						<p>&#149; Removed from the normal flow of the document</p>
+						<p>&#149; Element will collapse to content's width</p>
+						<p>&#149; Used for:</p>
+						<p class="pad-left-lg">&rArr; Animations (we will see shortly)</p>
+						<p class="pad-left-lg">&rArr; Precisely placing an element within a parent</p>
+						<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BjzqKG?editors=1100">CodePen Exercise</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">absolute</code> & <code class="lower">relative</code></div>
+
+					<p>&#149; Use <code class="code">position: absolute</code> with <code class="code">position: relative</code> to absolutely position an element <u>within</u> another element</p>
+					<p>&#149; <code class="code">position: relative</code> is placed on the parent element</p>
+					<p>&#149; <code class="code">position: absolute</code> is placed on the child element</p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/LGZgyz?editors=110">CodePen Exercise</a></p>
+				</section>
+
+				<section class="center">
+					<h2><code>Position: Absolute;</code></h2>
+					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/WrxYzp?editors=110">CodePen Exercise</a></p>
+					<img src="img/class19/position-absolute.png" alt="">
+				</section>
+
+				<!-- jQuery .animate() -->
+				<section class="title" id="jquery-animate">
+					<h1>jQuery <code class="lower">.animate()</code></h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
+
+					<p><code class="code">.animate()</code> performs a custom animation on a set of CSS properties</p>
+					<p class="pad-left-lg text-smallest">&rArr; Ex: animate height/width from <code class="code">Ypx</code> to <code class="code">Zpx</code></p>
+					<p class="pad-left-lg text-smallest">&rArr; Ex: animate an element's postion (move element across screen)</p>
+					<p>&#149; Can call <code class="code">.animate()</code> on <u>most</u> CSS properties</p>
+					<p>&#149; Cannot <code class="code">.animate()</code> color-related properties</p>
+					<p class="pad-left-lg">&rArr; See <a target="_blank" href="https://jqueryui.com/animate/">jQuery UI Color Animation</a> plugin</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
+
+					<div class="text-smallest">
+						<p>&#149; Border:</p>
+						<p class="text-smallest pad-left-lg">border; border-width; border-bottom-width; etc.</p>
+						<p>&#149; Margin:</p>
+						<p class="text-smallest pad-left-lg">margin; margin-top; margin-right; etc</p>
+						<p>&#149; Padding:</p>
+						<p class="text-smallest pad-left-lg">padding; padding-top; padding-right; etc</p>
+						<p>&#149; height/width</p>
+						<p>&#149; font-size</p>
+						<p>&#149; top/right/bottom/left</p>
+						<p>&#149; opacity</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate()</code></div>
+
+					<p>&#149; jQuery <code class="code">.animate()</code> signature:</p>
+
+					<p class="pad-left-lg"><code class="code">.animate(CSS-properties, duration)</code></p>
+
+					<p>&#149; Example:</p>
+
+<pre><code>
+	$('#someEl').animate({
+		'width': '500px',
+		'height': '500px'
+	}, 2000)
+
+</code></pre>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/jWrQMV">CodePen Example</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery <code class="lower">.animate</code>: Positioning</div>
+
+					<p>&#149; We can animate an element's postioning:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">top</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+						<p>&rArr; <code class="code">bottom</code></p>
+						<p>&rArr; <code class="code">right</code></p>
+					</div>
+					<p>&#149; Said element must be <code class="code">position: absolute;</code></p>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/WrxYpG">CodePen Exercise</a></p>
+				</section>
+
+				<!-- ANIMATE CSS -->
+				<section data-background="#FFF" class="text-left" id="animate-css">
+					<div class="heading">Animate.CSS</div>
+						<p>1) Visit: <a target="_blank" href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+						<p>2) Check out the documentation <a href="https://github.com/daneden/animate.css" target="_blank">here</a></p>
+						<p>3) Open <code class="code">animate-css</code> in Sublime Text</p>
+						<p>4) Apply the library directly via CSS classes and via jQuery</p>
+				</section>
+
+				<section class="title">
+					<h1>In-Class Final Project Work</h1>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #20 (of 20) - Final Class</h4>
+
+					<p>&#149; Course Recap</p>
+					<p>&#149; Course Certification</p>
+					<p>&#149; You + GA</p>
+					<p>&#149; Next Steps</p>
+					<p>&#149; Final Presentations</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
