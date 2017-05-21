@@ -1,7 +1,8 @@
 <p align="center">
 	<img src="img/fewd-logo.png" />
 </p>
-#FEWD: Course Website and Notes
+
+# FEWD: Course Website and Notes
 
 Hosted at [http://gafewd.surge.sh/](http://gafewd.surge.sh/).
 
