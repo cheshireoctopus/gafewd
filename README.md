@@ -4,7 +4,7 @@
 
 # FEWD: Course Website and Notes
 
-Hosted at [http://gafewd.surge.sh/](http://gafewd.surge.sh/).
+Hosted at [http://fewd.nyc/](http://fewd.nyc/).
 
 Please feel free to fork for your own class. Contributions are welcome 👍
 
