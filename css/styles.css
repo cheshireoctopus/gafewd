@@ -22,13 +22,6 @@ header {
 	margin-top: 50px;
 }
 
-h1 {
-	font-family: 'Pf Din', Impact, sans-serif;
-	text-transform: uppercase;
-	color: white;
-	font-size: 63px;
-}
-
 p, h2, h3, h4, h5, th, li, table, a {
 	font-family: 'Circular', sans-serif;
 	color: #222222;
@@ -44,9 +37,17 @@ h2 {
 	text-align: center;
 }
 
+p {
+	hyphens: auto;
+}
+
 a {
 	color: #358DF2;
 	font-weight: 700;
+}
+
+img {
+	max-width: 100%;
 }
 
 a:hover {
@@ -55,10 +56,6 @@ a:hover {
 
 hr {
 	border-top: 1px solid black;
-}
-
-.blueheader h1 {
-	text-align: center;
 }
 
 .darkgrey {
@@ -145,16 +142,47 @@ hr {
 	margin: 0 auto;
 }
 
+.page-title {
+	font-family: 'Pf Din', Impact, sans-serif;
+	text-transform: uppercase;
+	color: white;
+	font-size: 4em;
+}
+
+@media screen and (max-width: 400px) {
+	.blueheader {
+		padding: 0;
+	}
+
+	.page-title {
+		font-size: 3em;
+	}
+}
+
 .overview {
 	background-color: #358DF2;
 	padding: 30px;
-	display: flex;
-	align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+	.overview {
+		text-align: center;
+	}
 }
 
 .overview p {
 	color: white;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+	.overview {
+		padding: 15px;
+	}
+
+	.overview p {
+		font-size: 1.5em;
+	}
 }
 
 .overview h3 {
@@ -175,6 +203,12 @@ hr {
 .light-grey-bg {
 	background-color: #F6F6F6;
 	padding: 60px;
+}
+
+@media screen and (max-width: 600px) {
+	.light-blue-bg, .light-grey-bg {
+		padding: 15px;
+	}
 }
 
 .info-card {
@@ -214,6 +248,12 @@ hr {
 	height: 75px;
 	align-items: center;
 	justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+	.red-button {
+		font-size: 1em;
+	}
 }
 
 .red-button:hover {
@@ -296,16 +336,8 @@ hr {
 	color: #FFD800;
 }
 
-footer a {
-	color: white;
-}
-
 .overview a:hover {
 	color: #E51B24;
-}
-
-footer a:hover {
-	color: #FFD800;
 }
 
 th {
@@ -322,7 +354,6 @@ th, td {
 	border: 0px;
 }
 
-
 footer {
 	background-color: #222222;
   	width: 100%;
@@ -335,4 +366,23 @@ footer {
 footer p {
 	color: white;
 	font-weight: lighter;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	color: #FFD800;
+}
+
+@media screen and (max-width: 600px) {
+	footer {
+		height: auto;
+		padding: 15px;
+	}
+
+	footer p {
+		/*font-size: .5em;*/
+	}
 }
