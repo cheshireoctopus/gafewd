@@ -210,7 +210,14 @@ hr {
 .info-card {
 	background-color: white;
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	hyphens: auto;
 	padding: 20px;
+}
+
+@media screen and (max-width: 769px) {
+	.info-card ul {
+		padding-left: 16px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -254,6 +261,7 @@ hr {
 	flex-basis: 20%;
 	height: 75px;
 	justify-content: center;
+	min-height: 75px;
 	padding: 10px;
 	text-align: center;
 }
