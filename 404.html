@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ruh Roh</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		@import url(font/pf-din/pf-din.css);
+		html, body {
+			height: 100%;
+			marign: 0;
+			width: 100%;
+		}
+		h1 {
+			font-family: 'Pf Din', Impact, sans-serif;
+			margin-top: 100px;
+		}
+		.container {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+		}
+		img {
+			animation: spin 10s infinite linear;
+			max-width: 25%;
+			-webkit-animation: spin 10s infinite linear;
+		}
+		@-webkit-keyframes spin {
+		    0%   {-webkit-transform: rotate(0deg)}
+		    100% {-webkit-transform: rotate(360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="img/icon_code.svg" alt="spinning machine">
+		<h1>404 - Page Not Found</h1>
+	</div>
+</body>
+</html>
