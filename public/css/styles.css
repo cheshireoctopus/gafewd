@@ -1,6 +1,6 @@
 @import url(../font/news-706/news-706.css);
 @import url(../font/pf-din/pf-din.css);
-@import url(../font/circular.css)
+@import url(../font/circular/circular-black.css);
 @import url(../font/lineto-circular-pro-book.css)
 
 /* SITE COLORS
@@ -15,7 +15,7 @@ $lightgrey: #F6F6F6;*/
 body {
 	padding-bottom: 50px;
 	font-size: 18px;
-	line-height: 26px
+	line-height: 26px;
 }
 
 header {
@@ -337,6 +337,10 @@ hr {
 	margin: 10px;
 }
 
+.meet-time {
+	margin-left: 75px;
+}
+
 .icon {
 	width: 60px;
 	text-align: center;
@@ -345,7 +349,6 @@ hr {
 }
 
 .timeline-bar {
-	/*background-color: #585858;*/
 	background-color: #FFD800;
 }
 
@@ -408,9 +411,5 @@ footer a:hover {
 	footer {
 		height: auto;
 		padding: 15px;
-	}
-
-	footer p {
-		/*font-size: .5em;*/
 	}
 }
