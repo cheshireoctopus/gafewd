@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sass --watch assets/sass/app.scss:public/css/build.css --style compresed --cache false
