@@ -36,7 +36,7 @@
 					<div class="heading">Annoucements</div>
 					<p>&#149; GA Happy Hour</p>
 					<div class="pad-left-lg">
-						<p>&rArr; Monday, 10/04</p>
+						<p>&rArr; Wednesday, 10/11</p>
 						<p>&rArr; Old Town Bar (18th, between Broadway and Park)</p>
 					</div>
 					<p>&#149; Final Projects:</p>
@@ -74,9 +74,9 @@
 				</section>
 
 				<!-- HW REVIEW -->
-				<section class="title">
+				<!-- <section class="title">
 					<h1>Homework Review</h1>
-				</section>
+				</section> -->
 
 				<!-- CSS SPECIFICITY -->
 				<section class="title" id="css-specificity">
@@ -87,9 +87,9 @@
 					<div class="heading">CSS Specificity</div>
 
 					<div class="text-smallest">
-						<p>&#149; Not all CSS-selectors are created equal</p>
+						<p>&#149; Not all CSS-selectors are created equal!</p>
 						<div class="fragment">
-							<p>&#149; Inline > ID's > Classes > Elements:</p>
+							<p>&#149; Inline Styles > ID's > Classes > Elements:</p>
 <pre><code>
 	#article-title { color: red; }
 
@@ -157,10 +157,11 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Developer Tools</div>
 
-					<p>&#149; Allow us to peek under the hood</p>
-					<p>&#149; Crucial for debugging</p>
-					<p>&#149; Enable on-the-fly HTML and CSS changes (no SublimeText necessary!)</p>
-					<p>&#149; Contains a JavaScript console!</p>
+					<p>&#149; Chrome tool (all major browsers have a variant)</p>
+					<p class="fragment">&#149; Allow us to peek under the hood and inspect underlying code</p>
+					<p class="fragment">&#149; Crucial for debugging; helps locate errors</p>
+					<p class="fragment">&#149; Enable on-the-fly HTML and CSS changes</p>
+					<p class="fragment">&#149; Contains a JavaScript console</p>
 				</section>
 
 				<section class="center">
@@ -193,9 +194,9 @@
 					<div class="heading">Browser Variances</div>
 
 					<p>&#149; Surprise - all browser's are different!</p>
-					<p>&#149; HTML/CSS/JS differ, subtly</p>
-					<p>&#149; No standard for what a <code class="code">&lt;h1&gt;</code> should look like</p>
-					<p>&#149; Developing consistent experience is a headache</p>
+					<p class="fragment">&#149; HTML/CSS/JS differ, subtly</p>
+					<p class="fragment">&#149; No standard for what a <code class="code">&lt;h1&gt;</code> should look like</p>
+					<p class="fragment">&#149; Developing consistent experience is a headache</p>
 				</section>
 
 				<section class="center">
@@ -217,7 +218,7 @@
 
 					<p>Method 2: <u>Normalize It</u></p>
 					<p>&#149; Make all browsers the same while maintaining some default styles</p>
-					<p>&#149; You don't have to redeclare some styles</p>
+					<p>&#149; Unlike Reset.css don't have to re-declare some styles</p>
 					<p>&#149; <a target="_blank" href="https://necolas.github.io/normalize.css/">https://necolas.github.io/normalize.css/</a></p>
 				</section>
 
@@ -272,24 +273,37 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Semantic HTML</div>
 
-					<p><code class="code">&lt;header&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines a header for a document</p>
-					<p class="pad-left-lg">&#149; This is <u>different</u> from the <code class="code">&lt;head&gt;</code> element</p>
-					<p><code class="code">&lt;footer&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines a footer for a document</p>
-					<p><code class="code">&lt;nav&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines navigation links</p>
+					<div class="text-smaller">
+						<p><code class="code">&lt;header&gt;</code></p>
+						<p class="pad-left-lg">&#149; Defines a header for a document</p>
+						<p class="pad-left-lg">&#149; This is <u>different</u> from the <code class="code">&lt;head&gt;</code> element</p>
+						<div class="fragment">
+							<p><code class="code">&lt;footer&gt;</code></p>
+							<p class="pad-left-lg">&#149; Defines a footer for a document</p>
+						</div>
+						<div class="fragment">
+							<p><code class="code">&lt;nav&gt;</code></p>
+							<p class="pad-left-lg">&#149; Defines navigation links</p>
+						</div>
+					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Semantic HTML</div>
 
-					<p><code class="code">&lt;section&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines a section in a document</p>
-					<p><code class="code">&lt;aside&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines content aside from the page content</p>
-					<p><code class="code">&lt;article&gt;</code></p>
-					<p class="pad-left-lg">&#149; Defines an article (as in a blog or news site)</p>
+					<div class="text-smaller">
+						<p><code class="code">&lt;section&gt;</code></p>
+						<p class="pad-left-lg">&#149; Defines a section in a document</p>
+						<p class="pad-left-lg">&#149; Sections group various components</p>
+						<div class="fragment">
+							<p><code class="code">&lt;aside&gt;</code></p>
+							<p class="pad-left-lg">&#149; Defines content aside from the page content (sidebar)</p>
+						</div>
+						<div class="fragment">
+							<p><code class="code">&lt;article&gt;</code></p>
+							<p class="pad-left-lg">&#149; Defines an article (as in a blog or news site)</p>
+						</div>
+					</div>
 				</section>
 
 				<section class="center">
@@ -299,11 +313,19 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Layout Lab</div>
-					<p>1) Open <code class="code">fashion-blog</code> in SublimeText</p>
-					<p>2) Build <code class="code">design.png</code></p>
-					<p>3) Copy located in <code class="code">copy.txt</code></p>
-					<p>4) Design specs (colors + font-sizing) can be found in <code class="code">readme.txt</code></p>
-					<p>5) Note the extra <code class="code">&lt;link&gt;</code> tag; this fetches the Lato font</p>
+
+					<div class="text-smallest">
+						<p>1) Open <code class="code">fashion-blog</code> in SublimeText</p>
+						<p>2) Build <code class="code">design.png</code></p>
+						<p>3) Copy located in <code class="code">copy.txt</code></p>
+						<p>4) Design specs (colors + font-sizing) can be found in <code class="code">readme.txt</code></p>
+						<p>5) Let's checkout the <code class="code">&lt;head&gt;</code> together:</p>
+						<div class="pad-left-lg">
+							<p>&#149; Note the first <code class="code">&lt;link&gt;</code> tag; this fetches the Lato font</p>
+							<p>&#149; The order of the <code class="code">&lt;link&gt;</code> tags is important - why?</p>
+							<p class="fragment">&#149; Always load in external (3rd-party) CSS before your own!</p>
+						</div>
+					</div>
 				</section>
 
 				<!-- THE END -->
