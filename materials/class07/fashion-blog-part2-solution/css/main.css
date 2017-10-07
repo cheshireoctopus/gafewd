@@ -76,6 +76,7 @@ p {
 	margin: 27px 0 0;
 	padding: 0;
 }
+
 p.more {
 	font-weight: bold;
 	text-align: right;
@@ -87,11 +88,11 @@ img {
 	max-width: 100%;
 }
 
-
 #header h1 {
 	display: inline;
 	margin-right: 9px;
 }
+
 #header h2 {
 	display: inline;
 	font-size: 27px;
@@ -103,6 +104,7 @@ img {
 	margin: 0;
 	padding: 0;
 }
+
 #header #nav a {
 	float: left;
 	width: 179px;
@@ -116,6 +118,7 @@ img {
 	padding: 15px 0;
 	text-align: center;
 }
+
 #header #nav a:hover {
 	color: white;
 	background: #900;
@@ -126,6 +129,7 @@ img {
 	margin: 54px 0;
 	padding-bottom: 27px;
 }
+
 .article p:first-of-type:first-letter {
 	float: left;
 	font-size: 108px;
@@ -138,6 +142,7 @@ img {
 	border-bottom: 1px solid #ddd;
 	padding: 27px 0;
 }
+
 .module:last-of-type {
 	border: none;
 }
