@@ -11,30 +11,20 @@
 		<h1>Lifetime Supply Calculator</h1>
 
 		<h2>What is your age?</h2>
-
-		<input id="age">
+		<input id="current-age" type="number">
 
 		<h2>How old do you plan to live to?</h2>
-
-		<input id="max-age">
+		<input id="max-age" type="number">
 
 		<h2>Favorite drink?</h2>
-
-		<select id="item">
-			<option>cups of coffee</option>
-			<option>cups of tea</option>
-			<option>glasses of wine</option>
-			<option>pints of beer</option>
-			<option>snifters of whiskey</option>
-		</select>
+		<input id="fav-drink" placeholder="Favorite Drink">
 
 		<h2>How many of your favorite drink do you consume a day?</h2>
-
-		<input id="num-per-day">
+		<input id="num-per-day" type="number">
 
 		<button id="click-me">Calculate!</button>
 
-		<h3>You will drink <span id="solution"> </span> more <span id="drink"></span> in your lifetime.</h3>
+		<h3>You will drink <span id="total-num-of-drinks-output"></span> more units of <span id="drink-output"></span> in your lifetime.</h3>
 
 		<script src="js/script.js" type="text/javascript"></script>
 	</body>
