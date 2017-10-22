@@ -6,3 +6,9 @@
 // 4: Else if the number of clicks == 10, change the background-color of <body> to green
 // 5: Else if the number of clicks == 15, change the background-color of <body> to blue
 // 6: Else, change the background-color of <body> to black
+
+$('#clickme').onClick(clickCount);
+
+function clickCount() {
+
+}
