@@ -43,15 +43,64 @@
 					<div class="heading">Announcements</div>
 
 					<p>&#149; Final Projects:</p>
-					<div class="pad-left-lg text-smaller">
+					<div class="pad-left-lg text-smallest">
 						<p>&rArr; Third deliverable due Monday, October 30th</p>
 						<p>&rArr; HTML/CSS Rough Draft</p>
 					</div>
 					<p>&#149; Advanced Topic Saturday:</p>
-					<div class="pad-left-lg text-smaller">
+					<div class="pad-left-lg text-smallest">
 						<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-						<p>&rArr; When: 11/11; approximately 2-3 hours</p>
+						<p>&rArr; When: 11/11; approximately 2-3 hours; Time TBD</p>
+						<p>&rArr; Fill out poll in class (Rob, remind me to do this please)</p>
 					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Mid-Course Feedback</div>
+
+					<p>&#149; Thanks 👍</p>
+					<p>&#149; Feedback can be annoying...</p>
+					<blockquote class="text-smaller fragment">
+						I think overall it's been really great, but these constant surveys are really a drag and cheapen the
+						experience. While it's really great that you want to improve the curriculum and classes, I am so
+						turned off by this survey pestering. An exit survey??? After every class? So crazy. I'm pretty sure
+						that all my fellow classmates feel the same way.
+					</blockquote>
+
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Mid-Course Feedback</div>
+
+					<p>&#149; Suggestions for improvement (Chandler):</p>
+					<div class="pad-left-lg text-smaller">
+						<p class="fragment">&rArr; "My Instructor Provides Meaningful Feedback"</p>
+						<p class="fragment">&rArr; "I'm Happy With The Breadth Of Topics We're Covering In This Program."</p>
+						<p class="fragment">&rArr; "I'm Happy With How Deep We're Going Into Each Topic."</p>
+						<p class="fragment">&rArr; I Have Opportunities To Engage/Collaborate With My Peers.</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Mid-Course Feedback</div>
+
+					<p>&#149; Suggestions for improvement (GA):</p>
+					<div class="pad-left-lg text-smaller">
+						<p class="fragment">&rArr; Tuition (How can I deliver more value?)</p>
+						<p class="fragment">&rArr; GA-sponsored events outside of class - see <a href="https://generalassemb.ly/education?format=events" target="_blank">Events page</a></p>
+
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Mid-Course Feedback</div>
+
+					<p>&#149; Feedback Favorite (anonymous):</p>
+					<blockquote>
+						Having a class on the second floor and keeping the glass door entry on the second floor locked so
+						that you have to go to the third floor and walk down is ridiculous.
+					</blockquote>
+					<p>&#149; Crowd control</p>
 				</section>
 
 				<!-- AGENDA -->
@@ -73,19 +122,29 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Hide and Show</div>
+					<div class="heading">Toggling Element Visibility</div>
+
+					<p>&#149; Hiding/showing HTML is a very common effect</p>
+					<p>&#149; Allow developers to render more content w/out scroll</p>
+					<p>&#149; Useful for menus/tooltips/modals (overlays)</p>
+					<p>&#149; Hidden elements are not destroyed; they are just not <b>visible</b></p>
+					<p>&#149; Ex: <a href="http://getbootstrap.com/docs/4.0/components/modal/#live-demo" target="_blank">Bootstrap modal</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery's <code class="lower">.hide()</code> / <code class="lower">.show()</code></div>
 
 					<div class="text-smallest">
 						<p><code class="code">.hide()</code></p>
-						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their inline style to <code class="code">display: none;</code></p>
+						<p class="pad-left-lg text-smallest">&rArr; Hides elements by setting their <b>inline</b> style to <code class="code">display: none;</code></p>
 <pre><code>
 	$('p').hide();
 
 </code></pre>
 						<div class="fragment">
 							<p><code class="code">.show()</code></p>
-							<p class="pad-left-lg text-smallest">&rArr; Reveals elements by setting their inline style to <code class="code">display: block</code></p>
-							<p class="pad-left-lg text-smallest">&rArr; If the element was originally <code class="code">inline</code>, then <code class="code">display: inline</code> will be used</p>
+							<p class="pad-left-lg text-smallest">&rArr; Reveals elements by setting their <b>inline</b> style to <code class="code">display: block</code></p>
+							<p class="pad-left-lg text-smallest">&rArr; If the element originally had <code class="code">display: inline</code>, then <code class="code">display: inline</code> will be used</p>
 <pre><code>
 	$('p').show();
 
@@ -95,7 +154,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Hide and Show</div>
+					<div class="heading">jQuery's <code class="lower">.hide()</code> / <code class="lower">.show()</code></div>
 
 					<div class="text-smallest">
 						<p>&#149; Change the duration by passing an argument:</p>
@@ -121,7 +180,7 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Hide and Show</div>
+					<div class="heading">jQuery's <code class="lower">.hide()</code> / <code class="lower">.show()</code></div>
 
 					<div class="text-smallest">
 						<p>&#149; jQuery provides alternatives to <code class="code">.hide()</code> and <code class="code">.show()</code>:</p>
