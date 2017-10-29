@@ -28,7 +28,7 @@
 
 				<section class="hero condensed">
 					<h1>Class <span class="red">#13</span></h1>
-					<h1>4/17/2017</h1>
+					<h1>11/01/2017</h1>
 					<h1 class="lesson-title">Function Arguments and HTML Manipulation</h1>
 				</section>
 
@@ -36,15 +36,17 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Announcements</div>
 
-					<p>&#149; Final Projects:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Fourth deliverable due Monday, April 24th</p>
-						<p>&rArr; JavaScript Pseudocode</p>
-					</div>
-					<p>&#149; Advanced Topic Saturday:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-						<p>&rArr; When: 04/29; approximately 3 hours</p>
+					<div class="text-smaller">
+						<p>&#149; Final Projects:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Fourth deliverable due Monday, November 6th</p>
+							<p>&rArr; JavaScript Pseudocode</p>
+						</div>
+						<p>&#149; Advanced Topic Saturday:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
+							<p>&rArr; When: 11/11; approximately 3 hours</p>
+						</div>
 					</div>
 				</section>
 
@@ -72,48 +74,50 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Function Arguments</div>
 
-					<p>So far, <u>named</u> functions have been defined like this:</p>
+					<div class="text-smallest">
+						<p>So far, <u>named</u> functions have been defined like this:</p>
 <pre><code>
 	function someName () {
-		// Body of function here
+	  // ...
+	  // ...
 	}
 
 </code></pre>
-					<p>...and called like this:</p>
+						<p>...and called like this:</p>
 <pre><code>
-	someName()
+	someName();
 
 </code></pre>
-					<p>Many of you have inquired: <span class="fragment">What are the <code class="code">()</code> for?</span></p>
+						<p>Many of you have inquired: <span class="fragment">What are the <code class="code">()</code> for?</span></p>
+					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Function Arguments</div>
 
-					<p><b><u>Arguments:</u></b></p>
-					<p class="pad-left-lg">&rArr; Data inputs that are "passed" into a function</p>
-					<div class="text-smallest fragment">
-					<hr>
-						<p>&#149; Define a function that will accept an argument:</p>
+					<div class="text-smaller">
+						<p><b><u>Arguments</u>:</b> <span class="fragment">inputs that are "passed" into a function</span></p>
+						<div class="text-smallest fragment">
+							<p>&#149; Define a function that will accept an argument:</p>
 <pre><code>
 	function hello (name) {
 	  alert("Hello, it's " + name);
 	}
 
 </code></pre>
-					</div>
-					<div class="text-smallest fragment">
-						<p>&#149; Call a function that accepts an argument:</p>
+						</div>
+						<div class="text-smallest fragment">
+							<p>&#149; Call a function that accepts an argument:</p>
 <pre><code>
 	hello('me');
 
 	// outputs: "hello, it's me"
 
-	hello('Maria');
+	hello('Robert');
 	hello('Chandler');
 
 </code></pre>
-
+						</div>
 					</div>
 				</section>
 
@@ -128,7 +132,6 @@
 	}
 
 </code></pre>
-						<p class="fragment">&#149; The function <code class="code">hello</code> takes one argument: <code class="code">name</code></p>
 						<div class="fragment">
 							<p>&#149; Whatever is "passed" as <code class="code">name</code> replaces instances of <code class="code">name</code> in the function body:</p>
 <pre><code>
@@ -153,7 +156,7 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Function Arguments: Multiple Arguments</div>
 
-					<div class="text-smaller">
+					<div class="text-smallest">
 						<p>&#149; Functions can accept multiple arguments</p>
 						<div class="fragment">
 							<p>&#149; Use a comma-separated list to define:</p>
@@ -172,9 +175,6 @@
 
 	add(2, 5);
 	// returns 7
-
-	add(100, 1);
-	// returns 101
 
 </code></pre>
 						</div>
@@ -195,23 +195,25 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Arguments vs Parameters</div>
 
-					<p>Parameters:</p>
-					<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> defined with two parameters, <code class="code">x</code> and <code class="code">y</code>:</p>
+					<div class="text-smallest">
+						<p>Parameters:</p>
+						<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> defined with two <u>parameters</u>, <code class="code">x</code> and <code class="code">y</code>:</p>
 <pre><code>
 	function add (x, y) {
 	  return x + y;
 	}
 
 </code></pre>
-					<div class="fragment">
-					<p>Arguments:</p>
-						<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> called with the arguments <code class="code">5</code> and <code class="code">2</code>:</p>
+						<div class="fragment">
+						<p>Arguments:</p>
+							<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> called with the <u>arguments</u> <code class="code">5</code> and <code class="code">2</code>:</p>
 <pre><code>
 	add(5, 2);
 
 	// returns 7
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -226,10 +228,10 @@
 					<p><a href="http://codepen.io/cheshireoctopus/pen/QywMov?editors=101" target="_blank">CodePen</a></p>
 				</section> -->
 
-				<section class="center">
+				<!-- <section class="center">
 					<h1>Exercise: Bill Calculator</h1>
 					<p><a href="http://codepen.io/cheshireoctopus/pen/bENoeR?editors=101" target="_blank">CodePen</a></p>
-				</section>
+				</section> -->
 
 				<!-- BREAK (5-7 mins) -->
 				<section class="center">
@@ -245,19 +247,21 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">HTML Insertion</div>
 
-					<p><code class="code">.append('content')</code></p>
-					<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>END</b> of each element</p>
+					<div class="text-smaller">
+						<p><code class="code">.append('content')</code></p>
+						<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>END</b> of each element</p>
 <pre><code>
 	$('div').append('&lt;p&gt;Appended paragraph&lt;/p&gt;')
 
 </code></pre>
-					<div class="fragment">
-						<p><code class="code">.prepend('content')</code></p>
-						<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>BEGINNING</b> of each element</p>
+						<div class="fragment">
+							<p><code class="code">.prepend('content')</code></p>
+							<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>BEGINNING</b> of each element</p>
 <pre><code>
 	$('div').prepend('&lt;p&gt;Prepended paragraph&lt;/p&gt;')
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -299,12 +303,14 @@
 	$('div').before('&lt;p&gt;Before paragraph&lt;/p&gt;')
 
 </code></pre>
-					<p><code class="code">.after('content')</code></p>
-					<p class="text-smallest pad-left-lg">&rArr; Insert "content" <b>AFTER</b> each element</p>
+					<div class="fragment">
+						<p><code class="code">.after('content')</code></p>
+						<p class="text-smallest pad-left-lg">&rArr; Insert "content" <b>AFTER</b> each element</p>
 <pre><code>
 	$('div').after('&lt;p&gt;After paragraph&lt;/p&gt;')
 
 </code></pre>
+					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -350,18 +356,20 @@
 	$('#someDiv').remove()
 
 </code></pre>
-					<p><code class="code">.empty()</code></p>
-					<p class="text-smallest pad-left-lg">&rArr; Removes all content inside the selected element</p>
+					<div class="fragment">
+						<p><code class="code">.empty()</code></p>
+						<p class="text-smallest pad-left-lg">&rArr; Removes all content inside the selected element</p>
 <pre><code>
 	$('#someDiv').empty()
 
 </code></pre>
+					</div>
 				</section>
 
-				<section class="center">
+<!-- 				<section class="center">
 					<h1>CodeAlong</h1>
 					<p><a href="http://codepen.io/cheshireoctopus/pen/eJmGrX?editors=1010" target="_blank">HTML Insertion/Removal</a></p>
-				</section>
+				</section> -->
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Lab/HW</div>
