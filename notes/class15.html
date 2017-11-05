@@ -33,7 +33,7 @@
 
 				<section class="hero">
 					<h1>Class <span class="red">#15</span></h1>
-					<h1>04/24/2017</h1>
+					<h1>11/08/2017</h1>
 					<h1 class="lesson-title">jQuery Plugins + Google Maps API</h1>
 				</section>
 
@@ -41,15 +41,17 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Announcements</div>
 
-					<p>&#149; Final Projects:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Fifth deliverable due Monday, May 1st</p>
-						<p>&rArr; JavaScript Draft</p>
-					</div>
-					<p>&#149; Advanced Topic Saturday:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-						<p>&rArr; When: 04/29; approximately 3 hours</p>
+					<div class="text-smaller">
+						<p>&#149; Final Projects:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Fifth deliverable due Monday, November 13th</p>
+							<p>&rArr; JavaScript (pt. 1)</p>
+						</div>
+						<p>&#149; Advanced Topic Saturday:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
+							<p>&rArr; When: 11/11; from 12PM - 3PM</p>
+						</div>
 					</div>
 				</section>
 
@@ -95,22 +97,24 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">jQuery Plugins</div>
 
-					<p>&#149; Plugins (or libraries) are pre-written pieces of JavaScript</p>
-					<div class="fragment">
-						<p>&#149; Built to solve a particular issue:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&rArr; Fullscreen video player</p>
-							<p>&rArr; Image carousel</p>
-							<p>&rArr; Page scrolling</p>
+					<div class="text-smallest">
+						<p>&#149; Plugins (or libraries) are pre-written pieces of JavaScript</p>
+						<div class="fragment">
+							<p>&#149; Built to solve a particular issue:</p>
+							<div class="pad-left-lg text-smaller">
+								<p>&rArr; Fullscreen video player</p>
+								<p>&rArr; Image carousel</p>
+								<p>&rArr; Page scrolling</p>
+							</div>
 						</div>
-					</div>
-					<div class="fragment">
-						<p>&#149; To use, just add the plugin script below jQuery:</p>
+						<div class="fragment">
+							<p>&#149; To use, just add the plugin's <code class="code">script</code> tag <b>below</b> jQuery:</p>
 <pre><code>
 	&lt;script&gt; src="jquery.js"&gt;&lt;/script&gt;
 	&lt;script&gt; src="my-super-plugin.js"&gt;&lt;/script&gt;
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
@@ -133,7 +137,7 @@
 					<p class="fragment">1) Read the documentation</p>
 					<p class="fragment">2) Seriously, read the documentation</p>
 					<p class="fragment">3) Look for, and copy, examples</p>
-					<p class="fragment">4) Start simply, then add complexity</p>
+					<p class="fragment">4) Start simple<span class="fragment">, then add complexity</span></p>
 					<p class="fragment">5) Search for tutorials/examples if you get stuck</p>
 					<p class="fragment">6) Open a GitHub issue if you think you found a bug</p>
 				</section>
@@ -265,42 +269,46 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Arrays</div>
 
-					<p>&#149; Arrays are a list-like data structure of comma-separated values</p>
-					<p>&#149; Useful for storing a sequence of related data</p>
-					<p>&#149; Declare arrays using square brackets: <code class="code">[ ]</code></p>
+					<div class="text-smallest">
+						<p>&#149; Arrays are a list-like data structure of comma-separated values</p>
+						<p>&#149; Useful for storing a sequence of related data</p>
+						<p>&#149; Declare arrays using square brackets: <code class="code">[ ]</code></p>
 <pre><code>
 	var friends = ['Moe', 'Larry', 'Curly'];
 
 </code></pre>
-					<div class="fragment">
-						<p>&#149; <b>Element</b> - an item inside the array</p>
-						<p>&#149; <b>Index</b> - the numerical location of each element in the array (starts at position 0 - aka "0-indexed")</p>
+						<div class="fragment">
+							<p>&#149; <b>Element</b> - an item inside the array</p>
+							<p>&#149; <b>Index</b> - the numerical location of each element in the array (starts at position 0 - aka "0-indexed")</p>
+						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Arrays</div>
 
-					<p>&#149; JS provides multiple methods for array creation:</p>
-					<div class="pad-left-lg">
-						<div class="fragment">
-							<p>&rArr; The <code class="code">new</code> keyword</p>
+					<div class="text-smallest">
+						<p>&#149; JS provides multiple methods for array creation:</p>
+						<div class="pad-left-lg">
+							<div class="fragment">
+								<p>&rArr; The <code class="code">new</code> keyword</p>
 <pre><code>
 	var drinks = new Array('beer', 'coffee', 'water');
 
 </code></pre>
-						</div>
-						<div class="fragment">
-							<p>&rArr; Using the array literal</p>
+							</div>
+							<div class="fragment">
+								<p>&rArr; Using the array literal</p>
 <pre><code>
 	var drinks = ['beer', 'coffee', 'water'];
 
 </code></pre>
+							</div>
 						</div>
-					</div>
-					<div class="fragment">
-						<p>&#149; While similar, there are crucial differences</p>
-						<p>&#149; Use the <u>array literal</u> for now</p>
+						<div class="fragment">
+							<p>&#149; While similar, there are crucial differences</p>
+							<p>&#149; Use the <u>array literal</u> for now</p>
+						</div>
 					</div>
 				</section>
 
@@ -333,13 +341,15 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Array Iteration</div>
-					<p>&#149; Consider an array of names:</p>
+
+					<div class="text-smallest">
+						<p>&#149; Consider an array of names:</p>
 <pre><code>
   var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
 
 </code></pre>
-					<p class="fragment">&#149; How would we <code class="code">console.log</code> all the names in this array?</p>
-					<div class="fragment">
+						<p class="fragment">&#149; How would we <code class="code">console.log</code> all the names in this array?</p>
+						<div class="fragment">
 <pre><code>
 	console.log(boroughs[0]);
 	console.log(boroughs[1]);
@@ -348,8 +358,9 @@
 	console.log(boroughs[4]);
 
 </code></pre>
+						</div>
+						<p class="fragment">&#149; Is this efficient/scalable?</p>
 					</div>
-					<p class="fragment">&#149; Is this efficient/scalable?</p>
 				</section>
 
 				<!-- ARRAY ITERATION -->
@@ -359,14 +370,18 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Array Iteration</div>
-					<p>&#149; Iteration is the process of running the same function to every element in an array:</p>
-					<div class="fragment">
+
+					<div class="text-smaller">
+						<p>&#149; Iteration is the process of running the same function to every element in an array:</p>
+						<div class="fragment">
 <pre><code>
   var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
 
-  boroughs.forEach(function (borough) {
-    console.log(borough)
-  })
+  boroughs.forEach(logBorough);
+
+  function logBorough (borough) {
+    console.log(borough);
+  }
 
   // 'manhattan'
   // 'the bronx'
@@ -375,21 +390,24 @@
   // 'staten island'
 
 </code></pre>
+						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Array Iteration</div>
 
-					<p>&#149; JS arrays have several iteration methods:</p>
-					<div class="pad-left-lg text-smaller">
-						<p><code class="code">.forEach()</code></p>
-						<p><code class="code">.every()</code></p>
-						<p><code class="code">.some()</code></p>
-						<p><code class="code">.filter()</code></p>
-						<p><code class="code">.map()</code></p>
+					<div class="text-smaller">
+						<p>&#149; JS arrays have several iteration methods:</p>
+						<div class="pad-left-lg text-smallest">
+							<p><code class="code">.forEach()</code></p>
+							<p><code class="code">.every()</code></p>
+							<p><code class="code">.some()</code></p>
+							<p><code class="code">.filter()</code></p>
+							<p><code class="code">.map()</code></p>
+						</div>
+						<p class="fragment">&#149; Most require a function to be supplied as an argument; this function will be applied to each item in the array, individually</p>
 					</div>
-					<p class="fragment">&#149; Most require a function to be supplied as an argument; this function will be applied to each item in the array, individually</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -406,30 +424,25 @@
 					<div class="heading">Array Iteration</div>
 
 					<div class="text-smallest">
-						<p>&#149; Create an array of location objects (each should contain <code class="code">lat</code>, <code class="code">lng</code>, and <code class="code">title</code>:</p>
+						<p>&#149; Create an array of location objects containing <code class="code">lat</code>, <code class="code">lng</code>, and <code class="code">title</code>:</p>
 <pre><code>
-	    var locations = [
-		{
-		  lat: 40.7484444,
-		  lng: -73.9878441,
-		  title: 'Empire State Building'
-		},
-		{
-		  lat: 40.7516248,
-		  lng: -73.9776907,
-		  title: 'Chrysler Building'
-		},
-		{
-		  lat: 40.7339877,
-		  lng: -73.980817,
-		  title: 'Flatiron Building',
-		},
-		{
-		  lat: 40.7121162,
-		  lng: -74.0128352,
-		  title: 'World Trade Center',
-		}
-	    ];
+	var locations = [
+	  {
+	    lat: 40.7484444,
+	    lng: -73.9878441,
+	    title: 'Empire State Building',
+	  },
+	  {
+	    lat: 40.7516248,
+	    lng: -73.9776907,
+	    title: 'Chrysler Building',
+	  },
+	  {
+	    lat: 40.7339877,
+	    lng: -73.980817,
+	    title: 'Flatiron Building',
+	  },
+	];
 
 </code></pre>
 					</div>
@@ -442,40 +455,32 @@
 <pre><code>
 	var locations = [ ... ];
 
-	locations.forEach(function (location) {
-	  // will write function body here
-	});
+	locations.forEach(processLocation);
+
+	function processLocation (location) {
+	  console.log(location)
+	}
 
 </code></pre>
-					<div class="fragment">
-						<p>&#149; Use a <code class="code">console.log</code> statement to ensure the loop is working correclty</p>
-<pre><code>
-	locations.forEach(function (location) {
-	  console.log(location);
-	});
-
-</code></pre>
-					</div>
+					<p>&#149; Use <code class="code">console.log(...)</code> to test your code is working</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Array Iteration</div>
 
-					<p>&#149; Write the function to apply each marker to the <code class="code">map</code></p>
+					<p>&#149; Update <code class="code">processLocation</code> to render the markers</p>
 
 <pre><code>
-	locations.forEach(function (location) {
-
+	function processLocation (location) {
 	  var marker = new google.maps.Marker({
 	    position: {
 	      lat: location.lat,
 	      lng: location.lng,
 	    },
 	    title: location.title,
-	    map: map
- 	  });
-
-	});
+	    map: map,
+	  });
+	}
 
 </code></pre>
 				</section>
