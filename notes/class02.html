@@ -296,15 +296,15 @@
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">HTML Structure: DOCTYPE</div>
-
+	
+					<p>&#149; The first line of an HTML document:</p>
 <pre><code>
-	&lt;!DOCTYPE html&gt;
+  &lt;!DOCTYPE html&gt;
 
 </code></pre>
-						<p>&#149; Short for "document type declaration"</p>
-						<p>&#149; <b>ALWAYS</b> the first line of your HTML</p>
-						<p>&#149; Tells the browser which "flavor" of HTML is being used</p>
-						<p>&#149; All modern websites <u>should</u> use HTML5 DOCTYPE</p>
+						<p>&#149; Document type declaration</p>
+						<p>&#149; Tells browser the "flavor" of HTML</p>
+						<p>&#149; Modern websites <u>should</u> use HTML5 doctype</p>
 				</section>
 
 				<section data-background="#FFF" class="center">
@@ -312,8 +312,6 @@
 					<p>
 						<code class="code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"&gt;</code>
 					</p>
-					<br>
-					<br>
 					<div class="fragment">
 						<p>2012+</p>
 						<p><code class="code">&lt;!DOCTYPE html&gt;</code></p>
@@ -325,7 +323,7 @@
 
 					<div class="text-smaller">
 						<p>&#149; <code class="code">&lt;html&gt;</code> is HTML...</p>
-						<p>&#149; All HTML should be contained inside <code class="code">&lt;html&gt;&lt;/html&gt;</code></p>
+						<p>&#149; All HTML should live between <code class="code">&lt;html&gt;...&lt;/html&gt;</code></p>
 						<p>&#149; Represents the root of your HTML document</p>
 						<div class="fragment">
 							<p>&#149; Within our <code class="code">&lt;html&gt;</code> tags, we have:</p>
@@ -339,13 +337,12 @@
 					<div class="heading">HTML Structure: <code class="code lower">&lt;head&gt;</code></div>
 
 					<div class="text-smaller">
-						<p>&#149; <code class="code">&lt;head&gt;</code> : first tag inside <code class="code">&lt;html&gt;&lt;/html&gt;</code></p>
+						<p>&#149; <code class="code">&lt;head&gt;</code> is the first tag inside <code class="code">&lt;html&gt;</code></p>
 						<p class="pad-left-lg">&#149; Adds additional, behind-the-scenes content</p>
 						<p class="pad-left-lg">&#149; Not displayed, but is machine parsable</p>
 						<p class="fragment">&#149; <code class="code">&lt;title&gt;</code> : adds title to page</p>
 						<div class="fragment">
-							<p>&#149; <code class="code">&lt;meta&gt;</code> : adds data...about data</p>
-							<p>&#149; Some meta data: page description, keywords, author</p>
+							<p>&#149; <code class="code">&lt;meta&gt;</code> : adds data...about data (keywords, author)</p>
 							<p>&#149; External CSS documents are linked in the <code class="code">&lt;head&gt;</code></p>
 						</div>
 					</div>
@@ -354,25 +351,25 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">HTML Structure: <code class="code lower">&lt;body&gt;</code></div>
 
-					<p>&#149; <code class="code">&lt;body&gt;</code> : second tag inside <code class="code">&lt;html&gt;&lt;/html&gt;</code></p>
-					<p>&#149; Follows <code class="code">&lt;head&gt;&lt;/head&gt;</code></p>
-					<p>&#149; Contains HTML/content that will be displayed to user</p>
-					<p>&#149; All other HTML will be placed here</p>
+					<p>&#149; <code class="code">&lt;body&gt;</code> is the second tag inside <code class="code">&lt;html&gt;</code></p>
+					<p>&#149; Follows the <code class="code">&lt;head&gt;</code></p>
+					<p>&#149; Holds content for the user to see</p>
+					<p>&#149; Majority of HTML lives here</p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">HTML Structure: Basic Structure</div>
 <pre><code>
-	&lt;!DOCTYPE html&gt;
-	&lt;html>
-	  &lt;head>
-	    &lt;title>The Website Title&lt;/title>
-          &lt;/head>
+  &lt;!DOCTYPE html&gt;
+    &lt;html>
+    &lt;head>
+      &lt;title>The Website Title&lt;/title>
+    &lt;/head>
 
-	  &lt;body>
-	    &lt;h1>ALL HTML CONTENT HERE!&lt;/h1>
-	  &lt;/body>
-	&lt;/html>
+    &lt;body>
+      &lt;h1>ALL HTML CONTENT HERE!&lt;/h1>
+    &lt;/body>
+  &lt;/html>
 
 </code></pre>
 				</section>
@@ -381,24 +378,29 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Exercise: GA Press Release (ctn)</div>
 
-					<p>1. Create a directory, <code class="code">homework</code> in your <u>local</u> repo</p>
-					<p>2. Create a directory,  <code class="code">ga-press-release</code>, in <code class="code">homework</code></p>
-					<p>3. Create an <code class="code">index.html</code> file inside <code class="code">ga-press-release</code></p>
-					<p>4. Copy your code from CodePen into <code class="code">index.html</code></p>
+					<div class="text-smaller">
+						<p>1. Create a directory, <code class="code">homework</code> in your repo</p>
+						<p>2. Create a directory,  <code class="code">ga-press-release</code>, in <code class="code">homework</code></p>
+						<p>3. Create an <code class="code">index.html</code> file inside <code class="code">ga-press-release</code></p>
+						<p>4. Copy your code from CodePen into <code class="code">index.html</code></p>
 					<p>5. Save your code and right-click to open in browser</p>
+					</div>
 				</section>
 
 				<!-- EXERCISE 1 - GA Press Release (Structured) (15 - 20 mins) -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Exercise: GA Press Release (ctn)</div>
-					<p>1. Restructure the page using proper HTML</p>
-					<p>2. Include:</p>
-					<div class="text-smallest pad-left-lg">
-						<p>&#149; <code class="code">&lt;!DOCTYPE html&gt;</code></p>
-						<p>&#149; <code class="code">&lt;html&gt;</code></p>
-						<p>&#149; <code class="code">&lt;head&gt;</code></p>
-						<p>&#149; <code class="code">&lt;title&gt;</code></p>
-						<p>&#149; <code class="code">&lt;body&gt;</code></p>
+
+					<div class="text-smaller">
+						<p>1. Restructure the page using proper HTML</p>
+						<p>2. Include:</p>
+						<div class="text-smallest pad-left-lg">
+							<p>&#149; <code class="code">&lt;!DOCTYPE html&gt;</code></p>
+							<p>&#149; <code class="code">&lt;html&gt;</code></p>
+							<p>&#149; <code class="code">&lt;head&gt;</code></p>
+							<p>&#149; <code class="code">&lt;title&gt;</code></p>
+							<p>&#149; <code class="code">&lt;body&gt;</code></p>
+						</div>
 					</div>
 				</section>
 
