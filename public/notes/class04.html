@@ -47,18 +47,32 @@
 					<p>&#149; Happy to discuss ahead of schedule</p>
 				</section>
 
-<!-- 				<section class="title">
+				<section class="title">
 					<h1>Questions</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Questions</div>
 
-					<p class="text-smaller"><b>Q: When breaking up large groups of text, is it better to use the <code class="code">&lt;br&gt;</code> tag, or different <code class="code">&lt;p&gt;</code>'s?</b></p>
-					<p class="fragment text-smallest">A: <code class="code">&lt;p&gt;</code>'s are <a href="http://codepen.io/cheshireoctopus/pen/qrXypa?editors=1100#0" target="_blank">recommended</a>; leverage CSS for spacing</p>
-					<p class="fragment text-smaller"><b>Q: So I uploaded to Github now what? What do I do with the files after they are on GitHub? How do I put this stuff on a server?</b></p>
-					<p class="fragment text-smallest">A: Technically, it's already on GitHub's server :) - if you don't want to rely on GitHub, or you already have your own server, check out <a href="http://www.webopedia.com/TERM/F/ftp.html" target="_blank">FTP</a></p>
-				</section> -->
+					<div class="text-smaller">
+						<p class="text-smaller"><b>Q: Difference between <code class="code">display: inline</code> & <code class="code">display: inline-block</code></b></p>
+						<p class="fragment text-smallest">A: Will learn this class, and next!</p>
+						<p class="fragment text-smaller"><b>Q: With multiple pages, what is best practice for styling the <code class="code">body</code>: style the <code class="code">body</code> directly, or use a class?</b></p>
+						<p class="fragment text-smallest">A: Beware when styling the <code class="code">body</code>! Limit styles and use classes when appropriate.</p>
+						<p class="text-smaller fragment"><b>Q: How to style/build a <code class="code">&lt;button></code>?</b></p>
+						<p class="text-smallest fragment">A: <a href="https://codepen.io/cheshireoctopus/pen/BqBarN?editors=1100" target="_blank">CodePen</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+				  <div class="heading">Homework Feedback</div>
+				
+				  <p>1. Remember to indent all child elements</p>
+				  <p>2. Files, images, and folders should be lowercase</p>
+	  			<p class="pad-left-lg"><code class="code">My_Image.png</code> &rArr; <code class="code">my_image.png</code></p>
+	  			<p class="pad-left-lg"><code class="code">Index.html</code> &rArr; <code class="code">index.html</code></p>
+				  <p>3. Make sure to clean up your code - avoid random empty lines</p>
+				</section>
 
 				<!-- CLASSES AND ID'S -->
 				<section class="center">
@@ -75,7 +89,7 @@
 
 					<div class="text-smallest">
 						<p>&#149; ID's are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">attributes</a> (options to specify element behavior)</p>
-						<p class="fragment">&#149; Assigned to only <u>one</u> HTML element per page (app)</p>
+						<p class="fragment">&#149; An ID can only be used one!</p>
 						<p class="fragment">&#149; Identify the element for styling/scripting</p>
 						<div class="fragment">
 							<p>&#149; Cannot contain spaces</p>
@@ -97,13 +111,13 @@
 					<div class="text-smallest">
 					<p>&#149; To style the following ID:</p>
 <pre><code>
-	&lt;p <span class="red">id="important-title"</span>>Hello, World!&lt;/p>
+	&lt;p <span class="code">id="important-title"</span>>Hello, World!&lt;/p>
 
 </code></pre>
 					<div class="fragment">
 						<p>&#149; Use <code class="code">#</code> + the ID's name:</p>
 <pre><code>
-	#important-title {
+	<span class="code">#important-title</span> {
 	  color: red;
 	}
 
@@ -141,14 +155,15 @@
 					<div class="text-smallest">
 						<p>&#149; To style the following classes:</p>
 <pre><code>
-	&lt;p class="hello">Hello, World!&lt;/p&gt;
-	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
+	&lt;p <span class="code">class="hello"</span>>Hello, World!&lt;/p&gt;
+
+	&lt;p <span class="code">class="hello"</span>>Hello, Mars!&lt;/p&gt;
 
 </code></pre>
 						<div class="fragment">
 							<p>&#149; Use <code class="code">.</code> + the class's name:</p>
 <pre><code>
-	.hello {
+	<span class="code">.hello</span> {
 	  color: pink;
 	}
 
@@ -356,7 +371,7 @@
 
 					<p>1. Open a <a href="http://codepen.io" target="_blank">CodePen</a></p>
 					<p>2. Create a <code class="code">&lt;div&gt;&lt;/div&gt;</code></p>
-					<p>3. Fill it with some content (hint: type "lorem" and hit <code class="code">tab</code>)</p>
+					<p>3. Add content to it - type <code class="code">lorem</code> and hit <code class="code">tab</code></p>
 					<p>4. Apply a <code class="code">background</code> color to it</p>
 				</section>
 
@@ -582,7 +597,7 @@
 						<div class="fragment">
 							<p>&#149; Center <code class="code">block</code> elements by setting:</p>
 							<p class="pad-left-lg">1) a <code class="code">width</code> on the element</p>
-							<p class="pad-left-lg">2) <code class="code">margin: 0 auto;</code></p>
+							<p class="pad-left-lg">2) <code class="code">margin: auto;</code></p>
 						</div>
 						<p class="fragment">
 							&#149; Apply styling to the previous CodePen
@@ -603,7 +618,7 @@
 							<p>&rArr; <code class="code">padding</code></p>
 							<p>&rArr; <code class="code">margin</code></p>
 							<p>&rArr; <code class="code">text-align</code></p>
-							<p>&rArr; Classes, ID's, nested selectors</p>
+							<p>&rArr; Classes, ID's, grouped selectors</p>
 						</div>
 					</div>
 				</section>
