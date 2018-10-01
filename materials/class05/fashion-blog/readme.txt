@@ -3,37 +3,37 @@ Complete the fashion blog from the attached screenshot. Take a look at the copy.
 Some values you will also need:
 
 Content:
-    720px wide
-    54px of padding
-    solid, left, 6px, border, #dddddd
+    width: 720px
+    padding: 54px
+    border-left: solid 6px #dddddd
 
 High-level text properties:
-    #444444
-    "Lato" font
-    1.5 line-height
-
-"Better Dressed People":
-    black
+    color: #444444
+    font-family: "Lato" 
+    line-height: 1.5
 
 "Sartre's List" and Links:
-    #dd0000
+    color: #dd0000
+
+"Better Dressed People":
+    color: #000
 
 "Sartre's List" and Links hover:
-    #aa0000
+    color: #aa0000
 
 Navigation links:
-    #dddddd
+    color: #dddddd
 
 Navigation links hover:
-    black
+    color: #000
 
 Date:
-    #cccccc
+    color: #cccccc
 
 Article Title
-    black
+    color: #000
 
 Copyright
-    #bbbbbb
+    color: #bbbbbb
 
 If we were working with a real design document, you would be able to get the precise pixel values for line height, font size, margin, padding, etc. Just approximate as best you can.
