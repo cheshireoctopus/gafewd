@@ -2,45 +2,11 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
-	background: #fff;
 	color: #444;
 }
 
-#wrapper {
-	width: 1080px;
-	margin: 0 auto;
-	padding: 54px;
-}
-
-#main {
-	float: left;
-	width: 720px;
-}
-
-#sidebar {
-	float: right;
-	width: 320px;
-	margin-top: 54px;
-	color: #888;
-}
-
-#footer {
-	clear: both;
-	color: #bbb;
-}
-
-a {
-	color: #d00;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #a00;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
 	margin: 0;
-	padding: 0;
 }
 
 h1 {
@@ -52,12 +18,10 @@ h2 {
 	font-size: 36px;
 	font-weight: normal;
 	color: black;
-	margin: 0;
-	padding: 0;
 }
 
 h2 a {
-	color: inherit;
+	color: black;
 }
 
 h2 a:hover {
@@ -68,13 +32,20 @@ h3 {
 	font-size: 36px;
 	font-weight: normal;
 	color: #cccccc;
-	margin: 0;
-	padding: 0;
+}
+
+a {
+	color: #d00;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #a00;
 }
 
 p {
-	margin: 27px 0 0;
-	padding: 0;
+	margin-top: 27px;
+	margin-bottom: 0;
 }
 
 p.more {
@@ -85,43 +56,62 @@ p.more {
 img {
 	display: block;
 	margin: 10px 0;
-	max-width: 100%;
+	width: 100%;
 }
 
-#header h1 {
+.container {
+	width: 1080px;
+	margin: auto;
+	padding: 54px;
+}
+
+.header h1 {
 	display: inline;
 	margin-right: 9px;
 }
 
-#header h2 {
+.header h2 {
 	display: inline;
 	font-size: 27px;
 	margin-bottom: 9px;
 	color: #888;
 }
 
-#header #nav {
-	margin: 0;
-	padding: 0;
+.header .nav {
+	overflow: auto;
 }
 
-#header #nav a {
+.header .nav a {
 	float: left;
-	width: 179px;
-	margin: 0;
-	padding: 0;
+	width: 180px;
 	display: block;
 	font-size: 24px;
 	color: white;
 	background: black;
-	margin-right: 1px;
 	padding: 15px 0;
 	text-align: center;
 }
 
-#header #nav a:hover {
+.header .nav a:hover {
 	color: white;
 	background: #900;
+}
+
+.main {
+	float: left;
+	width: 720px;
+}
+
+.sidebar {
+	float: right;
+	width: 320px;
+	margin-top: 54px;
+	color: #888;
+}
+
+.footer {
+	clear: both;
+	color: #bbb;
 }
 
 .article {

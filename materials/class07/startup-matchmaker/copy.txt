@@ -1,0 +1,33 @@
+Logo
+  "Startup Matchmaker"
+
+Navigation Links
+  "Developers"
+  "Designers"
+  "How it Works"
+  "Our Team"
+  "Blog"
+
+Tagline
+  "Because two brains -taste- better than one."
+
+Blurb
+  "Meet your Match!"
+  "Have a great idea for a product, but need help making it a reality? We’re here to help. Startup Matchmaker is the best place for designers and developers to find each other."
+  "Create a Profile"
+
+Cards
+  "Create a Profile"
+  "Are you a Designer? Developer? Put yourself out there so that others can find you!"
+  "Sign Up Now"
+
+  "Find a Developer"
+  "Looking for a fantastic developer to work with on the next big thing? Look no further."
+  "Start Your Search"
+
+  "Find a Designer"
+  "Need someone who can make a product intuitive, appealing, and user-friendly? Get your wireframes ready."
+  "Start Your Search"
+
+Footer
+  "© 2018 Startup Matchmaker. Made with <3 in NY."
