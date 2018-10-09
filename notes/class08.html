@@ -1,640 +1,514 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>FEWD: Class 08</title>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-		<link rel="stylesheet" href="css/zenburn.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-	</head>
+  <head>
+    <title>FEWD: Class 08</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/general-assembly.css" id="theme">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/zenburn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="hero">
-					<h1>HELLO</h1>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="hero">
+          <h1>HELLO</h1>
 
-					<div class="opening-instructions">
-						<p>1) Please download <a href="../materials/class08.zip">Class 08 Starter Code</a></p>
-						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
-						<p class="pad-left-lg">&#149; <code class="code">first-javascript</code></p>
-						<p>3) The solution to <code class="code">startup-matchmaker</code> is included</p>
-					</div>
-				</section>
 
-				<section class="hero condensed">
-					<h1>Class <span class="red">#08</span></h1>
-					<h1>10/16/2017</h1>
-					<h1 class="lesson-title">Introduction to JavaScript</h1>
-				</section>
+          <div class="opening-instructions">
+            <p>1) Please download <a href="../materials/class16.zip">Class 08 Starter Code</a></p>
+            <p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+            <div class="pad-left-lg">
+              <p>&#149; <code class="code">super-school-news</code></p>
+              <p>&#149; <code class="code">responsive-news</code></p>
+            </div>
+          </div>
+        </section>
 
-				<!-- ANNOUNCEMENTS -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Announcements</div>
-					<p>&#149; Final Projects:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Second deliverable due Monday, October 23rd</p>
-						<p>&rArr; Wireframes</p>
-					</div>
-				</section>
+        <section class="hero">
+          <h1>Class <span class="red">#08</span></h1>
+          <h1>10/15/2018</h1>
+          <h1 class="lesson-title">Responsive Web Design</h1>
+        </section>
 
-				<!-- QUESTIONS -->
-				<!-- <section data-background="#FFF" class="text-left">
-					<div class="heading">Questions</div>
-				</section> -->
+        <!-- ANNOUNCEMENTS -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Annoucements</div>
+          
+          <p>&#149; Final Projects:</p>
+          <div class="pad-left-lg">
+            <p>&rArr; First deliverable due Monday, October 22nd</p>
+            <p>&rArr; Two weeks away!</p>
+            <p>&rArr; Project proposal/ideas</p>
+            <p>&rArr; Wirefames if possible!</p>
+          </div>
+        </section>
 
-				<!-- AGENDA -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Agenda</div>
+        <!-- AGENDA -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Agenda</div>
 
-					<div class="text-smaller">
-						<p>&#149; <a href="#/js-in-the-browser">JS in the browser</a></p>
-						<p>&#149; <a href="#/intro-to-programming">Intro to programming</a></p>
-						<p>&#149; <a href="#/pseudo-code">Pseudo code</a></p>
-						<p>&#149; <a href="#/working-with-js">Working locally with JavaScript</a></p>
-						<p>&#149; <a href="#/js-basics">JS Basics</a></p>
-						<p>&#149; <a href="#/document-querying">Document Querying</a></p>
-					</div>
-				</section>
+          <p>&#149; <a href="#/border-box"><code class="code lower">box-sizing: border-box</code></a></p>
+          <p>&#149; <a href="#/calc"><code class="code lower">calc</code></a></p>
+          <p>&#149; <a href="#/responsive-web-design">Responsive Web Design Overview</a></p>
+          <p>&#149; <a href="#/fluid-layout">Fluid Layout</a></p>
+          <p>&#149; <a href="#/media-queries">Media Queries</a></p>
+        </section>
 
-				<!-- QUESTIONS -->
-				<!-- <section class="title">
-					<h1>Questions</h1>
-				</section>
+        <!-- REVIEW -->
+        <!-- <section class="title">
+          <h1>Cash Register Review</h1>
+        </section> -->
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Questions</div>
+        <!-- Box-Sizing: Border-Box -->
+        <section class="title" id="border-box">
+          <h2><code class="lower">box-sizing: border-box;</code></h2>
+        </section>
 
-					<div class="text-smaller">
-						<p class="text-smaller"><b>Q: Why use React or jQuery</b></p>
-						<p class="text-smallest fragment">A: Depends on the scope and structure of your project; starting off jQuery will suffice for nealry all your project needs. React is useful in large-scale applications with many moving pieces.</p>
-				 	</div>
-				</section> -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
 
-				<!-- INTRO TO JAVASCRIPT -->
-				<section class="title">
-					<h1>Intro To JavaScript</h1>
-				</section>
-
-				<section class="center">
-					<img src="img/class08/roller-coaster.png">
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript: An Overview</div>
-
-					<p>&#149; JavaScript &ne; Java</p>
-					<p class="fragment">&#149; Born in 1995 - created in 10 days by <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a></p>
-					<p class="fragment">&#149; Most recent version: ECMAScript 2017 (ES8)</p>
-					<p class="fragment">&#149; JavaScript is one of the most <a target="_blank" href="http://githut.info/">popular languages</a></p>
-					<p class="fragment">&#149; <a href="https://blog.codinghorror.com/the-principle-of-least-power/" target="_blank">Attwood's Law</a> &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript: An Overview</div>
-
-					<div class="text-smallest">
-						<p>&#149; JavaScript's most recent version is ES8; most developers using a mix of ES5/ES6/ES7</p>
-						<p>&#149; ES &rArr; <a href="http://www.ecma-international.org/" target="_blank">ECMAScript</a> (European Computer Manufacturers Association)</p>
-						<p>&#149; FEWD will focus on the ES5 implementation</p>
-
-						<div class="text-center">
-							<img src="img/class08/history-javascript.png" alt="">
-						</div>
-					</div>
-				</section>
-
-				<section class="title" id="js-in-the-browser">
-					<h1>JS in the Browser</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript: Uses</div>
-
-					<p>Most uses of JavaScript fall into four categories:</p>
-					<div class="pad-left-lg">
-						<p class="fragment">1) Responding to user actions (events)</p>
-						<p class="fragment">2) Changing HTML Content</p>
-						<p class="fragment">3) Changing CSS Styles</p>
-						<p class="fragment">4) Sending/retrieving data to/from the server</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript: Uses</div>
-
-					<p>A few examples:</p>
-					<div class="pad-left-lg text-smaller">
-						<p class="fragment">&rArr; Adding / removing elements</p>
-						<p class="fragment">&rArr; Animating content</p>
-						<p class="fragment">&rArr; Changing CSS on-the-fly</p>
-						<p class="fragment">&rArr; Detecting user interactions (clicks, scrolling, etc.)</p>
-						<p class="fragment">&rArr; Form validation</p>
-						<p class="fragment">&rArr; Loading dynamic content (ex: infinite scroll)</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Javascript vs HTML + CSS</div>
-
-					<h3>HTML/CSS</h3>
-					<div class="pad-left-lg">
-						<p>&#149; HTML/CSS are used to define <u>initial</u> page state</p>
-						<p>&#149; HTML/CSS are <u>static</u></p>
-					</div>
-					<div class="fragment">
-						<h3>JS</h3>
-						<div class="pad-left-lg">
-							<p>&#149; JS is used to define how page state can <u>change</u></p>
-							<p>&#149; JS is <u>dynamic</u></p>
-						</div>
-					</div>
-				</section>
-
-				<!-- INTRO TO PROGRAMMING -->
-				<section class="title" id="intro-to-programming">
-					<h1>Intro To Programming</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Intro to Programming</div>
-
-					<p class="text-smaller"><b>Q:</b> What is a program?</p>
-					<p class="fragment text-smallest pad-left-lg">&rArr; A program is a set of instructions that tells a computer how to carry-out a task</p>
-					<p class="text-smaller fragment"><b>Q:</b> What is programming?</p>
-					<p class="fragment text-smallest pad-left-lg">&rArr; Programming is the task of writing those instructions in a language that the computer can understand</p>
-					<p class="text-smaller fragment"><b>Q:</b> How do I become a programmer?</p>
-					<p class="fragment text-smallest pad-left-lg">&rArr; Not by learning a particular language, but by learning how to think like a computer</p>
-				</section>
-
-				<section class="center">
-					<h1>Introducing: Chandler-bot</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Think like a CPU - What did we learn?</div>
-
-					<p>&#149; You have to speak the same language</p>
-					<p class="fragment">&#149; Steps execute sequentially</p>
-					<p class="fragment">&#149; Steps need to be granular and precise</p>
-					<p class="fragment">&#149; The computer will only do what you tell it to do</p>
-					<p class="fragment">&#149; The computer is never wrong</p>
-				</section>
-
-				<section class="title" id="pseudo-code">
-					<h1>Pseudo Code</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Pseudo Code</div>
-
-					<div class="text-smaller">
-						<p class="fragment">&#149; The process of thinking through a program, step-by-step</p>
-						<p class="fragment">&#149; No code is written</p>
-						<p class="fragment">&#149; A written outline of a program that can be converted into code</p>
-						<p class="fragment">&#149; Allows the programmer to focus on problem solving, not the precise layout of the code and its syntax</p>
-						<p class="fragment">&#149; Don't need to know how to code, to write pseudo code!</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Pseudo Code</div>
-
-					<p>&#149; Let's write pseudo code for a thermostat:</p>
-					<p class="pad-left-lg text-smaller">User inputs a temperature, if the current temperature is colder, turn the heat on, otherwise turn the heat off</p>
-					<div class="fragment">
-						<p>&#149; Things to think about:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&rArr; What are the <u>inputs</u> for our program? What pieces of data will be going into it?</p>
-							<p>&rArr; What is the desired <u>output</u> of our program? Once the program runs, what should happen?</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Pseudo Code</div>
-
-					<div class="text-left text-smaller">
-						<div class="fragment">
-							<p><code>set target_temperature = 72</code></p>
-						</div>
-						<div class="fragment">
-							<p><code>get current_temperature = 68</code></p>
-						</div>
-						<div class="fragment">
-							<p><code>if current_temperature < target_temperature</code></p>
-							<p class="pad-left-lg"><code>turn_heater_up</code></p>
-						</div>
-						<div class="fragment">
-							<p><code>if current_temperature >= target_temperature</code></p>
-							<p class="pad-left-lg"><code>turn_heater_off</code></p>
-						</div>
-					</div>
-				</section>
-
-				<section class="title" id="working-with-js">
-					<h1>Working Locally With JS</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Working Locally with JavaScript</div>
-
-					<div class="text-smallest">
-						<p>&#149; Create JavaScript files using the <code class="code">.js</code> extension</p>
-						<p>&#149; Example: <code class="code">script.js</code></p>
-						<div class="fragment">
-							<p>&#149; Two methods to link HTML and JS:</p>
-							<p class="pad-left-lg">&rArr; External (as a separate file):</p>
+          <div class="text-smaller">
+          <p>Q: What is the <code class="code">width</code> of the following? (Hint: it's not 100px)</p>
 <pre><code>
-	&lt;script type="text/javascript" src="script.js"></script>
+  .box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    padding: 20px;
+  }
 
 </code></pre>
-							<p class="pad-left-lg">&rArr; Locally (in our HTML):</p>
+          <div class="fragment">
+            <p>A: <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/aNGWGw?editors=1100">142px</a></p>
+            <p class="pad-left-lg">
+              100px <code class="code">width</code> + 
+              40px <code class="code">padding</code> +
+              2px <code class="code">border</code>
+            </p>
+          </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
+
+          <p>&#149; By default, the <code class="code">width</code> of an element is sum of:</p>
+          <div class="pad-left-lg text-smaller">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="code">width</code> (content)</p>
+            <p>+ <code class="code">padding</code></p>
+            <p>+ <code class="code">border</code></p>
+          </div>
+          <p class="fragment">&#149; Initial <code class="code">width</code> increases with <code class="code">padding</code> and <code class="code">border</code></p>
+          <p class="fragment">&#149; <code class="code">box-sizing</code> addresses the confusion</p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
+
+          <div class="text-smaller">
+            <p>&#149; Apply <code class="code">box-sizing: border-box;</code> to previous CodePen</p>
 <pre><code>
-		&lt;p&gt;some text&lt;/p&gt;
-		&lt;script type="text/javascript"&gt;
-		  // Write JavaScript here
-		&lt;/script&gt;
-	&lt;/body&gt;
+  .box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+            <p>&#149; Inspect the element's overall width</p>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Code Along: First JavaScript</div>
-					<div class="text-left text-smallest">
-						<p>1. Open <code class="code">first-javascript</code> directory in SublimeText</p>
-						<p>2. Open the file <code class="code">script.js</code></p>
-						<p>3. Add the following to <code class="code">index.html</code>, above <code class="code">&lt;/body&gt;</code></p>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
+
+          <div class="text-center">
+            <img src="img/class16/box-model-comparison.png" alt="">
+          </div>
+        </section>
+
+<!--         <section data-background="#FFF" class="text-left">
+          <div class="heading">Exercise: Box-Sizing</div>
+
+          <div class="text-smaller">
+            <p>1. Open <code class="code">super-school-news</code> in SublimeText</p>
+            <p>2. Edit <code class="code">style.css</code> to build <code class="code">layout.png</code></p>
+            <p>3. Only edit the <code class="code">.article</code> and <code class="code">.section</code> rules</p>
+            <p class="pad-left-lg">Note 1: gutters are 10px each</p>
+            <p class="pad-left-lg">Note 2: articles have 10px of padding</p>
+            <p class="pad-left-lg">Note 3: overall container width is 960px</p>
+            <p class="pad-left-lg">Note 4: remember <code class="code">box-sizing: border-box;</code></p>
+          </div>
+        </section> -->
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"></div>
+
+          <p>&#149; TODO: Use box-sizing for everything</p>
 <pre><code>
-	&lt;script type="text/javascript" src="script.js">&lt;/script>
+  * {
+    box-sizing: border-box;
+  }
+</code></pre>
+          <p>&#149; Let's apply this to Startup Matchmaker</p>
+          
+        </section>
+
+        <section class="title" id="calc">
+          <h1><code class="lower">calc</code></h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fashion Blog Two Review</div>
+        
+          <p>&#149; How did you build the <code class="code">nav</code> for Fashion Blog Two?</p>
+          <p>&#149; What was the <code class="code">width</code> of each <code class="code">&lt;a&gt;</code>?</p>
+          <p class="fragment">&#149; Example: <a href="https://codepen.io/cheshireoctopus/pen/vVyyjd?editors=1100" target=_blank>CodePen</a></p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">calc</code></div>
+        
+          <p>&#149; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" target="_blank">calc</a> is a function for help determining length</p>
+          <p>&#149; Use simple arithmetic operators: <code class="code">+</code>, <code class="code">-</code>, etc.</p>
+<pre><code>
+  width: calc(1080px/6 - 6px);
 
 </code></pre>
-						<p>3. Add the following to <code class="code">script.js</code></p>
+          <div class="fragment">
+            <p>&#149; Can mix sizing units:</p>
 <pre><code>
-	alert('This is an alert. This is annoying');
-
-	document.write('Writing to the document!');
+  width: calc(50% - 100px);
 
 </code></pre>
-						<p>4. Save and open <code class="code">index.html</code> in the browser</p>
-					</div>
-				</section>
+          </div>
+        </section>
 
-				<section class="center">
-					<h1>Let's take a Break</h1>
-					<img src="img/main/break-time-bear.jpg">
-				</section>
+        <!-- RESPONSIVE WEB DESIGN INTRO -->
+        <section class="title" id="responsive-web-design">
+          <h1>Responsive Web Design</h1>
+        </section>
 
-				<!-- JAVASCRIPT BASICS -->
-				<section class="title" id="js-basics">
-					<h1>JavaScript Basics</h1>
-				</section>
+        <section class="center">
+          <h1>The reality...</h1>
+          <img src="img/class16/rwd-intro.jpg">
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaSript Basics: Data Types</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Responsive Web Design</div>
 
-					<div class="text-smaller">
-						<p>&#149; In the machine, there is only data</p>
-						<p class="fragment">&#149; Data are separated by type:</p>
-						<div class="pad-left-lg text-smallest">
-							<p class="fragment">&rArr; Numbers: <code class="code">1</code>, <code class="code">2</code>, <code class="code">100</code></p>
-							<p class="fragment">&rArr; Strings: <code class="code">"cats"</code>, <code class="code">"i love javascript"</code></p>
-							<p class="fragment">&rArr; Booleans: <code class="code">true</code> and <code class="code">false</code></p>
-							<p class="fragment">&rArr; Objects: <code class="code">{ name: "Keanu Reeves" }</code></p>
-							<p class="fragment">&rArr; Functions: <code class="code">function () { alert('hello, world!) }</code></p>
-							<p class="fragment">&rArr; Null/Undefined</p>
-						</div>
-					</div>
-				</section>
+          <p><u>Definitions:</u></p>
+          <p class="pad-left-lg">Allows a site's layout to change as the screen size being used to view that site changes</p>
+          <div class="fragment">
+            <p>Or...</p>
+            <p class="pad-left-lg">One site for every screen</p>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Data Types: Numbers</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Responsive Web Design</div>
 
-					<p>&#149; Used for arithmetic: (operators: <code class="code">+</code>, <code class="code">-</code>, <code class="code">*</code>, <code class="code">/</code> )</p>
-					<div class="pad-left-lg text-smaller">
-						<p><code class="code">2 + 2</code></p>
-						<p><code class="code">2 - 2</code></p>
-						<p><code class="code">2 * 2</code></p>
-						<p><code class="code">2 / 2</code></p>
-					</div>
-					<div class="fragment">
-						<p>&#149; Advanced operations contained in the <code class="code">Math</code> library:</p>
-						<div class="pad-left-lg text-smaller">
-							<p>&rArr; <code class="code">Math.pow(2,3)</code> = 8</p>
-							<p>&rArr; <code class="code">Math.sqrt(25)</code> = 5</p>
-						</div>
-					</div>
-				</section>
+          <p>Why is RWD important?</p>
+          <div class="pad-left-lg">
+            <p class="fragment">1. Mobile</p>
+            <p class="fragment">2. One site (codebase) for all screens</p>
+            <p class="fragment">3. Improved SEO</p>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Data Types: Strings</div>
+        <section class="center">
+          <h2>Open up...</h2>
+          <h2><a target="_blank" href="http://GeneralAssemb.ly">GeneralAssemb.ly</a></h2>
+          <h2>What makes the site responsive?</h2>
+        </section>
 
-					<div class="text-smallest">
-						<p>&#149; Used to represent text: <code class="code">"Hello, World!"</code></p>
-						<div class="fragment">
-						<p>&#149; Notable for <b>string concatenation</b>:</p>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Responsive Web Design</div>
+
+          <div class="text-smaller">
+            <p>GA's Responsive Changes:</p>
+            <div class="pad-left-lg">
+              <p class="fragment">1. Element size - height/width</p>
+              <p class="fragment">2. Layout (content display)</p>
+              <p class="fragment">3. Navbar (icons visible)</p>
+              <p class="fragment">4. Elements are hidden/shown</p>
+              <p class="fragment">5. Image dimensions</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="center">
+          <h1>Two pillars of RWD:</h1>
+
+          <p>1. Fluid layout</p>
+          <p>2. Media queries</p>
+        </section>
+
+        <!-- FLUID LAYOUT -->
+        <section class="title" id="fluid-layout">
+          <h1>Fluid Layout</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fixed Layout</div>
+
+          <div class="text-smaller">
+            <p>&#149; So far, layouts have been <u>fixed</u> (eg <code class="code">960px</code>)</p>
+            <p>&#149; Container elements have had a fixed-width</p>
+            <p>&#149; Content will render the same across screen sizes</p>
+            <div class="text-center">
+              <img src="img/class16/fixed-layout.jpg">
+            </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fluid Layout</div>
+
+          <div class="text-smallest">
+            <p>&#149; Fluid layouts use relative widths (eg <code class="code">width: 75%</code>)</p>
+            <p>&#149; Content will adapt to the screen size:</p>
+            <div class="pad-left-lg">
+              <p>&#149; 75% of 960px &rArr; 720px</p>
+              <p>&#149; 75% of 375px &rArr; 280px</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="img/class16/fluid-layout.jpg" alt="">
+          </div>
+
+        </section>
+
+        <section class="center">
+          <h1 style="color: yellow;">Super School News</h1>
+          <p>Does it have a fluid layout?</p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fluid Layout</div>
+
+          <p>&#149; First step towards RWD</p>
+          <p>&#149; Replace <u>fixed</u> widths with <u>fluid</u> widths</p>
+          <p class="pad-left-lg">960px => 85%</p>
+        </section>
+
+        <section class="center">
+          <h1 style="color: yellow;">Super School News</h1>
+          <p>Let's add a fluid layout</p>
+        </section>
+
+        <section class="center">
+          <h1>Fluid Layout</h1>
+          <p>Did it solve all our responsive problems?</p>
+        </section>
+
+        <!-- BREAK (5-7 mins) -->
+        <section class="center">
+          <h1>5 minute break</h1>
+          <img src="img/main/break-time-bear.jpg">
+        </section>
+
+        <!-- MEDIA QUERIES -->
+        <section class="title" id="media-queries">
+          <h1>Media Queries</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries</div>
+
+          <div class="text-smaller">
+            <p>&#149; Targeted CSS styles based screen size:</p>
 <pre><code>
-	'c' + 'a' + 't'
-
-	// "cat"
+  @media screen and (min-width: 900px) {
+    body {
+      background: blue;
+    }
+  }
 
 </code></pre>
-						</div>
-						<div class="fragment">
-							<p>&#149; Can concatenate different data types (numbers, variables) with strings:</p>
-<pre><code>
-	'i have ' + 2 + 'cats'
+            <p>&#149; When <code class="code">width &gt; 900px</code> style the background blue </p>
+            <p>&#149; <a href="http://codepen.io/cheshireoctopus/pen/GNjNGZ?editors=1100#0" target="_blank">CodePen Example</a></p>
+          </div>
+        </section>
 
-	// "i have 2 cats"
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Methods</div>
+
+          <p>1. Within CSS Stylesheet:</p>
+          <div class="text-smallest">
+<pre><code>
+  @media screen and (min-width: 1024px) {
+    /* Styles go here */
+  }
 
 </code></pre>
-						</div>
-					</div>
-				</section>
-<!--
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Data Types: Strings</div>
-
-					<p>&#149; ES6 introduced <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank">template strings</a></p>
-					<p>&#149; A cleaner way to perform string concatenation:</p>
+          </div>
+          <p>2. Using a <code class="code">&lt;link&gt;</code> tag:</p>
+          <div class="text-smallest">
 <pre><code>
-	var first = 'Barack'
-	var last = 'Obama'
-
-	`Your name is ${first} ${last}.`
-
-	// "Your name is Barack Obama"
+  &lt;link rel="stylesheet " media="screen and (min-width: 1024px)" href="css/1024only.css"&gt;
 
 </code></pre>
-					<p>&#149; Note the tick marks surrounding the template: <code class="code">`</code></p>
-				</section> -->
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Code Along: First JavaScript</div>
-					<div class="text-left text-smallest">
-						<p>1. Reopen <code class="code">first-javascript</code> in SublimeText</p>
-						<p>2. Add the following <code class="code">document.write()</code> messages:</p>
-						<div class="pad-left-lg">
-							<p>&#149; The product of 10 and 10:</p>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Browser-Width</div>
+
+          <div class="text-smaller">
+            <p>Within CSS Stylesheet:</p>
 <pre><code>
-	document.write(10 * 10);
+  @media screen and (min-width: 1024px) {
+    color: red;
+  }
 
 </code></pre>
-							<p>&#149; The quotient of 100 and 10</p>
-							<p>&#149; The difference of 50 and 17</p>
-							<p>&#149; The sum of 50 and 17</p>
-							<p>&#149; Your first and last name (using string concatenation)</p>
-						</div>
-					</div>
-				</section>
+            <p><u>Media Type:</u> <code class="fragment code">screen</code></p>
+            <p class="fragment pad-left-lg">Only target devices with a viewable screen</p>
+            <p><u>Rule:</u> <code class="fragment code">(mid-width: 1024px)</code></p>
+            <p class="fragment pad-left-lg">Only target windows larger than, or equal to, 1024px</p>
+          </div>
+        </section>
 
-				<section class="title">
-					<h1>JS Basics: Variables</h1>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Media Types</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript Basics: Variables</div>
+          <div class="text-smaller">
+            <p><code class="code">all</code>: Suitable for all devices</p>
+            <p><code class="code">handheld</code>: Intended for handheld devices</p>
+            <p><code class="code">print</code>: Intended for paged material and for documents viewed on screen in print preview mode</p>
+            <p><code class="code">screen</code>: Intended primarily for color computer screens</p>
+            <p><code class="code">tv</code>: Intended for television-type devices</p>
 
-					<div class="text-smallest">
-						<p>&#149; Often, you will want to store, or keep track of, data in a program</p>
-						<p class="fragment">&#149; Declare using the <code class="code">var</code> keyword (note: ES6 introduced <code class="code">let</code> and <code class="code">const</code>)</p>
-						<p class="fragment">&#149; Will store the piece of data in memory</p>
-						<div class="fragment">
-							<p>&#149; Use the variable's name to "call" it (retrieve it from memory):</p>
+            <p class="text-right">- <a target="_blank" href="http://www.w3.org/TR/CSS2/media.html">W3.org</a></p>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Media Rules</div>
+
+          <p><code class="code">width</code>: viewport width</p>
+          <p><code class="code">height</code>: viewport height</p>
+          <p><code class="code">aspect-ratio</code>: width-to-height aspect ratio of the viewport</p>
+          <p><code class="code">orientation</code>: orientation of the viewport</p>
+          <p class="text-right">- <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDC</a></p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Browser-Width</div>
+
+          <div class="text-smaller">
+            <p>&#149; <code class="code">min-width: ___ px</code></p>
+            <p class="pad-left-lg">Targets widths greater than or equal to __ px wide</p>
 <pre><code>
-	var x = 2;
-	var y = 3;
-
-	x
-	// 2
-
-	x + y
-	// 5
+  @media screen and (min-width: 1000px) { ... }
 
 </code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Variables: Naming Rules</div>
-
-					<div class="text-smaller">
-						<p>&#149; Take care when naming your variables!</p>
-						<p class="fragment">&#149; Variable names should reflect the data they describe</p>
-						<div class="fragment">
-							<p>&#149; Other naming conventions:</p>
-							<div class="pad-left-lg text-smallest">
-								<p>&rArr; Names should start with a lowercase letter</p>
-								<p>&rArr; Cannot use spaces; use hyphens or underscores instead</p>
-								<p>&rArr; Better yet, use camelCase:</p>
+            <p>&#149; <code class="code">max-width: ___ px</code></p>
+            <p class="pad-left-lg">Targets widths less than or equal to __ px wide</p>
 <pre><code>
-	var currentTemp = 70;
-	var targetTemp = 73;
+  @media screen and (max-width: 1000px) { ... }
 
 </code></pre>
-							</div>
-						</div>
-					</div>
-				</section>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Variable: Reassignment</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Media Queries: Additional Examples</div>
 
-					<div class="text-smallest">
-						<p>1. Declare a variable, <code class="code">x</code>, and assign it to the number <code class="code">2</code></p>
+          <div class="text-smaller">
+            <p>Don't have to specify a media type:</p>
 <pre><code>
-	var x = 2;
+  @media (min-width: 700px) { ... }
 
 </code></pre>
-						<div class="fragment">
-							<p>2. Perform any arithmetic method on <code class="code">x</code></p>
+            <p>Multiple rules:</p>
 <pre><code>
-	x * 2
-	// 4
+  @media (min-width: 320px) and (max-width: 480px) { ... }
 
 </code></pre>
-						</div>
-						<div class="fragment">
-							<p>3. What's <code class="code">x</code> now equal to?</p>
-<pre><code>
-	x
-	// 2
+            <p>&#149; These styles will only apply on devices between 320 and 480 pixels</p>
+          </div>
+        </section>
 
-</code></pre>
-			 			</div>
-					</div>
-				</section>
+        <section class="center" id="break-points">
+          <h1>Break Points</h1>
+          <img src="img/class16/breakpoint.png" alt="">
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Variables: Reassignment</div>
+        <section class="center">
+          <blockquote>If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.</blockquote>
+          <p>- <a target="_blank" href="https://twitter.com/jbrewer/status/178528003402379265">Josh Brewer</a></p>
+        </section>
 
-					<p><b>NOTE</b>: you must <u>reassign</u> variables to change them</p>
-<pre><code>
-	var x = 2
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Break Points</div>
 
-	x * 2
-	// 4
+          <p>&#149; There are a lot of <a target="_blank" href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints">break points</a>...</p>
+          <div class="fragment">
+            <p>&#149; A few recommendations:</p>
+            <div class="text-smallest">
+              <p class="pad-left-lg">&gt; 1280px</p>
+              <p class="pad-left-lg">1024px</p>
+              <p class="pad-left-lg">768px</p>
+              <p class="pad-left-lg">480px</p>
+              <p class="pad-left-lg">320px</p>
+            </div>
+          </div>
+        </section>
 
-	x
-	// 2
+        <section class="center">
+          <h1>Codealong</h1>
+          <p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/WrrvLj?editors=1100">CodePen Exercise</a></p>
+        </section>
 
-	x = x * 2
-	// 4
+        <section class="center">
+          <h1 style="color: yellow;">Super School News</h1>
+          <p>Let's add some break points!</p>
+        </section>
 
-	x
-	// 4
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Lab/HW: Startup Matchmaker</div>
 
-</code></pre>
-				</section>
+          <p>&#149; Continue work on Startup Matchmaker</p>
+          <p>&#149; Apply the following RWS techniques as necessary:</p>
+          <div class="pad-left-lg text-smaller">
+            <p>&rArr; Media Queries</p>
+            <p>&rArr; Fluid Layouts</p>
+            <p>&rArr; <code class="code">box-sizing: border-box;</code></p>
+          </div>
+          <p>&#149; Use <code class="code">float: none</code> to stop existing floats</p>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Code Along: First JavaScript</div>
+        <!-- THE END -->
+        <section class="center">
+          <img src="img/main/the-end.jpg">
+        </section>
 
-					<p>1. Open <code class="code">first-javascript</code> in SublimeText</p>
-					<p>2. Store your previous arithmetic in variables:</p>
-<pre><code>
-	var num1 = 10 * 10;
+        <!-- ON DECK -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">What's On Deck: #09 - Responsive Web Design (pt. 2)</div>
 
-</code></pre>
-					<p>3. Use <code class="code">document.write()</code> with the variables:</p>
-<pre><code>
-	document.write(num1);
+          <p>&#149; Responsive Navbar Tutorial</p>
+          <p>&#149; <code class="code lower">&lt;meta&gt;</code> Tag</p>
+          <p>&#149; Startup Matchmaker Responsive Lab</p>
+        </section>
 
-</code></pre>
+        <section class="center">
+          <h1>Exit Tickets!</h1>
+        </section>
+      </div>
+    </div>
 
-				</section>
-
-				<section class="title">
-					<h1>JS Basics: Functions</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">JavaScript Basics: Functions</div>
-
-					<div class="text-smallest">
-						<p>&#149; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
-						<p class="fragment">&#149; Often take an input, perform logic on that input, and return ouput</p>
-						<p class="fragment">&#149; Think of them as miniature programs</p>
-						<div class="fragment">
-							<p>&#149; What is the name of this function? What does this function do?</p>
-<pre><code>
-	function hello () {
-	  var greeting = 'hello!';
-
-	  greeting = 'hello, world!';
-
-	  alert(greeting);
-	}
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section class="title" id="document-querying">
-					<h1>Document Querying</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Document Querying</div>
-
-					<div class="text-smallest">
-						<p><code class="code">document.querySelector(selector)</code></p>
-						<div class="pad-left-lg">
-							<p>&rArr; Returns the <u>first</u> element matching the <code class="code">selector</code></p>
-							<p class="fragment">&rArr; Can query for elements, classes, and ID's</p>
-							<p class="fragment">&rArr; Prefix <code class="code">selector</code> with <code class="code">#</code> for ID's</p>
-							<p class="fragment">&rArr; Prefix <code class="code">selector</code> with <code class="code">.</code> for classes</p>
-						</div>
-						<div class="fragment">
-<pre><code>
-	document.querySelector('#some-id')
-	// returns the first element with id of "some-id"
-
-	document.querySelector('.some-class')
-	// returns the first element class of "some-class"
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Document Querying</div>
-
-					<p><code class="code">document.querySelectorAll(selectors)</code></p>
-					<div class="pad-left-lg text-smallest">
-						<p>&rArr; Returns a <u>list</u> of the elements within the document</p>
-						<p>&rArr; Can query for elements, classes, and ID's</p>
-					</div>
-<pre><code>
-	document.querySelectorAll('p')
-	// returns all &lt;p> tags
-
-	document.querySelectorAll('.some-class')
-	// returns all elements with class of "some-class"
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lab: First JavaScript</div>
-
-					<div class="text-smallest">
-						<p>1. Open <code class="code">first-javascript</code> in SublimeText</p>
-						<p>2. Add the following elements to <code class="code">index.html</code>:</p>
-<pre><code>
-	&lt;h1 id="title">Some Title&lt;/h1&gt;
-	&lt;p id="text-chunk">A block of text! Yay! Content! SEO!&lt;/p&gt;
-
-</code></pre>
-						<p>3. Use a document query to target the above elements and change their text color</p>
-						<p class="pad-left-lg">Hint: combine your query with <code class="code">.style.color = 'red'</code></p>
-					</div>
-				</section>
-
-				<!-- THE END -->
-				<section class="center">
-					<img src="img/main/the-end.jpg">
-				</section>
-
-				<!-- HOMEWORK -->
-				<!-- <section data-background="#FFF" class="text-left">
-					<div class="heading">Homework</div>
-					<p>1. Complete <code class="code">startup-matchmaker</code></p>
-					<p>2. Attempt <a href="https://dash.generalassemb.ly/" target="_blank">Dash</a> projecs four and five</p>
-					<p>3. Final project deliverable one: project proposal(s)</p>
-					<p>4. Pre-reading</p>
-				</section> -->
-
-				<!-- ON DECK -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">What's On Deck</div>
-
-					<h4>Class #9 (of 20) - Javascript and the Browser</h4>
-
-					<p>&#149; More JavaScript!</p>
-					<p>&#149; Functions</p>
-					<p>&#149; The DOM</p>
-					<p>&#149; JavaScript <code class="code">.click</code> event</p>
-					<p>&#149; Getting Input/Writing Output</p>
-				</section>
-
-				<section class="center">
-					<h1>Exit Tickets!</h1>
-				</section>
-			</div>
-		</div>
-
-		<script src="js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
+

@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 08</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/class08.zip">Class 08 Starter Code</a></p>
+						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+						<p class="pad-left-lg">&#149; <code class="code">first-javascript</code></p>
+						<p>3) The solution to <code class="code">startup-matchmaker</code> is included</p>
+					</div>
+				</section>
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#08</span></h1>
+					<h1>10/16/2017</h1>
+					<h1 class="lesson-title">Introduction to JavaScript</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Second deliverable due Monday, October 23rd</p>
+						<p>&rArr; Wireframes</p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<!-- <section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<div class="text-smaller">
+						<p>&#149; <a href="#/js-in-the-browser">JS in the browser</a></p>
+						<p>&#149; <a href="#/intro-to-programming">Intro to programming</a></p>
+						<p>&#149; <a href="#/pseudo-code">Pseudo code</a></p>
+						<p>&#149; <a href="#/working-with-js">Working locally with JavaScript</a></p>
+						<p>&#149; <a href="#/js-basics">JS Basics</a></p>
+						<p>&#149; <a href="#/document-querying">Document Querying</a></p>
+					</div>
+				</section>
+
+				<!-- QUESTIONS -->
+				<!-- <section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+					<div class="text-smaller">
+						<p class="text-smaller"><b>Q: Why use React or jQuery</b></p>
+						<p class="text-smallest fragment">A: Depends on the scope and structure of your project; starting off jQuery will suffice for nealry all your project needs. React is useful in large-scale applications with many moving pieces.</p>
+				 	</div>
+				</section> -->
+
+				<!-- INTRO TO JAVASCRIPT -->
+				<section class="title">
+					<h1>Intro To JavaScript</h1>
+				</section>
+
+				<section class="center">
+					<img src="img/class08/roller-coaster.png">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript: An Overview</div>
+
+					<p>&#149; JavaScript &ne; Java</p>
+					<p class="fragment">&#149; Born in 1995 - created in 10 days by <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a></p>
+					<p class="fragment">&#149; Most recent version: ECMAScript 2017 (ES8)</p>
+					<p class="fragment">&#149; JavaScript is one of the most <a target="_blank" href="http://githut.info/">popular languages</a></p>
+					<p class="fragment">&#149; <a href="https://blog.codinghorror.com/the-principle-of-least-power/" target="_blank">Attwood's Law</a> &rArr; "Any application that can be written in JavaScript, will eventually be written in JavaScript."</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript: An Overview</div>
+
+					<div class="text-smallest">
+						<p>&#149; JavaScript's most recent version is ES8; most developers using a mix of ES5/ES6/ES7</p>
+						<p>&#149; ES &rArr; <a href="http://www.ecma-international.org/" target="_blank">ECMAScript</a> (European Computer Manufacturers Association)</p>
+						<p>&#149; FEWD will focus on the ES5 implementation</p>
+
+						<div class="text-center">
+							<img src="img/class08/history-javascript.png" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section class="title" id="js-in-the-browser">
+					<h1>JS in the Browser</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript: Uses</div>
+
+					<p>Most uses of JavaScript fall into four categories:</p>
+					<div class="pad-left-lg">
+						<p class="fragment">1) Responding to user actions (events)</p>
+						<p class="fragment">2) Changing HTML Content</p>
+						<p class="fragment">3) Changing CSS Styles</p>
+						<p class="fragment">4) Sending/retrieving data to/from the server</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript: Uses</div>
+
+					<p>A few examples:</p>
+					<div class="pad-left-lg text-smaller">
+						<p class="fragment">&rArr; Adding / removing elements</p>
+						<p class="fragment">&rArr; Animating content</p>
+						<p class="fragment">&rArr; Changing CSS on-the-fly</p>
+						<p class="fragment">&rArr; Detecting user interactions (clicks, scrolling, etc.)</p>
+						<p class="fragment">&rArr; Form validation</p>
+						<p class="fragment">&rArr; Loading dynamic content (ex: infinite scroll)</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Javascript vs HTML + CSS</div>
+
+					<h3>HTML/CSS</h3>
+					<div class="pad-left-lg">
+						<p>&#149; HTML/CSS are used to define <u>initial</u> page state</p>
+						<p>&#149; HTML/CSS are <u>static</u></p>
+					</div>
+					<div class="fragment">
+						<h3>JS</h3>
+						<div class="pad-left-lg">
+							<p>&#149; JS is used to define how page state can <u>change</u></p>
+							<p>&#149; JS is <u>dynamic</u></p>
+						</div>
+					</div>
+				</section>
+
+				<!-- INTRO TO PROGRAMMING -->
+				<section class="title" id="intro-to-programming">
+					<h1>Intro To Programming</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Intro to Programming</div>
+
+					<p class="text-smaller"><b>Q:</b> What is a program?</p>
+					<p class="fragment text-smallest pad-left-lg">&rArr; A program is a set of instructions that tells a computer how to carry-out a task</p>
+					<p class="text-smaller fragment"><b>Q:</b> What is programming?</p>
+					<p class="fragment text-smallest pad-left-lg">&rArr; Programming is the task of writing those instructions in a language that the computer can understand</p>
+					<p class="text-smaller fragment"><b>Q:</b> How do I become a programmer?</p>
+					<p class="fragment text-smallest pad-left-lg">&rArr; Not by learning a particular language, but by learning how to think like a computer</p>
+				</section>
+
+				<section class="center">
+					<h1>Introducing: Chandler-bot</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Think like a CPU - What did we learn?</div>
+
+					<p>&#149; You have to speak the same language</p>
+					<p class="fragment">&#149; Steps execute sequentially</p>
+					<p class="fragment">&#149; Steps need to be granular and precise</p>
+					<p class="fragment">&#149; The computer will only do what you tell it to do</p>
+					<p class="fragment">&#149; The computer is never wrong</p>
+				</section>
+
+				<section class="title" id="pseudo-code">
+					<h1>Pseudo Code</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Code</div>
+
+					<div class="text-smaller">
+						<p class="fragment">&#149; The process of thinking through a program, step-by-step</p>
+						<p class="fragment">&#149; No code is written</p>
+						<p class="fragment">&#149; A written outline of a program that can be converted into code</p>
+						<p class="fragment">&#149; Allows the programmer to focus on problem solving, not the precise layout of the code and its syntax</p>
+						<p class="fragment">&#149; Don't need to know how to code, to write pseudo code!</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Code</div>
+
+					<p>&#149; Let's write pseudo code for a thermostat:</p>
+					<p class="pad-left-lg text-smaller">User inputs a temperature, if the current temperature is colder, turn the heat on, otherwise turn the heat off</p>
+					<div class="fragment">
+						<p>&#149; Things to think about:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; What are the <u>inputs</u> for our program? What pieces of data will be going into it?</p>
+							<p>&rArr; What is the desired <u>output</u> of our program? Once the program runs, what should happen?</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Code</div>
+
+					<div class="text-left text-smaller">
+						<div class="fragment">
+							<p><code>set target_temperature = 72</code></p>
+						</div>
+						<div class="fragment">
+							<p><code>get current_temperature = 68</code></p>
+						</div>
+						<div class="fragment">
+							<p><code>if current_temperature < target_temperature</code></p>
+							<p class="pad-left-lg"><code>turn_heater_up</code></p>
+						</div>
+						<div class="fragment">
+							<p><code>if current_temperature >= target_temperature</code></p>
+							<p class="pad-left-lg"><code>turn_heater_off</code></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="title" id="working-with-js">
+					<h1>Working Locally With JS</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Working Locally with JavaScript</div>
+
+					<div class="text-smallest">
+						<p>&#149; Create JavaScript files using the <code class="code">.js</code> extension</p>
+						<p>&#149; Example: <code class="code">script.js</code></p>
+						<div class="fragment">
+							<p>&#149; Two methods to link HTML and JS:</p>
+							<p class="pad-left-lg">&rArr; External (as a separate file):</p>
+<pre><code>
+	&lt;script type="text/javascript" src="script.js"></script>
+
+</code></pre>
+							<p class="pad-left-lg">&rArr; Locally (in our HTML):</p>
+<pre><code>
+		&lt;p&gt;some text&lt;/p&gt;
+		&lt;script type="text/javascript"&gt;
+		  // Write JavaScript here
+		&lt;/script&gt;
+	&lt;/body&gt;
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Code Along: First JavaScript</div>
+					<div class="text-left text-smallest">
+						<p>1. Open <code class="code">first-javascript</code> directory in SublimeText</p>
+						<p>2. Open the file <code class="code">script.js</code></p>
+						<p>3. Add the following to <code class="code">index.html</code>, above <code class="code">&lt;/body&gt;</code></p>
+<pre><code>
+	&lt;script type="text/javascript" src="script.js">&lt;/script>
+
+</code></pre>
+						<p>3. Add the following to <code class="code">script.js</code></p>
+<pre><code>
+	alert('This is an alert. This is annoying');
+
+	document.write('Writing to the document!');
+
+</code></pre>
+						<p>4. Save and open <code class="code">index.html</code> in the browser</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Let's take a Break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- JAVASCRIPT BASICS -->
+				<section class="title" id="js-basics">
+					<h1>JavaScript Basics</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaSript Basics: Data Types</div>
+
+					<div class="text-smaller">
+						<p>&#149; In the machine, there is only data</p>
+						<p class="fragment">&#149; Data are separated by type:</p>
+						<div class="pad-left-lg text-smallest">
+							<p class="fragment">&rArr; Numbers: <code class="code">1</code>, <code class="code">2</code>, <code class="code">100</code></p>
+							<p class="fragment">&rArr; Strings: <code class="code">"cats"</code>, <code class="code">"i love javascript"</code></p>
+							<p class="fragment">&rArr; Booleans: <code class="code">true</code> and <code class="code">false</code></p>
+							<p class="fragment">&rArr; Objects: <code class="code">{ name: "Keanu Reeves" }</code></p>
+							<p class="fragment">&rArr; Functions: <code class="code">function () { alert('hello, world!) }</code></p>
+							<p class="fragment">&rArr; Null/Undefined</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types: Numbers</div>
+
+					<p>&#149; Used for arithmetic: (operators: <code class="code">+</code>, <code class="code">-</code>, <code class="code">*</code>, <code class="code">/</code> )</p>
+					<div class="pad-left-lg text-smaller">
+						<p><code class="code">2 + 2</code></p>
+						<p><code class="code">2 - 2</code></p>
+						<p><code class="code">2 * 2</code></p>
+						<p><code class="code">2 / 2</code></p>
+					</div>
+					<div class="fragment">
+						<p>&#149; Advanced operations contained in the <code class="code">Math</code> library:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&rArr; <code class="code">Math.pow(2,3)</code> = 8</p>
+							<p>&rArr; <code class="code">Math.sqrt(25)</code> = 5</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types: Strings</div>
+
+					<div class="text-smallest">
+						<p>&#149; Used to represent text: <code class="code">"Hello, World!"</code></p>
+						<div class="fragment">
+						<p>&#149; Notable for <b>string concatenation</b>:</p>
+<pre><code>
+	'c' + 'a' + 't'
+
+	// "cat"
+
+</code></pre>
+						</div>
+						<div class="fragment">
+							<p>&#149; Can concatenate different data types (numbers, variables) with strings:</p>
+<pre><code>
+	'i have ' + 2 + 'cats'
+
+	// "i have 2 cats"
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+<!--
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Data Types: Strings</div>
+
+					<p>&#149; ES6 introduced <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank">template strings</a></p>
+					<p>&#149; A cleaner way to perform string concatenation:</p>
+<pre><code>
+	var first = 'Barack'
+	var last = 'Obama'
+
+	`Your name is ${first} ${last}.`
+
+	// "Your name is Barack Obama"
+
+</code></pre>
+					<p>&#149; Note the tick marks surrounding the template: <code class="code">`</code></p>
+				</section> -->
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Code Along: First JavaScript</div>
+					<div class="text-left text-smallest">
+						<p>1. Reopen <code class="code">first-javascript</code> in SublimeText</p>
+						<p>2. Add the following <code class="code">document.write()</code> messages:</p>
+						<div class="pad-left-lg">
+							<p>&#149; The product of 10 and 10:</p>
+<pre><code>
+	document.write(10 * 10);
+
+</code></pre>
+							<p>&#149; The quotient of 100 and 10</p>
+							<p>&#149; The difference of 50 and 17</p>
+							<p>&#149; The sum of 50 and 17</p>
+							<p>&#149; Your first and last name (using string concatenation)</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="title">
+					<h1>JS Basics: Variables</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript Basics: Variables</div>
+
+					<div class="text-smallest">
+						<p>&#149; Often, you will want to store, or keep track of, data in a program</p>
+						<p class="fragment">&#149; Declare using the <code class="code">var</code> keyword (note: ES6 introduced <code class="code">let</code> and <code class="code">const</code>)</p>
+						<p class="fragment">&#149; Will store the piece of data in memory</p>
+						<div class="fragment">
+							<p>&#149; Use the variable's name to "call" it (retrieve it from memory):</p>
+<pre><code>
+	var x = 2;
+	var y = 3;
+
+	x
+	// 2
+
+	x + y
+	// 5
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Variables: Naming Rules</div>
+
+					<div class="text-smaller">
+						<p>&#149; Take care when naming your variables!</p>
+						<p class="fragment">&#149; Variable names should reflect the data they describe</p>
+						<div class="fragment">
+							<p>&#149; Other naming conventions:</p>
+							<div class="pad-left-lg text-smallest">
+								<p>&rArr; Names should start with a lowercase letter</p>
+								<p>&rArr; Cannot use spaces; use hyphens or underscores instead</p>
+								<p>&rArr; Better yet, use camelCase:</p>
+<pre><code>
+	var currentTemp = 70;
+	var targetTemp = 73;
+
+</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Variable: Reassignment</div>
+
+					<div class="text-smallest">
+						<p>1. Declare a variable, <code class="code">x</code>, and assign it to the number <code class="code">2</code></p>
+<pre><code>
+	var x = 2;
+
+</code></pre>
+						<div class="fragment">
+							<p>2. Perform any arithmetic method on <code class="code">x</code></p>
+<pre><code>
+	x * 2
+	// 4
+
+</code></pre>
+						</div>
+						<div class="fragment">
+							<p>3. What's <code class="code">x</code> now equal to?</p>
+<pre><code>
+	x
+	// 2
+
+</code></pre>
+			 			</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Variables: Reassignment</div>
+
+					<p><b>NOTE</b>: you must <u>reassign</u> variables to change them</p>
+<pre><code>
+	var x = 2
+
+	x * 2
+	// 4
+
+	x
+	// 2
+
+	x = x * 2
+	// 4
+
+	x
+	// 4
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Code Along: First JavaScript</div>
+
+					<p>1. Open <code class="code">first-javascript</code> in SublimeText</p>
+					<p>2. Store your previous arithmetic in variables:</p>
+<pre><code>
+	var num1 = 10 * 10;
+
+</code></pre>
+					<p>3. Use <code class="code">document.write()</code> with the variables:</p>
+<pre><code>
+	document.write(num1);
+
+</code></pre>
+
+				</section>
+
+				<section class="title">
+					<h1>JS Basics: Functions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">JavaScript Basics: Functions</div>
+
+					<div class="text-smallest">
+						<p>&#149; Functions are chunks of code, grouped together, that execute (or run) line-by-line</p>
+						<p class="fragment">&#149; Often take an input, perform logic on that input, and return ouput</p>
+						<p class="fragment">&#149; Think of them as miniature programs</p>
+						<div class="fragment">
+							<p>&#149; What is the name of this function? What does this function do?</p>
+<pre><code>
+	function hello () {
+	  var greeting = 'hello!';
+
+	  greeting = 'hello, world!';
+
+	  alert(greeting);
+	}
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="title" id="document-querying">
+					<h1>Document Querying</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Querying</div>
+
+					<div class="text-smallest">
+						<p><code class="code">document.querySelector(selector)</code></p>
+						<div class="pad-left-lg">
+							<p>&rArr; Returns the <u>first</u> element matching the <code class="code">selector</code></p>
+							<p class="fragment">&rArr; Can query for elements, classes, and ID's</p>
+							<p class="fragment">&rArr; Prefix <code class="code">selector</code> with <code class="code">#</code> for ID's</p>
+							<p class="fragment">&rArr; Prefix <code class="code">selector</code> with <code class="code">.</code> for classes</p>
+						</div>
+						<div class="fragment">
+<pre><code>
+	document.querySelector('#some-id')
+	// returns the first element with id of "some-id"
+
+	document.querySelector('.some-class')
+	// returns the first element class of "some-class"
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Document Querying</div>
+
+					<p><code class="code">document.querySelectorAll(selectors)</code></p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; Returns a <u>list</u> of the elements within the document</p>
+						<p>&rArr; Can query for elements, classes, and ID's</p>
+					</div>
+<pre><code>
+	document.querySelectorAll('p')
+	// returns all &lt;p> tags
+
+	document.querySelectorAll('.some-class')
+	// returns all elements with class of "some-class"
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab: First JavaScript</div>
+
+					<div class="text-smallest">
+						<p>1. Open <code class="code">first-javascript</code> in SublimeText</p>
+						<p>2. Add the following elements to <code class="code">index.html</code>:</p>
+<pre><code>
+	&lt;h1 id="title">Some Title&lt;/h1&gt;
+	&lt;p id="text-chunk">A block of text! Yay! Content! SEO!&lt;/p&gt;
+
+</code></pre>
+						<p>3. Use a document query to target the above elements and change their text color</p>
+						<p class="pad-left-lg">Hint: combine your query with <code class="code">.style.color = 'red'</code></p>
+					</div>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- HOMEWORK -->
+				<!-- <section data-background="#FFF" class="text-left">
+					<div class="heading">Homework</div>
+					<p>1. Complete <code class="code">startup-matchmaker</code></p>
+					<p>2. Attempt <a href="https://dash.generalassemb.ly/" target="_blank">Dash</a> projecs four and five</p>
+					<p>3. Final project deliverable one: project proposal(s)</p>
+					<p>4. Pre-reading</p>
+				</section> -->
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #9 (of 20) - Javascript and the Browser</h4>
+
+					<p>&#149; More JavaScript!</p>
+					<p>&#149; Functions</p>
+					<p>&#149; The DOM</p>
+					<p>&#149; JavaScript <code class="code">.click</code> event</p>
+					<p>&#149; Getting Input/Writing Output</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
