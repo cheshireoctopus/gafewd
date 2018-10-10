@@ -19,18 +19,18 @@
 
 
           <div class="opening-instructions">
-            <p>1) Please download <a href="../materials/class16.zip">Class 08 Starter Code</a></p>
+            <!-- <p>1) Please download <a href="../materials/class16.zip">Class 08 Starter Code</a></p>
             <p>2) Move the following into your <code class="code">class-work</code> directory:</p>
             <div class="pad-left-lg">
               <p>&#149; <code class="code">super-school-news</code></p>
               <p>&#149; <code class="code">responsive-news</code></p>
-            </div>
+            </div> -->
           </div>
         </section>
 
         <section class="hero">
           <h1>Class <span class="red">#08</span></h1>
-          <h1>10/15/2018</h1>
+          <h1>10/10/2018</h1>
           <h1 class="lesson-title">Responsive Web Design</h1>
         </section>
 
@@ -52,9 +52,9 @@
           <div class="heading">Agenda</div>
 
           <p>&#149; <a href="#/border-box"><code class="code lower">box-sizing: border-box</code></a></p>
-          <p>&#149; <a href="#/calc"><code class="code lower">calc</code></a></p>
           <p>&#149; <a href="#/responsive-web-design">Responsive Web Design Overview</a></p>
           <p>&#149; <a href="#/fluid-layout">Fluid Layout</a></p>
+          <p>&#149; <a href="#/calc"><code class="code lower">calc</code></a></p>
           <p>&#149; <a href="#/media-queries">Media Queries</a></p>
         </section>
 
@@ -96,7 +96,7 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
 
-          <p>&#149; By default, the <code class="code">width</code> of an element is sum of:</p>
+          <p>&#149; By default, the <code class="code">width</code> of an element is the sum of:</p>
           <div class="pad-left-lg text-smaller">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="code">width</code> (content)</p>
             <p>+ <code class="code">padding</code></p>
@@ -129,7 +129,7 @@
           <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
 
           <div class="text-center">
-            <img src="img/class16/box-model-comparison.png" alt="">
+            <img src="img/class08/box-model-comparison.png" alt="">
           </div>
         </section>
 
@@ -148,46 +148,32 @@
         </section> -->
 
         <section data-background="#FFF" class="text-left">
-          <div class="heading"></div>
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
 
-          <p>&#149; TODO: Use box-sizing for everything</p>
+          <p>&#149; Use <code class="code">box-sizing: border-box;</code> for everything</p>
 <pre><code>
   * {
     box-sizing: border-box;
   }
+
 </code></pre>
-          <p>&#149; Let's apply this to Startup Matchmaker</p>
+          <p>&#149; <a href="https://css-tricks.com/international-box-sizing-awareness-day/" target="_blank">International Box Sizing Awareness Day</a></p>
           
         </section>
 
-        <section class="title" id="calc">
-          <h1><code class="lower">calc</code></h1>
+        <section class="center">
+          <p>Let's apply this to Startup Matchmaker!</p>
+          <img src="img/class08/startup-matchmaker-cards.png" alt="">
         </section>
 
         <section data-background="#FFF" class="text-left">
-          <div class="heading">Fashion Blog Two Review</div>
+          <div class="heading"><code class="lower">box-sizing: border-box;</code></div>
         
-          <p>&#149; How did you build the <code class="code">nav</code> for Fashion Blog Two?</p>
-          <p>&#149; What was the <code class="code">width</code> of each <code class="code">&lt;a&gt;</code>?</p>
-          <p class="fragment">&#149; Example: <a href="https://codepen.io/cheshireoctopus/pen/vVyyjd?editors=1100" target=_blank>CodePen</a></p>
-        </section>
-
-        <section data-background="#FFF" class="text-left">
-          <div class="heading"><code class="lower">calc</code></div>
-        
-          <p>&#149; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" target="_blank">calc</a> is a function for help determining length</p>
-          <p>&#149; Use simple arithmetic operators: <code class="code">+</code>, <code class="code">-</code>, etc.</p>
-<pre><code>
-  width: calc(1080px/6 - 6px);
-
-</code></pre>
-          <div class="fragment">
-            <p>&#149; Can mix sizing units:</p>
-<pre><code>
-  width: calc(50% - 100px);
-
-</code></pre>
-          </div>
+          <p>&#149; Assuming a container width of <code class="code">960px</code></p>
+          <p class="fragment">&#149; Three boxes of equal width @ <code class="code">320px</code></p>
+          <p class="fragment">&#149; We also need to add <code class="code">padding: 40px</code></p>
+          <p class="fragment">&#149; We could perform some maths...</p>
+          <p class="fragment">&#149; ...or we could use <code class="code">box-sizing!</code></p>
         </section>
 
         <!-- RESPONSIVE WEB DESIGN INTRO -->
@@ -196,15 +182,14 @@
         </section>
 
         <section class="center">
-          <h1>The reality...</h1>
-          <img src="img/class16/rwd-intro.jpg">
+          <img src="img/class08/rwd-intro.jpg">
         </section>
 
         <section data-background="#FFF" class="text-left">
           <div class="heading">Responsive Web Design</div>
 
           <p><u>Definitions:</u></p>
-          <p class="pad-left-lg">Allows a site's layout to change as the screen size being used to view that site changes</p>
+          <p class="pad-left-lg">Allow layout to change as the screen size being used to view that layout changes</p>
           <div class="fragment">
             <p>Or...</p>
             <p class="pad-left-lg">One site for every screen</p>
@@ -217,8 +202,9 @@
           <p>Why is RWD important?</p>
           <div class="pad-left-lg">
             <p class="fragment">1. Mobile</p>
-            <p class="fragment">2. One site (codebase) for all screens</p>
-            <p class="fragment">3. Improved SEO</p>
+            <p class="fragment">2. Sheer number of screen sizes</p>
+            <p class="fragment">3. One site (codebase) for all screens</p>
+            <p class="fragment">4. Improved SEO</p>
           </div>
         </section>
 
@@ -263,7 +249,7 @@
             <p>&#149; Container elements have had a fixed-width</p>
             <p>&#149; Content will render the same across screen sizes</p>
             <div class="text-center">
-              <img src="img/class16/fixed-layout.jpg">
+              <img src="img/class08/fixed-layout.jpg">
             </div>
           </div>
         </section>
@@ -280,13 +266,13 @@
             </div>
           </div>
           <div class="text-center">
-            <img src="img/class16/fluid-layout.jpg" alt="">
+            <img src="img/class08/fluid-layout.jpg" alt="">
           </div>
 
         </section>
 
         <section class="center">
-          <h1 style="color: yellow;">Super School News</h1>
+          <h1 style="color: yellow;">Startup Matchmaker Cards</h1>
           <p>Does it have a fluid layout?</p>
         </section>
 
@@ -295,12 +281,55 @@
 
           <p>&#149; First step towards RWD</p>
           <p>&#149; Replace <u>fixed</u> widths with <u>fluid</u> widths</p>
-          <p class="pad-left-lg">960px => 85%</p>
+          <p>&#149; In Codepen, update <code class="code">.cards-container</code>:</p>
+          <p class="pad-left-lg"><code class="code">width: 960px</code> &rArr; <code class="code">width: 75%</code></p>
+          
         </section>
 
-        <section class="center">
-          <h1 style="color: yellow;">Super School News</h1>
-          <p>Let's add a fluid layout</p>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fluid Layout</div>
+        
+          <p>&#149; What about the widths of <code class="code">.card</code>?</p>
+          <p class="fragment">&#149; 100% / 3 (cards)  &rArr; ~<code class="code">33%</code></p>
+          <p class="fragment">&#149; We can be precise &rArr; <code class="code">33.3%</code></p>
+          <p class="fragment">&#149; We can be <u>more</u> precise &rArr; <code class="code">33.33%</code></p>
+          <p class="fragment">&#149; Can we be even more precise?</p>
+        </section>
+
+        <section class="title" id="calc">
+          <h1><code class="lower">calc</code></h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">calc</code></div>
+        
+          <p>&#149; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" target="_blank">calc</a> helps determine sizing (height/width)</p>
+          <p>&#149; Uses simple arithmetic operators: <code class="code">+</code>, <code class="code">-</code>, etc.</p>
+<pre><code>
+  width: calc(1080px/6 - 6px);
+
+</code></pre>
+          <div class="fragment">
+            <p>&#149; Can mix sizing units:</p>
+<pre><code>
+  width: calc(50% - 100px);
+
+</code></pre>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">calc</code></div>
+        
+          <p>&#149; For <code class="code">.card</code>, we are calculating <code class="code">100% / 3</code></p>
+<pre><code>
+  .card {
+    float: left;
+    width: calc(100% / 3);
+    padding: 40px;
+  }
+
+</code></pre>
         </section>
 
         <section class="center">
@@ -439,7 +468,7 @@
 
         <section class="center" id="break-points">
           <h1>Break Points</h1>
-          <img src="img/class16/breakpoint.png" alt="">
+          <img src="img/class08/breakpoint.png" alt="">
         </section>
 
         <section class="center">
