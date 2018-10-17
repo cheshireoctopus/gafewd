@@ -1,419 +1,406 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>FEWD: Class 12</title>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-		<link rel="stylesheet" href="css/zenburn.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-	</head>
+  <head>
+    <title>FEWD: Class 12</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/general-assembly.css" id="theme">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/zenburn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="hero">
-					<h1>HELLO</h1>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="hero">
+          <h1>HELLO</h1>
 
-					<div class="opening-instructions">
-						<p>1) Please download <a href="../materials/class12.zip">Class 12 Starter Code</a></p>
-						<p>2) Move the following into <code class="code">class-work</code>:</p>
-						<p class=" pad-left-lg">&#149; <code class="code">click-count</code></p>
-						<p class=" pad-left-lg">&#149; <code class="code">temp-converter</code></p>
-					</div>
-				</section>
+          <div class="opening-instructions">
+            <p>1) Please download <a href="../materials/class12.zip">Class 12 Starter Code</a></p>
+            <p>2) Move the following into your <code class="code">homework</code> directory:</p>
+            <p class="pad-left-lg">&#149; <code class="code">rgb-color-choice</code></p>
+          </div>
+        </section>
 
-				<section class="hero condensed">
-					<h1>Class <span class="red">#12</span></h1>
-					<h1>10/30/2017</h1>
-					<h1 class="lesson-title">Conditional Statements</h1>
-				</section>
+        <section class="hero">
+          <h1>Class <span class="red">#12</span></h1>
+          <h1>10/24/2018</h1>
+          <h1 class="lesson-title">JS and the Browser</h1>
+        </section>
 
-				<!-- ANNOUNCEMENTS -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Announcements</div>
+        <!-- ANNOUNCEMENTS -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Announcements</div>
 
-					<div class="text-smaller">
-						<p>&#149; Final Projects:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; Fourth deliverable due Monday, November 6th</p>
-							<p>&rArr; JavaScript Pseudocode</p>
-						</div>
-						<p>&#149; Advanced Topic Saturday:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-							<p>&rArr; When: 11/11; approximately 3 hours</p>
-						</div>
-					</div>
-				</section>
+          <p>&#149; Final Projects:</p>
+          <div class="pad-left-lg">
+            <p>&rArr; Second deliverable due Monday, October 29th</p>
+            <p>&rArr; Wireframes</p>
+          </div>
+          <!-- <p>&#149; Mid-course Review:</p>
+          <p class="pad-left-lg">&rArr; Please check your email for the mid-course review</p>
+          <p class="pad-left-lg">&rArr; Will complete towards the end of class</p> -->
+        </section>
 
-				<!-- AGENDA -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Agenda</div>
+        <!-- AGENDA -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Agenda</div>
 
-					<p>&#149; <a href="#/conditional-statements">Conditional statements</a></p>
-					<p>&#149; <a href="#/logical-operators">Logical Operators</a></p>
-					<p>&#149; <a href="#/manipulating-css">Manipulating CSS Classes</a></p>
-					<p>&#149; <a href="#/chaining-functions">Chaining Functions</a></p>
-				</section>
+          <div class="text-smallest">
+            <p>&#149; <a href="#/functions">Functions</a></p>
+            <p>&#149; <a href="#/browser-events">Browser events</a></p>
+            <p>&#149; <a href="#/inner-html-property"><code>.innerHTML</code></a> property</p>
+            <p>&#149; <a href="#/input-elements">Input elements</a></p>
+            <p>&#149; <a href="#/labs">Labs</a></p>
+          </div>
+        </section>
 
-				<section class="title" id="conditional-statements">
-					<h1>Conditional Statements</h1>
-				</section>
+        <section class="title">
+          <h1>Warmup</h1>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
+        <!-- FUNCTIONS -->
+        <section class="title" id="functions">
+          <h1>Functions</h1>
+        </section>
 
-					<p>Control Flow:</p>
-					<div class="text-smaller pad-left-lg">
-						<p>&#149; Order in which the computer executes a program's statements</p>
-						<p>&#149; Determines which chunks of code are running at a given time</p>
-					</div>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Functions</div>
 
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
-
-					<div class="text-smaller">
-						<p>Sequential Control Flow:</p>
-						<div class="pad-left-lg text-smallest">
-							<p>&#149; Programs execute line by line, from top to bottom</p>
-							<p>&#149; So far, all our functions have been written this way</p>
-						</div>
-						<div class="text-center">
-							<img src="img/class12/sequential-flow.png">
-						</div>
-					</div>
-				</section>
-
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
-
-					<p>Sequential Control Flow Example:</p>
+          <div class="text-smallest">
+            <p>&#149; Group of code that executes (runs) when asked</p>
+            <p class="fragment">&#149; Often perform a specific task - consider them miniature programs</p>
+            <p class="fragment">&#149; Can take an input, perform logic on that input, and return ouput</p>
+            <div class="fragment">
+              <p>&#149; What is the name of this function? What does this function do?</p>
 <pre><code>
-	function square () {
-	  var inputNum = $('input').val();
-	  var parsedNum = parseInt(inputNum);
-	  var outputNum = parsedNum * parsedNum;
+  function hello() {
+    var greeting = 'hello, world!';
 
-	  $('#output').text(outputNum);
-	}
+    alert(greeting);
+  }
 
 </code></pre>
-				</section>
+            </div>
+          </div>
+        </section>
 
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Functions</div>
+        
+          <p>&#149; Open the following REPL.it</p>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
+        <!-- BROWSER EVENTS -->
+        <section class="title" id="browser-events">
+          <h1>Browser Events</h1>
+        </section>
 
-					<p>Programs can flow in other ways:</p>
-					<div class="text-center">
-						<img src="img/class12/control-flows.jpg">
-					</div>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Browser Events</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
+          <p>&#149; <a href="http://eloquentjavascript.net/14_event.html" target="_blank">Events</a> are actions users perform in the browser:</p>
+          <div class="pad-left-lg text-smallest">
+            <p>&rArr; Click</p>
+            <p>&rArr; Key press / key down / key down</p>
+            <p>&rArr; Form submit</p>
+            <p>&rArr; Scroll</p>
+          </div>
+          <p>&#149; We can use JS to listen and respond to events</p>
+        </section>
 
-					<p>If/Else Flow:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; AKA <i>conditional</i> or <i>selection</i></p>
-						<p>&rArr; Used to alter program flow when a decision must be made between two or more actions</p>
-						<p>&rArr; This choice is usually made based on variables within the function/program</p>
-					</div>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Browser Events</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
-
-					<p>If/Else Flow:</p>
-					<div class="text-center">
-						<img src="img/class12/conditional-flow.jpg">
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
-
-					<p>Sequential vs. Conditional Flows:</p>
-					<div class="text-center">
-						<img src="img/class12/sequential-vs-conditional-flow.png" alt="">
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements</div>
-
-					<div class="text-smallest">
-						<p>Conditional Flows JavaScript Syntax:</p>
+          <div class="text-">
+            <div class="fragment">
+              <p>1) Use <code class="code">document.querySelector()</code> to select the element you want to apply the event to:</p>
 <pre><code>
-	var x = 10;
-
-	if (x > 5) {
-	  alert('x is larger than 5!');
-	} else {
-	  alert('x is smaller than 5!');
-	}
+  document.querySelector('#click-me')
 
 </code></pre>
-						<div class="text-smaller">
-							<p class="fragment">&#149; Denoted by the <code class="code">if</code> and <code class="code">else</code> keywords</p>
-							<p class="fragment">&#149; Begins with a <u>condition</u>: <code class="code">(x > 5)</code></p>
-							<p class="fragment">&#149; If the condition is <b>true</b>, the statment(s) in the "if block" will run</p>
-							<p class="fragment">&#149; If the condition is <b>false</b>, the statment(s) in the "else block" will run</p>
-						</div>
-					</div>
-				</section>
-
-				<section class="title" id="logical-operators">
-					<h1>Logical Operators</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements: Logical Operators</div>
-
-					<p><code class="code" style="margin-right: 30px">===</code> equal to</p>
-					<p><code class="code" style="margin-right: 30px">!==</code> not equal to</p>
-					<p><code class="code" style="margin-right: 30px">></code> greater than</p>
-					<p><code class="code" style="margin-right: 30px"><</code> less than</p>
-					<p><code class="code" style="margin-right: 30px">>=</code> greater than or equal to</p>
-					<p><code class="code" style="margin-right: 30px"><=</code> less than or equal to</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements: Logical Operators</div>
-
-					<div class="text-smallest">
+            </div>
+            <div class="fragment">
+              <p>2) Apply the event (ex: <code class="code">.onclick</code>) to the query:</p>
 <pre><code>
-	var x = 10;
-
-	if (x === 10) {
-	  alert('bananas');
-	} else {
-	  alert('apples');
-	}
+  document.querySelector('#click-me').onclick
 
 </code></pre>
+            </div>
+          </div>
+        </section>
 
-						<div class="fragment">
-							<hr>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Browser Events</div>
+        
+          <p>3) Set the query/event equal to a function</p>
 <pre><code>
-	var x = 'cat';
-
-	if (x !== 5) {
-	  alert('tacos');
-	} else {
-	  alert('salads');
-	}
+  document.querySelector('#click-me').onclick = hello;
+  
+  function hello() {
+    alert('Hello, World!');
+  }
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+          <p>&#149; Function <code class="code">hello</code> runs when <code class="code">#click-me</code> is clicked</p>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements: Logical Operators</div>
-					<div class="text-smallest">
+        <section class="center">
+          <h1>Code Along</h1>
+            <p><a href="http://codepen.io/cheshireoctopus/pen/oxweRg?editors=1010" target="_blank">CodePen</a></p>
+        </section>
+
+        <section class="title" id="inner-html-property">
+          <h1><code><span class="lower">inner</span>HTML</code> Property</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code><span class="lower">inner</span>HTML</code> Property</div>
+
+          <div class="text-smallest">
+            <p>&#149; <code class="code">.innerHTML</code> is used to read and write HTML</p>
+            <div class="fragment">
+              <p>&#149; Assuming the following HTML:</p>
 <pre><code>
-	var x = 10;
-
-	if (x >= 10) {
-	  alert('oranges');
-	} else {
-	  alert('strawberrys');
-	}
+  &lt;div id="result">Hello, World!&lt;/div>
 
 </code></pre>
-
-						<div class="fragment">
-							<hr>
+            </div>
+            <div class="fragment">
+              <p>&rArr; To read:</p>
 <pre><code>
-	var x = 10;
-
-	if (x <= 10) {
-	  alert('kiwis');
-	} else {
-	  alert('olives');
-	}
+  document.querySelector('#result').innerHTML;
+  => 'Hello, World!'
 
 </code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong</h1>
-					<p><a target="_blank" href="https://repl.it/CAh1/43">Repl.it</a></p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Conditional Statements: Multiple Conditions</div>
-
-					<p class="text-smaller">&#149; Often, programs will evaluate more than one condition</p>
-					<p class="text-smaller">&#149; Use the <code class="code">else if</code> operator to handle:</p>
+            </div>
+            <div class="fragment">
+              <p>&rArr; To write:</p>
 <pre><code>
-	var x = 10;
-
-	if (x !== 10) {
-		alert('beer');
-	} else if (x === 10) {
-		alert('coffee');
-	} else {
-		alert('water');
-	}
+  document.querySelector('#result').innerHTML = 'Cats';
 
 </code></pre>
-				</section>
+            </div>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Exercise: Click Count</div>
+        <section class="title" id="input-elements">
+          <h1>Input Elements</h1>
+        </section>
 
-					<div class="text-left">
-						<p>1. Open <code class="code">click-count</code> in Sublime Text</p>
-						<p>2. Follow the instructions in <code class="code">project.js</code></p>
-					</div>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Input Elements</div>
 
-				<!-- BREAK (5-7 mins) -->
-				<section class="center">
-					<h1>5 minute break</h1>
-					<img src="img/main/break-time-bear.jpg">
-				</section>
+          <p>&#149; Input elements enable interactive behaviors</p>
+          <p>&#149; Allow users to input, select, check, and submit data</p>
+          <div class="fragment">
+            <p>&#149; Two (primary) input-related elements:</p>
+            <p class="pad-left-lg"><code class="code">&lt;input&gt;</code></p>
+            <p class="pad-left-lg"><code class="code">&lt;select&gt;</code></p>
+            <p>&#149; Also see: <code class="code">&lt;textarea&gt;</code></p>
+          </div>
+        </section>
 
-				<section class="title" id="manipulating-css">
-					<h1>Manipulating CSS Classes</h1>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">&lt;input&gt;</code> element</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Manipulating CSS Classes</div>
-
-					<div class="text-smallest">
-						<p><code class="code">.addClass('class-name')</code></p>
-						<p class="text-smallest pad-left-lg">&rArr; Adds classes to elements</p>
+          <div class="text-smallest">
+            <p>&#149; Used to accept a variety of data from user</p>
 <pre><code>
-	$('p').addClass('bold-text')
-
-	// would yield: &lt;p class="bold-text"&gt;&lt;/p&gt;
+  &lt;input type="text" /&gt;
 
 </code></pre>
-						<div class="fragment">
-							<p><code class="code">.removeClass('class-name')</code></p>
-							<p class="text-smallest pad-left-lg">&rArr; Removes classes from elements</p>
+            <div class="fragment">
+              <p>&#149; The <code class="code">type</code> attribute determines the type of input:</p>
+              <div class="pad-left-lg">
+                <p>&rArr; text (default; don't have to specify)</p>
+                <p>&rArr; password</p>
+                <p>&rArr; radio</p>
+                <p>&rArr; checkbox</p>
+                <p>&rArr; color</p>
+                <p>&rArr; date</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">&lt;input&gt;</code> element</div>
+
+          <div class="text-smallest">
+            <p class="text-smallest"><code class="code">&lt;input placeholder="this is a placeholer"&gt;</code></p>
+            <input type="text" placeholder="this is a placeholer">
+            <div class="fragment">
+              <hr>
+              <p class="text-smallest">
+                <code class="code">&lt;input type="radio" name="my-radio" checked&gt;</code>
+                <br><br>
+                <code class="code">&lt;input type="radio" name="my-radio"&gt;</code>
+              </p>
+              <input type="radio" name="radio1" checked> <input type="radio" name="radio1">
+            </div>
+            <div class="fragment">
+              <hr>
+              <p class="text-smallest">
+                <code class="code">&lt;input type="checkbox"&gt;</code>
+              </p>
+              <input type="checkbox">
+            </div>
+            <div class="fragment">
+              <hr>
+              <p class="text-smallest"><code class="code">&lt;input type="color"&gt;</code></p>
+              <input type="color">
+            </div>
+          </div>
+        </section>
+
+        <!-- <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">&lt;select&gt;</code> element</div>
+
+          <div class="text-smallest">
+            <p>&#149; AKA - dropddown element</p>
+            <p>&#149; Used to represent a menu of options</p>
 <pre><code>
-	$('p').removeClass('bold-text')
+  &lt;select&gt;
+    &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+            <div class="fragment">
+              <hr>
+              <select>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+              <p>&#149; <code class="code">&lt;option&gt;</code> elements represent available selections</p>
+              <p>&#149; <code class="code">&lt;option&gt;</code> elements must contain <code class="code">value</code> attributes</p>
+            </div>
+          </div>
+        </section> -->
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Manipulatin CSS Classes</div>
+        <section class="title">
+          <h1><code class="lower">.value</code> Property</h1>
+        </section>
 
-					<div class="text-smallest">
-						<p><code class="code">.toggleClass('class-name')</code></p>
-						<p class="text-smaller pad-left-lg">&rArr; Adds class to elements if it does not exist; otherwise removes</p>
-						<div class="fragment">
-							<p class="text-smaller">&#149; Assuming the following HTML:</p>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">.value</code> Property</div>
+
+          <div class="text-smaller">
+            <p>&#149; <code class="code">.value</code> is used to get/set <code class="code">&lt;input&gt;</code> values</p>
+            <div class="fragment">
+              <p class="pad-left-lg">&rArr; Read:</p>
 <pre><code>
-	&lt;p&gt;Some Paragraph&lt;/p&gt;
+  document.querySelector('#my-input').value
 
 </code></pre>
-
+              <p class="pad-left-lg">&rArr; Write:</p>
 <pre><code>
-	$('p').toggleClass('bold-text')
-
-	// would yield: &lt;p class="bold-text"&gt;&lt;/p&gt;
+  document.querySelector('#my-input').value = 'some value'
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+            </div>
+            <p class="fragment">&#149; WATCHOUT - similar to <code class="code">.innerHTML</code></p>
+          </div>
+        </section>
 
-				<!-- CHAINING FUNCTIONS -->
-				<section class="title" id="chaining-functions">
-					<h1>Chaining Functions</h1>
-				</section>
+        <!-- <section data-background="#FFF" class="text-left">
+          <div class="heading"><code class="lower">.value</code> Property</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Chaining Functions</div>
-
-					<div class="text-smaller">
-						<p>How can we improve this code:</p>
+          <div class="text-smaller">
+            <p>&#149; <code class="code">.value</code> can also be used on <code class="code">&lt;select&gt;</code> elements</p>
+            <p>&#149; Uses the <code class="code">&lt;option&gt;</code>'s <code class="code">value</code> attribute</p>
 <pre><code>
-	$('p').css('background-color', 'blue')
-	$('p').text('Some new text to be added')
-	$('p').slideDown()
+  &lt;select id="my-dropdown"&gt;
+    &lt;option value="option-one"&gt;Beer&lt;/option&gt;
+    &lt;option value="option-two"&gt;Coffee&lt;/option&gt;
+    &lt;option value="option-three"&gt;Water&lt;/option&gt;
+  &lt;/select&gt;
 
 </code></pre>
-
-						<div class="fragment">
-						<p>Function chaining:</p>
+            <div class="fragment">
+              <p>&#149; The following will return the above's selected <code class="code">&lt;option&gt;</code> <u>value</u>!</p>
 <pre><code>
-	$('p')
-	  .css('background-color', 'blue')
-	  .text('Some new text to be added')
-	  .slideDown()
+  document.querySelector('#my-dropdown').value
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+              <p>&#149; Returns "option-one", NOT "Beer"</p>
+            </div>
+          </div>
+        </section> -->
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Chaining Functions</div>
+<!--        <section class="title" id="labs">
+          <h1>Labs</h1>
+        </section> -->
 
-					<div class="text-smallest">
-						<p>&#149; Perform multiple effects/actions one after another</p>
-						<p>&#149; Only works when called on the SAME object:</p>
-<pre><code>
-	$('p').text('hello').css('color', 'red').slideDown()
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Lab: RGB Color Choice</div>
+          <div class="text-smaller">
+            <p>Open <code class="code">rgb-color-choice</code> and write JS for the following:</p>
+            <p>1. User enters a value into the red, green, and blue fields</p>
+            <p>2. User clicks 'Change the Color!' <code class="code">&lt;button&gt;</code>, triggers a function</p>
+            <p>3. Inside this function, create variables for the color values (R, G, B)</p>
+            <p>4. Replace the text inside <code class="code">id=colorful-text</code> with the new RGB values</p>
+            <p>5. Use <code class="code">.style.background</code> to change the background color of the <code class="code">#wrapper</code></p>
+          </div>
+        </section>
 
-</code></pre>
-						<div class="fragment">
-							<p>&#149; Some chained commands are queued; commands further down the chain will wait until previous commands have finished before executing</p>
-<pre><code>
-	$('p').slideDown(500).slideUp(500).slideDown(500)
+      <!--  <section data-background="#FFF" class="text-left">
+          <div class="heading">Lab: Lifetime Supply</div>
+          <div class="text-smaller">
+            <p>Open <code class="code">lifetime-supply</code>; write JS for the following:</p>
+            <p>1. Store your current age into a variable</p>
+            <p>2. Store a maximum age into a variable</p>
+            <p>3. Store a favorite drink (from a drop-down) into a variable</p>
+            <p>4. Store an amount per day into a variable</p>
+            <p>5. Calculate how many you would eat total for the rest of your life</p>
+            <p>6. Output your results to the user</p>
+          </div>
+        </section> -->
 
-</code></pre>
-						</div>
-					</div>
-				</section>
+<!--        <section class="center">
+          <h2>Exercise/HW: Temperature Converter</h2>
+          <div class="text-left">
+            <p class="text-smallest">Open <code>temperature-converter/</code></p>
+            <p class="text-smallest">&#149; Goal: Create an application that converts farenheit to celsius (and vice versa)</p>
+            <p class="text-smallest">&#149; There is no starter code (HTML/CSS/JS); this is up to you!</p>
+            <p class="text-smallest">&#149; Bonus Challenges:</p>
+            <p class="text-smallest pad-left-lg">&rArr; Use an event other than <code>.onclick</code> (hint: research key events)</p>
+            <p class="text-smallest pad-left-lg">&rArr; Change the background based on user input (hint: research <code>if/else</code> statements)</p>
+          </div>
+        </section> -->
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lab/HW</div>
+        <!-- THE END -->
+        <section class="center">
+          <img src="img/main/the-end.jpg">
+        </section>
 
-					<p>1) Open <code class="code">temp-converter</code>; follow <code class="code">instructions.txt</code></p>
-				</section>
+        <!-- ON DECK -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">What's On Deck</div>
 
-				<!-- THE END -->
-				<section class="center">
-					<img src="img/main/the-end.jpg">
-				</section>
+          <h4>Class #10 (of 20) - jQuery (pt. 1)</h4>
 
-				<!-- ON DECK -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">What's On Deck</div>
+          <p>&#149; jQuery</p>
+          <p>&#149; HTML manipulation using <code class="code">.html()</code></p>
+          <p>&#149; The <code class="code">.click()</code> method</p>
+          <p>&#149; The <code class="code">.val()</code> method</p>
+          <p>&#149; Using jQuery and <code class="code">$(document).ready()</code></p>
+          <p>&#149; CSS manipulation using <code class="code">.css()</code></p>
+        </section>
 
-					<h4>Class #13 (of 20) - Function Arguments</h4>
+        <section class="center">
+          <h1>Exit Tickets!</h1>
+        </section>
+      </div>
+    </div>
 
-					<p>&#149; Function Arguments</p>
-					<p>&#149; HTML Insertion/Removal</p>
-				</section>
-
-				<section class="center">
-					<h1>Exit Tickets!</h1>
-				</section>
-			</div>
-		</div>
-
-		<script src="js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
-
