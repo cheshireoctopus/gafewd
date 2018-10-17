@@ -138,7 +138,7 @@
           <p>3) Set the query/event equal to a function</p>
 <pre><code>
   document.querySelector('#click-me').onclick = hello;
-  
+
   function hello() {
     alert('Hello, World!');
   }
@@ -148,8 +148,7 @@
         </section>
 
         <section class="center">
-          <h1>Code Along</h1>
-            <p><a href="http://codepen.io/cheshireoctopus/pen/oxweRg?editors=1010" target="_blank">CodePen</a></p>
+          <h1><a href="http://codepen.io/cheshireoctopus/pen/oxweRg?editors=1010" target="_blank">Code Along</a></h1>
         </section>
 
         <section class="title" id="inner-html-property">
@@ -159,31 +158,26 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading"><code><span class="lower">inner</span>HTML</code> Property</div>
 
-          <div class="text-smallest">
-            <p>&#149; <code class="code">.innerHTML</code> is used to read and write HTML</p>
+          <div class="text-smaller">
+            <p>&#149; <code class="code">.innerHTML</code> reads/writes HTML inside an element</p>
+            <p>&#149; Used for updating content after an action is performed</p>
             <div class="fragment">
               <p>&#149; Assuming the following HTML:</p>
 <pre><code>
-  &lt;div id="result">Hello, World!&lt;/div>
+  &lt;div id="my-div">Hello!&lt;/div>
 
 </code></pre>
-            </div>
-            <div class="fragment">
-              <p>&rArr; To read:</p>
+              <p>&rArr; To change the content within <code class="code">#my-div</code>:</p>
 <pre><code>
-  document.querySelector('#result').innerHTML;
-  => 'Hello, World!'
-
-</code></pre>
-            </div>
-            <div class="fragment">
-              <p>&rArr; To write:</p>
-<pre><code>
-  document.querySelector('#result').innerHTML = 'Cats';
+  document.querySelector('#my-div').innerHTML = 'Hello, World!';
 
 </code></pre>
             </div>
           </div>
+        </section>
+
+        <section class="center">
+          <h1><a href="" target="_blank">Code Along</a></h1>
         </section>
 
         <section class="title" id="input-elements">
@@ -193,20 +187,22 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading">Input Elements</div>
 
-          <p>&#149; Input elements enable interactive behaviors</p>
-          <p>&#149; Allow users to input, select, check, and submit data</p>
+          <p>&#149; Input elements enable interactive behavior</p>
+          <p>&#149; Allow users to submit data</p>
           <div class="fragment">
-            <p>&#149; Two (primary) input-related elements:</p>
-            <p class="pad-left-lg"><code class="code">&lt;input&gt;</code></p>
-            <p class="pad-left-lg"><code class="code">&lt;select&gt;</code></p>
-            <p>&#149; Also see: <code class="code">&lt;textarea&gt;</code></p>
+            <p>&#149; Prominent input-related elements:</p>
+            <div class="pad-left-lg text-smaller">
+              <p>&rArr; <code class="code">&lt;input&gt;</code></p>
+              <p>&rArr; <code class="code">&lt;select&gt;</code></p>
+              <p>&rArr; <code class="code">&lt;textarea&gt;</code></p>
+            </div>
           </div>
         </section>
 
         <section data-background="#FFF" class="text-left">
           <div class="heading"><code class="lower">&lt;input&gt;</code> element</div>
 
-          <div class="text-smallest">
+          <div class="text-smaller">
             <p>&#149; Used to accept a variety of data from user</p>
 <pre><code>
   &lt;input type="text" /&gt;
@@ -217,71 +213,11 @@
               <div class="pad-left-lg">
                 <p>&rArr; text (default; don't have to specify)</p>
                 <p>&rArr; password</p>
-                <p>&rArr; radio</p>
-                <p>&rArr; checkbox</p>
                 <p>&rArr; color</p>
-                <p>&rArr; date</p>
               </div>
             </div>
           </div>
         </section>
-
-        <section data-background="#FFF" class="text-left">
-          <div class="heading"><code class="lower">&lt;input&gt;</code> element</div>
-
-          <div class="text-smallest">
-            <p class="text-smallest"><code class="code">&lt;input placeholder="this is a placeholer"&gt;</code></p>
-            <input type="text" placeholder="this is a placeholer">
-            <div class="fragment">
-              <hr>
-              <p class="text-smallest">
-                <code class="code">&lt;input type="radio" name="my-radio" checked&gt;</code>
-                <br><br>
-                <code class="code">&lt;input type="radio" name="my-radio"&gt;</code>
-              </p>
-              <input type="radio" name="radio1" checked> <input type="radio" name="radio1">
-            </div>
-            <div class="fragment">
-              <hr>
-              <p class="text-smallest">
-                <code class="code">&lt;input type="checkbox"&gt;</code>
-              </p>
-              <input type="checkbox">
-            </div>
-            <div class="fragment">
-              <hr>
-              <p class="text-smallest"><code class="code">&lt;input type="color"&gt;</code></p>
-              <input type="color">
-            </div>
-          </div>
-        </section>
-
-        <!-- <section data-background="#FFF" class="text-left">
-          <div class="heading"><code class="lower">&lt;select&gt;</code> element</div>
-
-          <div class="text-smallest">
-            <p>&#149; AKA - dropddown element</p>
-            <p>&#149; Used to represent a menu of options</p>
-<pre><code>
-  &lt;select&gt;
-    &lt;option value="option1"&gt;Option 1&lt;/option&gt;
-    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
-    &lt;option value="option3"&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
-
-</code></pre>
-            <div class="fragment">
-              <hr>
-              <select>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-              </select>
-              <p>&#149; <code class="code">&lt;option&gt;</code> elements represent available selections</p>
-              <p>&#149; <code class="code">&lt;option&gt;</code> elements must contain <code class="code">value</code> attributes</p>
-            </div>
-          </div>
-        </section> -->
 
         <section class="title">
           <h1><code class="lower">.value</code> Property</h1>
@@ -290,89 +226,32 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading"><code class="lower">.value</code> Property</div>
 
-          <div class="text-smaller">
-            <p>&#149; <code class="code">.value</code> is used to get/set <code class="code">&lt;input&gt;</code> values</p>
-            <div class="fragment">
-              <p class="pad-left-lg">&rArr; Read:</p>
+          <p>&#149; The <code class="code">.value</code> property gets/sets <code class="code">&lt;input&gt;</code> values</p>
+          <div class="fragment">
+            <p>&#149; To get the value of an input:</p>
 <pre><code>
   document.querySelector('#my-input').value
 
 </code></pre>
-              <p class="pad-left-lg">&rArr; Write:</p>
-<pre><code>
-  document.querySelector('#my-input').value = 'some value'
-
-</code></pre>
-            </div>
-            <p class="fragment">&#149; WATCHOUT - similar to <code class="code">.innerHTML</code></p>
           </div>
+          <p class="fragment">&#149; WATCHOUT - similar to <code class="code">.innerHTML</code></p>
         </section>
 
-        <!-- <section data-background="#FFF" class="text-left">
-          <div class="heading"><code class="lower">.value</code> Property</div>
-
-          <div class="text-smaller">
-            <p>&#149; <code class="code">.value</code> can also be used on <code class="code">&lt;select&gt;</code> elements</p>
-            <p>&#149; Uses the <code class="code">&lt;option&gt;</code>'s <code class="code">value</code> attribute</p>
-<pre><code>
-  &lt;select id="my-dropdown"&gt;
-    &lt;option value="option-one"&gt;Beer&lt;/option&gt;
-    &lt;option value="option-two"&gt;Coffee&lt;/option&gt;
-    &lt;option value="option-three"&gt;Water&lt;/option&gt;
-  &lt;/select&gt;
-
-</code></pre>
-            <div class="fragment">
-              <p>&#149; The following will return the above's selected <code class="code">&lt;option&gt;</code> <u>value</u>!</p>
-<pre><code>
-  document.querySelector('#my-dropdown').value
-
-</code></pre>
-              <p>&#149; Returns "option-one", NOT "Beer"</p>
-            </div>
-          </div>
-        </section> -->
-
-<!--        <section class="title" id="labs">
-          <h1>Labs</h1>
-        </section> -->
+        <section class="center">
+          <h1><a href="" target="_blank">Code Along</a></h1>
+        </section>
 
         <section data-background="#FFF" class="text-left">
           <div class="heading">Lab: RGB Color Choice</div>
+
           <div class="text-smaller">
             <p>Open <code class="code">rgb-color-choice</code> and write JS for the following:</p>
-            <p>1. User enters a value into the red, green, and blue fields</p>
-            <p>2. User clicks 'Change the Color!' <code class="code">&lt;button&gt;</code>, triggers a function</p>
-            <p>3. Inside this function, create variables for the color values (R, G, B)</p>
-            <p>4. Replace the text inside <code class="code">id=colorful-text</code> with the new RGB values</p>
-            <p>5. Use <code class="code">.style.background</code> to change the background color of the <code class="code">#wrapper</code></p>
+            <p>1. User enters a value into the red, green, and blue inputs</p>
+            <p>2. User clicks the button</p>
+            <p>3. Text in <code class="code">id=colorful-text</code> updates with the user input</p>
+            <p>4. The background color of <code class="code">#wrapper</code> changes to the user input</p>
           </div>
         </section>
-
-      <!--  <section data-background="#FFF" class="text-left">
-          <div class="heading">Lab: Lifetime Supply</div>
-          <div class="text-smaller">
-            <p>Open <code class="code">lifetime-supply</code>; write JS for the following:</p>
-            <p>1. Store your current age into a variable</p>
-            <p>2. Store a maximum age into a variable</p>
-            <p>3. Store a favorite drink (from a drop-down) into a variable</p>
-            <p>4. Store an amount per day into a variable</p>
-            <p>5. Calculate how many you would eat total for the rest of your life</p>
-            <p>6. Output your results to the user</p>
-          </div>
-        </section> -->
-
-<!--        <section class="center">
-          <h2>Exercise/HW: Temperature Converter</h2>
-          <div class="text-left">
-            <p class="text-smallest">Open <code>temperature-converter/</code></p>
-            <p class="text-smallest">&#149; Goal: Create an application that converts farenheit to celsius (and vice versa)</p>
-            <p class="text-smallest">&#149; There is no starter code (HTML/CSS/JS); this is up to you!</p>
-            <p class="text-smallest">&#149; Bonus Challenges:</p>
-            <p class="text-smallest pad-left-lg">&rArr; Use an event other than <code>.onclick</code> (hint: research key events)</p>
-            <p class="text-smallest pad-left-lg">&rArr; Change the background based on user input (hint: research <code>if/else</code> statements)</p>
-          </div>
-        </section> -->
 
         <!-- THE END -->
         <section class="center">
@@ -381,9 +260,7 @@
 
         <!-- ON DECK -->
         <section data-background="#FFF" class="text-left">
-          <div class="heading">What's On Deck</div>
-
-          <h4>Class #10 (of 20) - jQuery (pt. 1)</h4>
+          <div class="heading">On Deck: #13 - jQuery (pt. 1)</div>
 
           <p>&#149; jQuery</p>
           <p>&#149; HTML manipulation using <code class="code">.html()</code></p>
