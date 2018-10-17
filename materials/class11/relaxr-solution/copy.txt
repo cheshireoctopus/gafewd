@@ -1,0 +1,43 @@
+=== Header ===
+
+Title (h1)
+  Relaxr
+
+Navigation Anchors (a)
+  About FAQ Team Contact Us Blog
+
+=== Articles ===
+
+Article One Title (h2)
+  How I implemented Relaxr in 2 weeks and changed my life.
+
+Article One Body (p)
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius augue nec metus viverra interdum. Sed in gravida lectus. Pellentesque habitant morbi tristique senectus et netu et malesuada fames ac turpis egestas. Mauris ut vulputate nisl. Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci, porttitor ac sapien a, rutrum porttitor odio. Phasellus faucibus tristique orci eget dictum. Proin tincidunt vehicula leo sed mattis. Nunc faucibus augue a pellentesque tristique. Proin suscipit in dui ut convallis.
+
+Article Two Title (h2)
+  I traveled across the globe thanks to Relaxr’s Excel automation
+
+Article Two Body (p)
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius augue nec metus viverra interdum. Sed in gravida lectus. Pellentesque habitant morbi tristique senectus et netu et malesuada fames ac turpis egestas. Mauris ut vulputate nisl. Maecenas quis auctor dui. Ut porta aliquam lorem, at volutpat orci commodo a. Suspendisse nunc orci, porttitor ac sapien a, rutrum porttitor odio. Phasellus faucibus tristique orci eget dictum. Proin tincidunt vehicula leo sed mattis. Nunc faucibus augue a pellentesque tristique. Proin suscipit in dui ut convallis.
+
+=== Sidebar ===
+
+Categories (h3)
+  Success stories (a)
+  Stats
+  How tos
+  Best of
+  Business tips
+
+About Relaxr (h3)
+
+About Relaxr Body (p)
+  Proin sed justo vel sapien varius auctor. Proin scelerisque massa at luctus tincidunt. Fusce porttitor, sapien sed tincidunt fringilla.
+
+=== Call To Action ===
+  Sign Up Now!
+
+=== Footer ===
+  Relaxr (h4)
+  
+  Copyright 2018. Relaxr. (p)
