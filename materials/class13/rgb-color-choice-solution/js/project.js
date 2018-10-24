@@ -12,3 +12,16 @@
   Hints:
     1. You will have to rely on string concatenation to build the rgb-value given the user's input: 'rgb(' + ...
 */
+
+function changeTheColor() {
+  var red = document.querySelector('#red').value
+  var green = document.querySelector('#green').value
+  var blue = document.querySelector('#blue').value
+
+  var rgbValue = 'rgb(' + red + ',' + green + ',' + blue + ')'
+
+  document.querySelector('#colorful-text').innerHTML = rgbValue
+  document.querySelector('#wrapper').style.background = rgbValue
+}
+
+document.querySelector('#color-button').onclick = changeTheColor
