@@ -48,17 +48,15 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading">Agenda</div>
 
-          <div class="text-smallest">
-            <p>&#149; <a href="#/functions">Functions</a></p>
-            <p>&#149; <a href="#/browser-events">Browser events</a></p>
-            <p>&#149; <a href="#/inner-html-property"><code>.innerHTML</code></a> property</p>
-            <p>&#149; <a href="#/input-elements">Input elements</a></p>
-            <p>&#149; <a href="#/labs">Labs</a></p>
-          </div>
+          <p>&#149; <a href="#/functions">Functions</a></p>
+          <p>&#149; <a href="#/browser-events">Browser events</a></p>
+          <p>&#149; <a href="#/inner-html-property"><code>.innerHTML</code></a> property</p>
+          <p>&#149; <a href="#/input-elements">Input elements</a></p>
+          <p>&#149; <a href="#/labs">Lab</a></p>
         </section>
 
-        <section class="title">
-          <h1>Warmup</h1>
+        <section class="center">
+          <h1><a href="https://codepen.io/cheshireoctopus/pen/vVaNRe?editors=1010" target="_blank">Warmup</a></h1>
         </section>
 
         <!-- FUNCTIONS -->
@@ -84,6 +82,50 @@
 
 </code></pre>
             </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Functions</div>
+
+          <div class="text-smaller">
+          <p>&#149; A function has the following syntax:</p>
+          <div class="pad-left-lg">
+            <p>&rArr; <code class="code">function</code> keyword</p>
+            <p>&rArr; Name: used to invoke or call the function</p>
+            <p>&rArr; Parameters: options to change the function's input</p>
+            <p>&rArr; Body: code that runs when the function is called</p>
+          </div>
+
+<pre><code>
+  function speak(words) {
+    console.log(words)
+  }
+
+</code></pre>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Functions</div>
+        
+          <div class="text-smaller">
+            <p>&#149; Remember: you must call functions to use them!</p>
+            <p>&#149; Calling a function will execute the function's body</p>
+            <p>&#149; To call a function, follow the function's name with <code class="code">()</code></p>
+<pre><code>
+  // function declaration
+  function helloWorld() {
+    console.log('hello, world!')
+  }
+
+  // will not call the function; returns the definition
+  helloWorld
+
+  // use () to call a function
+  helloWorld()
+
+</code></pre>
           </div>
         </section>
 
@@ -137,11 +179,11 @@
         
           <p>3) Set the query/event equal to a function</p>
 <pre><code>
-  document.querySelector('#click-me').onclick = hello;
-
   function hello() {
     alert('Hello, World!');
   }
+
+  document.querySelector('#click-me').onclick = hello;
 
 </code></pre>
           <p>&#149; Function <code class="code">hello</code> runs when <code class="code">#click-me</code> is clicked</p>
@@ -158,16 +200,15 @@
         <section data-background="#FFF" class="text-left">
           <div class="heading"><code><span class="lower">inner</span>HTML</code> Property</div>
 
-          <div class="text-smaller">
+          <div class="text-small">
             <p>&#149; <code class="code">.innerHTML</code> reads/writes HTML inside an element</p>
-            <p>&#149; Used for updating content after an action is performed</p>
             <div class="fragment">
               <p>&#149; Assuming the following HTML:</p>
 <pre><code>
   &lt;div id="my-div">Hello!&lt;/div>
 
 </code></pre>
-              <p>&rArr; To change the content within <code class="code">#my-div</code>:</p>
+              <p>&#149; To change the content within <code class="code">#my-div</code>:</p>
 <pre><code>
   document.querySelector('#my-div').innerHTML = 'Hello, World!';
 
@@ -177,7 +218,7 @@
         </section>
 
         <section class="center">
-          <h1><a href="" target="_blank">Code Along</a></h1>
+          <h1><a href="https://codepen.io/cheshireoctopus/pen/jeezvx?editors=1010" target="_blank">Code Along</a></h1>
         </section>
 
         <section class="title" id="input-elements">
@@ -235,10 +276,6 @@
 </code></pre>
           </div>
           <p class="fragment">&#149; WATCHOUT - similar to <code class="code">.innerHTML</code></p>
-        </section>
-
-        <section class="center">
-          <h1><a href="" target="_blank">Code Along</a></h1>
         </section>
 
         <section data-background="#FFF" class="text-left">
