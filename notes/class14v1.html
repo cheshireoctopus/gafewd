@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 14</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1>HELLO</h1>
+
+					<div class="opening-instructions text-smallest">
+						<p>1) Please download <a href="../materials/class14.zip">Class 14 Starter Code</a></p>
+						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
+						<p class=" pad-left-lg"><code class="code">citi-pix</code> and <code class="code">form-test</code></p>
+						<p>3) Move the following in your <code class="code">homework</code> directory:</p>
+						<p class=" pad-left-lg"><code class="code">cash-register</code></p>
+						<p>4) The following solutions are included:</p>
+						<p class=" pad-left-lg"><code class="code">list-maker-solution</code></p>
+					</div>
+				</section>
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#14</span></h1>
+					<h1>11/06/2017</h1>
+					<h1 class="lesson-title">The <code class="lower">change</code> and <code class="lower">submit</code> Events</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Announcements</div>
+
+					<div class="text-smaller">
+						<p>&#149; Final Projects:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Fifth deliverable due Monday, November 13th</p>
+							<p>&rArr; JavaScript (pt. 1)</p>
+						</div>
+						<p>&#149; Advanced Topic Saturday:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
+							<p>&rArr; When: 11/11; from 12PM - 3PM</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<div class="text-smallest">
+						<p>&#149; JS Review</p>
+						<p>&#149; <a href="#/change-event"><code class="code">.change()</code> Event</a></p>
+						<p>&#149; <a href="#/form-element">HTML <code class="code">&lt;form&gt;</code> Element</a></p>
+						<p>&#149; <a href="#/submit-event"><code class="code">.submit()</code> Event</a></p>
+						<p>&#149; <a href="#/prevent-default">Preventing Default Event Behaviours</a></p>
+						<p>&#149; <a href="#/table-element">HTML <code class="code">&lt;table&gt;</code> Element</a></p>
+						<p>&#149; <a href="#/lab">Cash Register Lab/HW</a></p>
+					</div>
+				</section>
+
+				<!-- REVIEW -->
+				<section class="title">
+					<h1>Review</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Function Arguments</div>
+
+					<div class="text-smallest">
+						<p>&#149; So far, named functions have been defined like this:</p>
+<pre><code>
+	function alertName () {
+	  alert('Keanu Reeves')
+	}
+
+</code></pre>
+						<p class="fragment">&#149; What happens if we want to alert another name?</p>
+						<div class="fragment">
+							<p>&#149; We would have to declare another function:</p>
+<pre><code>
+	function alertAnotherName () {
+	  alert('Gary Busey');
+	}
+
+</code></pre>
+							<p class="fragment">&#149; Is this scalable? Say we wanted to alert the entire cast of <u>Point Break (1991)</u>...</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-center text-smaller" data-background="#FFF">
+<pre><code>
+	function alertBodhi () {
+	  alert('Patrick Swayze');
+	}
+
+</code></pre>
+
+<pre><code>
+	function alertJohnny () {
+	  alert('Keanu Reeves');
+	}
+
+</code></pre>
+
+<pre><code>
+	function alertPappas () {
+	  alert('Gary Busey');
+	}
+
+</code></pre>
+
+<pre><code>
+	function alertTyler () {
+	  alert('Lori Petty');
+	}
+
+</code></pre>
+					<p class="fragment">Only 37 more functions to write...</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Function Arguments</div>
+
+					<div class="text-smallest">
+						<p>&#149; Instead, we could write:</p>
+<pre><code>
+	function alertName (nameInput) {
+	  alert(nameInput);
+	}
+
+	alertName('Keanu Reeves');
+	alertName('Patrick Swayze');
+
+</code></pre>
+
+						<div class="fragment">
+							<p>&#149; Function arguments make our code:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; Cleaner</p>
+								<p>&rArr; Reusable</p>
+								<p>&rArr; More maintainable</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Multiple Arguments</div>
+
+					<div class="text-smallest">
+						<p>&#149; Functions can take more than one argument (up to 255!)</p>
+						<p>&#149; Define multiple arguments using a comma-separated list:</p>
+<pre><code>
+	function add (x, y, z) {
+	  var sum = x + y + z;
+	  alert(sum);
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; And called like so:</p>
+<pre><code>
+	add(1,2,3);
+	// alerts 6
+
+	add(5,10,15);
+	// alerts 30
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: HTML Insertion/Removal</div>
+
+					<div class="text-smallest">
+						<p>&rArr; <code class="code">.append('someContent')</code></p>
+<pre><code>
+	$('#someEl').append('&lt;some text here&gt;')
+
+</code></pre>
+						<p>&rArr; <code class="code">.prepend('someContent')</code></p>
+						<p>&rArr; <code class="code">.before('someContent')</code></p>
+						<p>&rArr; <code class="code">.after('someContent')</code></p>
+						<div class="fragment">
+							<p>&rArr; <code class="code">.empty()</code></p>
+							<p>&rArr; <code class="code">.remove()</code></p>
+						</div>
+					</div>
+				</section>
+
+				<!-- SKILL ASSESSMENT -->
+				<section class="center">
+					<h1>Skill Assessment</h1>
+					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/eJNRjN?editors=101">Code Debug - CodePen</a></p>
+				</section>
+
+				<!-- CHANGE EVENT-->
+				<section class="title" id="change-event">
+					<h1><code class="lower">.change()</code> Event</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Review: Browser Events</div>
+
+					<p>&#149; Events are actions that users perform in the browser:</p>
+					<div class="pad-left-lg text-smallest">
+						<p>&rArr; click</p>
+						<p>&rArr; mouse over / mouse out</p>
+						<p>&rArr; key down / key up</p>
+						<p>&rArr; form submit</p>
+					</div>
+					<p>&#149; We can use JavaScript to track and respond to events</p>
+					<p>&#149; <a href="http://eloquentjavascript.net/14_event.html">More Events Info</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.onclick</code> and <code class="lower">.click()</code></div>
+
+					<p>So far, we've primarily used the click event:</p>
+<pre><code>
+	// jQuery
+	$('#someElement').click(myFunction)
+
+	// vanilla JavaScript
+	document.querySelector('#someElement').onclick = myFunction
+
+	function myFunction () {
+	  // do something
+	}
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.change()</code> Event</div>
+
+					<div class="text-smaller">
+						<p>&#149; The <code class="code">.change()</code> event will fire when the following change:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">&lt;input&gt;</code></p>
+							<p>&rArr; <code class="code">&lt;select&gt;</code></p>
+							<p>&rArr; <code class="code">&lt;textarea&gt;</code></p>
+						</div>
+						<p>&#149; Useful for rendering dynamic forms</p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="http://www1.bloomingdales.com/bag/index.ognc?CategoryID=">Shopping Cart</a></p>
+						<p class="pad-left-lg">&rArr; <a target="_blank" href="https://www.virginamerica.com/book">Airline Tickets</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.change()</code> Event</div>
+
+					<p>&#149; Apply a <code class="code">.change()</code> just as you would a <code class="code">.click()</code>:</p>
+
+<pre><code>
+	$('#some-input').change(doSomethingCool)
+
+	function doSomethingCool () {
+	  // function body here
+	}
+
+</code></pre>
+					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/YwXQdY?editors=101">Codepen Example</a></p>
+				</section>
+
+				<!-- CITIPIX EXERCISE -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Exercise: CitiPix</div>
+					<p>1. Open <code class="code">citi-pix</code> in SublimeText</p>
+					<p>2. Follow the instructions in <code class="code">app.js</code></p>
+				</section>
+
+				<!-- BREAK (5-7 mins) -->
+				<section class="center">
+					<h1>5 minute break</h1>
+					<img src="img/main/break-time-bear.jpg">
+				</section>
+
+				<!-- FORM ELEMENT -->
+				<section class="title" id="form-element">
+					<h1><code class="lower">&lt;form&gt;</code> Element</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;form&gt;</code> Element</div>
+
+					<div class="text-smaller">
+						<p>&#149; Forms are used to capture user input</p>
+						<p>&#149; User input is sent to (processed by) the server</p>
+						<p>&#149; HTML forms can contain a variety of elements:</p>
+						<div class="pad-left-lg text-smallest">
+							<p>&rArr; inputs and textareas</p>
+							<p>&rArr; selects (dropdowns)</p>
+							<p>&rArr; checkboxes</p>
+							<p>&rArr; radio buttons</p>
+							<p>&rArr; submit buttons</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;form&gt;</code> Element</div>
+
+					<div class="text-smaller">
+						<p>&#149; Example form structure:</p>
+<pre><code>
+	&lt;form&gt;
+		&lt;input type="text" placeholder="Name"&gt;
+
+		&lt;select&gt;
+			&lt;option value="one"&gt;One&lt;/option&gt;
+			&lt;option value="one"&gt;Two&lt;/option&gt;
+		&lt;/select&gt;
+
+		&lt;input type="checkbox"&gt; Checkbox 1
+		&lt;input type="checkbox"&gt; Checkbox 2
+
+		&lt;input type="submit" value="Submit Form"&gt;
+	&lt;/form&gt;
+
+</code></pre>
+					</div>
+				</section>
+
+				<!-- SUBMIT EVENT -->
+				<section class="title" id="submit-event">
+					<h2><code class="lower">.submit()</code> Event</h2>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.submit()</code> Event</div>
+
+					<div class="text-smallest">
+						<p>&#149; Fires when <code class="code">&lt;form&gt;</code> elements are submitted</p>
+<pre><code>
+	$('#my-form').submit(handleFormSubmit);
+
+	function handleFormSubmit () {
+	  // do something!
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; On submit, will send form data to server (this requires configuration)</p>
+							<p>&#149; Only works on <code class="code">&lt;form&gt;</code> elements</p>
+							<p>&#149; <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">More info</a> on <code class="code">&lt;form&gt;</code> attributes</p>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">.submit()</code> Event</div>
+
+					<p>&#149; Specifically, <code class="code">.submit()</code> will fire when:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; User clicks <code class="code">&lt;input type="submit&gt;</code></p>
+						<p>&rArr; User clicks <code class="code">&lt;button type="submit&gt;&lt;/button&gt;</code></p>
+						<p>&rArr; User presses <code class="code">enter</code> key while a <code class="code">&lt;form&gt;</code> element is selected</p>
+					</div>
+					<p>&#149; Note: There is an issue re: submitting forms...open <code class="code">form-test</code> in Sublime Text</p>
+				</section>
+
+				<!-- PREVENT DEFAULT EVENT BEHAVIOR -->
+				<section class="title" id="prevent-default">
+					<h1>Preventing Default Event Behaviors</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Preventing Default Event Behavior</div>
+
+					<p>&#149; Some events/elements have <u>default</u> behaviors</p>
+					<div class="fragment">
+						<p>&#149; For example, when clicked on, the following link will take you to http://google.com</p>
+<pre><code>
+	&lt;a href="http://google.com">Google&lt;/a>
+
+</code></pre>
+					</div>
+					<p class="fragment">&#149; Often, developers will want to override these default behaviors</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Preventing Default Event Behavior</div>
+
+					<div class="text-smallest">
+						<p>&#149; Override defaults using <code class="code">.preventDefault()</code></p>
+<pre><code>
+	$('#my-form').submit(handleFormSubmit);
+
+	function handleFormSubmit (event) {
+	  event.preventDefault();
+
+	  // your code here!
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; The <code class="code">event</code> argument can be passed into the function associated with the event</p>
+							<p>&#149; You may also see this referred to as: <code class="code">evt</code>, or even: <code class="code">e</code></p>
+						</div>
+					</div>
+				</section>
+
+				<!-- TABLE ELEMENT -->
+				<section class="title" id="table-element">
+					<h1><code class="lower">&lt;table&gt;</code> Element</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
+					<p>&#149; <code class="code">&lt;table&gt;</code>'s are used to organize and store data into rows, columns, and cells</p>
+					<p>&#149; Circa 1999: used for page layout</p>
+					<p>&#149; 2017: primary use is in email layouts</p>
+					<p>&#149; Still used on web for data display</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
+					<div class="text-smallest">
+<pre><code>
+	&lt;table border="1"&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Drink&lt;/th&gt;
+				&lt;th&gt;Cost&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Coffee&lt;/td&gt;
+				&lt;td&gt;$2.00&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Water&lt;/td&gt;
+				&lt;td&gt;$1.00&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Beer&lt;/td&gt;
+				&lt;td&gt;$5.00&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+
+</pre></code>
+						<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/JGoaGp?editors=100">CodePen Table</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;table&gt;</code> Element</div>
+
+					<div class="text-smallest">
+						<p><code class="code">&lt;table&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Top level table element; contains the below elements:</p>
+						<p><code class="code">&lt;thead&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Table Header; contains top level table row</p>
+						<p><code class="code">&lt;tbody&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Table Body; contains the data to be displayed</p>
+						<p><code class="code">&lt;tr&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Table Row: used to display a row of data;</p>
+						<p><code class="code">&lt;td&gt;</code> and <code class="code">&lt;th&gt;</code></p>
+						<p class="pad-left-lg">&rArr; Table Data; an individual data cell; <code class="code">&lt;th&gt;</code> are for header cells</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h2>Table Layout</h2>
+					<img src="img/class14/table-layout.png" alt="">
+				</section>
+
+				<!-- CASH REGISTER LAB/HW -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab/HW: Cash Register</div>
+					<p>1. Open up <code class="code">cash-register</code> in Sublime Text</p>
+					<p>2. Follow instructions in <code class="code">app.js</code></p>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #15 (of 20) - jQuery Plugins + Google Maps API</h4>
+
+					<p>&#149; jQuery Plugins: Raindrops, Lightbox, and Masonry</p>
+					<p>&#149; Google Maps API Tutorial</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
