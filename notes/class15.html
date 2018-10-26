@@ -1,513 +1,417 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>FEWD: Class 15</title>
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-		<link rel="stylesheet" href="css/zenburn.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-	</head>
-
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="hero">
-					<h1>HELLO</h1>
-
-					<div class="opening-instructions">
-						<p>1) Please download <a href="../materials/class15.zip">Class 15 Starter Code</a></p>
-						<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
-						<div class="pad-left-lg">
-							<p>&#149; <code class="code">light-box-example</code></p>
-							<p>&#149; <code class="code">raindrops-example</code></p>
-							<p>&#149; <code class="code">google-maps-example</code></p>
-						</div>
-					</div>
-				</section>
-
-				<section class="hero">
-					<h1>Class <span class="red">#15</span></h1>
-					<h1>11/08/2017</h1>
-					<h1 class="lesson-title">jQuery Plugins + Google Maps API</h1>
-				</section>
-
-				<!-- ANNOUNCEMENTS -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Announcements</div>
-
-					<div class="text-smaller">
-						<p>&#149; Final Projects:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; Fifth deliverable due Monday, November 13th</p>
-							<p>&rArr; JavaScript (pt. 1)</p>
-						</div>
-						<p>&#149; Advanced Topic Saturday:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-							<p>&rArr; When: 11/11; from 12PM - 3PM</p>
-						</div>
-					</div>
-				</section>
-
-				<!-- AGENDA -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Agenda</div>
-
-					<!-- <p>&#149; <code class="code lower">cash-register</code> Review</p> -->
-					<p>&#149; <a href="#/jquery-plugins">jQuery Plugins</a></p>
-					<div class="pad-left-lg text-smallest">
-						<p>&rArr; Lightbox</p>
-						<p>&rArr; Raindrops</p>
-					</div>
-					<p>&#149; <a href="#/google-maps">Google Maps API</a></p>
-					<p>&#149; <a href="#/arrays">Arrays</a></p>
-					<p>&#149; <a href="#/iteration">Array Iteration</a></p>
-					<p>&#149; Final Project Check-ins</p>
-				</section>
-
-				<!-- WARM UP -->
-				<section class="title">
-					<h1>Warm Up</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Warm Up</div>
-					<p>1) Find a partner</p>
-					<p>2) Ask your partner what their final project idea is</p>
-					<p>3) Inquire if your partner has encountered any challenges so far</p>
-					<p>4) Commiserate</p>
-				</section>
-
-				<!-- REVIEW -->
-				<section class="title">
-					<h1>Cash Register Review</h1>
-				</section>
-
-				<!-- jQuery Plugins -->
-				<section class="title" id="jquery-plugins">
-					<h1>jQuery Plugins</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Plugins</div>
-
-					<div class="text-smallest">
-						<p>&#149; Plugins (or libraries) are pre-written pieces of JavaScript</p>
-						<div class="fragment">
-							<p>&#149; Built to solve a particular issue:</p>
-							<div class="pad-left-lg text-smaller">
-								<p>&rArr; Fullscreen video player</p>
-								<p>&rArr; Image carousel</p>
-								<p>&rArr; Page scrolling</p>
-							</div>
-						</div>
-						<div class="fragment">
-							<p>&#149; To use, just add the plugin's <code class="code">script</code> tag <b>below</b> jQuery:</p>
-<pre><code>
-	&lt;script&gt; src="jquery.js"&gt;&lt;/script&gt;
-	&lt;script&gt; src="my-super-plugin.js"&gt;&lt;/script&gt;
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Plugins: What to look for?</div>
-
-					<p>&#149; There are 1000's of plugins; be judicious:</p>
-					<div class="pad-left-lg">
-						<p class="fragment">&rArr; Recently updated</p>
-						<p class="fragment">&rArr; Well-documented</p>
-						<p class="fragment">&rArr; The more contributors the better</p>
-						<p class="fragment">&rArr; Open source</p>
-						<p class="fragment">&rArr; Hosted on GitHub</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">jQuery Plugins: Tips for using</div>
-
-					<p class="fragment">1) Read the documentation</p>
-					<p class="fragment">2) Seriously, read the documentation</p>
-					<p class="fragment">3) Look for, and copy, examples</p>
-					<p class="fragment">4) Start simple<span class="fragment">, then add complexity</span></p>
-					<p class="fragment">5) Search for tutorials/examples if you get stuck</p>
-					<p class="fragment">6) Open a GitHub issue if you think you found a bug</p>
-				</section>
-
-				<!-- Light Box Tutorial -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lightbox Plugin</div>
-					<p>1) Open <code class="code">light-box-example</code> in Sublime Text</p>
-					<p>2) Visit <a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">http://lokeshdhakar.com/projects/lightbox2/</a></p>
-				</section>
-
-				<!-- RAIN DROPS PLUGIN -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Raindrops.js</div>
-
-					<p>1) Open <code class="code">raindrops-exmaple</code></p>
-					<p>2) Visit <a href="http://daniellaharel.com/raindrops/" target="_blank">http://daniellaharel.com/raindrops/</a></p>
-					<p>3) Find a partner</p>
-					<p>4) Successfully implement raindrops.js</p>
-				</section>
-
-				<!-- BREAK (5-7 mins) -->
-				<section class="center">
-					<h1>5 minute break</h1>
-					<img src="img/main/break-time-bear.jpg">
-				</section>
-
-				<!-- GOOGLE MAPS API -->
-				<section class="title" id="google-maps">
-					<h1>Google Maps API</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">What is an API?</div>
-
-					<div class="text-smallest">
-						<p>&#149; API &rArr; Application Programming Interface</p>
-						<p>&#149; Set of rules/instructions for interacting with a piece of software</p>
-						<p>&#149; Middleman; allows different pieces of software to "talk" to each other</p>
-					</div>
-					<div class="text-center">
-						<img src="img/class15/api.png" alt="">
-					</div>
-				</section>
-
-				<section class="center">
-					<h2>Let's Build a Map</h2>
-					<div class="text-left">
-						<p>&#149; <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps JavaScript API V3 Documentation</a></p>
-						<p>&#149; Open <code class="code">google-maps-example</code> in Sublime Text</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Let's Build a Map</div>
-
-					<p>1. Obtain API Key</p>
-					<p>2. Add starter HTML and CSS</p>
-					<p>3. Enable map using JS</p>
-					<p>4. ???</p>
-					<p>5. Profit</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Google Maps: Changing the <code class="lower">center</code></div>
-
-					<p>Google Maps require:</p>
-					<p class="pad-left-lg">&rArr; <code class="code">center</code></p>
-					<p class="pad-left-lg">&rArr; <code class="code">zoom</code></p>
-
-					<p>Challenge: Change the <code class="code">center</code> of your map to NYC</p>
-					<p class="pad-left-lg fragment">&rArr; Hint: look up NYC's coordinates!</p>
-					<p class="pad-left-lg fragment">&rArr; 40.7127 N, 74.0059 W</p>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Google Maps: Adding Markers</div>
-
-					<p>&#149; Markers require:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; <code class="code">position: {lat: y, lng: x}</code></p>
-						<p>&rArr; <code class="code">map</code></p>
-					</div>
-					<p>&#149; Challenge: use the following to add a marker at NYC</p>
-<pre><code>
-	var marker = new google.maps.Marker({
-	  position: {lat: y, lng: x},
-	  map: map,
-	  title: 'New York, NY'
-	});
-
-</code></pre>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Google Maps: Multiple Markers</div>
-
-					<div class="text-smallest">
-						<p>&#149; Easiest way to add multiple markers:</p>
-<div class="fragment">
-<pre><code>
-	var marker1 = new google.maps.Marker({
-	  position: {lat: 40, lng: 50},
-	  map: map,
-	});
-
-	var marker2 = new google.maps.Marker({
-	  position: {lat: 45, lng: 45},
-	  map: map,
-	});
-
-	var marker3 = new google.maps.Marker({
-	  position: {lat: 25, lng: 75},
-	  map: map,
-	});
-
-	...
-
-</code></pre>
-</div>
-						<p class="fragment">&#149; Is this efficient? Say I want to add 100 markers? 1,000?</p>
-					</div>
-				</section>
-
-				<section class="title" id="arrays">
-					<h1>Arrays</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Arrays</div>
-
-					<div class="text-smallest">
-						<p>&#149; Arrays are a list-like data structure of comma-separated values</p>
-						<p>&#149; Useful for storing a sequence of related data</p>
-						<p>&#149; Declare arrays using square brackets: <code class="code">[ ]</code></p>
-<pre><code>
-	var friends = ['Moe', 'Larry', 'Curly'];
-
-</code></pre>
-						<div class="fragment">
-							<p>&#149; <b>Element</b> - an item inside the array</p>
-							<p>&#149; <b>Index</b> - the numerical location of each element in the array (starts at position 0 - aka "0-indexed")</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Arrays</div>
-
-					<div class="text-smallest">
-						<p>&#149; JS provides multiple methods for array creation:</p>
-						<div class="pad-left-lg">
-							<div class="fragment">
-								<p>&rArr; The <code class="code">new</code> keyword</p>
-<pre><code>
-	var drinks = new Array('beer', 'coffee', 'water');
-
-</code></pre>
-							</div>
-							<div class="fragment">
-								<p>&rArr; Using the array literal</p>
-<pre><code>
-	var drinks = ['beer', 'coffee', 'water'];
-
-</code></pre>
-							</div>
-						</div>
-						<div class="fragment">
-							<p>&#149; While similar, there are crucial differences</p>
-							<p>&#149; Use the <u>array literal</u> for now</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Arrays</div>
-
-					<div class="text-smallest">
-						<p>&#149; Use <code class="code">[index]</code> to retrieve values from an array</p>
-						<p>&#149; Remember that arrays are <u>0-indexed</u></p>
-<pre><code>
-	var drinks = ['beer', 'coffee', 'water'];
-
-	drinks[0]
-	// 'beer'
-
-	drinks [0+1]
-	// 'coffee'
-
-	var x = drinks.length - 1
-	drinks[x]
-	// 'water'
-
-	drinks[4]
-	// undefined
-
-</code></pre>
-						<p>&#149; <a href="https://repl.it/HWRb/1" target="_blank">REPL.it</a> examples</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
-
-					<div class="text-smallest">
-						<p>&#149; Consider an array of names:</p>
-<pre><code>
-  var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
-
-</code></pre>
-						<p class="fragment">&#149; How would we <code class="code">console.log</code> all the names in this array?</p>
-						<div class="fragment">
-<pre><code>
-	console.log(boroughs[0]);
-	console.log(boroughs[1]);
-	console.log(boroughs[2]);
-	console.log(boroughs[3]);
-	console.log(boroughs[4]);
-
-</code></pre>
-						</div>
-						<p class="fragment">&#149; Is this efficient/scalable?</p>
-					</div>
-				</section>
-
-				<!-- ARRAY ITERATION -->
-				<section class="title" id="iteration">
-					<h1>Array Iteration</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
-
-					<div class="text-smaller">
-						<p>&#149; Iteration is the process of running the same function to every element in an array:</p>
-						<div class="fragment">
-<pre><code>
-  var boroughs = ['manhattan', 'the bronx', 'queens', 'brooklyn', 'staten island'];
-
-  boroughs.forEach(logBorough);
-
-  function logBorough (borough) {
-    console.log(borough);
+  <head>
+    <title>FEWD: Class 15</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/general-assembly.css" id="theme">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/zenburn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="hero">
+          <h1>HELLO</h1>
+
+          <div class="opening-instructions">
+            <p>1) Please download <a href="../materials/class15.zip">Class 15 Starter Code</a></p>
+            <p>2) Move the following into <code class="code">class-work</code>:</p>
+            <p class=" pad-left-lg">&#149; <code class="code">click-count</code></p>
+            <p class=" pad-left-lg">&#149; <code class="code">temp-converter</code></p>
+          </div>
+        </section>
+
+        <section class="hero condensed">
+          <h1>Class <span class="red">#12</span></h1>
+          <h1>11/05/2018</h1>
+          <h1 class="lesson-title">Conditional Statements</h1>
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Announcements</div>
+
+          <p>&#149; Final Projects:</p>
+          <div class="pad-left-lg">
+            <p>&rArr; Fourth deliverable due Wednesday, November 14th</p>
+            <p>&rArr; JavaScript Pseudocode</p>
+          </div>
+        </section>
+
+        <!-- AGENDA -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Agenda</div>
+
+          <p>&#149; <a href="#/conditional-statements">Conditional statements</a></p>
+          <p>&#149; <a href="#/logical-operators">Logical Operators</a></p>
+          <p>&#149; <a href="#/manipulating-css">Manipulating CSS Classes</a></p>
+          <p>&#149; <a href="#/chaining-functions">Chaining Functions</a></p>
+        </section>
+
+        <!-- WARMUP -->
+        <section class="center">
+          <h1>Warmup</h1>
+        </section>
+
+        <section class="title" id="conditional-statements">
+          <h1>Conditional Statements</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; Control Flow:</p>
+          <div class="text-smaller pad-left-lg">
+            <p>&rArr; Order that the CPU runs a program's statements</p>
+            <p>&rArr; Determines which code is running at a given time</p>
+          </div>
+        </section>
+
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <div class="text-smaller">
+            <p>&#149; Sequential Control Flow:</p>
+            <div class="pad-left-lg">
+              <p>&rArr; Programs execute line by line, from top to bottom</p>
+              <p>&rArr; So far, all our code have run this way</p>
+            </div>
+            <div class="text-center">
+              <img src="img/class12/sequential-flow.png">
+            </div>
+          </div>
+        </section>
+
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; Sequential Control Flow Example:</p>
+<pre><code class="code">
+  function square() {
+    var inputNum = $('input').val()
+    var parsedNum = parseInt(inputNum)
+    var outputNum = parsedNum * parsedNum
+
+    $('#output').text(outputNum)
   }
 
-  // 'manhattan'
-  // 'the bronx'
-  // 'queens'
-  // 'brooklyn'
-  // 'staten island'
+</code></pre>
+        </section>
+
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; Programs can flow in other ways:</p>
+          <div class="text-center">
+            <img src="img/class12/control-flows.jpg">
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; Conditonal Flow:</p>
+          <div class="pad-left-lg">
+            <p>&rArr; AKA <b>if/else</b> statements</p>
+            <p>&rArr; Alters flow when a decision must be made</p>
+            <p>&rArr; Choice is based on variables within the program</p>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; If/Else Flow:</p>
+          <div class="text-center">
+            <img src="img/class12/conditional-flow.jpg">
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <p>&#149; Sequential vs. Conditional Flows:</p>
+          <div class="text-center">
+            <img src="img/class12/sequential-vs-conditional-flow.png" alt="">
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements</div>
+
+          <div class="text-smallest">
+            <p>&#149; Conditional Flows JavaScript Syntax:</p>
+<pre><code class="code">
+  var x = 10
+
+  if (x > 5) {
+    alert('x is larger than 5!')
+  } else {
+    alert('x is smaller than 5!')
+  }
 
 </code></pre>
-						</div>
-					</div>
-				</section>
+            <div class="text-smaller">
+              <p class="fragment">&#149; Denoted by the <code class="code">if</code> and <code class="code">else</code> keywords</p>
+              <p class="fragment">&#149; Begins with a <u>condition</u>: <code class="code">(x > 5)</code></p>
+              <p class="fragment">&#149; If the condition is <b>true</b>, the statment(s) in the "if block" will run</p>
+              <p class="fragment">&#149; If the condition is <b>false</b>, the statment(s) in the "else block" will run</p>
+            </div>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
+        <section class="title" id="logical-operators">
+          <h1>Logical Operators</h1>
+        </section>
 
-					<div class="text-smaller">
-						<p>&#149; JS arrays have several iteration methods:</p>
-						<div class="pad-left-lg text-smallest">
-							<p><code class="code">.forEach()</code></p>
-							<p><code class="code">.every()</code></p>
-							<p><code class="code">.some()</code></p>
-							<p><code class="code">.filter()</code></p>
-							<p><code class="code">.map()</code></p>
-						</div>
-						<p class="fragment">&#149; Most require a function to be supplied as an argument; this function will be applied to each item in the array, individually</p>
-					</div>
-				</section>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements: Logical Operators</div>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
-					<p>&#149; Let's apply array iteration to our Google Maps Markers:</p>
-					<div class="pad-left-lg">
-						<p>1) Create an array of location objects (each should contain <code class="code">lat</code>, <code class="code">lng</code>, and <code class="code">title</code></p>
-						<p>2) Apply the <code class="code">forEach</code> method to the array</p>
-						<p>3) Write the function to apply each marker to the <code class="code">map</code></p>
-					</div>
-				</section>
+          <p><code class="code" style="margin-right: 30px">===</code> equal to</p>
+          <p><code class="code" style="margin-right: 30px">!==</code> not equal to</p>
+          <p><code class="code" style="margin-right: 30px">></code> greater than</p>
+          <p><code class="code" style="margin-right: 30px"><</code> less than</p>
+          <p><code class="code" style="margin-right: 30px">>=</code> greater than or equal to</p>
+          <p><code class="code" style="margin-right: 30px"><=</code> less than or equal to</p>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements: Logical Operators</div>
 
-					<div class="text-smallest">
-						<p>&#149; Create an array of location objects containing <code class="code">lat</code>, <code class="code">lng</code>, and <code class="code">title</code>:</p>
+          <div class="text-smallest">
 <pre><code>
-	var locations = [
-	  {
-	    lat: 40.7484444,
-	    lng: -73.9878441,
-	    title: 'Empire State Building',
-	  },
-	  {
-	    lat: 40.7516248,
-	    lng: -73.9776907,
-	    title: 'Chrysler Building',
-	  },
-	  {
-	    lat: 40.7339877,
-	    lng: -73.980817,
-	    title: 'Flatiron Building',
-	  },
-	];
+  var x = 10;
+
+  if (x === 10) {
+    alert('bananas');
+  } else {
+    alert('apples');
+  }
 
 </code></pre>
-					</div>
-				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
-
-					<p>&#149; Apply the <code class="code">forEach</code> method to the array</p>
+            <div class="fragment">
+              <hr>
 <pre><code>
-	var locations = [ ... ];
+  var x = 'cat';
 
-	locations.forEach(processLocation);
-
-	function processLocation (location) {
-	  console.log(location)
-	}
+  if (x !== 5) {
+    alert('tacos');
+  } else {
+    alert('salads');
+  }
 
 </code></pre>
-					<p>&#149; Use <code class="code">console.log(...)</code> to test your code is working</p>
-				</section>
+            </div>
+          </div>
+        </section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Array Iteration</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements: Logical Operators</div>
+          <div class="text-smallest">
+<pre><code>
+  var x = 10;
 
-					<p>&#149; Update <code class="code">processLocation</code> to render the markers</p>
+  if (x >= 10) {
+    alert('oranges');
+  } else {
+    alert('strawberrys');
+  }
+
+</code></pre>
+
+            <div class="fragment">
+              <hr>
+<pre><code>
+  var x = 10;
+
+  if (x <= 10) {
+    alert('kiwis');
+  } else {
+    alert('olives');
+  }
+
+</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="center">
+          <h1>CodeAlong</h1>
+          <p><a target="_blank" href="https://repl.it/CAh1/43">Repl.it</a></p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Conditional Statements: Multiple Conditions</div>
+
+          <p class="text-smaller">&#149; Often, programs will evaluate more than one condition</p>
+          <p class="text-smaller">&#149; Use the <code class="code">else if</code> operator to handle:</p>
+<pre><code>
+  var x = 10;
+
+  if (x !== 10) {
+    alert('beer');
+  } else if (x === 10) {
+    alert('coffee');
+  } else {
+    alert('water');
+  }
+
+</code></pre>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Exercise: Click Count</div>
+
+          <div class="text-left">
+            <p>1. Open <code class="code">click-count</code> in Sublime Text</p>
+            <p>2. Follow the instructions in <code class="code">project.js</code></p>
+          </div>
+        </section>
+
+        <!-- BREAK (5-7 mins) -->
+        <section class="center">
+          <h1>5 minute break</h1>
+          <img src="img/main/break-time-bear.jpg">
+        </section>
+
+        <section class="title" id="manipulating-css">
+          <h1>Manipulating CSS Classes</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Manipulating CSS Classes</div>
+
+          <div class="text-smallest">
+            <p><code class="code">.addClass('class-name')</code></p>
+            <p class="text-smallest pad-left-lg">&rArr; Adds classes to elements</p>
+<pre><code>
+  $('p').addClass('bold-text')
+
+  // would yield: &lt;p class="bold-text"&gt;&lt;/p&gt;
+
+</code></pre>
+            <div class="fragment">
+              <p><code class="code">.removeClass('class-name')</code></p>
+              <p class="text-smallest pad-left-lg">&rArr; Removes classes from elements</p>
+<pre><code>
+  $('p').removeClass('bold-text')
+
+</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Manipulatin CSS Classes</div>
+
+          <div class="text-smallest">
+            <p><code class="code">.toggleClass('class-name')</code></p>
+            <p class="text-smaller pad-left-lg">&rArr; Adds class to elements if it does not exist; otherwise removes</p>
+            <div class="fragment">
+              <p class="text-smaller">&#149; Assuming the following HTML:</p>
+<pre><code>
+  &lt;p&gt;Some Paragraph&lt;/p&gt;
+
+</code></pre>
 
 <pre><code>
-	function processLocation (location) {
-	  var marker = new google.maps.Marker({
-	    position: {
-	      lat: location.lat,
-	      lng: location.lng,
-	    },
-	    title: location.title,
-	    map: map,
-	  });
-	}
+  $('p').toggleClass('bold-text')
+
+  // would yield: &lt;p class="bold-text"&gt;&lt;/p&gt;
 
 </code></pre>
-				</section>
+            </div>
+          </div>
+        </section>
 
-				<!-- THE END -->
-				<section class="center">
-					<img src="img/main/the-end.jpg">
-				</section>
+        <!-- CHAINING FUNCTIONS -->
+        <section class="title" id="chaining-functions">
+          <h1>Chaining Functions</h1>
+        </section>
 
-				<!-- ON DECK -->
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">What's On Deck</div>
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Chaining Functions</div>
 
-					<h4>Class #16 (of 20) - Responsive Web Design (pt. 1)</h4>
+          <div class="text-smaller">
+            <p>How can we improve this code:</p>
+<pre><code>
+  $('p').css('background-color', 'blue')
+  $('p').text('Some new text to be added')
+  $('p').slideDown()
 
-					<p>&#149; <code class="code lower">box-sizing: border-box</code></p>
-					<p>&#149; Responsive Web Design Overview</p>
-					<p>&#149; Fluid Layout</p>
-					<p>&#149; Media Queries</p>
-				</section>
+</code></pre>
 
-				<section class="center">
-					<h1>Exit Tickets!</h1>
-				</section>
-			</div>
-		</div>
+            <div class="fragment">
+            <p>Function chaining:</p>
+<pre><code>
+  $('p')
+    .css('background-color', 'blue')
+    .text('Some new text to be added')
+    .slideDown()
 
-		<script src="js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Chaining Functions</div>
+
+          <div class="text-smallest">
+            <p>&#149; Perform multiple effects/actions one after another</p>
+            <p>&#149; Only works when called on the SAME object:</p>
+<pre><code>
+  $('p').text('hello').css('color', 'red').slideDown()
+
+</code></pre>
+            <div class="fragment">
+              <p>&#149; Some chained commands are queued; commands further down the chain will wait until previous commands have finished before executing</p>
+<pre><code>
+  $('p').slideDown(500).slideUp(500).slideDown(500)
+
+</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Lab/HW</div>
+
+          <p>1) Open <code class="code">temp-converter</code>; follow <code class="code">instructions.txt</code></p>
+        </section>
+
+        <!-- THE END -->
+        <section class="center">
+          <img src="img/main/the-end.jpg">
+        </section>
+
+        <!-- ON DECK -->
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">What's On Deck</div>
+
+          <h4>Class #13 (of 20) - Function Arguments</h4>
+
+          <p>&#149; Function Arguments</p>
+          <p>&#149; HTML Insertion/Removal</p>
+        </section>
+
+        <section class="center">
+          <h1>Exit Tickets!</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
 
