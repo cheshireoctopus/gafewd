@@ -1,23 +1,30 @@
-#app {
-	padding-top: 50px;
-	font-family: monospace;
-	width: 500px;
-	margin: 0px auto;
+body {
+	margin: 0;
+	font-family: sans-serif;
 }
 
-.clear {
-	clear: both;
+html,
+body,
+.grid {
+	height: 100%;
 }
 
-.row div {
-	text-align: center;
-	width: 100px;
-	padding: 30px;
-	border: 1px dashed #252525;
-	float: left;
+.grid {
+	display: grid;
+  grid-template-columns: auto auto auto;
 }
 
-.row div:hover {
-	background-color: #cccccc;
+.grid > * {
+	align-items: center;
+	border: 1px solid black;
 	cursor: pointer;
+	display: flex;
+	font-size: 36px;
+	justify-content: center;
+	text-transform: uppercase;
+	transition: all 350ms;
+}
+
+.grid > *:hover {
+	background: rgb(222, 222, 222);
 }
