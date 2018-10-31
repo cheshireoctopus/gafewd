@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -19,362 +19,431 @@
 
 					<div class="opening-instructions">
 						<p>1) Please download <a href="../materials/class13.zip">Class 13 Starter Code</a></p>
-						<p>2) Move the following into your <code class="code">homework</code> directory:</p>
-						<p class=" pad-left-lg">&#149; <code class="code">list-maker</code></p>
-						<!-- <p>3) Move the following into your homework direction</p>
-						<p class=" pad-left-lg"><code class="code">cash-register</code></p> -->
+						<p>2) Move the following into <code class="code">class-work</code>:</p>
+						<div class="text-smaller pad-left-lg">
+							<p>&#149; <code class="code">lifetime-supply</code></p>
+							<p>&#149; <code class="code">calculator-box</code></p>
+						</div>
+						<p>3) The following solutions are included:</p>
+						<p class="pad-left-lg text-smaller">&#149; <code class="code">rgb-color-choice-solution</code></p>
 					</div>
 				</section>
 
-				<section class="hero condensed">
-					<h1>Class <span class="red">#13</span></h1>
-					<h1>11/01/2017</h1>
-					<h1 class="lesson-title">Function Arguments and HTML Manipulation</h1>
+				<section class="hero">
+					<h1>Class <span class="red">#10</span></h1>
+					<h1>10/29/2018</h1>
+					<h1 class="lesson-title">jQuery (pt. 1)</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Announcements</div>
 
-					<div class="text-smaller">
-						<p>&#149; Final Projects:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; Fourth deliverable due Monday, November 6th</p>
-							<p>&rArr; JavaScript Pseudocode</p>
-						</div>
-						<p>&#149; Advanced Topic Saturday:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; What: API's + AJAX + Data structures (objects and arrays)</p>
-							<p>&rArr; When: 11/11; from 12PM - 3PM</p>
-						</div>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg text-smaller">
+						<p>&rArr; Third deliverable due Monday, November 5th</p>
+						<p>&rArr; HTML/CSS Rough Draft</p>
 					</div>
 				</section>
+
+				<!-- <section class="title" id="feedback">
+					<h1>Mid-Course Feedback</h1>
+				</section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Mid-Course Feedback</div>
+
+          <p>&#149; Thanks 👍</p>
+          <p>&#149; Feedback can be annoying...</p>
+          <blockquote class="text-smaller fragment">
+            Quoty McQuoteFace
+          </blockquote>
+
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Mid-Course Feedback</div>
+
+          <p>&#149; Suggestions for improvement (GA):</p>
+          <div class="pad-left-lg text-smaller">
+            <p class="fragment">&rArr; Tuition (How can I deliver more value?)</p>
+            <p class="fragment">&rArr; GA-sponsored events outside of class - see <a href="https://generalassemb.ly/education?format=events" target="_blank">Events page</a></p>
+
+          </div>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Mid-Course Feedback</div>
+
+          <p>&#149; Feedback Favorite (anonymous):</p>
+          <blockquote>
+            Having a class on the second floor and keeping the glass door entry on the second floor locked so
+            that you have to go to the third floor and walk down is ridiculous.
+          </blockquote>
+          <p>&#149; Crowd control</p>
+        </section> -->
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Agenda</div>
 
-					<p>&#149; <a href="#/function-arguments">Function Arguments</a></p>
-					<p>&#149; <a href="#/html-insertion">HTML Insertion</a></p>
-					<p>&#149; <a href="#/html-removal">HTML Removal</a></p>
-					<!-- <p class="text-smaller">&#149; HTML <code>&lt;table&gt;</code> Element - maybe</p> -->
-					<!-- <p class="text-smaller">&#149; Preventing Default Event Behaviours - maybe</p> -->
-				</section>
-
-				<!-- SKILL ASSESSMENT -->
-				<!-- <section class="center">
-					<h1>Skill Assessment</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/QywMov?editors=101" target="_blank">Homework Grader - CodePen</a></p>
-				</section> -->
-
-				<section class="title" id="function-arguments">
-					<h1>Function Arguments</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Function Arguments</div>
-
-					<div class="text-smallest">
-						<p>So far, <u>named</u> functions have been defined like this:</p>
-<pre><code>
-	function someName () {
-	  // ...
-	  // ...
-	}
-
-</code></pre>
-						<p>...and called like this:</p>
-<pre><code>
-	someName();
-
-</code></pre>
-						<p>Many of you have inquired: <span class="fragment">What are the <code class="code">()</code> for?</span></p>
+					<div class="text-smaller">
+						<p>&#149; <a href="#/jquery-intro">jQuery Intro</a></p>
+						<p>&#149; <a href="#/css-selectors">CSS Selectors</a></p>
+						<p>&#149; <a href="#/html-manipulation">HTML manipulation using <code>.html()</code></a></p>
+						<p>&#149; <a href="#/click-event">The <code>.click()</code> method</a></p>
+						<p>&#149; <a href="#/input-and-val">The <code>.val()</code> method</a></p>
+						<!-- <p>&#149; <a href="#/using-jquery">Using jQuery and <code>$(document).ready()</code></a></p> -->
+						<p>&#149; <a href="#/css-manipulation">CSS manipulation using <code>.css()</code></a></p>
 					</div>
 				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Function Arguments</div>
+				<section data-background="#FFF" class="text-left" id="js-review">
+					<div class="heading">JavaScript Review</div>
 
 					<div class="text-smaller">
-						<p><b><u>Arguments</u>:</b> <span class="fragment">inputs that are "passed" into a function</span></p>
-						<div class="text-smallest fragment">
-							<p>&#149; Define a function that will accept an argument:</p>
-<pre><code>
-	function hello (name) {
-	  alert("Hello, it's " + name);
-	}
+						<p>Open <code class="code">lifetime-supply</code>; write JS for the following:</p>
+						<p>1. Store your current age into a variable</p>
+						<p>2. Store a maximum age into a variable</p>
+						<p>3. Store a favorite drink into a variable</p>
+						<p>4. Store an amount per day into a variable</p>
+						<p>5. Calculate how much you would drink for the rest of your life!</p>
+						<p>6. Output your results to the user</p>
+					</div>
+				</section>
 
-</code></pre>
-						</div>
-						<div class="text-smallest fragment">
-							<p>&#149; Call a function that accepts an argument:</p>
-<pre><code>
-	hello('me');
+				<!-- JQUERY -->
+				<section class="title" id="jquery-intro">
+					<h1>jQuery</h1>
+				</section>
 
-	// outputs: "hello, it's me"
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery: What is it?</div>
 
-	hello('Robert');
-	hello('Chandler');
-
-</code></pre>
-						</div>
+					<div class="text-small">
+						<p>&#149; jQuery <u>IS</u> JavaScript (<a href="https://code.jquery.com/jquery-2.2.2.js" target="_blank">source code</a>)</p>
+						<p>&#149; jQuery is a JavaScript <u>library</u></p>
+						<p class="fragment">&#149; Collection of battle-tested code</p>
+						<p class="fragment">&#149; Increases the speed/stability of development</p>
+						<p class="fragment">&#149; Why reinvent the wheel?</p>
+						<p class="fragment">&#149; 1000's of JS libraries (and growing)</p>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Function Arguments</div>
-
-					<div class="text-smallest">
-						<p>&#149; Function arguments are accessible in the function body using their respective names:</p>
-<pre><code>
-	function hello (name) {
-	  alert("Hello, it's " + name);
-	}
-
-</code></pre>
-						<div class="fragment">
-							<p>&#149; Whatever is "passed" as <code class="code">name</code> replaces instances of <code class="code">name</code> in the function body:</p>
-<pre><code>
-	hello('rob');
-
-	// translates to:
-
-	function hello ('rob') {
-	  alert("Hello, it's " + 'rob');
-	}
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>Codealong</h1>
-					<a href="https://repl.it/ERgQ/1" target="_blank">https://repl.it/ERgQ/1</a>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Function Arguments: Multiple Arguments</div>
-
-					<div class="text-smallest">
-						<p>&#149; Functions can accept multiple arguments</p>
-						<div class="fragment">
-							<p>&#149; Use a comma-separated list to define:</p>
-<pre><code>
-	function add (x, y) {
-	  return x + y;
-	}
-
-</code></pre>
-						</div>
-						<div class="fragment">
-							<p>&#149; Call a function with multiple arguments:</p>
-<pre><code>
-	add(2, 2);
-	// returns 4
-
-	add(2, 5);
-	// returns 7
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Arguments vs Parameters</div>
-
-					<p>&#149; Arguments and parameters are often used interchangeably</p>
-					<p class="fragment">&#149; There is a clear distinction:</p>
-					<div class="fragment pad-left-lg text-smaller">
-						<p>&rArr; <u>Parameters</u> refer to the variables declared in the function definition</p>
-						<p>&rArr; <u>Arugments</u> refer to the data passed into the function</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Arguments vs Parameters</div>
-
-					<div class="text-smallest">
-						<p>Parameters:</p>
-						<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> defined with two <u>parameters</u>, <code class="code">x</code> and <code class="code">y</code>:</p>
-<pre><code>
-	function add (x, y) {
-	  return x + y;
-	}
-
-</code></pre>
-						<div class="fragment">
-						<p>Arguments:</p>
-							<p class="text-smaller pad-left-lg">&#149; Function <code class="code">add</code> called with the <u>arguments</u> <code class="code">5</code> and <code class="code">2</code>:</p>
-<pre><code>
-	add(5, 2);
-
-	// returns 7
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section class="center">
-					<h1>CodeAlong: Name Machine</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/VeYMew?editors=1010" target="_blank">CodePen</a></p>
-				</section>
-
-				<!-- <section class="center">
-					<h1>CodeAlong</h1>
-					<p>Refactor Homework Grader using functions and arguments</p>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/QywMov?editors=101" target="_blank">CodePen</a></p>
-				</section> -->
-
-				<!-- <section class="center">
-					<h1>Exercise: Bill Calculator</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/bENoeR?editors=101" target="_blank">CodePen</a></p>
-				</section> -->
-
-				<!-- BREAK (5-7 mins) -->
-				<section class="center">
-					<h1>5 minute break</h1>
-					<img src="img/main/break-time-bear.jpg">
-				</section>
-
-				<!-- HTML INSERTION -->
-				<section class="title" id="html-insertion">
-					<h1>HTML Insertion</h1>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">HTML Insertion</div>
+					<div class="heading">jQuery: What is it?</div>
 
 					<div class="text-smaller">
-						<p><code class="code">.append('content')</code></p>
-						<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>END</b> of each element</p>
-<pre><code>
-	$('div').append('&lt;p&gt;Appended paragraph&lt;/p&gt;')
-
-</code></pre>
+						<p>&#149; Written by John Resig (lives in Brooklyn)</p>
+						<p class="fragment">&#149; Motto: <em>"Write Less, Do More"</em></p>
 						<div class="fragment">
-							<p><code class="code">.prepend('content')</code></p>
-							<p class="text-smallest pad-left-lg">&rArr; Insert "content" at the <b>BEGINNING</b> of each element</p>
-<pre><code>
-	$('div').prepend('&lt;p&gt;Prepended paragraph&lt;/p&gt;')
+							<p>&#149; tl;dr makes working with JS easier:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; HTML / CSS manipulation</p>
+								<p>&rArr; Event handling (click events)</p>
+								<p>&rArr; AJAX</p>
+							</div>
+						</div>
+						<p class="fragment">&#149; Bonus: Covers JS's browser inconsistencies</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery: What use it?</div>
+
+					<p>Pure JavaScript:</p>
+					<p class="pad-left-lg"><a target="_blank" href="http://codepen.io/josephjbliss/pen/uqdCw">http://codepen.io/josephjbliss/pen/uqdCw</a></p>
+					<p>jQuery:</p>
+					<p class="pad-left-lg"><a target="_blank" href="http://codepen.io/josephjbliss/pen/jLtfC">http://codepen.io/josephjbliss/pen/jLtfC</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+				  <div class="heading">jQUery in Two Steps:</div>
+				
+						<div class="fragment">
+							<p>1) Use <code class="code">$()</code> to select HTML elements:</p>
+<pre><code class="code">
+	$('#element')
 
 </code></pre>
+						</div>
+						<div class="fragment">
+							<p>2) Attach jQuery methods to the above selector:</p>
+<pre><code class="code">
+	$('#element').css('background', 'blue')
+
+</code></pre>
+						</div>
+				</section>
+
+				<section class="title" id="css-selectors">
+					<h1>jQuery CSS Selectors</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery CSS Selectors: <code class="code lower">$('x')</code></div>
+
+					<div class="text-smaller">
+						<p>&#149; Similar to <code class="code">document.querySelector()</code></p>
+						<div class="fragment">
+							<p>&#149; The <code class="code">$('x')</code> function - select all of the <code class="code">'x'</code></p>
+<pre><code>
+	$('.nav-links') // select all elements with class "nav-links"
+	$('h2') // select all &lt;h2&gt;'s
+	$('p a') // select all &lt;a&gt;'s inside of all &lt;p&gt;'s
+	$('p, a') // select all &lt;p&gt;'s and &lt;a&gt;'s
+
+</code></pre>
+							<p>&#149; The <code class="code">$('x')</code> function takes <u>ANY</u> CSS selector</p>
 						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">HTML Insertion</div>
+					<div class="heading">jQuery CSS Selectors: ID's and Classes</div>
 
-					<div class="text-smallest">
-					<p>&#149; Assuming the following HTML:</p>
-<pre><code>
-	&lt;div id="someDiv"&gt;
-	  &lt;p&gt;A paragrpah of text&lt;/p&gt;
-	&lt;/div&gt;
-
-</code></pre>
-					<p>&#149; The following JS:</p>
-<pre><code>
-	$('#someDiv').append('&lt;p&gt;Appended paragraph&lt;/p&gt;')
-	$('#someDiv').prepend('&lt;p&gt;Prepended paragraph&lt;/p&gt;')
-
-</code></pre>
-					<p>&#149; Will yield the following HTML:</p>
-<pre><code>
-	&lt;div id="someDiv"&gt;
-	  <span class="red">&lt;p&gt;Prepended paragraph&lt;/p&gt;</span>
-	  &lt;p&gt;A paragrpah of text&lt;/p&gt;
-	  <span class="red">&lt;p&gt;Appened paragraph&lt;/p&gt;</span>
-	&lt;/div&gt;
-
-</code></pre>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">HTML Insertion</div>
-
-					<p><code class="code">.before('content')</code></p>
-					<p class="text-smallest pad-left-lg">&rArr; Insert "content" <b>BEFORE</b> each element</p>
-<pre><code>
-	$('div').before('&lt;p&gt;Before paragraph&lt;/p&gt;')
+					<p>&#149; Select ID's using the <code class="code">#</code> (hashtag):</p>
+<pre><code class="code">
+	$('#element')
+	$('#element div')
 
 </code></pre>
 					<div class="fragment">
-						<p><code class="code">.after('content')</code></p>
-						<p class="text-smallest pad-left-lg">&rArr; Insert "content" <b>AFTER</b> each element</p>
-<pre><code>
-	$('div').after('&lt;p&gt;After paragraph&lt;/p&gt;')
+						<p>&#149; Select Classes using the <code class="code">.</code> (period):</p>
+<pre><code class="code">
+	$('.someClass')
+	$('.someClass p')
 
 </code></pre>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">HTML Insertion</div>
+					<div class="heading">jQuery CSS Selectors: Practice</div>
+
+					<div class="text-smaller">
+						<p>&#149; <code class="code">$('div')</code></p>
+						<p class="fragment pad-left-lg text-smaller">&rArr; Select all HTML <code class="code">&lt;div&gt;</code> elements</p>
+						<p class="fragment">&#149; <code class="code">$('#element')</code></p>
+						<p class="fragment pad-left-lg text-smaller">&rArr; Selects the first HTML with an ID of "<code class="code">element</code>"</p>
+						<p class="fragment">&#149; <code class="code">$('ul li .social-link')</code></p>
+						<p class="fragment pad-left-lg text-smaller">&rArr; Select elements with class <code class="code">social-link</code> that are inside <code class="code">&lt;li&gt;</code> elements which are inside <code class="code">&lt;ul&gt;</code></p>
+					</div>
+				</section>
+
+				<section class="title" id="html-manipulation">
+					<h1>HTML Manipulation</h1>
+				</section>
+
+				<!-- HTML Manipulation -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML Manipulation</div>
+
+					<div class="text-smaller">
+						<p><code class="code">.html()</code></p>
+						<p class="text-smallest pad-left-lg">Reads the HTML (and text) inside the selected element:</p>
+<pre><code class="code">
+	$('#element').html()
+
+</code></pre>
+						<div class="fragment">
+							<p><code class="code">.html('&lt;h1&gt;a heading&lt;/h1&gt;')</code></p>
+							<p class="text-smallest pad-left-lg">Overwrites the HTML inside the selected element:</p>
+<pre><code class="code">
+	$('#element').html('&lt;h1&gt;a heading&lt;/h1&gt;')
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">Codealong</a></h1>
+				</section>
+
+				<!-- CLICK EVENT -->
+				<section class="title" id="click-event">
+					<h1>Click Event</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">jQuery Click Event</div>
 
 					<div class="text-smallest">
-					<p>Assuming the following HTML:</p>
-<pre><code>
-	&lt;div id="someDiv"&gt;
-	  &lt;p&gt;A paragrpah of text&lt;/p&gt;
-	&lt;/div&gt;
+						<p>JavaScript:</p>
+<pre><code class="code">
+	function handleClick() {
+	  // do something
+	}
+
+	document.querySelector('#element').onclick = handleClick
 
 </code></pre>
-					<p>The following JS:</p>
-<pre><code>
-	$('#someDiv').before('&lt;p&gt;Before paragraph&lt;/p&gt;')
-	$('#someDiv').after('&lt;p&gt;After paragraph&lt;/p&gt;')
+						<div class="fragment">
+							<p>jQuery:</p>
+<pre><code class="code">
+	function handleClick() {
+	  // do something
+	}
+
+	$('#element').click(handleClick)
 
 </code></pre>
-					<p>Will yield the following HTML:</p>
-<pre><code>
-	<span class="red">&lt;p>Before paragraph&lt;/p&gt;</span>
-	&lt;div id="someDiv"&gt;
-	  &lt;p&gt;A paragrpah of text&lt;/p&gt;
-	&lt;/div&gt;
-	<span class="red">&lt;p&gt;After paragraph&lt;/p&gt;</span>
-
-
-</code></pre>
+						</div>
 					</div>
 				</section>
 
-				<section class="title" id="html-removal">
-					<h1>HTML Removal</h1>
+				<section class="center">
+					<h1><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/ZbNKzQ?editors=101">CodeAlong</a></h1>
+				</section>
+
+				<!-- INPUTS AND .val() -->
+				<section class="title" id="input-and-val">
+					<h1><code class="lower">&lt;input&gt;</code> & <code class="lower">.val()</code></h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">HTML Removal</div>
+					<div class="heading"><code class="lower">&lt;input&gt;</code> and <code class="lower">.val()</code></div>
 
-					<p><code class="code">.remove()</code></p>
-					<p class="text-smallest pad-left-lg">&rArr; Remove the selected element</p>
-<pre><code>
-	$('#someDiv').remove()
+					<p>JavaScript:</p>
+<pre><code class="code">
+	document.querySelector('#element').value
+
+	// returns the value inside of #element
 
 </code></pre>
 					<div class="fragment">
-						<p><code class="code">.empty()</code></p>
-						<p class="text-smallest pad-left-lg">&rArr; Removes all content inside the selected element</p>
-<pre><code>
-	$('#someDiv').empty()
+						<p>jQuery:</p>
+<pre><code class="code">
+	$('#element').val()
+
+	// returns the value inside of #element
 
 </code></pre>
 					</div>
 				</section>
 
-<!-- 				<section class="center">
-					<h1>CodeAlong</h1>
-					<p><a href="http://codepen.io/cheshireoctopus/pen/eJmGrX?editors=1010" target="_blank">HTML Insertion/Removal</a></p>
-				</section> -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="lower">&lt;input&gt;</code> and <code class="lower">.val()</code></div>
+
+					<p>&#149; Getting values, use <code class="code">.val()</code></p>
+<pre><code class="code">
+	$('#element').val()
+
+	// returns the value inside of #element
+
+</code></pre>
+					<div class="fragment">
+						<p>&#149; Setting values, use <code class="code">.val('text')</code></p>
+<pre><code class="code">
+	$('#element').val('Keanu Reeves')
+
+	// sets the value of #element to 'Keanu Reeves'
+
+</code></pre>
+					</div>
+				</section>
+
+				<section class="title" id="using-jquery">
+					<h1>Using jQuery</h1>
+				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lab/HW</div>
-					<p>1. Open <code class="code">list-maker</code> </p>
-					<p>2. Follow instructions in <code class="code">js/app.js</code></p>
+					<div class="heading">Using jQuery</div>
+
+					<p>Option 1: Download and store jQuery locally</p>
+					<div class="pad-left-lg text-smaller">
+						<p>1. Download jQuery from <a target="_blank" href="http://jquery.com/download">http://jquery.com/download</a></p>
+						<p>2. Save it as <code class="code">jquery.js</code> in the project's <code class="code">js</code> directory</p>
+						<p>3. Create a <code class="code">&lt;script&gt;</code> tag <u>ABOVE</u> your JS files</p>
+					</div>
+<pre><code class="code">
+  &lt;script src="jquery.js"&gt;&lt;/script&gt;
+  &lt;script src="my-js-project.js"&gt;&lt;/script&gt;
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Using jQuery</div>
+
+					<p>Option 2: Link to an external jQuery source (CDN)</p>
+					<div class="pad-left-lg text-smaller">
+						<p>1. Locate an <a target="_blank" href="https://code.jquery.com/">externally hosted</a> version of jQuery</p>
+					</div>
+					<p class="pad-left-lg text-smaller">2. Create a <code class="code">&lt;script&gt;</code> tag <u>ABOVE</u> your JS files</p>
+					<p class="pad-left-lg text-smaller">3. Point the <code class="code">src</code> attribute to the jQuery CDN</p>
+<pre><code class="code">
+  &lt;script src="https://code.jquery.com/jquery-1.11.3.js"&gt;&lt;/script&gt;
+  &lt;script src="my-js-project.js"&gt;&lt;/script&gt;
+
+</code></pre>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Using jQuery: Script Placement</div>
+
+					<p>&#149; <code class="code">&lt;script&gt;</code> tags should always be placed:</p>
+					<p class="pad-left-lg">&rArr; At the <u>BOTTOM</u> of your <code class="code">&lt;body&gt;</code></p>
+					<p class="pad-left-lg">&rArr; Right before the closing <code class="code">&lt;/body&gt</code> tag</p>
+					<div class="fragment">
+						<p>&#149; JS references the DOM - need to build it first!</p>
+						<p>&#149; Remember: load <code class="code">&lt;script&gt;</code>'s LAST</p>
+					</div>
+				</section>
+
+				<section class="title" id="css-manipulation">
+					<h1>CSS Manipulation</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Manipulation: <code class="lower">.css()</code></div>
+
+					<p>JavaScript:</p>
+<pre><code class="code">
+	document.querySelector('#element').style.color = 'red'
+
+</code></pre>
+					<div class="fragment">
+						<p>jQuery:</p>
+<pre><code class="code">
+	$('#element').css('color', 'red')
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Manipulation: <code class="lower">.css()</code></div>
+
+					<p>&#149; Set Single Property:</p>
+<pre><code class="code">
+	$('p').css('background-color', 'pink')
+
+</code></pre>
+					<div class="fragment">
+							<p>&#149; Multiple Properties:</p>
+<pre><code class="code">
+	$('#element').css({ 'height': '100px', 'width': '100px' })
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab</div>
+					<div class="text-smallest">
+						<p>1. Open <code class="code">calculator-box</code> in SublimeText</p>
+						<p>2. Add a <code class="code">&lt;script&gt;</code> tag to include jQuery</p>
+						<p>3. Include the following behavior:</p>
+						<div class="pad-left-lg text-smaller">
+							<p>&#149; Clicking on a "plus" box adds to the total in the center</p>
+							<p>&#149; Clicking on a "minus" box subtracts from the total</p>
+							<p>&#149; Clicking the red box makes the background of the center box red</p>
+							<p>&#149; Clicking the blue box makes the background of the center box blue</p>
+							<p>&#149; Clicking the center box make its background white and resets the value to zero</p>
+						</div>
+					</div>
 				</section>
 
 				<!-- THE END -->
@@ -384,15 +453,12 @@
 
 				<!-- ON DECK -->
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">What's On Deck</div>
+					<div class="heading">On Deck: #14 - jQuery (pt. 2)</div>
 
-					<h4>Class #14 (of 20) - Function Arguments and HTML Insertion</h4>
-
-					<p>&#149; <code class="code">.change()</code> Event</p>
-					<p>&#149; HTML <code class="code">&lt;form&gt;</code> Element</p>
-					<p>&#149; <code class="code">.submit()</code> Event</p>
-					<p>&#149; Preventing Default Event Behaviours</p>
-					<p>&#149; HTML <code class="code">&lt;table&gt;</code> Element</p>
+					<p>&#149; Toggling element visibility (hide vs. show)</p>
+					<p>&#149; Manipulating element attributes using <code class="code">.attr()</code></p>
+					<p>&#149; The <code class="code">$(this)</code> keyword</p>
+					<p>&#149; Document traversal (walking the DOM)</p>
 				</section>
 
 				<section class="center">
@@ -406,4 +472,3 @@
 		<script src="js/main.js"></script>
 	</body>
 </html>
-

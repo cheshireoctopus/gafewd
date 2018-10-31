@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+html,
+body,
+.grid {
+	height: 100%;
+}
+
+.grid {
+	display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid > * {
+	align-items: center;
+	border: 1px solid black;
+	cursor: pointer;
+	display: flex;
+	font-size: 36px;
+	justify-content: center;
+	text-transform: uppercase;
+	transition: all 350ms;
+}
+
+.grid > *:hover {
+	background: rgb(222, 222, 222);
+}
