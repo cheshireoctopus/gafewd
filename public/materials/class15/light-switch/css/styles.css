@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+body.dark {
+  background: rgb(32, 32, 32);
+}
+
+body,
+button {
+  transition: background 500ms;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  background: rgb(222, 222, 222);
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px 30px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+button.dark {
+  background: #85ef9e;
+}

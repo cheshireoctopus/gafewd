@@ -1,0 +1,38 @@
+body {
+	background:#efefef;
+	margin:0;
+	padding:0;
+	font-family:Helvetica, Arial, Verdana;
+}
+
+h1 {
+	color:#888888;
+}
+
+p {
+	color:#666666;
+}
+
+#wrapper {
+	width:960px;
+	margin:0 auto;
+	padding:20px;
+}
+
+#thumbnails{
+	position: relative;
+	display: block;
+	height: 130px;
+	clear:both;
+}
+
+.thumb {
+	float: left;
+	margin: 5px;
+	height: 100px;
+	width: 100px;
+	display: block;
+	cursor: pointer;
+}
+
+
