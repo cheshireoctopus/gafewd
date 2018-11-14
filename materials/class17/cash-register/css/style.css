@@ -5,35 +5,38 @@ body {
   margin: 3em;
   padding: 0;
 }
+
 #register {
   width: 20em;
   margin: auto;
 }
+
 #ticket {
   background: white;
   margin: 0 1em;
   padding: 1em;
   box-shadow: 0 0 5px rgba(0,0,0,.25);
 }
+
 #ticket h1 {
   text-align: center;
 }
-#ticket table {
+
+#entries-container {
   font-family: monospace;
   width: 100%;
   border-collapse: collapse;
 }
-#ticket td, #ticket th {
+
+#entries-container > * {
   padding: 5px;
-}
-#ticket th {
-  text-align: left;
-}
-#ticket td, #ticket #total {
   text-align: right;
 }
-#ticket tfoot th {
+
+#total-container {
   border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
 }
 
 #entry {
@@ -42,6 +45,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,.25);
 }
+
 #entry input {
   width: 100%;
   padding: 10px;
@@ -54,6 +58,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 #entry input:focus {
   outline: none;
   border-color: rgba(255,255,255,.75);
