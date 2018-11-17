@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Intro: Example 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html,
+        body,
+        .container {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-areas: 
+                "m h h h h h h h h h h h"
+                "m c c c c c c c c c c c"
+                "m f f f f f f f f f f f";
+        }
+
+        .header {
+            grid-area: h;
+        }
+
+        .aside {
+            grid-area: m;
+        }
+
+        .content {
+            grid-area: c;
+        }
+
+        .footer {
+            grid-area: f;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "h h h h m m m m"
+                    "c c c c c c c c"
+                    "f f f f f f f f";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="aside">ASIDE</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
