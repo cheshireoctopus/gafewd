@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: CSS Grid</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1><span class="red">Weekend</span> Class</h1>
+					<h1>11/17/2018</h1>
+					<h1 class="lesson-title">CSS Grid</h1>
+				</section>
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<p>&#149; <a href="#/grid-intro">Grid Intro</a></p>
+					<p>&#149; <a href="#/rows-and-columns">Rows and Columns</a></p>
+					<p>&#149; <a href="#/fraction-units">Fraction Units</a></p>
+					<p>&#149; <a href="#/grid-item-sizing">Grid Item Sizing</a></p>
+				</section>
+
+				<section class="title" id="grid-intro">
+					<h1>Grid Intro</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grid Intro: Overview</div>
+
+					<p>&#149; <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="blank">CSS Grid</a> is the most powerful layout system in CSS</p>
+					<p>&#149; First CSS tool to seriously address layout issues</p>
+					<p>&#149; Supports two dimensions: rows and columns</p>
+					<p>&#149; Like Flexbox: system of parents and children</p>
+				</section>
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grid Intro: Why Learn</div>
+
+					<p>1. Easy (?) to create two dimensional layout</p>
+					<p>2. Simpler/reduced HTML markup</p>
+					<p>3. Browser support (support by all major browsers)</p>
+					<p>4. Skip frameworks like bootstrap</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grid Intro: Terminology</div>
+
+          <p>Grid Container:</p>
+<pre><code class="code">
+  &lt;div class="container"> // Grid Container
+    &lt;div class="item">&lt;/div> 
+    &lt;div class="item">&lt;/div> 
+    &lt;div class="item">&lt;/div>
+  &lt;/div>
+
+</code></pre>
+          <p>&#149; Element which <code class="code">display: grid</code> is applied</p>
+          <p>&#149; Direct parent of all the grid items</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grid Intro: Terminology</div>
+
+          <p>Grid Item:</p>
+<pre><code class="code">
+  &lt;div class="container">
+    &lt;div class="item">&lt;/div> // Grid Item
+    &lt;div class="item">&lt;/div> // Grid Item
+    &lt;div class="item">&lt;/div> // Grid Item
+  &lt;/div>
+
+</code></pre>
+          <p>&#149; Direct children of the grid container</p>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+					<div class="heading">Grid Intro: Terminology</div>
+
+          <div class="text-smaller">
+            <p>Grid Line:</p>
+            <div class="text-center">
+              <img src="https://css-tricks.com/wp-content/uploads/2016/03/grid-line.png">
+            </div>
+            <p>&#149; Dividers that make up the structure of the grid</p>
+          </div>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Grid Intro: Terminology</div>
+          
+          <div class="text-smaller">
+            <p>Grid Area:</p>
+            <div class="text-center">
+              <img src="https://css-tricks.com/wp-content/uploads/2016/03/grid-area.png">
+            </div>
+            <p>&#149; Area comprised of any number <u>grid cells</u></p>
+          </div>
+        </section>
+
+        <section class="title" id="rows-and-columns">
+          <h1>Rows and Columns</h1>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+					<div class="heading">Rows and Columns</div>
+
+          <p>&#149; Open <code class="code">example-one.html</code></p>
+          <p>&#149; Apply <code class="code">display:grid</code> to <code class="code">.container</code></p>
+          <div class="fragment">
+            <p>&#149; Apply the following to <code class="code">.container</code>:</p>
+<pre><code class="code">
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+    grid-gap: 3px;
+
+</code></pre>
+          </div>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+					<div class="heading">Rows and Columns</div>
+
+          <p>&#149; Use <code class="code">auto</code> to maximize grid item's sizing:</p>
+<pre><code class="code">
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+
+</code></pre>
+          <div class="fragment">
+            <p>&#149; Apply <code class="code">auto</code> to each column for same-width layout:</p>
+<pre><code class="code">
+    grid-template-columns: auto auto auto;
+
+</code></pre>
+          </div>
+        </section>
+
+        <section class="title" id="fraction-units">
+          <h1>Fraction Units</h1>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Fraction Units</div>
+
+          <p>&#149; Grid intros a new unit of measurement: <code class="code">fr</code></p>
+          <p>&#149; Represents a fraction of available space in the grid</p>
+          <p class="fragment">&#149; In <code class="code">example-2.html</code>, replace <code class="code">auto</code> with <code class="code">fr</code></p>
+          <p class="fragment">&#149; Can we make the middle column larger?</p>
+          <div class="fragment">
+<pre><code class="code">
+    grid-template-columns: 1fr 2fr 1fr;
+
+</code></pre>
+          </div>
+        </section>
+
+        <section class="title" id="grid-item-sizing">
+          <h1>Grid Item Sizing</h1>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Grid Item Sizing</div>
+
+          <p>&#149; So far, we have controlled grid items via the parent</p>
+          <p>&#149; Grid provides grid item rules for advanced layout</p>
+          <div class="fragment">
+            <p>&#149; Open <code class="code">example-3</code> and change:</p>
+<pre><code class="code">
+    grid-template-rows: 40px 200px 40px;
+
+</code></pre>
+            <p class="fragment">&#149; What happens to the third row? (Check inspector!)</p>
+          </div>
+        </section>
+        
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Grid Item Sizing</div>
+
+          <p>&#149; Adjust the width of the header via <code class="code">grid-column</code>:</p>
+<pre><code class="code">
+  .header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+</code></pre>
+          <p class="fragment">&#149; Start <code class="code">.header</code> on 1st grid line and end on 3rd</p>
+          <p class="fragment">&#149; Add these rules to <code class="code">.footer</code></p>
+        </section>
+
+        <section data-background="#FFF" class="text-left">
+          <div class="heading">Grid Item Sizing</div>
+
+          <p>&#149; Let's use 12 columns instead of 3 with <code class="code">repeat</code>:</p>
+<pre><code class="code">
+    grid-template-columns: repeat(12, 1fr);
+
+</code></pre>
+          <div class="fragment">
+            <p>&#149; Update the <code class="code">grid-column</code> properties for the items</p>
+            <p>&#149; Hint: Try <code class="code">grid-column-end: -1;</code></p>
+          </div>
+        </section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
